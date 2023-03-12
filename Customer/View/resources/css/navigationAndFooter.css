@@ -1,0 +1,166 @@
+/**
+    Navigation
+**/
+
+.navtitle {
+  font-family: var(--navigationFont);
+  font-size: var(--navigationFontSize);
+  position: relative;
+  padding-left: 0 !important;
+}
+.navtitle::before,
+.navtitleActive::before {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--mainColor);
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  transition: all 0.5s;
+}
+.navtitleActive::before {
+  width: 50px;
+}
+.navtitle::after,
+.navtitleActive::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--mainColor);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.navtitleActive::after {
+  width: 30px;
+}
+.navtitle:hover::before {
+  width: 50px;
+}
+.navtitle:hover::after {
+  width: 30px;
+}
+.searchIcon {
+  background-color: var(--mainColor);
+  color: var(--secondMainColor);
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+.searchIcon:hover {
+  opacity: 0.7;
+}
+.userIcon,
+.userdownIcon {
+  color: var(--secondMainColor);
+}
+.userText {
+  color: var(--textColorPrimary);
+}
+.userbox {
+  background-color: var(--mainColor);
+}
+.navLine {
+  width: 100%;
+  height: 1px;
+  background-color: var(--mainColor);
+}
+.userimage {
+  margin: 0.4em;
+}
+/* responsive side bar */
+
+.sideBar {
+  background-color: var(--backgroundTertiary);
+  height: 100vh;
+  box-shadow: var(--cardShadow);
+  right: -400px;
+  opacity: 0;
+  transition: all 0.7s;
+}
+.sideBarChange {
+  right: 0;
+  opacity: 1;
+}
+#closeSideBar {
+  top: 10px;
+  right: 10px;
+  transition: all 0.4s;
+}
+#closeSideBar:hover {
+  color: var(--mainColor);
+  transform: rotate(360deg);
+}
+#responsiveSideBarIcon {
+  font-size: 2.3em;
+  margin-left: 0.4em;
+}
+.userIcon {
+  font-size: 2.2em;
+}
+
+@media screen and (max-width: 470px) {
+  .logo {
+    height: 40px;
+  }
+  #responsiveSideBarIcon {
+    font-size: 1.7em;
+  }
+  .userIcon {
+    font-size: 1.7em;
+  }
+  .userText {
+    font-size: 0.7em;
+  }
+  .searchIcon {
+    font-size: 1em;
+  }
+}
+.searchDropdown {
+  background-color: var(--mainColor);
+}
+.searchBox {
+  border: none;
+  outline: none;
+  width: 80%;
+  color: var(--textColorPrimary);
+  background-color: transparent;
+  border-bottom: 1px solid var(--textColorSecondary);
+}
+.searchBox::placeholder {
+  color: var(--textColorPrimary);
+  opacity: 0.7;
+}
+.inputSearchIcon {
+  color: var(--secondMainColor);
+}
+.signColor {
+  color: var(--textColorPrimary);
+  font-family: var(--titleFont);
+}
+.signIcon {
+  color: var(--secondMainColor);
+}
+.signBox {
+  background-color: var(--mainColor);
+  right: 0;
+  top: 80px;
+}
+.signBox::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: var(--mainColor);
+  position: absolute;
+  top: -11px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: rotate(45deg);
+}
+@media screen and (max-width: 992px) {
+  .signBox {
+    right: unset !important;
+  }
+}
