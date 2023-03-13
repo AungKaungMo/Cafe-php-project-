@@ -48,10 +48,7 @@
 }
 
 
-.aboutSection .title::before, 
-.serviceSection .title::before, 
-.contactSection .title::before,
-.customerSection .title::before{
+.title::before{
     content: "";
     width: 100px;
     height: 3px;
@@ -61,10 +58,7 @@
     bottom: 5px;
     transition: all 0.5s;
 }   
-.aboutSection .title::after, 
-.serviceSection .title::after, 
-.contactSection .title::after,
-.customerSection .title::after{
+ .title::after{
     content: "";
     width: 80px;
     height: 3px;

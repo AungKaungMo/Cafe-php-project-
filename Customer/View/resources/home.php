@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Home Page</title>
 
   <!-------------------------    GOOGLE FONTS   ------------------------------>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,23 +16,23 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
 
   <!------------------------  BOOTSTRAP  --------------------------------------------->
-  <link rel="stylesheet" href="../../lib/Bootstrap/css/bootstrap.min.css">
-  <script src="../../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
+  <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 
   <!-----------------------    Jquery   ---------------------------->
-  <script src="../../lib/Jquery/jquery3.6.0.js"></script>
+  <script src="../lib/Jquery/jquery3.6.0.js"></script>
 
   <!------------------------   JS   -------------------------------->
-  <script src="../javascript/home.js"></script>
+  <script src="./javascript/navigation.js"></script>
 
   <!------------------------   CSS   ----------------------------->
-  <link rel="stylesheet" href="../css/root.css">
-  <link rel="stylesheet" href="../css/navigationAndFooter.css">
-  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="./css/root.css">
+  <link rel="stylesheet" href="./css/navigationAndFooter.css">
+  <link rel="stylesheet" href="./css/home.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
 
       <a class="navbar-brand" href="#">
 
-        <img src="../img/cafeLogo 1.png" height="60px" class="logo">
+        <img src="./img/cafeLogo 1.png" height="60px" class="logo">
 
       </a>
       <div class="d-flex align-items-center mt-1 d-lg-none d-bllock">
@@ -52,7 +52,7 @@
             <iconify-icon icon="material-symbols:search" class="p-1 d-flex justify-content-center align-items-center fs-3 searchIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></iconify-icon>
           </div>
           <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
-            <!-- <img src="../img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
+            <!-- <img src="./img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
             <iconify-icon icon="mdi:user-circle" class="userIcon m-1"></iconify-icon>
 
             <div class="d-flex  align-items-center">
@@ -95,7 +95,7 @@
       <div class="collapse navbar-collapse" id="responsiveSideBar">
         <ul class="navbar-nav m-auto ">
           <li class="nav-item">
-            <a class="nav-link navtitle navtitleActive" aria-current="page" href="#">HOME</a>
+            <a class="nav-link navtitle navtitleActive" href="./home.php">HOME</a>
           </li>
           <li class="nav-item">
             <a class="nav-link navtitle mx-5" href="#">SHOP</a>
@@ -104,7 +104,7 @@
             <a class="nav-link navtitle me-5" href="#">PROMOTIONS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navtitle" href="#">BUY SHOP</a>
+            <a class="nav-link navtitle" href="./buyShop.php">BUY SHOP</a>
           </li>
         </ul>
         <div class="d-flex align-items-center position-relative">
@@ -112,7 +112,7 @@
             <iconify-icon icon="material-symbols:search" class=" p-1 d-flex justify-content-center align-items-center fs-3 searchIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></iconify-icon>
           </div>
           <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
-            <!-- <img src="../img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
+            <!-- <img src="./img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
             <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon>
 
             <div class="d-flex  align-items-center">
@@ -142,7 +142,7 @@
 
     <ul class="">
       <li class="nav-item">
-        <a class="nav-link navtitle navtitleActive pb-2" aria-current="page" href="#">HOME</a>
+        <a class="nav-link navtitle navtitleActive pb-2" aria-current="page" href="./home.php">HOME</a>
       </li>
       <li class="nav-item">
         <a class="nav-link navtitle my-5 pb-2" href="#">SHOP</a>
@@ -151,7 +151,7 @@
         <a class="nav-link navtitle pb-2" href="#">PROMOTIONS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navtitle my-5 pb-2" href="#">BUY SHOP</a>
+        <a class="nav-link navtitle my-5 pb-2" href="./buyShop.php">BUY SHOP</a>
       </li>
     </ul>
   </div>
@@ -233,7 +233,7 @@
     </div>
     <div class="col-lg-6 ">
       <div class="h-75 ">
-        <img class="aboutImage" src="../img/about.png" height="100%" width="100%">
+        <img class="aboutImage" src="./img/about.png" height="100%" width="100%">
       </div>
     </div>
   </div>
@@ -286,7 +286,7 @@
     </div>
 
     <div class="mt-5 d-flex align-items-center justify-content-center">
-      <img src="../img/service.png" width="40%" class="serviceImage">
+      <img src="./img/service.png" width="40%" class="serviceImage">
     </div>
 
 
@@ -312,7 +312,7 @@
                 <div class="d-flex justify-content-between align-items-center ">
                   <div class="d-flex align-items-center">
                     <div class="customersProfile">
-                      <img class=" rounded-circle " src="../img/cust1.jpg" width="100%" height="100%">
+                      <img class=" rounded-circle " src="./img/cust1.jpg" width="100%" height="100%">
                     </div>
                     <div class="ms-3">
                       <div class="">Willian Zin</div>
@@ -340,7 +340,7 @@
   <div class="d-flex justify-content-between align-items-center ">
     <div class="d-flex align-items-center">
       <div class="customersProfile">
-        <img class=" rounded-circle " src="../img/cust2.jpg" width="100%" height="100%">
+        <img class=" rounded-circle " src="./img/cust2.jpg" width="100%" height="100%">
       </div>
       <div class="ms-3">
         <div class="">Johnie Sinde</div>
@@ -368,7 +368,7 @@
   <div class="d-flex justify-content-between align-items-center ">
     <div class="d-flex align-items-center">
       <div class="customersProfile">
-        <img class=" rounded-circle " src="../img/cust3.jpg" width="100%" height="100%">
+        <img class=" rounded-circle " src="./img/cust3.jpg" width="100%" height="100%">
       </div>
       <div class="ms-3">
         <div class="">Gray Bellin</div>
@@ -406,7 +406,7 @@
             <iconify-icon icon="material-symbols:arrow-back" class="display-2"></iconify-icon>
           </div>
           <div class="h-100 position-absolute reviewImage">
-            <img src="../img/customerReview.png" height="170%">
+            <img src="./img/customerReview.png" height="170%">
           </div>
         </div>
       </div>
@@ -426,7 +426,7 @@
       <div class="col-md-6 text-center mt-3  ">
 
         <div class=" p-3 rounded-circle contactImage m-auto">
-          <img src="../img/contactImage.png">
+          <img src="./img/contactImage.png">
         </div>
 
         <div class="ms-5">
@@ -492,7 +492,7 @@
   <div class="footer">
     <div class="footerContainer d-flex mx-sm-5 mx-2 pt-5 mb-4 justify-content-between flex-wrap">
       <div class="footerLogo">
-        <img src="../img/footerlogo.png" width="200px">
+        <img src="./img/footerlogo.png" width="200px">
       </div>
       <div class="navigation">
         <div class="footerTitle">Navigation</div>
