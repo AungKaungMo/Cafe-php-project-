@@ -4,6 +4,7 @@
     --backgroundTertiary: #FFFFFF;
     --textColorPrimary: #FFFFFF;
     --textColorSecondary: #000000;
+    --paginationColor: #3D251E;
     --mainColor: #765341;
     --secondMainColor: #FFEBCD;
     --saleChartColorOne: #3500F2;
@@ -47,7 +48,7 @@ h3 {
 h6 {
     font-size: var(--minisubtitleFontSize);
 }
-p {
+p,span {
     font-size: var(--paragraphFontSize);
 }
 html {

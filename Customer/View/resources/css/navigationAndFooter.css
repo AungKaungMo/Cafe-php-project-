@@ -3,10 +3,10 @@
 **/
 
 .navtitle {
-  font-family: var(--navigationFont);
-  font-size: var(--navigationFontSize);
   position: relative;
   padding-left: 0 !important;
+  font-family: var(--navigationFont);
+  font-weight: bold;
 }
 .navtitle::before,
 .navtitleActive::before {
@@ -146,6 +146,7 @@
   background-color: var(--mainColor);
   right: 0;
   top: 80px;
+  z-index: 11;
 }
 .signBox::after {
   content: "";
