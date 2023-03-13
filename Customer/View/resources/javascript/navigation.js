@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $("#responsiveSideBarIcon").click(function() {
-       $(".sideBar").addClass('sideBarChange');
+        $(".sideBar").addClass('sideBarChange');
     });
     $("#closeSideBar").click(function() {
         $(".sideBar").removeClass('sideBarChange');
