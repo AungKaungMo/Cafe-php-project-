@@ -18,3 +18,111 @@
     left: 0;
     transition: all 0.5s;
 }   
+.seemoreBtn {
+    width: 200px;
+    background-color: var(--mainColor);
+    color: var(--textColorPrimary);
+    transition: all 0.5s;
+}
+.seemoreBtn:hover{
+    background-color: var(--secondMainColor);
+    color: var(--mainColor);
+}
+.buyText{
+    line-height: 23px;
+    opacity: 0.8;
+}
+@media screen and (max-width:470px) {
+    .buyText{
+    font-size: 0.8em;
+    }
+    .seemoreBtn{
+        width: 150px;
+        font-size: 0.8em;
+    }
+}
+/**
+Payment card
+**/
+.payment .title::before, .payment .title::after
+{
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .paymentCard{
+    margin-top: 7em;
+    width: 290px;
+    border: 2px solid var(--mainColor);
+    background-color: var(--backgroundTertiary);
+    border-radius: 10px;
+  }
+  .ruleText{
+    font-size: 0.9em;
+    margin-left: 1em;
+    font-family: var(--inputAndPaymentCardFont);
+  }
+  .paymentCard h6{
+    color: var(--mainColor);
+    font-weight: bold;
+  }
+  .ruleIcon{
+    color: var(--mainColor);
+  }
+  .paymentCard:nth-child(2){
+    margin-top: 5em;
+    background-color: var(--mainColor);
+    height: 470px;
+  }
+  .paymentCard:nth-child(2) .ruleIcon{
+    color: var(--secondMainColor);
+  }
+  .paymentCard:nth-child(2) .ruleText{
+    color: var(--textColorPrimary);
+  }
+  .paymentPrice{
+    color: var(--textColorPrimary);
+  }
+  .paymentCard:nth-child(2) h6{
+    color: var(--secondMainColor);
+  }
+  .buyNowBtn button, .buyNowBtn2 button{
+    background-color: var(--mainColor);
+    width: 150px;
+    color: var(--textColorPrimary);
+    border-radius: 5px;
+    border: 2px solid var(--mainColor);
+    transition: all 0.5s;
+  }
+  .buyNowBtn button:hover{
+    background-color: var(--backgroundTertiary);
+    color: var(--mainColor);
+  }
+  .buyNowBtn2 button{
+    background-color: var(--backgroundSecondary);
+    color: var(--mainColor);
+    border: 2px solid var(--backgroundSecondary);
+  }
+  .buyNowBtn2 button:hover{
+    background-color: var(--mainColor);
+    color: var(--backgroundSecondary);
+  }
+
+  @media screen and (max-width:1200px) {
+    .paymentCardContainer{
+        width: 100% !important;
+    }
+  }
+  @media screen and (max-width:992px) {
+    .paymentCard:nth-child(2){
+        margin-top: 4em;
+    }
+    .paymentCard {
+        margin-top: 4em;
+    }
+  }
+  @media screen and (max-width:681px) {
+    .paymentCardContainer{
+        justify-content: center !important;
+    }
+  }

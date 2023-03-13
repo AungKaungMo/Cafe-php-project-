@@ -72,3 +72,8 @@ body {
     font-family: var(--paragraphFont);
     background-color: var(--backgroundPrimary);
 }
+@media screen and (max-width:470px){
+    h1{
+        font-size: 2em;
+    }
+}

@@ -39,7 +39,7 @@
 
       <a class="navbar-brand" href="#">
 
-        <img src="../img/cafeLogo 1.png" height="60px" class="logo">
+        <img src="./img/cafeLogo 1.png" height="60px" class="logo">
 
       </a>
       <div class="d-flex align-items-center mt-1 d-lg-none d-bllock">
@@ -48,7 +48,7 @@
             <iconify-icon icon="material-symbols:search" class="p-1 d-flex justify-content-center align-items-center fs-3 searchIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></iconify-icon>
           </div>
           <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
-            <!-- <img src="../img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
+            <!-- <img src="./img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
             <iconify-icon icon="mdi:user-circle" class="userIcon m-1"></iconify-icon>
 
             <div class="d-flex  align-items-center">
@@ -138,7 +138,7 @@
 
     <ul class="">
       <li class="nav-item">
-        <a class="nav-link navtitle navtitleActive pb-2" aria-current="page" href="./home.php">HOME</a>
+        <a class="nav-link navtitle pb-2" href="./home.php">HOME</a>
       </li>
       <li class="nav-item">
         <a class="nav-link navtitle my-5 pb-2" href="#">SHOP</a>
@@ -154,8 +154,8 @@
   <div class="navLine"></div>
 
         <!------------------------------    Get your own shop   ---------------------------------->
-        <div class="mt-5 row mx-sm-5 mx-2 ">
-            <div class="col-6">
+        <div class="mt-5 row mx-sm-5 mx-2 d-flex flex-lg-row flex-column-reverse">
+            <div class="col-lg-6 col-12">
             <h1 class="title my-5 fw-bold position-relative pb-2">Get Your Own Shop</h1>
             <p class="buyText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ab tempora laborum. Eveniet  sit amet consectetur olor sit amet consectetur adipisicing elit. Numquam ab tempora laborum. Eveniet  sit amet consecte adipisicing elit.t  sit amet consectetu Numquam ab t fugiat deserunt culpa deleniti dolorum architecto ab?
             <span class="collapse" id="collapseExample4">Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
@@ -164,9 +164,160 @@
         <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">See More</button>
       </div>
             </div>
-            <div class="col-6">
-
+            <div class="col-lg-6 col-md-8 col-10 m-auto">
+              <img src="./img/buyShop.png" width="100%">
             </div>
         </div>
+
+        <!--------------------------    Payment Card   --------------------------------->
+
+        <div class="payment mt-5 pt-5 mx-sm-5 mx-2">
+        <h1 class="text-center title position-relative pb-2">Choose Your Plan</h1>
+
+        <div class="d-flex justify-content-between w-75 m-auto paymentCardContainer flex-wrap">
+          <div class="paymentCard p-4 ">
+            <h6 class="text-center mb-0 mt-3">Basic</h6>
+            <div class="text-center fs-5 mb-5 fw-bold">$150 per month</div>
+
+            <div class="rule">
+              <div class="d-flex ">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">have only booking and reserve system.</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">can booking 100 times each day.</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">can update menu 4 times each day.</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">can update 2 blogs.</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">online cash payment system.</p>
+              </div>
+            </div>
+            <div class="buyNowBtn mt-2 text-center">
+              <button class="p-2">Buy Now</button>
+            </div>
+          </div>
+          
+          <div class="paymentCard p-4 ">
+            <h6 class="text-center mb-0 mt-3">Premium</h6>
+            <div class="text-center fs-5 mb-5 fw-bold paymentPrice" >$400 per month</div>
+
+            <div class="rule">
+              <div class="d-flex ">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">have delivery system and booking system</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">unlimited delivery and booking.</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">can update unlimited menu everyday.</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">can update 6 blog..</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">coin payment.</p>
+              </div>
+            </div>
+            
+            <div class="buyNowBtn2 mt-2 text-center">
+              <button class="p-2">Buy Now</button>
+            </div>
+
+          </div>
+
+          <div class="paymentCard p-4 ">
+            <h6 class="text-center mb-0 mt-3">Standard</h6>
+            <div class="text-center fs-5 mb-5 fw-bold">$250 per month</div>
+
+            <div class="rule">
+              <div class="d-flex ">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">have delivery system and booking system.</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">can booking and deliver 100 time each day.</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">can update 20times menu each day.</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">can update 3 blogs.</p>
+              </div>
+              <div class="d-flex">
+              <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+              <p class=" ruleText">coin payment.</p>
+              </div>
+            </div>
+            <div class="buyNowBtn mt-2 text-center">
+              <button class="p-2">Buy Now</button>
+            </div>
+          </div>
+
+
+          </div>
+        </div>
+
+          <!-----------------------   Footer   ---------------------------->
+
+  <div class="footerImg mt-5"></div>
+  <div class="footer">
+    <div class="footerContainer d-flex mx-sm-5 mx-2 pt-5 mb-4 justify-content-between flex-wrap">
+      <div class="footerLogo">
+        <img src="./img/footerlogo.png" width="200px">
+      </div>
+      <div class="navigation">
+        <div class="footerTitle">Navigation</div>
+        <div class="mt-4 d-flex flex-column footerDetails">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">Promotions</a>
+          <a href="#">Buy Shop</a>
+        </div>
+      </div>
+
+      <div class="someLinks">
+        <div class="footerTitle">Some Links</div>
+        <div class="mt-4 d-flex flex-column footerDetails">
+          <a href="#">FAQS</a>
+          <a href="#">User Guide</a>
+          <a href="#">Privacy Policy</a>
+
+        </div>
+      </div>
+
+      <div class="socialMedia">
+        <div class="footerTitle">Social Media</div>
+        <div class="mt-4 d-flex footerDetails">
+          <a href="#"><iconify-icon icon="ic:baseline-facebook"></iconify-icon></a>
+          <a href="#"><iconify-icon icon="ph:instagram-logo-fill"></iconify-icon></a>
+          <a href="#"><iconify-icon icon="mdi:github"></iconify-icon></a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyRight pb-3">
+      <div class="w-75 m-auto mb-2"></div>
+      <p class="text-center mb-0">Copyright @ design by GroupTwo</p>
+    </div>
+  </div>
 </body>
 </html>
