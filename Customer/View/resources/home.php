@@ -52,8 +52,8 @@
             <iconify-icon icon="material-symbols:search" class="p-1 d-flex justify-content-center align-items-center fs-3 searchIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></iconify-icon>
           </div>
           <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
-            <!-- <img src="./img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
-            <iconify-icon icon="mdi:user-circle" class="userIcon m-1"></iconify-icon>
+            <img src="./img/user.png" width="50px" height="50px" class="rounded-5 userimage">
+            <!-- <iconify-icon icon="mdi:user-circle" class="userIcon m-1"></iconify-icon> -->
 
             <div class="d-flex  align-items-center">
               <p class="mt-3 userText ">New User</p>
@@ -112,29 +112,180 @@
             <iconify-icon icon="material-symbols:search" class=" p-1 d-flex justify-content-center align-items-center fs-3 searchIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></iconify-icon>
           </div>
           <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
-            <!-- <img src="./img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
-            <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon>
+            <img src="./img/user.png" width="50px" height="50px" class="rounded-5 userimage">
+            <!-- <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon> -->
 
             <div class="d-flex  align-items-center">
               <p class="mt-3 userText">New User</p>
               <iconify-icon icon="material-symbols:keyboard-arrow-down" class=" p-1 userdownIcon" width="25" height="25"></iconify-icon>
             </div>
             <div class=" w-75 p-3 position-absolute rounded-4 signBox d-none">
-              <div class="d-flex justify-content-between mt-2">
+
+              <!-------------   BEFORE SIGN IN/ SIGN UP   ------------------->
+
+              <!-- <div class="d-flex justify-content-between mt-2">
                 <p class="fw-bold signColor">Sign In</p>
                 <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
               </div>
               <div class="d-flex justify-content-between">
                 <p class="fw-bold signColor">Sign Up</p>
                 <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
+              </div> -->
+
+              <!-------------   AFTER SIGN IN/ SIGN UP   ------------------->
+
+              <div class="d-flex justify-content-between mt-2 afterLogin">
+                <div>
+                  <span class="cartText">Cart </span>
+                  <span>(14)</span>
+                </div>
+                <div>
+                  <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon"></iconify-icon>
+                </div>
+
               </div>
+              <div class="line"></div>
+
+              <div class="d-flex justify-content-between mt-2 afterLogin">
+                <div>
+                  <span class="cartText">Fav</span>
+                  <span>(14)</span>
+                </div>
+                <div>
+                  <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
+                </div>
+
+              </div>
+              <div class="line"></div>
+
+              <div class="d-flex justify-content-between mt-2 afterLogin">
+                <div>
+                  <span class="cartText">Profile </span>
+
+                </div>
+                <div>
+                  <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 cartIcon"></iconify-icon>
+                </div>
+
+              </div>
+              <div class="line"></div>
+
             </div>
+
+          </div>
+        </div>
+      </div>
+  </nav>
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <div class="d-flex ">
+        <h5 id="offcanvasRightLabel" class="favList fs-3">Favourite </h5>
+        <iconify-icon icon="mdi:cards-heart" class="mt-2 ms-2 fs-3"></iconify-icon>
+      </div>
+
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="navLine"></div>
+    <div class="offcanvas-body">
+
+      <div class="d-flex">
+
+        <div class="ListImg me-3 col-5">
+          <img src="./img/cake.jpg" width="100%" height="100%">
+        </div>
+
+        <div class="col-7">
+          <div class="d-flex justify-content-between">
+            <div class="favProductTitle fw-bold">Chocolate Cake</div>
+            <iconify-icon icon="mdi:cards-heart" class="fs-3 heartIcon"></iconify-icon>
+          </div>
+
+          <p class="mt-2 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
+          <p class="mb-1 favtext">Price - <span class="fw-bold">2000mmk</span></p>
+          <div class="d-flex justify-content-between">
+
+            <div class="gowebsite">
+              <button class="p-2">Go to website</button>
+            </div>
+
+            <div>
+              <iconify-icon icon="ph:shopping-cart-fill" class="p-1 buyIcon fs-4 rounded-circle"></iconify-icon>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="navLine my-4"></div>
+
+      <div class="d-flex">
+
+        <div class="ListImg me-3 col-5">
+          <img src="./img/cake.jpg" width="100%" height="100%">
+        </div>
+
+        <div class="col-7">
+          <div class="d-flex justify-content-between">
+            <div class="favProductTitle fw-bold">Chocolate Cake</div>
+            <iconify-icon icon="mdi:cards-heart" class="fs-3 heartIcon"></iconify-icon>
+          </div>
+
+          <p class="mt-2 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
+          <p class="mb-1 favtext">Price - <span class="fw-bold">2000mmk</span></p>
+          <div class="d-flex justify-content-between">
+
+            <div class="gowebsite">
+              <button class="p-2">Go to website</button>
+            </div>
+
+            <div>
+              <iconify-icon icon="ph:shopping-cart-fill" class="p-1 buyIcon fs-4 rounded-circle"></iconify-icon>
+            </div>
+
           </div>
 
         </div>
+
       </div>
+      <div class="navLine my-4"></div>
+
+      <div class="d-flex">
+
+        <div class="ListImg me-3 col-5">
+          <img src="./img/cake.jpg" width="100%" height="100%">
+        </div>
+
+        <div class="col-7">
+          <div class="d-flex justify-content-between">
+            <div class="favProductTitle fw-bold">Chocolate Cake</div>
+            <iconify-icon icon="mdi:cards-heart" class="fs-3 heartIcon"></iconify-icon>
+          </div>
+
+          <p class="mt-2 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
+          <p class="mb-1 favtext">Price - <span class="fw-bold">2000mmk</span></p>
+
+          <div class="d-flex justify-content-between">
+
+            <div class="gowebsite">
+              <button class="p-2">Go to website</button>
+            </div>
+
+            <div>
+              <iconify-icon icon="ph:shopping-cart-fill" class="p-1 buyIcon fs-4 rounded-circle"></iconify-icon>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="navLine my-4"></div>
+
+
     </div>
-  </nav>
+  </div>
 
   <!-----------------------------   RES side bar   --------------------------->
   <div class="position-absolute top-0 p-5  sideBar d-flex flex-column justify-content-center align-items-center ">
@@ -304,97 +455,97 @@
 
             <div class=" customersBox m-lg-0 m-auto">
 
-             <div class="swiper mySwiper1">
+              <div class="swiper mySwiper1">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
 
-              <div class="mx-3 my-3">
-                <div class="d-flex justify-content-between align-items-center ">
-                  <div class="d-flex align-items-center">
-                    <div class="customersProfile">
-                      <img class=" rounded-circle " src="./img/cust1.jpg" width="100%" height="100%">
-                    </div>
-                    <div class="ms-3">
-                      <div class="">Willian Zin</div>
-                      <h6 class="">Yangon</h6>
-                    </div>
-                  </div>
-                  <div>
-                    <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                    <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                    <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                    <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                  </div>
-                </div>
+                    <div class="mx-3 my-3">
+                      <div class="d-flex justify-content-between align-items-center ">
+                        <div class="d-flex align-items-center">
+                          <div class="customersProfile">
+                            <img class=" rounded-circle " src="./img/cust1.jpg" width="100%" height="100%">
+                          </div>
+                          <div class="ms-3">
+                            <div class="">Willian Zin</div>
+                            <h6 class="">Yangon</h6>
+                          </div>
+                        </div>
+                        <div>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                        </div>
+                      </div>
 
-                    <div class="mt-4 customersText">
-                      Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
-                    </div>
+                      <div class="mt-4 customersText">
+                        Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
+                      </div>
 
-              </div>
+                    </div>
                   </div>
 
                   <div class="swiper-slide">
 
-<div class="mx-3 my-3">
-  <div class="d-flex justify-content-between align-items-center ">
-    <div class="d-flex align-items-center">
-      <div class="customersProfile">
-        <img class=" rounded-circle " src="./img/cust2.jpg" width="100%" height="100%">
-      </div>
-      <div class="ms-3">
-        <div class="">Johnie Sinde</div>
-        <h6 class="">Yangon</h6>
-      </div>
-    </div>
-    <div>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-    </div>
-  </div>
+                    <div class="mx-3 my-3">
+                      <div class="d-flex justify-content-between align-items-center ">
+                        <div class="d-flex align-items-center">
+                          <div class="customersProfile">
+                            <img class=" rounded-circle " src="./img/cust2.jpg" width="100%" height="100%">
+                          </div>
+                          <div class="ms-3">
+                            <div class="">Johnie Sinde</div>
+                            <h6 class="">Yangon</h6>
+                          </div>
+                        </div>
+                        <div>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                        </div>
+                      </div>
 
-      <div class="mt-4 customersText">
-        Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
-      </div>
+                      <div class="mt-4 customersText">
+                        Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
+                      </div>
 
-</div>
-    </div>
-
-    <div class="swiper-slide">
-
-<div class="mx-3 my-3">
-  <div class="d-flex justify-content-between align-items-center ">
-    <div class="d-flex align-items-center">
-      <div class="customersProfile">
-        <img class=" rounded-circle " src="./img/cust3.jpg" width="100%" height="100%">
-      </div>
-      <div class="ms-3">
-        <div class="">Gray Bellin</div>
-        <h6 class="">Yangon</h6>
-      </div>
-    </div>
-    <div>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-    </div>
-  </div>
-
-      <div class="mt-4 customersText">
-        Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
-      </div>
-
-</div>
-    </div>
-   
+                    </div>
                   </div>
 
-                  <div class="swiper-pagination testimonialBullet"></div>
+                  <div class="swiper-slide">
+
+                    <div class="mx-3 my-3">
+                      <div class="d-flex justify-content-between align-items-center ">
+                        <div class="d-flex align-items-center">
+                          <div class="customersProfile">
+                            <img class=" rounded-circle " src="./img/cust3.jpg" width="100%" height="100%">
+                          </div>
+                          <div class="ms-3">
+                            <div class="">Gray Bellin</div>
+                            <h6 class="">Yangon</h6>
+                          </div>
+                        </div>
+                        <div>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                        </div>
+                      </div>
+
+                      <div class="mt-4 customersText">
+                        Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
+                      </div>
+
+                    </div>
+                  </div>
 
                 </div>
+
+                <div class="swiper-pagination testimonialBullet"></div>
+
+              </div>
 
             </div>
 
@@ -546,14 +697,14 @@
     });
   </script>
 
-<script>
-  var swiper = new Swiper(".mySwiper1", {
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+  <script>
+    var swiper = new Swiper(".mySwiper1", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
   </script>
 </body>
 

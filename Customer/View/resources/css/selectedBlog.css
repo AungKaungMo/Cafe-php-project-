@@ -1,0 +1,118 @@
+.navLine, .line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--mainColor);
+}
+.backIcon a{
+    color: var(--mainColor)
+}
+.aurthorImg{
+    width: 140px;
+    height: 140px;
+}
+.commentSection{
+    height: 80vh;
+    overflow: auto;
+}
+.commentImage{
+    width: 60px;
+    height: 60px;
+}
+.aurthorImg img,.commentImage img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--mainColor);
+}
+.socialGp iconify-icon{
+    font-size: 2em;
+    color: var(--mainColor);
+}
+.personName{
+    color: var(--mainColor);
+}
+.commentDate{
+    font-size: var(--minisubtitleFontSize);
+}
+.likeIcon, .unLikeIcon{
+    color: var(--mainColor);
+}
+.commentText{
+    background-color: var(--mainColor);
+    position: relative;
+    border-radius: 0px 20px;
+}
+.commentText::after{
+    content: '';
+    width:25px;
+    height: 25px;
+    background-color: var(--mainColor);
+    position: absolute;
+    top: -12px;
+    transform: rotate(45deg);
+    left:15px;
+}
+.commentText p{
+    color: var(--textColorPrimary);
+    font-size: 0.9em;
+}
+.commentSection::-webkit-scrollbar {
+    width: 0;
+    margin: 0 ;
+    padding: 0 ;
+}
+.typeBox textarea{
+    width: 85%;
+    height:200px;
+    background-color: var(--mainColor);
+    padding: 1em;
+    border-radius: 10px;
+    color: var(--textColorPrimary);
+    border: none;
+    outline: none;
+}
+.typeBox textarea::placeholder{
+    color: var(--textColorPrimary);
+    opacity: 0.7;
+}
+.submitBtn button{
+    width: 180px;
+    border-radius: 10px;
+    background-color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    color: var(--textColorPrimary);
+    transition: all 0.5s;
+}
+.submitBtn button:hover{
+    background-color: transparent;
+    color: var(--mainColor);
+}
+@media screen and (max-width:470px) {
+    .title{
+        font-size: 1.2em !important;
+    }
+    .subtitle{
+        font-size: 1.1em !important;
+    }
+    .subtitle + p {
+        font-size: 0.8em !important;
+    }
+    .aurthorImg{
+        width: 120px;
+        height: 120px;
+    }
+    .aurthorName, .blogTitle{
+        font-size: 1em !important;
+    }
+    .commentText p{
+        font-size: 0.8em;
+    }
+    .typeBox textarea{
+        width: 100% ;
+    }
+    .submitBtn button{
+        width: 150px;
+        font-size: 0.8em;
+    }
+}

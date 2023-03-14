@@ -136,6 +136,7 @@
 .inputSearchIcon {
   color: var(--secondMainColor);
 }
+
 .signColor {
   color: var(--textColorPrimary);
   font-family: var(--titleFont);
@@ -148,6 +149,70 @@
   right: 0;
   top: 80px;
   z-index: 11;
+}
+.cartIcon{
+  color: var(--secondMainColor);
+}
+.cartText{
+  font-family: var(--titleFont);
+  color: var(--secondMainColor);
+  font-size: 1.2em;
+}
+.cartText + span{
+  color: var(--secondMainColor);
+}
+.line{
+  width: 100%;
+  margin-top: 0.3em;
+  height: 1px;
+  margin-bottom: 1em;
+  background-color: var(--backgroundTertiary);
+}
+.favList{
+  font-family: var(--titleFont);
+}
+.favList + iconify-icon{
+  color: var(--mainColor);
+}
+.ListImg{
+  width: 120px;
+  height: 120px;
+}
+.ListImg img{
+  border-radius: 10px;
+  border: 2px solid var(--mainColor);
+  object-fit: cover;
+}
+.favProductTitle{
+  color: var(--mainColor);
+}
+.heartIcon{
+  color: var(--mainColor);
+  margin-left: 2em;
+}
+.favtext{
+  font-size: 0.8em;
+}
+.buyIcon{
+  background-color: var(--mainColor);
+  color: var(--textColorPrimary);
+  transition: all 0.5s;
+}
+.buyIcon:hover{
+  transform: rotate(360deg);
+}
+.gowebsite button{
+  font-weight: bold;
+  background-color: var(--mainColor);
+  color: var(--textColorPrimary);
+  border-radius: 5px;
+  transition: all 0.5s;
+  border: 2px solid var(--mainColor);
+  font-size: 0.8em;
+}
+.gowebsite button:hover{
+  background-color: transparent;
+  color: var(--mainColor);
 }
 .signBox::after {
   content: "";
@@ -166,6 +231,7 @@
     right: unset !important;
   }
 }
+
 
 /**
 Footer
