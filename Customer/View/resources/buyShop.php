@@ -108,7 +108,7 @@
             <iconify-icon icon="material-symbols:search" class=" p-1 d-flex justify-content-center align-items-center fs-3 searchIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></iconify-icon>
           </div>
           <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
-            <!-- <img src="../img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
+            <!-- <img src="./img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
             <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon>
 
             <div class="d-flex  align-items-center">
@@ -202,7 +202,7 @@
               </div>
             </div>
             <div class="buyNowBtn mt-2 text-center">
-              <button class="p-2">Buy Now</button>
+            <a href="./buyShopFillInformation.php"> <button class="p-2">Buy Now</button></a>
             </div>
           </div>
           
@@ -234,7 +234,7 @@
             </div>
             
             <div class="buyNowBtn2 mt-2 text-center">
-              <button class="p-2">Buy Now</button>
+            <a href="./buyShopFillInformation.php"> <button class="p-2">Buy Now</button></a>
             </div>
 
           </div>
@@ -266,7 +266,7 @@
               </div>
             </div>
             <div class="buyNowBtn mt-2 text-center">
-              <button class="p-2">Buy Now</button>
+            <a href="./buyShopFillInformation.php"><button class="p-2">Buy Now</button></a>
             </div>
           </div>
 
