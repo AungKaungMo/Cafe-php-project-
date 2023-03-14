@@ -13,16 +13,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Poppins:wght@200;400&family=Roboto:wght@300;400&family=Ubuntu:ital,wght@1,300;1,400&display=swap" rel="stylesheet" />
 
   <!------------------------  BOOTSTRAP  --------------------------------------------->
-  <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
-  <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
+  <script src="./lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-------------------------   Iconify   --------------------->
   <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
 
 
   <!-------------------------   CSS   ---------------------------------->
-  <link rel="stylesheet" href="./css/root.css">
-  <link rel="stylesheet" href="./css/shopFillInformation.css">
+  <link rel="stylesheet" href="./resources/css/root.css">
+  <link rel="stylesheet" href="./resources/css/shopFillInformation.css">
 
 </head>
 

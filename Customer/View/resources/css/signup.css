@@ -1,0 +1,130 @@
+.part1 {
+    background-color: var(--mainColor);
+    text-align: center;
+    height: 100vh;
+}
+
+.part2 {
+    background-color: var(--backgroundSecondary);
+    text-align: center !important;
+}
+
+.box {
+    width: 20em !important;
+    height: 2.8em !important;
+    border-style: none !important;
+    border-radius: 15em !important;
+    background-color: var(--mainColor) !important;
+    color: var(--backgroundSecondary) !important;
+    padding-left: 3.5em !important;
+    padding-right: 0.5em !important;
+    font-family: var(--inputAndPaymentCardFont) !important;
+}
+
+.box::placeholder {
+    color: var(--backgroundSecondary);
+}
+
+.button {
+    width: 8em;
+    height: 2.5em;
+    background-color: var(--mainColor);
+    color: var(--backgroundSecondary) !important;
+    font-family: var(--inputAndPaymentCardFont);
+    border-radius: 0.3em;
+    border-style: none;
+    font-size: var(--paragraphFontSize);
+}
+
+.photo2 {
+    width: 70%;
+}
+
+.gp1 {
+    position: relative;
+}
+
+
+.icon1 {
+    position: absolute;
+    color: var(--mainColor);
+    left: 3em;
+    font-size: 2em;
+    top: 0.2em;
+}
+
+.gp2 {
+    position: relative;
+}
+
+.icon2 {
+    position: absolute;
+    color: var(--mainColor);
+    left: 3em;
+    font-size: 2em;
+    top: 0.2em;
+}
+
+.gp3 {
+    position: relative;
+}
+
+
+.icon3 {
+    position: absolute;
+    color: var(--mainColor);
+    left: 3em;
+    font-size: 2em;
+    top: 0.2em;
+}
+
+.gp4 {
+    position: relative;
+}
+
+.icon4 {
+    position: absolute;
+    color: var(--mainColor);
+    left: 3em;
+    font-size: 2em;
+    top: 0.2em;
+}
+
+.gp5 {
+    position: relative;
+}
+
+.icon5 {
+    position: absolute;
+    color: var(--mainColor);
+    left: 3em;
+    font-size: 2em;
+    top: 0.2em;
+}
+
+@media screen and (max-width: 720px) {
+    .box {
+        width: 18em;
+        height: 2em;
+    }
+
+    .photo2 {
+        width: 100%;
+    }
+
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--backgroundSecondary);
+}
+
+h2 {
+    color: var(--mainColor);
+}
+
+.forgot {
+    font-size: var(--navigationFontSize) !important;
+
+}

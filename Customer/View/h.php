@@ -16,23 +16,23 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
 
   <!------------------------  BOOTSTRAP  --------------------------------------------->
-  <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
-  <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
+  <script src="./lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 
   <!-----------------------    Jquery   ---------------------------->
-  <script src="../lib/Jquery/jquery3.6.0.js"></script>
+  <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
   <!------------------------   JS   -------------------------------->
-  <script src="./javascript/navigation.js"></script>
+  <script src="./resources/js/navigation.js"></script>
 
   <!------------------------   CSS   ----------------------------->
-  <link rel="stylesheet" href="./css/root.css">
-  <link rel="stylesheet" href="./css/navigationAndFooter.css">
-  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./resources/css/root.css">
+  <link rel="stylesheet" href="./resources/css/navigationAndFooter.css">
+  <link rel="stylesheet" href="./resources/css/home.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
 
       <a class="navbar-brand" href="#">
 
-        <img src="./img/cafeLogo 1.png" height="60px" class="logo">
+        <img src="./resources/img/cafeLogo 1.png" height="60px" class="logo">
 
       </a>
       <div class="d-flex align-items-center mt-1 d-lg-none d-bllock">
@@ -384,7 +384,7 @@
     </div>
     <div class="col-lg-6 ">
       <div class="h-75 ">
-        <img class="aboutImage" src="./img/about.png" height="100%" width="100%">
+        <img class="aboutImage" src="./resources/img/about.png" height="100%" width="100%">
       </div>
     </div>
   </div>
@@ -437,7 +437,7 @@
     </div>
 
     <div class="mt-5 d-flex align-items-center justify-content-center">
-      <img src="./img/service.png" width="40%" class="serviceImage">
+      <img src="./resources/img/service.png" width="40%" class="serviceImage">
     </div>
 
 
@@ -463,7 +463,7 @@
                       <div class="d-flex justify-content-between align-items-center ">
                         <div class="d-flex align-items-center">
                           <div class="customersProfile">
-                            <img class=" rounded-circle " src="./img/cust1.jpg" width="100%" height="100%">
+                            <img class=" rounded-circle " src="./resources/img/cust1.jpg" width="100%" height="100%">
                           </div>
                           <div class="ms-3">
                             <div class="">Willian Zin</div>
@@ -491,7 +491,7 @@
                       <div class="d-flex justify-content-between align-items-center ">
                         <div class="d-flex align-items-center">
                           <div class="customersProfile">
-                            <img class=" rounded-circle " src="./img/cust2.jpg" width="100%" height="100%">
+                            <img class=" rounded-circle " src="./resources/img/cust2.jpg" width="100%" height="100%">
                           </div>
                           <div class="ms-3">
                             <div class="">Johnie Sinde</div>
@@ -519,7 +519,7 @@
                       <div class="d-flex justify-content-between align-items-center ">
                         <div class="d-flex align-items-center">
                           <div class="customersProfile">
-                            <img class=" rounded-circle " src="./img/cust3.jpg" width="100%" height="100%">
+                            <img class=" rounded-circle " src="./resources/img/cust3.jpg" width="100%" height="100%">
                           </div>
                           <div class="ms-3">
                             <div class="">Gray Bellin</div>
@@ -557,7 +557,7 @@
             <iconify-icon icon="material-symbols:arrow-back" class="display-2"></iconify-icon>
           </div>
           <div class="h-100 position-absolute reviewImage">
-            <img src="./img/customerReview.png" height="170%">
+            <img src="./resources/img/customerReview.png" height="170%">
           </div>
         </div>
       </div>
@@ -577,7 +577,7 @@
       <div class="col-md-6 text-center mt-3  ">
 
         <div class=" p-3 rounded-circle contactImage m-auto">
-          <img src="./img/contactImage.png">
+          <img src="./resources/img/contactImage.png">
         </div>
 
         <div class="ms-5">
@@ -643,7 +643,7 @@
   <div class="footer">
     <div class="footerContainer d-flex mx-sm-5 mx-2 pt-5 mb-4 justify-content-between flex-wrap">
       <div class="footerLogo">
-        <img src="./img/footerlogo.png" width="200px">
+        <img src="./resources/img/footerlogo.png" width="200px">
       </div>
       <div class="navigation">
         <div class="footerTitle">Navigation</div>
