@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adminlogin</title>
+    <title>Login</title>
     <!-------css links----->
     <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/adminlogin.css">
+    <link rel="stylesheet" href="./resources/css/login.css">
 
-    <!---bootstrap link----->
+    <!--------bootstrap5-------->
     <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
     <script src="./lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -26,18 +26,19 @@
                     <div class="card login text-white" style="border-radius: 1rem;">
                         <div class="card-body text-center">
                             <div class="mb-md-3 mt-md-5 pb-3">
-                                <img src="./resources/img/cafeLogo 1.png" alt="" class="mb-5" width="50%">
+                                <h2 class="fw-bold mb-1 text-white letter">Admin Login</h2>
+                                <img src="./resources/img/footerlogo.png" alt="" class="mb-4" width="30%">
                                 <form action="" method="post">
                                     <div class="form-outline form-white mb-4 gp1">
                                         <input type="email" id="typeEmailX" class="box fw-bold " placeholder="EMAIL" name="email" />
                                         <iconify-icon icon="ic:baseline-mail" class="icon1"></iconify-icon>
                                     </div>
-                                    <div class=" form-outline form-white mb-4 gp2">
+                                    <div class=" form-outline form-white mb-4 gp1">
                                         <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" />
-                                        <iconify-icon icon="ic:outline-key" class="icon2"></iconify-icon>
+                                        <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                                     </div>
                                     <button class="button mb-5 fw-bold" type="submit" name="send">Log in</button>
-                                    <br>
+                                    
                             </div>
                             </form>
                         </div>

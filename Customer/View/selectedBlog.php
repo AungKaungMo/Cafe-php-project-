@@ -12,24 +12,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Poppins:wght@200;400&family=Roboto:wght@300;400&family=Ubuntu:ital,wght@1,300;1,400&display=swap" rel="stylesheet" />
 
-  <!------------------------  BOOTSTRAP  --------------------------------------------->
-  <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
-  <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!------------------------  BOOTSTRAP  --------------------------------------------->
+    <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
+  <script src="./lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-------------------------   Iconify   --------------------->
   <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
 
 
   <!-------------------------   CSS   ---------------------------------->
-  <link rel="stylesheet" href="./css/root.css">
-  <link rel="stylesheet" href="./css/selectedBlog.css">
+  <link rel="stylesheet" href="./resources/css/root.css">
+  <link rel="stylesheet" href="./resources/css/selectedBlog.css">
 
   
   <!-----------------------    Jquery   ---------------------------->
-  <script src="../lib/Jquery/jquery3.6.0.js"></script>
+  <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
   <!------------------------   JS   -------------------------------->
-  <script src="./javascript/selectedBlog.js"></script>
+  <script src="./resources/js/selectedBlog.js"></script>
 
 </head>
 <body>
@@ -44,7 +44,7 @@
   <div class="row mx-sm-5 mx-2">
     <div class="col-md-6 col-12">
 <div class="w-75 my-5 bg-info rounded-4">
-    <img src="./img/blog.png" width="100%" class="rounded-4">
+    <img src="./resources/img/blog.png" width="100%" class="rounded-4">
 </div>
 <h1 class="fs-2 fw-bold title">Essential Guide to Healthy Eating</h1>
 <div>
@@ -93,7 +93,7 @@ too — just in moderation. Avoid food that is
     <div class="col-md-6 col-12 mt-5">
         <div class="d-flex">
             <div class="me-4 aurthorImg">
-                <img src="./img/aurthor.jpg">
+                <img src="./resources/img/aurthor.jpg">
             </div>
             <div>
                 <div class="fs-5 aurthorName">Aurthor - <span>John Selena Zane</span></div>
@@ -116,7 +116,7 @@ too — just in moderation. Avoid food that is
         <div class="comment mt-5">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex">
-                    <div class="commentImage"><img src="./img/aurthor.jpg"></div>
+                    <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
                     <div class="ms-4">
                         <p class="personName fw-bold mb-0 fs-5">Calara</p>
                         <p class="commentDate">12/03/2023</p>
@@ -135,7 +135,7 @@ too — just in moderation. Avoid food that is
         <div class="comment mt-5">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex">
-                    <div class="commentImage"><img src="./img/aurthor.jpg"></div>
+                    <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
                     <div class="ms-4">
                         <p class="personName fw-bold mb-0 fs-5">Calara</p>
                         <p class="commentDate">12/03/2023</p>
@@ -154,7 +154,7 @@ too — just in moderation. Avoid food that is
         <div class="comment mt-5">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex">
-                    <div class="commentImage"><img src="./img/aurthor.jpg"></div>
+                    <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
                     <div class="ms-4">
                         <p class="personName fw-bold mb-0 fs-5">Calara</p>
                         <p class="commentDate">12/03/2023</p>

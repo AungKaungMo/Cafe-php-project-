@@ -33,9 +33,9 @@
                                         <input type="email" id="typeEmailX" class="box fw-bold " placeholder="EMAIL" name="email" />
                                         <iconify-icon icon="ic:baseline-mail" class="icon1"></iconify-icon>
                                     </div>
-                                    <div class=" form-outline form-white mb-4 gp2">
+                                    <div class=" form-outline form-white mb-4 gp1">
                                         <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" />
-                                        <iconify-icon icon="ic:outline-key" class="icon2"></iconify-icon>
+                                        <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                                     </div>
                                     <button class="button mb-5 fw-bold" type="submit" name="send">Log in</button>
                                     <br>

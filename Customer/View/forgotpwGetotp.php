@@ -33,8 +33,8 @@
                                         <input type="emal" id="typeEmailX" class="box fw-bold " placeholder="Enter your email" name="email" />
                                         <button class="getotp fw-bold">Get Code</button>
                                     </div>
-                                    <div class=" form-outline form-white mb-4">
-                                        <input type="password" id="typePasswordX" class="box1 fw-bold " placeholder="Enter Code- - - - - -" name="code" />
+                                    <div class=" form-outline divbox form-white mb-4">
+                                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="Enter Code- - - - - -" name="code" />
                                     </div>
                                     <button class="button mb-5 fw-bold" type="submit" name="send"> <a href="./changepw.php">Continue</a> </button>
                                     <br>
