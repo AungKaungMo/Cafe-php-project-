@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adminlogin</title>
     <!-------css links----->
-    <link rel="stylesheet" href="./css/root.css">
-    <link rel="stylesheet" href="./css/adminlogin.css">
+    <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/adminlogin.css">
 
     <!---bootstrap link----->
-    <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
-    <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
+    <script src="./lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!------icons link------->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
@@ -26,7 +26,7 @@
                     <div class="card login text-white" style="border-radius: 1rem;">
                         <div class="card-body text-center">
                             <div class="mb-md-3 mt-md-5 pb-3">
-                                <img src="./img/cafeLogo 1.png" alt="" class="mb-5" width="50%">
+                                <img src="./resources/img/cafeLogo 1.png" alt="" class="mb-5" width="50%">
                                 <form action="" method="post">
                                     <div class="form-outline form-white mb-4 gp1">
                                         <input type="email" id="typeEmailX" class="box fw-bold " placeholder="EMAIL" name="email" />

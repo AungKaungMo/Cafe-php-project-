@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <!-------css links----->
-    <link rel="stylesheet" href="./css/root.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/login.css">
 
     <!--------bootstrap5-------->
-    <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
-    <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
+    <script src="./lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!------icons link------->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
@@ -27,7 +27,7 @@
                         <div class="card-body text-center">
                             <div class="mb-md-3 mt-md-5 pb-3">
                                 <h2 class="fw-bold mb-1 text-white letter">SignIn on</h2>
-                                <img src="./img/footerlogo.png" alt="" class="mb-4" width="30%">
+                                <img src="./resources/img/footerlogo.png" alt="" class="mb-4" width="30%">
                                 <form action="" method="post">
                                     <div class="form-outline form-white mb-4 gp1">
                                         <input type="email" id="typeEmailX" class="box fw-bold " placeholder="EMAIL" name="email" />

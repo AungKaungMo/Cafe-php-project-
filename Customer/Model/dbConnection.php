@@ -14,9 +14,7 @@ class DBConnection {
     public function connect() {
         #//Connection Connect
         $pdo = new PDO(
-            "mysql:host=$this->hostname;
-            port = $this->port;
-        dbname = $this->dbname",
+            "mysql:host=$this->hostname;port=$this->port;dbname=d$this->dbname",
         $this->username,
             $this->password
         );

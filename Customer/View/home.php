@@ -16,23 +16,23 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
 
   <!------------------------  BOOTSTRAP  --------------------------------------------->
-  <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
-  <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
+  <script src="./lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 
   <!-----------------------    Jquery   ---------------------------->
-  <script src="../lib/Jquery/jquery3.6.0.js"></script>
+  <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
   <!------------------------   JS   -------------------------------->
-  <script src="./javascript/navigation.js"></script>
+  <script src="./resources/js/navigation.js"></script>
 
   <!------------------------   CSS   ----------------------------->
-  <link rel="stylesheet" href="./css/root.css">
-  <link rel="stylesheet" href="./css/navigationAndFooter.css">
-  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./resources/css/root.css">
+  <link rel="stylesheet" href="./resources/css/navigationAndFooter.css">
+  <link rel="stylesheet" href="./resources/css/home.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
 
       <a class="navbar-brand" href="#">
 
-        <img src="./img/cafeLogo 1.png" height="60px" class="logo">
+        <img src="./resources/img/cafeLogo 1.png" height="60px" class="logo">
 
       </a>
       <div class="d-flex align-items-center mt-1 d-lg-none d-bllock">
@@ -52,7 +52,7 @@
             <iconify-icon icon="material-symbols:search" class="p-1 d-flex justify-content-center align-items-center fs-3 searchIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></iconify-icon>
           </div>
           <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
-            <!-- <img src="./img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
+            <!-- <img src="./resources/img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
             <iconify-icon icon="mdi:user-circle" class="userIcon m-1"></iconify-icon>
 
             <div class="d-flex  align-items-center">
@@ -112,7 +112,7 @@
             <iconify-icon icon="material-symbols:search" class=" p-1 d-flex justify-content-center align-items-center fs-3 searchIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></iconify-icon>
           </div>
           <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
-            <!-- <img src="./img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
+            <!-- <img src="./resources/img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
             <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon>
 
             <div class="d-flex  align-items-center">
@@ -233,7 +233,7 @@
     </div>
     <div class="col-lg-6 ">
       <div class="h-75 ">
-        <img class="aboutImage" src="./img/about.png" height="100%" width="100%">
+        <img class="aboutImage" src="./resources/img/about.png" height="100%" width="100%">
       </div>
     </div>
   </div>
@@ -286,7 +286,7 @@
     </div>
 
     <div class="mt-5 d-flex align-items-center justify-content-center">
-      <img src="./img/service.png" width="40%" class="serviceImage">
+      <img src="./resources/img/service.png" width="40%" class="serviceImage">
     </div>
 
 
@@ -304,97 +304,97 @@
 
             <div class=" customersBox m-lg-0 m-auto">
 
-             <div class="swiper mySwiper1">
+              <div class="swiper mySwiper1">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
 
-              <div class="mx-3 my-3">
-                <div class="d-flex justify-content-between align-items-center ">
-                  <div class="d-flex align-items-center">
-                    <div class="customersProfile">
-                      <img class=" rounded-circle " src="./img/cust1.jpg" width="100%" height="100%">
-                    </div>
-                    <div class="ms-3">
-                      <div class="">Willian Zin</div>
-                      <h6 class="">Yangon</h6>
-                    </div>
-                  </div>
-                  <div>
-                    <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                    <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                    <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                    <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                  </div>
-                </div>
+                    <div class="mx-3 my-3">
+                      <div class="d-flex justify-content-between align-items-center ">
+                        <div class="d-flex align-items-center">
+                          <div class="customersProfile">
+                            <img class=" rounded-circle " src="./resources/img/cust1.jpg" width="100%" height="100%">
+                          </div>
+                          <div class="ms-3">
+                            <div class="">Willian Zin</div>
+                            <h6 class="">Yangon</h6>
+                          </div>
+                        </div>
+                        <div>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                        </div>
+                      </div>
 
-                    <div class="mt-4 customersText">
-                      Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
-                    </div>
+                      <div class="mt-4 customersText">
+                        Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
+                      </div>
 
-              </div>
+                    </div>
                   </div>
 
                   <div class="swiper-slide">
 
-<div class="mx-3 my-3">
-  <div class="d-flex justify-content-between align-items-center ">
-    <div class="d-flex align-items-center">
-      <div class="customersProfile">
-        <img class=" rounded-circle " src="./img/cust2.jpg" width="100%" height="100%">
-      </div>
-      <div class="ms-3">
-        <div class="">Johnie Sinde</div>
-        <h6 class="">Yangon</h6>
-      </div>
-    </div>
-    <div>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-    </div>
-  </div>
+                    <div class="mx-3 my-3">
+                      <div class="d-flex justify-content-between align-items-center ">
+                        <div class="d-flex align-items-center">
+                          <div class="customersProfile">
+                            <img class=" rounded-circle " src="./resources/img/cust2.jpg" width="100%" height="100%">
+                          </div>
+                          <div class="ms-3">
+                            <div class="">Johnie Sinde</div>
+                            <h6 class="">Yangon</h6>
+                          </div>
+                        </div>
+                        <div>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                        </div>
+                      </div>
 
-      <div class="mt-4 customersText">
-        Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
-      </div>
+                      <div class="mt-4 customersText">
+                        Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
+                      </div>
 
-</div>
-    </div>
-
-    <div class="swiper-slide">
-
-<div class="mx-3 my-3">
-  <div class="d-flex justify-content-between align-items-center ">
-    <div class="d-flex align-items-center">
-      <div class="customersProfile">
-        <img class=" rounded-circle " src="./img/cust3.jpg" width="100%" height="100%">
-      </div>
-      <div class="ms-3">
-        <div class="">Gray Bellin</div>
-        <h6 class="">Yangon</h6>
-      </div>
-    </div>
-    <div>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-    </div>
-  </div>
-
-      <div class="mt-4 customersText">
-        Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
-      </div>
-
-</div>
-    </div>
-   
+                    </div>
                   </div>
 
-                  <div class="swiper-pagination testimonialBullet"></div>
+                  <div class="swiper-slide">
+
+                    <div class="mx-3 my-3">
+                      <div class="d-flex justify-content-between align-items-center ">
+                        <div class="d-flex align-items-center">
+                          <div class="customersProfile">
+                            <img class=" rounded-circle " src="./resources/img/cust3.jpg" width="100%" height="100%">
+                          </div>
+                          <div class="ms-3">
+                            <div class="">Gray Bellin</div>
+                            <h6 class="">Yangon</h6>
+                          </div>
+                        </div>
+                        <div>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                        </div>
+                      </div>
+
+                      <div class="mt-4 customersText">
+                        Lorem ipsum dolor sit amet consectetur pisicing elit. Aut ex et numquam. pisicing elit. Aut ex et numquam. adipisicing elit. Aut ex et numquam. consectetur adipisicing elit. Aut ex et numquam.
+                      </div>
+
+                    </div>
+                  </div>
 
                 </div>
+
+                <div class="swiper-pagination testimonialBullet"></div>
+
+              </div>
 
             </div>
 
@@ -406,7 +406,7 @@
             <iconify-icon icon="material-symbols:arrow-back" class="display-2"></iconify-icon>
           </div>
           <div class="h-100 position-absolute reviewImage">
-            <img src="./img/customerReview.png" height="170%">
+            <img src="./resources/img/customerReview.png" height="170%">
           </div>
         </div>
       </div>
@@ -426,7 +426,7 @@
       <div class="col-md-6 text-center mt-3  ">
 
         <div class=" p-3 rounded-circle contactImage m-auto">
-          <img src="./img/contactImage.png">
+          <img src="./resources/img/contactImage.png">
         </div>
 
         <div class="ms-5">
@@ -488,49 +488,10 @@
 
   <!-----------------------   Footer   ---------------------------->
 
-  <div class="footerImg"></div>
-  <div class="footer">
-    <div class="footerContainer d-flex mx-sm-5 mx-2 pt-5 mb-4 justify-content-between flex-wrap">
-      <div class="footerLogo">
-        <img src="./img/footerlogo.png" width="200px">
-      </div>
-      <div class="navigation">
-        <div class="footerTitle">Navigation</div>
-        <div class="mt-4 d-flex flex-column footerDetails">
-          <a href="#">Home</a>
-          <a href="#">Shop</a>
-          <a href="#">Promotions</a>
-          <a href="#">Buy Shop</a>
-        </div>
-      </div>
-
-      <div class="someLinks">
-        <div class="footerTitle">Some Links</div>
-        <div class="mt-4 d-flex flex-column footerDetails">
-          <a href="#">FAQS</a>
-          <a href="#">User Guide</a>
-          <a href="#">Privacy Policy</a>
-
-        </div>
-      </div>
-
-      <div class="socialMedia">
-        <div class="footerTitle">Social Media</div>
-        <div class="mt-4 d-flex footerDetails">
-          <a href="#"><iconify-icon icon="ic:baseline-facebook"></iconify-icon></a>
-          <a href="#"><iconify-icon icon="ph:instagram-logo-fill"></iconify-icon></a>
-          <a href="#"><iconify-icon icon="mdi:github"></iconify-icon></a>
-
-        </div>
-      </div>
-
-    </div>
-
-    <div class="copyRight pb-3">
-      <div class="w-75 m-auto mb-2"></div>
-      <p class="text-center mb-0">Copyright @ design by GroupTwo</p>
-    </div>
-  </div>
+  <!-----------------------   Footer   ---------------------------->
+  <?php
+  include "./resources/shared/footer.php"
+  ?>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -546,14 +507,14 @@
     });
   </script>
 
-<script>
-  var swiper = new Swiper(".mySwiper1", {
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+  <script>
+    var swiper = new Swiper(".mySwiper1", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
   </script>
 </body>
 

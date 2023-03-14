@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <!-------css links----->
-    <link rel="stylesheet" href="./css/root.css">
-    <link rel="stylesheet" href="./css/shoplogin.css">
+    <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/shoplogin.css">
 
     <!--------bootstrap5-------->
-    <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
-    <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
+    <script src="./lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!------icons link------->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>

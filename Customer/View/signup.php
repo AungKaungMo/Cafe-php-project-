@@ -8,12 +8,12 @@
     <title>SignUp</title>
 
     <!-------css links----->
-    <link rel="stylesheet" href="./css/root.css">
-    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/signup.css">
 
     <!--------bootstrap5-------->
-    <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
-    <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
+    <script src="./lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!------icons link------->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
@@ -24,10 +24,10 @@
         <div class="row">
             <div class="col-md-5 part1">
                 <div class="mb-4">
-                    <img src="./img/footerlogo.png" alt="" width="30%">
+                    <img src="./resources/img/footerlogo.png" alt="" width="30%">
                 </div>
                 <div class="mb-5">
-                    <img src="./img/Coffee_3D_-_Canva_Elements_Keyword-removebg-preview 1.png" alt="" class="photo2">
+                    <img src="./resources/img/Coffee_3D_-_Canva_Elements_Keyword-removebg-preview 1.png" alt="" class="photo2">
                 </div>
             </div>
             <div class="col-md-7 part2">
