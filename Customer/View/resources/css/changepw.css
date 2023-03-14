@@ -1,0 +1,55 @@
+.back {
+    background-color: var(--backgroundSecondary);
+}
+
+.login {
+    background-color: var(--mainColor) !important;
+}
+
+.box {
+    width: 20em;
+    height: 2.8em;
+    border-style: none;
+    border-radius: 15em !important;
+    background-color: var(--backgroundSecondary) !important;
+    color: var(--mainColor) !important;
+    padding-left: 0.6em;
+    font-family: var(--inputAndPaymentCardFont) !important;
+}
+
+
+.letter {
+    font-family: var(--inputAndPaymentCardFont);
+}
+
+.forgot {
+    font-size: var(--navigationFontSize) !important;
+}
+
+.button {
+    width: 8em;
+    height: 2.5em;
+    background-color: var(--backgroundSecondary);
+    color: var(--mainColor) !important;
+    font-family: var(--inputAndPaymentCardFont);
+    border-radius: 0.3em;
+    border-style: none;
+    font-size: var(--paragraphFontSize);
+}
+
+.new {
+    font-size: var(--subTitleFontSize);
+    color: var(--backgroundSecondary);
+    font-family: var(--inputAndPaymentCardFont);
+}
+
+@media screen and (max-width: 720px) {
+    .box {
+        width: 16em;
+        height: 2em;
+    }
+}
+
+.box::placeholder {
+    color: var(--mainColor);
+}
