@@ -1,0 +1,187 @@
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.line {
+    width: 90%;
+    height: 1px;
+    background-color: var(--mainColor);
+    margin-left: 4em;
+}
+
+
+
+.date {
+    width: 11em;
+    height: 2.8em;
+    color: var(--backgroundSecondary);
+    border-radius: 0.2em;
+    border-style: none;
+    background-color: var(--mainColor);
+    cursor: pointer;
+    padding-left: 0.3em;
+}
+
+.place {
+    width: 11em;
+    height: 2.8em;
+    display: flex;
+    border-radius: 0.2em;
+}
+
+.time {
+    width: 6.2em;
+    height: 2.8em;
+    color: var(--backgroundSecondary);
+    border-radius: 0.2em;
+    border-style: none;
+    background-color: var(--mainColor);
+    cursor: pointer;
+    padding-left: 0.3em;
+}
+
+
+.indoor {
+    width: 5.6em;
+    height: 2.8em;
+    background-color: var(--backgroundSecondary) !important;
+    color: var(--mainColor) !important;
+    border-radius: 0.2em 0em 0em 0.2em;
+    cursor: pointer;
+}
+
+.changein {
+    background-color: var(--mainColor) !important;
+    color: var(--backgroundSecondary) !important;
+}
+
+
+.outdoor {
+    width: 5.6em;
+    height: 2.8em;
+    background-color: var(--mainColor) !important;
+    color: var(--backgroundSecondary) !important;
+    border-radius: 0em 0.2em 0.2em 0em;
+    cursor: pointer;
+}
+
+.changeout {
+    background-color: var(--backgroundSecondary) !important;
+    color: var(--mainColor) !important;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    font-size: var(--navigationFontSize);
+    text-align: center;
+}
+
+
+.people {
+    width: 6.2em;
+    height: 2.8em;
+    padding-left: 1em;
+    color: var(--backgroundSecondary);
+    background-color: var(--mainColor);
+    border-radius: 0.2em;
+    cursor: pointer;
+    padding-left: 3em;
+}
+
+
+.sendBtn {
+    margin-top: 3.2em;
+}
+
+.sendBtn button {
+    width: 150px;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    border: 2px solid var(--mainColor);
+    color: var(--secondMainColor);
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.sendBtn button:hover {
+    background-color: transparent;
+    color: var(--mainColor);
+}
+
+.gp1 {
+    position: relative;
+    /* margin: auto; */
+    width: 6.2em;
+}
+
+.icon1 {
+    position: absolute;
+    color: var(--backgroundSecondary);
+    left: 0.1em;
+    font-size: 2em;
+    top: 0.2em;
+}
+
+.main2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    width: 18em;
+    position: relative;
+    padding-top: 1em;
+}
+
+.bar {
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid var(--mainColor);
+    background: transparent;
+    font-size: var(--navigationFontSize);
+    color: var(--mainColor);
+    transition: 0.3s ease;
+}
+
+.bar::placeholder {
+    color: var(--mainColor);
+}
+
+
+.gp2 {
+    position: relative;
+    margin: auto;
+    width: 18em;
+}
+
+.note {
+    border-color: var(--mainColor);
+    border-radius: 0.5em;
+    padding-left: 3em;
+    padding-top: 0.5em;
+    color: var(--mainColor);
+}
+
+.icon2 {
+    position: absolute;
+    color: var(--mainColor);
+    left: 0.3em;
+    font-size: 2em;
+    top: 0.2em;
+}
+
+@media screen and (max-width: 720px) {
+    .line {
+        margin-left: 1em;
+    }
+
+    .gp1 {
+        width: 1.2em;
+    }
+}
