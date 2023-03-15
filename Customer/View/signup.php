@@ -38,31 +38,31 @@
                         <iconify-icon icon="mdi:user" class="icon1"></iconify-icon>
                     </div>
 
-                    <div class="form-outline form-white mb-5 gp2">
+                    <div class="form-outline form-white mb-5 gp1">
                         <select class="box fw-bold" aria-label="Default select example">
                             <option selected class="">Gender</option>
                             <option value="1">Male</option>
                             <option value="2">Female</option>
                             <option value="3">Other</option>
                         </select>
-                        <iconify-icon icon="bx:male-female" class="icon2"></iconify-icon>
+                        <iconify-icon icon="bx:male-female" class="icon1"></iconify-icon>
                     </div>
 
-                    <div class="form-outline form-white mb-5 gp3">
+                    <div class="form-outline form-white mb-5 gp1">
                         <input type="text" id="typeEmailX" class="box fw-bold " placeholder="Email" name="name" />
-                        <iconify-icon icon="ic:baseline-mail" class="icon3"></iconify-icon>
+                        <iconify-icon icon="ic:baseline-mail" class="icon1"></iconify-icon>
                     </div>
 
-                    <div class=" form-outline form-white mb-5 gp4">
+                    <div class=" form-outline form-white mb-5 gp1">
                         <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" />
-                        <iconify-icon icon="ic:outline-key" class="icon4"></iconify-icon>
+                        <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                     </div>
 
-                    <div class="form-outline form-white mb-5 gp5">
+                    <div class="form-outline form-white mb-5 gp1">
                         <select class="box fw-bold" aria-label="Default select example">
                             <option selected class="">Township</option>
                         </select>
-                        <iconify-icon icon="material-symbols:location-on" class="icon5"></iconify-icon>
+                        <iconify-icon icon="material-symbols:location-on" class="icon1"></iconify-icon>
                     </div>
 
                     <button class="button mb-5 fw-bold" type="submit" name="send">Log in</button>

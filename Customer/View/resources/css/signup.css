@@ -42,65 +42,19 @@
 
 .gp1 {
     position: relative;
+    margin: auto;
+    width: 20em;
 }
-
 
 .icon1 {
     position: absolute;
-    color: var(--mainColor);
-    left: 3em;
+    color: var(--backgroundSecondary);
+    left: 0.3em;
     font-size: 2em;
     top: 0.2em;
 }
 
-.gp2 {
-    position: relative;
-}
 
-.icon2 {
-    position: absolute;
-    color: var(--mainColor);
-    left: 3em;
-    font-size: 2em;
-    top: 0.2em;
-}
-
-.gp3 {
-    position: relative;
-}
-
-
-.icon3 {
-    position: absolute;
-    color: var(--mainColor);
-    left: 3em;
-    font-size: 2em;
-    top: 0.2em;
-}
-
-.gp4 {
-    position: relative;
-}
-
-.icon4 {
-    position: absolute;
-    color: var(--mainColor);
-    left: 3em;
-    font-size: 2em;
-    top: 0.2em;
-}
-
-.gp5 {
-    position: relative;
-}
-
-.icon5 {
-    position: absolute;
-    color: var(--mainColor);
-    left: 3em;
-    font-size: 2em;
-    top: 0.2em;
-}
 
 @media screen and (max-width: 720px) {
     .box {
@@ -127,4 +81,10 @@ h2 {
 .forgot {
     font-size: var(--navigationFontSize) !important;
 
+}
+
+@media screen and (max-width: 720px) {
+    .gp1 {
+        width: 15em;
+    }
 }

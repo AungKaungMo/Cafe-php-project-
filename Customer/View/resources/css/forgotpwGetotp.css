@@ -28,7 +28,9 @@
 }
 
 .forgot {
-    font-size: var(--navigationFontSize) !important;
+    font-size: var(--subTitleFontSize);
+    color: var(--backgroundSecondary);
+    font-family: var(--inputAndPaymentCardFont);
 }
 
 .button {
@@ -40,9 +42,11 @@
     border-style: none;
     font-size: var(--paragraphFontSize);
 }
-.button a{
-    color: var(--mainColor) ;
+
+.button a {
+    color: var(--mainColor);
 }
+
 .getotp {
     width: 6em;
     height: 2.4em;
@@ -71,7 +75,7 @@
 }
 
 @media screen and (max-width:375px) {
-    .divbox{
+    .divbox {
         width: 18em !important;
     }
 }

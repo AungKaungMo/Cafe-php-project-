@@ -27,14 +27,15 @@
                         <div class="card-body text-center">
                             <div class="mb-md-3 mt-md-5 pb-3">
                                 <h2 class="fw-bold mb-1 text-white letter">SignIn on</h2>
-                                <img src="./resources/image/footerlogo.png" alt="" class="mb-4" width="30%">
+                                <img src="./resources/img/footerlogo.png" alt="" class="mb-4" width="30%">
                                 <form action="" method="post">
-                                    <div class="form-outline form-white mb-4 group1">
+                                    <div class="form-outline form-white mb-4 gp1">
                                         <input type="text" id="typeEmailX" class="box fw-bold " placeholder="NAME" name="name" />
-                                        <iconify-icon icon="mdi:user" class="i1"></iconify-icon>
+                                        <iconify-icon icon="mdi:user" class="icon1"></iconify-icon>
                                     </div>
-                                    <div class=" form-outline form-white mb-4">
-                                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" />
+                                    <div class=" form-outline form-white mb-4 gp1">
+                                        <input type="password" id="typePasswordX" class="box fw-bold" placeholder="PASSWORD" name="password" />
+                                        <iconify-icon icon="material-symbols:key-rounded" class="icon1"></iconify-icon>
                                     </div>
                                     <button class="button mb-5 fw-bold" type="submit" name="send">Log in</button>
                                     <br>

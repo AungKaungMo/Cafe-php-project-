@@ -37,7 +37,7 @@
                                         <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" />
                                         <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                                     </div>
-                                    <button class="button mb-5 fw-bold" type="submit" name="send">Log in</button>
+                                    <button class="button mb-5 fw-bold" type="submit" name="send">log in</button>
                                     <br>
                                     <p class="forgot">Forgot Password? <a href="#" class="text-white fw-bold">Click Here</a></p>
                             </div>
