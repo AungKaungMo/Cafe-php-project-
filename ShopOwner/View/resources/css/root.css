@@ -6,6 +6,9 @@
     --textColorSecondary: #000000;
     --paginationColor: #3D251E;
     --mainColor: #765341;
+    --confirmColor: green;
+    --rejectColor: red;
+    --notificationColor: red;
     --secondMainColor: #FFEBCD;
     --saleChartColorOne: #3500F2;
     --saleChartColorTwo: #8666F7;

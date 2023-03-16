@@ -1,0 +1,16 @@
+.navBar h1:nth-child(3) {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+@media screen and (max-width: 700px) {
+  .navBar h1:nth-child(3) {
+    color: var(--secondMainColor);
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 450px) {
+  input,
+  textarea {
+    width: 150px;
+  }
+}

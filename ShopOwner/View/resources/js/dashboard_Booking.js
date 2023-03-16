@@ -156,8 +156,8 @@ function loopingBooking(tableName, state, appendTable) {
             <td data-label="Time">${tableName[i].Time}</td>
             <td data-label="Person">${tableName[i].Person}</td>
             <td data-label="Action" class='${state}'>
-            <iconify-icon icon="icon-park-solid:correct" class="confirm p-2 bg-success rounded-3 text-white me-3"></iconify-icon>
-            <iconify-icon icon="fa6-solid:xmark" class="reject p-2 bg-danger rounded-3 text-white"></iconify-icon>
+            <iconify-icon icon="icon-park-solid:correct" class="confirm p-2 rounded-3 text-white me-3"></iconify-icon>
+            <iconify-icon icon="fa6-solid:xmark" class="reject p-2 rounded-3 text-white"></iconify-icon>
             </td>
         </tr>`
         )

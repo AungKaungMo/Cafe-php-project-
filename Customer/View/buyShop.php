@@ -35,7 +35,7 @@
 
   <!------------------  Header Navigation   --------------------->
   <?php
-      include "./resources/shared/nav.php";
+  include "./resources/shared/nav.php";
   ?>
 
   <!------------------------------    Get your own shop   ---------------------------------->

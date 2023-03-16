@@ -89,6 +89,17 @@
       </select>
       </div>
 
+      <div>
+      <label for="payment" class="payment">
+        Payment Type
+      </label><br><br>
+      <select id="payment">
+        <option value="Credit Card">Credit Card</option>
+        <option value="KBZ">KBZ</option>
+        <option value="Wave">Wave</option>
+      </select>
+      </div>
+
      </div>
      <div class="text-center submitBtn my-5">
       <button class="fw-bold px-2 py-3">Submit</button>
