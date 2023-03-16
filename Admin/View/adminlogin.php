@@ -8,7 +8,7 @@
     <title>Login</title>
     <!-------css links----->
     <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/login.css">
+    <link rel="stylesheet" href="./resources/css/adminlogin.css">
 
     <!--------bootstrap5-------->
     <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
@@ -37,8 +37,10 @@
                                         <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" />
                                         <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                                     </div>
-                                    <button class="button mb-5 fw-bold" type="submit" name="send">Log in</button>
-                                    
+                                    <div class="loginBtn">
+                                        <button class="p-2">login</button>
+                                    </div>
+
                             </div>
                             </form>
                         </div>
