@@ -69,6 +69,7 @@ html::-webkit-scrollbar-track{
     /* border-radius: 100px; */
 }
 body {
+    overflow-x: hidden;
     font-family: var(--paragraphFont);
     background-color: var(--backgroundPrimary);
 }

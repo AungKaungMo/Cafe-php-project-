@@ -21,14 +21,57 @@
 
             </div>
             <div class=" w-75 p-3 position-absolute rounded-4 signBox d-none">
-              <div class="d-flex justify-content-between mt-2">
+
+            <!-----------------   Before Login  ------------------------>
+
+              <!-- <div class="d-flex justify-content-between mt-2">
                 <p class="fw-bold signColor">Sign In</p>
                 <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
               </div>
               <div class="d-flex justify-content-between">
                 <p class="fw-bold signColor">Sign Up</p>
                 <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
+              </div> -->
+
+              <!------------------  After Login   -------------------------->
+
+              <div class="d-flex justify-content-between mt-2 afterLogin">
+                <div>
+                  <span class="cartText">Cart </span>
+                  <span>(14)</span>
+                </div>
+                <div>
+                  <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon"></iconify-icon>
+                </div>
+
               </div>
+              <div class="line"></div>
+
+              <div class="d-flex justify-content-between mt-2 afterLogin">
+                <div>
+                  <span class="cartText">Fav</span>
+                  <span>(14)</span>
+                </div>
+                <div>
+                  <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
+                </div>
+
+              </div>
+              <div class="line"></div>
+
+              <div class="d-flex justify-content-between mt-2 afterLogin">
+                <div>
+                  <span class="cartText">Profile </span>
+
+                </div>
+                <div>
+                  <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 cartIcon"></iconify-icon>
+                </div>
+
+              </div>
+              <div class="line"></div>
+
+              
             </div>
           </div>
 
@@ -159,7 +202,8 @@
         <div class="col-7">
           <div class="d-flex justify-content-between">
             <div class="favProductTitle fw-bold">Chocolate Cake</div>
-            <iconify-icon icon="mdi:cards-heart" class="fs-3 heartIcon"></iconify-icon>
+            <iconify-icon icon="mdi:cards-heart" class="fs-3 heartIcon likeIcon"></iconify-icon>
+            <iconify-icon icon="mdi:cards-heart-outline" class="fs-3 heartIcon unLikeIcon d-none"></iconify-icon>
           </div>
 
           <p class="mt-2 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
@@ -189,7 +233,8 @@
         <div class="col-7">
           <div class="d-flex justify-content-between">
             <div class="favProductTitle fw-bold">Chocolate Cake</div>
-            <iconify-icon icon="mdi:cards-heart" class="fs-3 heartIcon"></iconify-icon>
+            <iconify-icon icon="mdi:cards-heart" class="fs-3 heartIcon likeIcon"></iconify-icon>
+            <iconify-icon icon="mdi:cards-heart-outline" class="fs-3 heartIcon unLikeIcon d-none"></iconify-icon>
           </div>
 
           <p class="mt-2 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
@@ -220,7 +265,8 @@
         <div class="col-7">
           <div class="d-flex justify-content-between">
             <div class="favProductTitle fw-bold">Chocolate Cake</div>
-            <iconify-icon icon="mdi:cards-heart" class="fs-3 heartIcon"></iconify-icon>
+            <iconify-icon icon="mdi:cards-heart" class="fs-3 heartIcon likeIcon"></iconify-icon>
+            <iconify-icon icon="mdi:cards-heart-outline" class="fs-3 heartIcon unLikeIcon d-none"></iconify-icon>
           </div>
 
           <p class="mt-2 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
