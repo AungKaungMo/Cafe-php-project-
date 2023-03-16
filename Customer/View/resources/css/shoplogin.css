@@ -37,14 +37,16 @@
     font-size: var(--paragraphFontSize);
 }
 
-.group1 {
+.gp1 {
     position: relative;
+    margin: auto;
+    width: 20em;
 }
 
-.i1 {
+.icon1 {
     position: absolute;
     color: var(--mainColor);
-    left: 3em;
+    left: 0.7em;
     font-size: 2em;
     top: 0.2em;
 }
@@ -53,6 +55,10 @@
     .box {
         width: 12em;
         height: 2em;
+    }
+
+    .gp1 {
+        width: 15em;
     }
 }
 

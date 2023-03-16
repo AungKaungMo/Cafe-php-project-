@@ -27,7 +27,7 @@
                         <div class="card-body text-center">
                             <div class="mb-md-2 mt-md-5 pb-3">
                                 <img src="./resources/img/footerlogo.png" alt="" class="mb-4" width="30%">
-                                <p class="mb-4 forgot ">Forgot password</p>
+                                <p class="mb-4 forgot">Forgot password</p>
                                 <form action="" method="post">
                                     <div class="form-outline divbox form-white mb-4">
                                         <input type="emal" id="typeEmailX" class="box fw-bold " placeholder="Enter your email" name="email" />
