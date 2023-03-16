@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: var(--paragraphFont);
+    background-color: var(--backgroundSecondary);
+}
+
+.Title{
+    margin: 1em 0em 2em 7em; 
+}
+
+.Question{
+    width: 100%;  
+    margin: 1em 5em 1em 12em;
+    border: 3px solid #765341; 
+    box-shadow: 5px 0px 2px #765341;
+
+}
+
+@media screen and (max-width: 410px) {
+
+    .Question{
+        width: 100%;  
+        margin: 1em 5em 1em 1em;
+        border: 3px solid #765341; 
+        box-shadow: 5px 0px 2px #765341;
+    
+    }
+}
+
+
+/* Privacy & Policy */
+
+.Privacy{
+    width: 80%;
+    height: 50vh;
+    border: 3px solid #765341; 
+    margin: auto;
+    margin-top: 4em;
+    border-radius: 10px;
+}
+
+
