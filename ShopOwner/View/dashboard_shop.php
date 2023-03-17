@@ -9,7 +9,7 @@ include "./resources/shared/dashboard.php";
 
     <div class="payment mx-3 my-5">
 
-        <div class="d-flex justify-content-between w-75 m-auto paymentCardContainer flex-wrap">
+        <div class="d-flex justify-content-center m-auto paymentCardContainer flex-wrap">
             <div class="paymentCard p-4 ">
                 <h6 class="text-center mb-0 mt-3">Basic</h6>
                 <div class="text-center fs-5 mb-5 fw-bold">$150 per month</div>
@@ -38,7 +38,7 @@ include "./resources/shared/dashboard.php";
                 </div>
             </div>
 
-            <div class="paymentCard p-4 ">
+            <div class="paymentCard p-4 mx-sm-3">
                 <h6 class="text-center mb-0 mt-3">Premium</h6>
                 <div class="text-center fs-5 mb-5 fw-bold paymentPrice">$400 per month</div>
 

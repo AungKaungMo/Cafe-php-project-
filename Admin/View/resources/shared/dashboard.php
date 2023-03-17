@@ -93,7 +93,7 @@
                 <!-- userImg -->
                 <div class="fs-4 fw-bold">Shop Owner</div>
                 <div class="owner">   
-                <img src="./resources/img/shopOwner.jpg">
+                <!-- <img src="./resources/img/shopOwner.jpg"> -->
                 </div>
             </div>  
            <hr>

@@ -9,7 +9,11 @@
   transition: all 0.3s;
   cursor: pointer;
 }
-.navBar h1:hover {
+.navBar a{
+  color: var(--textColorSecondary);
+}
+.navBar h1:hover,
+.navBar a:hover {
   color: var(--mainColor);
 }
 .navBar h1:first-child,
@@ -63,7 +67,8 @@
     display: flex !important;
     justify-content: end;
   }
-  .navBar h1:hover {
+  .navBar h1:hover,
+  .navBar a:hover {
     color: var(--secondMainColor);
   }
 }

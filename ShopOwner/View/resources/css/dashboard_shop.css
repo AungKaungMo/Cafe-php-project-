@@ -1,74 +1,71 @@
 .navigation ul li:nth-child(7) {
-    background: var(--backgroundPrimary);
-  }
-  .navigation ul li:nth-child(7) a {
-    color: var(--mainColor);
-  }
+  background: var(--backgroundPrimary);
+}
+.navigation ul li:nth-child(7) a {
+  color: var(--mainColor);
+}
 
-  .paymentCard{
-    margin-top: 3em;
-    width: 290px;
-    border: 2px solid var(--mainColor);
-    background-color: var(--backgroundTertiary);
-    border-radius: 10px;
+.paymentCard {
+  margin-top: 3em;
+  width: 290px;
+  border: 2px solid var(--mainColor);
+  background-color: var(--backgroundTertiary);
+  border-radius: 10px;
+}
+.ruleText {
+  font-size: 0.9em;
+  margin-left: 1em;
+  font-family: var(--inputAndPaymentCardFont);
+}
+.paymentCard h6 {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+.ruleIcon {
+  color: var(--mainColor);
+}
+.paymentCard:nth-child(2) {
+  background-color: var(--mainColor);
+}
+.paymentCard:nth-child(2) .ruleIcon {
+  color: var(--secondMainColor);
+}
+.paymentCard:nth-child(2) .ruleText {
+  color: var(--textColorPrimary);
+}
+.paymentPrice {
+  color: var(--textColorPrimary);
+}
+.paymentCard:nth-child(2) h6 {
+  color: var(--secondMainColor);
+}
+#package,
+#payment {
+  width: 90%;
+  padding: 0.4em;
+  border-color: var(--mainColor);
+}
+.submitBtn button {
+  width: 180px;
+  border-radius: 10px;
+  background-color: var(--mainColor);
+  border: 2px solid var(--mainColor);
+  color: var(--textColorPrimary);
+  transition: all 0.5s;
+}
+.submitBtn button:hover {
+  background-color: transparent;
+  color: var(--mainColor);
+}
+
+@media screen and (max-width: 710px) {
+  .paymentCardContainer {
+    justify-content: center !important;
   }
-  .ruleText{
+}
+@media screen and (max-width: 420px) {
+  .submitBtn button {
+    width: 140px;
     font-size: 0.9em;
-    margin-left: 1em;
-    font-family: var(--inputAndPaymentCardFont);
   }
-  .paymentCard h6{
-    color: var(--mainColor);
-    font-weight: bold;
-  }
-  .ruleIcon{
-    color: var(--mainColor);
-  }
-  .paymentCard:nth-child(2){
-    background-color: var(--mainColor);
-  }
-  .paymentCard:nth-child(2) .ruleIcon{
-    color: var(--secondMainColor);
-  }
-  .paymentCard:nth-child(2) .ruleText{
-    color: var(--textColorPrimary);
-  }
-  .paymentPrice{
-    color: var(--textColorPrimary);
-  }
-  .paymentCard:nth-child(2) h6{
-    color: var(--secondMainColor);
-  }
-  #package, #payment{
-    width: 90%;
-    padding: 0.4em;
-    border-color: var(--mainColor);
 }
-.submitBtn button{
-    width: 180px;
-    border-radius: 10px;
-    background-color: var(--mainColor);
-    border: 2px solid var(--mainColor);
-    color: var(--textColorPrimary);
-    transition: all 0.5s;
-}
-.submitBtn button:hover{
-    background-color: transparent;
-    color: var(--mainColor);
-}
-  @media screen and (max-width:1200px) {
-    .paymentCardContainer{
-        width: 100% !important;
-    }
-  }
-  @media screen and (max-width:710px) {
-    .paymentCardContainer{
-        justify-content: center !important;
-    }
-  }
-  @media screen and (max-width:420px){
-    .submitBtn button{
-        width: 140px;
-        font-size: 0.9em;
-    }
-  }
