@@ -18,7 +18,7 @@ body {
 .card {
     display: flex;
     width: 25em;
-    height: 35em;
+    height: auto;
     background-color: var(--backgroundTertiary);
     border-radius: 12px;
     margin-top: 3em;
@@ -64,98 +64,38 @@ body {
 }
 
 .line {
-    width: 20em;
+    width: 22em;
     border: 1px solid var(--textColorSecondary);
-    margin-left: 2.2em;
+    margin-left: 1.8em;
     margin-top: 0.8em;
 }
 
 @media screen and (max-width:720px) {
 
     .line {
-        width: 15em;
+        width: 17em;
         border: 1px solid var(--textColorSecondary);
-        margin-left: 2.2em;
+        margin-left: 2em;
         margin-top: 0.8em;
     }
 }
 
-.third {
-    display: flex;
-    justify-content: space-between;
-}
 
-.phone {
-    width: 22em;
-    height: 2.5em;
-    padding-left: 1em;
+.text1 {
     font-size: var(--paragraphFontSize);
-    border: 2px solid var(--mainColor);
-    border-radius: 0.2em;
 }
 
-@media screen and (max-width:720px) {
-    .phone {
-        width: 17em;
-        height: 2.5em;
-        padding-left: 1em;
-    }
-}
-
-.fouth {
-    display: flex;
-    justify-content: space-between;
-}
-
-.otpBtn button {
-    width: 6em;
-    background-color: var(--mainColor);
-    border-radius: 5px;
-    border: 2px solid var(--mainColor);
-    color: var(--secondMainColor);
-    font-weight: bold;
-    transition: all 0.5s;
-}
-
-.otpBtn button:hover {
-    background-color: transparent;
+.text2 {
+    font-size: var(--paragraphFontSize);
     color: var(--mainColor);
 }
 
-.pas {
-    width: 12em;
-    border: 2px solid var(--mainColor);
-    border-radius: 0.2em;
-    padding-left: 1em;
-}
-
-@media screen and (max-width:720px) {
-    .otpBtn button {
-        width: 5em;
-    }
-
-    .fouth {
-        justify-content: space-between;
-    }
-
-    .pas {
-        width: 10em;
-        padding-left: 0.2em;
-    }
-}
-
-.text {
-    font-size: var(--minisubtitleFontSize);
-    opacity: 0.7;
-}
-
-
 .comBtn {
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .comBtn button {
-    width: 150px;
+    width: 17em;
     background-color: var(--mainColor);
     border-radius: 10px;
     border: 2px solid var(--mainColor);
@@ -174,4 +114,30 @@ body {
         margin-top: 1em;
         margin-bottom: 2em;
     }
+}
+
+.btncircle {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.circles {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border-style: none;
+    background-color: var(--backgroundPrimary);
+    display: flex;
+}
+
+.tbl {
+    box-sizing: content-box;
+    border: 1px solid gray;
+    outline: none;
+    font-size: 1.5em;
+}
+
+.icondel {
+    font-size: 0.7em;
 }

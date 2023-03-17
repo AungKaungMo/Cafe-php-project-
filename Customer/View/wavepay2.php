@@ -27,8 +27,6 @@
     <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
     <!------------------------   JS   -------------------------------->
-    <script src="./resources/javascript/navigation.js"></script>
-    <script src="./resources/javascript/booking.js"></script>
 
     <!----------- css---------->
     <link rel="stylesheet" href="./resources/css/root.css">
