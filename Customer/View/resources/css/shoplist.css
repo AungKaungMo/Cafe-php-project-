@@ -1,0 +1,438 @@
+
+ /* Navigation CSS */
+ 
+ .navtitle{
+    font-family: var(--navigationFont);
+    font-size: var(--navigationFontSize);
+    position: relative;
+    padding-left: 0 !important;
+ }
+ .navtitle::before, .navtitleActive::before{
+    content: '';
+    width: 0; 
+    height: 3px;
+    background-color: var(--mainColor);
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.5s;
+ }
+ .navtitleActive::before{
+    width: 50px;
+ }
+ 
+ .navtitle::after, .navtitleActive::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--mainColor);
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    transition: all 0.5s;
+ }
+ .navtitleActive::after{
+    width: 30px;
+ }
+ .navtitle:hover::before{
+    width: 50px;
+ }
+ .navtitle:hover::after{
+    width: 30px;
+ }
+ .searchIcon{
+    background-color: var(--mainColor);
+    color: var(--secondMainColor);
+    border-radius: 50%;
+    transition: all 0.4s;
+ }
+ .searchIcon:hover{
+    opacity: 0.7;
+ }
+ .userIcon, .userdownIcon{
+    color: var(--secondMainColor);
+ }
+ .userText{
+    color: var(--textColorPrimary);
+ }
+ .userbox{
+    background-color: var(--mainColor);
+ }
+ .navLine{
+    width: 100%;
+    height: 1px;
+    background-color: var(--mainColor);
+ }
+ .userimage{
+    margin: 0.4em;
+ }
+ /* responsive side bar */
+ 
+ .sideBar{
+    background-color: var(--backgroundTertiary);
+    height: 100vh;
+    box-shadow: var(--cardShadow);
+    right: -400px;
+    opacity: 0;
+    transition: all 0.7s;
+ }
+ .sideBarChange{
+    right: 0;
+    opacity: 1;
+ }
+ #closeSideBar{
+    top: 10px;
+    right: 10px;
+    transition: all 0.4s;
+ }
+ #closeSideBar:hover{
+    color: var(--mainColor);
+    transform: rotate(360deg);
+ }
+ #responsiveSideBarIcon{
+    font-size: 2.3em;
+    margin-left: 0.4em;
+ }
+ .userIcon{
+    font-size: 2.2em;
+ }
+ @media screen and (max-width:470px) {
+    .logo{
+        height: 40px;
+    }
+    #responsiveSideBarIcon {
+        font-size: 1.7em;
+    }
+    .userIcon {
+        font-size: 1.7em;
+    }
+    .userText{
+        font-size: 0.7em;
+    }
+    .searchIcon{
+        font-size: 1em;
+    }
+ }
+ .searchDropdown{
+    background-color: var(--mainColor);
+ }
+ .searchBox{
+    border: none;
+    outline: none;
+    width:80%;
+    color: var(--textColorPrimary);
+    background-color: transparent;
+    border-bottom: 1px solid var(--textColorSecondary);
+ }
+ .searchBox::placeholder {
+    color: var(--textColorPrimary);
+    opacity: 0.7;
+ }
+ .inputSearchIcon{
+    color: var(--secondMainColor);
+ }
+ .signColor{
+    color: var(--textColorPrimary);
+    font-family: var(--titleFont);
+ }
+ .signIcon{
+    color: var(--secondMainColor);
+ }
+ .signBox{
+    background-color: var(--mainColor);
+    right: 0;
+    top: 80px;
+ }
+ .signBox::after{
+    content: '';
+    width:25px;
+    height:25px;
+    background-color: var(--mainColor);
+    position: absolute;
+    top: -11px;
+    left:0;
+    right: 0;
+    margin: auto;
+    transform: rotate(45deg);
+ }
+ 
+ 
+ 
+ 
+ @media screen and (max-width:992px) {
+    .signBox {
+        right: unset !important;
+    }
+ }
+ 
+/* ======================hero css========================= */
+
+.text-label, .text-hero-regular{
+   margin-left: 100px;
+}
+
+.text-label{
+    font-size: var(--titleFontSize);
+    color: var(--mainColor);
+    font-family: var(--titleFont);
+    line-height: 32px;
+    margin-top: 30%;
+    margin-bottom: 40px;
+ }
+
+ .text-hero-regular{
+   font-size: var(--paragraphFontSize);
+   color: var(--mainColor);
+   font-family: var(--paragraphFont);
+ }
+
+#tending h1, #tshop h1{
+   left:35%;
+}
+
+.title{
+   margin-bottom: 50px;
+}
+
+.title::before{
+   content: "";
+   width: 300px;
+   height: 3px;
+   background-color: var(--mainColor);
+   position: absolute;
+   left: 0;
+   bottom: 5px;
+   transition: all 0.5s;
+}   
+.title::after {
+   content: "";
+   width: 280px;
+   height: 3px;
+   background-color: var(--mainColor);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   transition: all 0.5s;
+}  
+
+
+.card{
+   width:250px ;
+   height:300px;
+   border-radius: 30px;
+   background-color:var(--mainColor);
+   margin-bottom: 100px;
+   margin-left: 55px;
+}
+
+.card img{
+   height: 200px;
+   width: 250px;
+   border-radius: 30px 30px 0 0;
+   margin-bottom: 10px;
+}
+
+.infor{
+   font-size: var(--navigationFontSize);
+   color: var(--textColorPrimary);
+   position: absolute;
+   left: 88px;
+}
+
+.icon .price{ 
+   position: absolute;
+   display: inline-block;
+   width: 100px;
+   height: 35px;
+   border-radius: 30px;
+   padding: 5px 0 1px 14px;
+   color: var(--mainColor);
+   background-color: var(--backgroundSecondary);
+   bottom: 15px;
+   left: 20px;
+}
+
+.icon iconify-icon{
+   position: absolute;
+   width: 35px;
+   height: 35px;
+   border-radius: 10px;
+   padding: 2px;
+   background-color: var(--backgroundSecondary);
+   bottom: 15px;
+   right: 40px;
+}
+
+.rightseemore{
+   width: 150px;
+   height: 40px;
+   float: right;
+   margin-right: 10%;
+   font-size: var(---subTitleFontSize);
+   font-family: var(--paragraphFont);
+   border-radius: 10px;
+   background-color: var(--mainColor);
+   color: var(--textColorPrimary);
+   border-style: none;
+   padding:4px;
+}
+/* ===========================================trending shop====================================================  */
+#tshop{
+   clear: both;
+}
+
+#tshop .subtitle{
+   font-size: var(--titleFontSize);
+   margin-bottom: 35px;
+}
+
+.subtitle::before{
+   content: "";
+   width: 250px;
+   height: 3px;
+   background-color: var(--mainColor);
+   position: absolute;
+   left: 0;
+   bottom: 5px;
+   transition: all 0.5s;
+}  
+
+.subtitle::after {
+   content: "";
+   width: 200px;
+   height: 3px;
+   background-color: var(--mainColor);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   transition: all 0.5s;
+}  
+
+.poularphoto img{
+   width:15%;
+   height: 15%;
+   border-radius: 50%;
+   margin-left: 5%;
+}
+
+.tseemore{
+   display:flex;
+   margin: auto;
+   width: 150px;
+   height: 40px;
+   font-size: var(---subTitleFontSize);
+   font-family: var(--paragraphFont);
+   border-radius: 10px;
+   background-color: var(--mainColor);
+   color: var(--textColorPrimary);
+   border-style: none;
+   padding: 8px 0 0 40px;
+}
+
+#tshop .leftseemore{
+   width: 150px;
+   height: 40px;
+   float: left;
+   margin-right: 10%;
+   margin-top: 8%;
+   font-size: var(---subTitleFontSize);
+   font-family: var(--paragraphFont);
+   border-radius: 10px;
+   background-color: var(--mainColor);
+   color: var(--textColorPrimary);
+   border-style: none;
+   padding:4px;
+}
+
+#tshop .leftseemore:hover, .tseemore:hover , .rightseemore:hover{
+   background-color: var(--backgroundSecondary);
+   color: var(--mainColor);
+}
+
+@media screen and (max-width:1000px) {
+   .card{
+      margin-left: 0;
+   }
+}
+
+
+@media screen and (max-width:747px) {
+   .card{
+      margin-left: 0;
+   }
+
+
+}
+
+@media screen and (max-width:440px) {
+   .container{
+      padding: 130px;
+   }
+   .card img{
+      width: 300px;
+   }
+   .card{
+      width: 300px;
+      margin-left: 0;
+   }
+}
+
+/* =================================footer================================ */
+
+.footerImg{
+   margin-top: 5em;
+   width: 100%;
+   height: 25vh;
+   background: url(../img/footer.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+ }
+ .footer{
+   width: 100%;
+   background-color: var(--mainColor);
+   color: var(--textColorPrimary);
+ }
+ .footerTitle{
+   font-size: var(--navigationFontSize);
+   font-weight: bold;
+ }
+ .footerDetails a{
+   margin-top: 1em;
+   color: var(--textColorPrimary);
+   opacity: 0.7;
+   transition: all 0.5s;
+ }
+ .footerDetails a:hover{
+   color: var(--secondMainColor);
+   opacity: 1;
+ }
+ .footerDetails a iconify-icon{
+   font-size: 2em;
+   margin-right: 0.7em;
+ }
+ .copyRight div{
+   background-color: var(--textColorPrimary);
+   height: 2px;
+ }
+
+ @media screen and (max-width:470px) {
+   .footerLogo{
+       width: 100%;
+   }
+   .navigation{
+       width: 40%;
+   }
+   .navigation {
+       margin-left: 2em;
+       margin-top: 1.5em;
+   }
+   .someLinks{
+       margin-right: 2em ;
+       margin-top: 1.5em;
+   }
+   .socialMedia{
+       margin-left: 2em;
+       margin-top: 1.5em;
+   }
+ }
