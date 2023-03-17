@@ -165,10 +165,11 @@
     }
  }
  
+/* ======================hero css========================= */
 
- section .hero{
-    margin: 5rem;
- }
+.text-label, .text-hero-regular{
+   margin-left: 100px;
+}
 
 .text-label{
     font-size: var(--titleFontSize);
@@ -185,18 +186,15 @@
    font-family: var(--paragraphFont);
  }
 
-#tending h1, #Tshop h1{
+#tending h1, #tshop h1{
    left:35%;
 }
 
-/* .title::before, .title::after ,h1
-{
-    left: 0;
-    margin: auto;
-  } */
+.title{
+   margin-bottom: 50px;
+}
 
-
- .title::before{
+.title::before{
    content: "";
    width: 300px;
    height: 3px;
@@ -206,7 +204,7 @@
    bottom: 5px;
    transition: all 0.5s;
 }   
-.title::after{
+.title::after {
    content: "";
    width: 280px;
    height: 3px;
@@ -224,7 +222,9 @@
    border-radius: 30px;
    background-color:var(--mainColor);
    margin-bottom: 100px;
+   margin-left: 55px;
 }
+
 .card img{
    height: 200px;
    width: 250px;
@@ -263,9 +263,78 @@
    right: 40px;
 }
 
-.seemore{
+.rightseemore{
    width: 150px;
    height: 40px;
+   float: right;
+   margin-right: 10%;
+   font-size: var(---subTitleFontSize);
+   font-family: var(--paragraphFont);
+   border-radius: 10px;
+   background-color: var(--mainColor);
+   color: var(--textColorPrimary);
+   border-style: none;
+   padding:4px;
+}
+/* ===========================================trending shop====================================================  */
+#tshop{
+   clear: both;
+}
+
+#tshop .subtitle{
+   font-size: var(--titleFontSize);
+   margin-bottom: 35px;
+}
+
+.subtitle::before{
+   content: "";
+   width: 250px;
+   height: 3px;
+   background-color: var(--mainColor);
+   position: absolute;
+   left: 0;
+   bottom: 5px;
+   transition: all 0.5s;
+}  
+
+.subtitle::after {
+   content: "";
+   width: 200px;
+   height: 3px;
+   background-color: var(--mainColor);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   transition: all 0.5s;
+}  
+
+.poularphoto img{
+   width:15%;
+   height: 15%;
+   border-radius: 50%;
+   margin-left: 5%;
+}
+
+.tseemore{
+   display:flex;
+   margin: auto;
+   width: 150px;
+   height: 40px;
+   font-size: var(---subTitleFontSize);
+   font-family: var(--paragraphFont);
+   border-radius: 10px;
+   background-color: var(--mainColor);
+   color: var(--textColorPrimary);
+   border-style: none;
+   padding: 8px 0 0 40px;
+}
+
+#tshop .leftseemore{
+   width: 150px;
+   height: 40px;
+   float: left;
+   margin-right: 10%;
+   margin-top: 8%;
    font-size: var(---subTitleFontSize);
    font-family: var(--paragraphFont);
    border-radius: 10px;
@@ -275,9 +344,95 @@
    padding:4px;
 }
 
-.poularphoto img{
-   width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   margin-left: 40px;
+#tshop .leftseemore:hover, .tseemore:hover , .rightseemore:hover{
+   background-color: var(--backgroundSecondary);
+   color: var(--mainColor);
 }
+
+@media screen and (max-width:1000px) {
+   .card{
+      margin-left: 0;
+   }
+}
+
+
+@media screen and (max-width:747px) {
+   .card{
+      margin-left: 0;
+   }
+
+
+}
+
+@media screen and (max-width:440px) {
+   .container{
+      padding: 130px;
+   }
+   .card img{
+      width: 300px;
+   }
+   .card{
+      width: 300px;
+      margin-left: 0;
+   }
+}
+
+/* =================================footer================================ */
+
+.footerImg{
+   margin-top: 5em;
+   width: 100%;
+   height: 25vh;
+   background: url(../img/footer.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+ }
+ .footer{
+   width: 100%;
+   background-color: var(--mainColor);
+   color: var(--textColorPrimary);
+ }
+ .footerTitle{
+   font-size: var(--navigationFontSize);
+   font-weight: bold;
+ }
+ .footerDetails a{
+   margin-top: 1em;
+   color: var(--textColorPrimary);
+   opacity: 0.7;
+   transition: all 0.5s;
+ }
+ .footerDetails a:hover{
+   color: var(--secondMainColor);
+   opacity: 1;
+ }
+ .footerDetails a iconify-icon{
+   font-size: 2em;
+   margin-right: 0.7em;
+ }
+ .copyRight div{
+   background-color: var(--textColorPrimary);
+   height: 2px;
+ }
+
+ @media screen and (max-width:470px) {
+   .footerLogo{
+       width: 100%;
+   }
+   .navigation{
+       width: 40%;
+   }
+   .navigation {
+       margin-left: 2em;
+       margin-top: 1.5em;
+   }
+   .someLinks{
+       margin-right: 2em ;
+       margin-top: 1.5em;
+   }
+   .socialMedia{
+       margin-left: 2em;
+       margin-top: 1.5em;
+   }
+ }
