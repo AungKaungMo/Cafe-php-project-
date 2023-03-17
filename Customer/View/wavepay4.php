@@ -27,8 +27,7 @@
     <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
     <!------------------------   JS   -------------------------------->
-    <script src="./resources/javascript/navigation.js"></script>
-    <script src="./resources/javascript/booking.js"></script>
+
 
     <!----------- css---------->
     <link rel="stylesheet" href="./resources/css/root.css">
@@ -49,7 +48,10 @@
 
             <div class="second">
                 <div class="slideBall mt-3">
-                    <div class="fw-bold ms-4">Receipt</div>
+                    <div class="ms-4">
+                        <iconify-icon icon="ph:arrow-left-bold" class="fw-bold"></iconify-icon>
+                        <span class="fw-bold ms-1">Receipt</span>
+                    </div>
                     <div class="me-4">
                         <button class="circle activecircle"></button>
                         <button class="circle activecircle"></button>
@@ -60,39 +62,34 @@
                 <div class="line"></div>
             </div>
 
+            <div class="third mt-5">
+                <div class="ms-5">Item Name</div>
+                <div class="me-5 fw-bold">Cafe Order</div>
+            </div>
+
             <div class="third mt-3">
-                <div class="ms-4">Item Name</div>
-                <div class="me-4 fw-bold">Cafe Order</div>
+                <div class="ms-5">Total Amount</div>
+                <div class="me-5 fw-bold">5030Ks</div>
             </div>
+            <div class="line mt-4"></div>
 
 
-            <div class="second">
-                <div class="slideBall mt-4">
-                    <div class="ms-4">Amount</div>
-                    <div class="me-4 fw-bold">5000MMK </div>
+            <div class="fouth mt-4">
+                <div>
+                    <img src="./resources/img/Ellipse 72.png" alt="" width="50%" class="ms-4">
                 </div>
-                <div class="line"></div>
-            </div>
-
-
-            <div class=" text-center mt-4">
-                <input type="text" name="" id="" placeholder="Wave account phone number" class="phone">
-            </div>
-
-            <div class="fouth mt-3">
-                <input type="password" name="" id="" placeholder="One time password" class="pas ms-4">
-                <div class="otpBtn">
-                    <button class="p-2 me-4">Get OTP</button>
+                <div class="ms-1">
+                    <div class="fw-bold me-5">959 122 324 221</div>
+                    <div class="me-4 mt-3">
+                        <div class="mb-2">Old Balance - <span class="fw-bold">130,000,00Ks</span></div>
+                        <div>New Balance - <span class="fw-bold">129,994,970Ks</span></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="text mt-3 ps-4">
-                <p>OTP SMS will be sent to your WavePay registered <br>
-                    Phone Number.</p>
-            </div>
 
             <div class="comBtn text-center">
-                <button class="p-2 me-4">Comfirm</button>
+                <button class="p-2">Back To Cafe</button>
             </div>
 
         </div>

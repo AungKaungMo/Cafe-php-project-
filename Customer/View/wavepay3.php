@@ -27,8 +27,6 @@
     <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
     <!------------------------   JS   -------------------------------->
-    <script src="./resources/javascript/navigation.js"></script>
-    <script src="./resources/javascript/booking.js"></script>
 
     <!----------- css---------->
     <link rel="stylesheet" href="./resources/css/root.css">
@@ -49,7 +47,10 @@
 
             <div class="second">
                 <div class="slideBall mt-3">
-                    <div class="fw-bold ms-4">Receipt</div>
+                    <div class="ms-4">
+                        <iconify-icon icon="ph:arrow-left-bold" class="fw-bold"></iconify-icon>
+                        <span class="fw-bold ms-1">Receipt</span>
+                    </div>
                     <div class="me-4">
                         <button class="circle activecircle"></button>
                         <button class="circle activecircle"></button>
@@ -60,39 +61,63 @@
                 <div class="line"></div>
             </div>
 
-            <div class="third mt-3">
-                <div class="ms-4">Item Name</div>
-                <div class="me-4 fw-bold">Cafe Order</div>
+
+            <h4 class="text-center fw-bold mt-4">Enter Your Pin</h4>
+            <div class="text-center text1">Please enter your login pin</div>
+            <div class="text-center text2">Comfirm Purchase</div>
+
+            <div class="btncircle mt-3">
+                <button class="circles"></button>
+                <button class="circles"></button>
+                <button class="circles"></button>
+                <button class="circles"></button>
             </div>
 
-
-            <div class="second">
-                <div class="slideBall mt-4">
-                    <div class="ms-4">Amount</div>
-                    <div class="me-4 fw-bold">5000MMK </div>
+            <!-- <div class="Table">
+                <div class="Row">
+                    <div class="Num"></div>
+                    <div class="Num"></div>
+                    <div class="Num"></div>
                 </div>
-                <div class="line"></div>
-            </div>
 
-
-            <div class=" text-center mt-4">
-                <input type="text" name="" id="" placeholder="Wave account phone number" class="phone">
-            </div>
-
-            <div class="fouth mt-3">
-                <input type="password" name="" id="" placeholder="One time password" class="pas ms-4">
-                <div class="otpBtn">
-                    <button class="p-2 me-4">Get OTP</button>
+                <div class="Row">
+                    <div class="Num"></div>
+                    <div class="Num"></div>
+                    <div class="Num"></div>
                 </div>
-            </div>
 
-            <div class="text mt-3 ps-4">
-                <p>OTP SMS will be sent to your WavePay registered <br>
-                    Phone Number.</p>
-            </div>
+                <div class="Row">
+                    <div class="Num"></div>
+                    <div class="Num"></div>
+                    <div class="Num"></div>
+                </div>
+            </div> -->
 
-            <div class="comBtn text-center">
-                <button class="p-2 me-4">Comfirm</button>
+            <table class="mt-3">
+                <tr align="center" bgcolor="white">
+                    <td class="tbl">1</td>
+                    <td class="tbl">2</td>
+                    <td class="tbl">3</td>
+                </tr>
+                <tr align="center" bgcolor="white">
+                    <td class="tbl">4</td>
+                    <td class="tbl">5</td>
+                    <td class="tbl">6</td>
+                </tr>
+                <tr align="center" bgcolor="white">
+                    <td class="tbl">7</td>
+                    <td class="tbl">8</td>
+                    <td class="tbl">9</td>
+                </tr>
+                <tr align="center" bgcolor="white">
+                    <td class="tbl"></td>
+                    <td class="tbl">0</td>
+                    <td class="tbl"><iconify-icon icon="ri:delete-back-2-fill" class="icondel"></iconify-icon></td>
+                </tr>
+            </table>
+
+            <div class="comBtn text-center mb-4">
+                <button class="p-2">Comfirm</button>
             </div>
 
         </div>
