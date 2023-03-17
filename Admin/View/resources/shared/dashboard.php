@@ -36,40 +36,28 @@
                 </li>
                 <li>
                     <a href="">
-                        <span class="icon"><iconify-icon icon="material-symbols:area-chart-rounded"></iconify-icon></span>
-                        <span class="title">Sale Chart</span>
+                        <span class="icon"><iconify-icon icon="material-symbols:list-alt"></iconify-icon></span>
+                        <span class="title">Manage Lists</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <span class="icon"><iconify-icon icon="ic:baseline-history"></iconify-icon></span>
-                        <span class="title">History</span>
+                        <span class="icon"><iconify-icon icon="material-symbols:mark-chat-unread"></iconify-icon></span>
+                        <span class="title">Chat Box</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <span class="icon"><iconify-icon icon="mdi:truck-delivery"></iconify-icon></span>
-                        <span class="title">Order</span>
+                        <span class="icon"><iconify-icon icon="material-symbols:edit-document-rounded"></iconify-icon></span>
+                        <span class="title">Manage Page</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <span class="icon"><iconify-icon icon="material-symbols:book"></iconify-icon></span>
-                        <span class="title">Booking</span>
+                        <span class="icon"><iconify-icon icon="material-symbols:edit-document-rounded"></iconify-icon></span>
+                        <span class="title">Manage Reviews</span>
                     </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="icon"><iconify-icon icon="iconoir:profile-circle"></iconify-icon></span>
-                        <span class="title">Profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="icon"><iconify-icon icon="simple-icons:shopee"></iconify-icon></span>
-                        <span class="title">Shop</span>
-                    </a>
-                </li>
+                </li>  
                 <li>
                     <a href="">
                         <span class="icon"><iconify-icon icon="uiw:setting"></iconify-icon></span>
@@ -91,7 +79,7 @@
                 <iconify-icon icon="material-symbols:menu"></iconify-icon>
                 </div>
                 <!-- userImg -->
-                <div class="fs-4 fw-bold">Shop Owner</div>
+                <div class="fs-4 fw-bold">Admin</div>
                 <div class="owner">   
                 <img src="./resources/img/shopOwner.jpg">
                 </div>
