@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
 
     <!-------------------------    GOOGLE FONTS   ------------------------------>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,18 +27,19 @@
     <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
     <!------------------------   JS   -------------------------------->
+    <script src="./resources/js/menu.js"></script>
     <script src="./resources/js/navigation.js"></script>
-    <script src="./resources/js/booking.js"></script>
 
-    <!------------------------   CSS   ----------------------------->
+    <!----------- css---------->
     <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/shopinterfacemenu.css">
     <link rel="stylesheet" href="./resources/css/navigationAndFooter.css">
-    <link rel="stylesheet" href="./resources/css/booking.css">
+
 </head>
 
-<body>
 
-    <!---------- nav --------->
+<body>
+    <!----------- navba-------->
     <nav class="navbar navbar-expand-lg mx-sm-5 mx-2 ">
         <div class="container-fluid">
 
@@ -142,10 +143,10 @@
                         <a class="nav-link navtitle" href="./home.php">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navtitle mx-5" href="./shopinterfacemenu.php">Menu</a>
+                        <a class="nav-link navtitle navtitleActive mx-5" href="./shopinterfacemenu.php">Menu</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link navtitle navtitleActive me-5" href="./booking.php">Booking</a>
+                        <a class="nav-link navtitle me-5" href="./booking.php">Booking</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center position-relative">
@@ -341,139 +342,159 @@
                 <a class="nav-link navtitle pb-2" aria-current="page" href="#">HOME</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navtitle my-5 pb-2" href="#">SHOP</a>
+                <a class="nav-link navtitle navtitleActive my-5 pb-2" href="#">Menu</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link navtitle navtitleActive pb-2" href="#">Booking</a>
+                <a class="nav-link navtitle pb-2" href="#">Booking</a>
             </li>
-        </ul>
+
     </div>
     <div class="navLine"></div>
 
-    <div class="mt-3 main">
 
-        <div class="mb-5">
-            <div class="bookdate mb-5">
-                <input type="date" name="" id="" class="date">
-            </div>
-            <div class="place">
-                <div class="indoor pt-3" id="in">Indoor</div>
-                <div class="outdoor pt-3 ps-2" id="out">Outdoor</div>
-            </div>
-        </div>
-
-        <div class="mb-5">
-            <div class="timer mb-5">
-                <input type="time" name="" id="" class="time">
-            </div>
-            <div class="gp1">
-                <select class="people" aria-label=".form-select-lg example">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-                <iconify-icon icon="mdi:user" class="icon1"></iconify-icon>
-            </div>
-
-        </div>
-    </div>
-    <div class="line"></div>
-
-
-
-    <div class="mt-3 main2">
-        <div class="input">
-            <input type="text" name="" id="name" class="bar" placeholder="Name">
-        </div>
-
-        <div class="input mt-3 text-center">
-            <input type="text" name="" id="email" class="bar" placeholder="Email">
-        </div>
-
-        <div class="input mt-3 text-center">
-            <input type="text" name="" id="phone" class="bar" placeholder="Phone Number">
-        </div>
-
-        <div class="input4 mt-4 text-center gp2">
-            <textarea name="" id="" cols="30" rows="5" class="note" placeholder="Note to order"></textarea>
-            <iconify-icon icon="mdi:message-reply-text" class="icon2"></iconify-icon>
-        </div>
-
-
-        <div class="sendBtn">
-            <button class="p-2">Booking</button>
-        </div>
-
-    </div>
-
-    <!-----------------------   Footer   ---------------------------->
-
-    <div class="footerImg"></div>
-    <div class="footer">
-        <div class="footerContainer d-flex mx-sm-5 mx-2 pt-5 mb-4 justify-content-between flex-wrap">
-            <div class="footerLogo">
-                <img src="./resources/img/Rectangle 535.png" width="200px">
-            </div>
-            <div class="navigation">
-                <div class="footerTitle">Navigation</div>
-                <div class="mt-4 d-flex flex-column footerDetails">
-                    <a href="./interface.php">Home</a>
-                    <a href="#">Menu</a>
-                    <a href="#">Booking</a>
-                </div>
-            </div>
-
-            <div class="someLinks">
-                <div class="footerTitle">Some Links</div>
-                <div class="mt-4 d-flex flex-column footerDetails">
-                    <a href="#">FAQS</a>
-                    <a href="#">User Guide</a>
-                    <a href="#">Privacy Policy</a>
-
-                </div>
-            </div>
-
-            <div class="socialMedia">
-                <div class="footerTitle">Social Media</div>
-                <div class="mt-4 d-flex footerDetails">
-                    <a href="#"><iconify-icon icon="ic:baseline-facebook"></iconify-icon></a>
-                    <a href="#"><iconify-icon icon="ph:instagram-logo-fill"></iconify-icon></a>
-                    <a href="#"><iconify-icon icon="mdi:github"></iconify-icon></a>
-
-                </div>
-            </div>
-
-        </div>
-
-        <div class="copyRight pb-3">
-            <div class="w-75 m-auto mb-2"></div>
-            <p class="text-center mb-0">Copyright @ design by GroupTwo</p>
+    <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
+        <div>
+            <h1 class=" text-center title fw-bold pb-2 position-relative">Our Menu</h1>
         </div>
     </div>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <div class="slidebtn mt-5">
+        <div class="box text-center change" id="cg1">Featured Menu</div>
+        <div class="box text-center" id="cg2">Popular Menu</div>
+        <div class="box text-center" id="cg3">New Menu</div>
+    </div>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
 
-    <script>
-        var swiper = new Swiper(".mySwiper1", {
-            spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
+    <div class="maincard">
+        <div class="card">
+            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+            <div class="text ms-3">Black Coffee</div>
+            <div class="pbtn ms-4">
+                <button>
+                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+                <button>
+                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+            </div>
+            <div class="price text-center">
+                1500MMK
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+            <div class="text ms-3">Black Coffee</div>
+            <div class="pbtn ms-4">
+                <button>
+                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+                <button>
+                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+            </div>
+            <div class="price text-center">
+                1500MMK
+            </div>
+        </div>
+        <div class="card">
+            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+            <div class="text ms-3">Black Coffee</div>
+            <div class="pbtn ms-4">
+                <button>
+                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+                <button>
+                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+            </div>
+            <div class="price text-center">
+                1500MMK
+            </div>
+        </div>
+        <div class="card">
+            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+            <div class="text ms-3">Black Coffee</div>
+            <div class="pbtn ms-4">
+                <button>
+                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+                <button>
+                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+            </div>
+            <div class="price text-center">
+                1500MMK
+            </div>
+        </div>
+    </div>
+
+    <div class="maincard">
+        <div class="card">
+            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+            <div class="text ms-3">Black Coffee</div>
+            <div class="pbtn ms-4">
+                <button>
+                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+                <button>
+                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+            </div>
+            <div class="price text-center">
+                1500MMK
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+            <div class="text ms-3">Black Coffee</div>
+            <div class="pbtn ms-4">
+                <button>
+                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+                <button>
+                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+            </div>
+            <div class="price text-center">
+                1500MMK
+            </div>
+        </div>
+        <div class="card">
+            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+            <div class="text ms-3">Black Coffee</div>
+            <div class="pbtn ms-4">
+                <button>
+                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+                <button>
+                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+            </div>
+            <div class="price text-center">
+                1500MMK
+            </div>
+        </div>
+        <div class="card">
+            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+            <div class="text ms-3">Black Coffee</div>
+            <div class="pbtn ms-4">
+                <button>
+                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+                <button>
+                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                </button>
+            </div>
+            <div class="price text-center">
+                1500MMK
+            </div>
+        </div>
+    </div>
+
+    <div class="line mt-5"></div>
+
 
 </body>
 
