@@ -6,12 +6,9 @@
     --textColorSecondary: #000000;
     --paginationColor: #3D251E;
     --mainColor: #765341;
-<<<<<<< HEAD
-=======
     --confirmColor: green;
     --rejectColor: red;
     --notificationColor: red;
->>>>>>> 2c17d669108192a5341dc69b2ff6b95a9b71b05c
     --secondMainColor: #FFEBCD;
     --saleChartColorOne: #3500F2;
     --saleChartColorTwo: #8666F7;
@@ -27,14 +24,6 @@
     --sideBarShadow: -7px 7px 10px rgba(0, 0, 0, 0.25);
     --cardShadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
 }
-<<<<<<< HEAD
-a {
-    text-decoration: none;
-}
-li {
-    list-style-type: none;
-}
-=======
 
 a {
     text-decoration: none;
@@ -44,20 +33,10 @@ li {
     list-style-type: none;
 }
 
->>>>>>> 2c17d669108192a5341dc69b2ff6b95a9b71b05c
 * {
     margin: 0;
     padding: 0;
 }
-<<<<<<< HEAD
-button {
-    font-family: var(--paragraphFont);
-}
-button,iconify-icon {
-    cursor: pointer !important;
-    transition: all 0.5s;
-}
-=======
 
 button {
     font-family: var(--paragraphFont);
@@ -69,22 +48,10 @@ iconify-icon {
     transition: all 0.5s;
 }
 
->>>>>>> 2c17d669108192a5341dc69b2ff6b95a9b71b05c
 h1 {
     font-size: var(--titleFontSize);
     font-family: var(--titleFont);
 }
-<<<<<<< HEAD
-h3 {
-    font-size: var(--subTitleFontSize);
-}
-h6 {
-    font-size: var(--minisubtitleFontSize);
-}
-p,span {
-    font-size: var(--paragraphFontSize);
-}
-=======
 
 h3 {
     font-size: var(--subTitleFontSize);
@@ -99,18 +66,10 @@ span {
     font-size: var(--paragraphFontSize);
 }
 
->>>>>>> 2c17d669108192a5341dc69b2ff6b95a9b71b05c
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-<<<<<<< HEAD
-html::-webkit-scrollbar {
-    width: 1vw;
-    margin: 0 ;
-    padding: 0 ;
-}
-=======
 
 html::-webkit-scrollbar {
     width: 1vw;
@@ -118,36 +77,23 @@ html::-webkit-scrollbar {
     padding: 0;
 }
 
->>>>>>> 2c17d669108192a5341dc69b2ff6b95a9b71b05c
 html::-webkit-scrollbar-thumb {
     background-color: rgb(221, 221, 221);
     border-radius: 100px;
 }
-<<<<<<< HEAD
-html::-webkit-scrollbar-track{
-    background-color:  rgb(182, 182, 182);
-    /* border-radius: 100px; */
-}
-=======
 
 html::-webkit-scrollbar-track {
     background-color: rgb(182, 182, 182);
     /* border-radius: 100px; */
 }
 
->>>>>>> 2c17d669108192a5341dc69b2ff6b95a9b71b05c
 body {
     font-family: var(--paragraphFont);
     background-color: var(--backgroundPrimary);
 }
-<<<<<<< HEAD
-@media screen and (max-width:470px){
-    h1{
-=======
 
 @media screen and (max-width:470px) {
     h1 {
->>>>>>> 2c17d669108192a5341dc69b2ff6b95a9b71b05c
         font-size: 2em;
     }
 }
