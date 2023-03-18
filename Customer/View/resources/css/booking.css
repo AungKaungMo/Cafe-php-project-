@@ -29,6 +29,7 @@ body {
     height: 2.8em;
     display: flex;
     border-radius: 0.2em;
+    border: 2px solid var(--mainColor);
 }
 
 .time {
@@ -45,10 +46,10 @@ body {
 
 .indoor {
     width: 5.6em;
-    height: 2.8em;
+    height: 2.6em;
     background-color: var(--backgroundSecondary) !important;
     color: var(--mainColor) !important;
-    border-radius: 0.2em 0em 0em 0.2em;
+    border-radius: 0.1em 0em 0em 0.1em;
     cursor: pointer;
 }
 
@@ -60,10 +61,10 @@ body {
 
 .outdoor {
     width: 5.6em;
-    height: 2.8em;
+    height: 2.6em;
     background-color: var(--mainColor) !important;
     color: var(--backgroundSecondary) !important;
-    border-radius: 0em 0.2em 0.2em 0em;
+    border-radius: 0em 0.1em 0.1em 0em;
     cursor: pointer;
 }
 
