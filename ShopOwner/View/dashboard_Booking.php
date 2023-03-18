@@ -89,7 +89,6 @@ include "./resources/shared/dashboard.php";
 
     </div>
     </div>
-    <script src="./resources/js/dashboard.js"></script>
     <script src="./resources/js/dashboard_booking.js"></script>
 </body>
 

@@ -103,8 +103,6 @@
      </div>
      </div>
 
-     <!--------------------------   JS   ------------------------------->
-     <script src="./resources/js/dashboard.js"></script>
  </body>
 
  </html>

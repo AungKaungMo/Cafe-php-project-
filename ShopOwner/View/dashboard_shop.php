@@ -127,8 +127,7 @@ include "./resources/shared/dashboard.php";
     </div>
     </div>
 
-    <!--------------------------   JS   ------------------------------->
-    <script src="./resources/js/dashboard.js"></script>
+
 </body>
 
 </html>

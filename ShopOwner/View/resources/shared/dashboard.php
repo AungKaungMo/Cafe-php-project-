@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="./resources/css/dashboard.css">
 
     <!---------------------- JS   ---------------------------------------->
+    <script src="./resources/js/dashboard.js" defer></script>
     <script src="./resources/js/color_theme.js" defer></script>
 
     <div class="admindsh_container">
@@ -38,7 +39,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_salechart.php">
                         <span class="icon"><iconify-icon icon="material-symbols:area-chart-rounded"></iconify-icon></span>
                         <span class="title">Sale Chart</span>
                     </a>

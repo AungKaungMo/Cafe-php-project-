@@ -44,7 +44,6 @@
        </div>
     </div>
 
-    <script src="./resources/js/dashboard.js"></script>
     <script src="./resources/js/dashboard_ManageReviews.js"></script>
 </body>
 </html>

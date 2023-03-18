@@ -83,7 +83,7 @@ include "./resources/shared/dashboard.php";
     <!----------  Ending Tab ------>
     </div>
     </div>
-    <script src="./resources/js/dashboard.js"></script>
+
     <script src="./resources/js/dashboard_setting.js"></script>
 </body>
 

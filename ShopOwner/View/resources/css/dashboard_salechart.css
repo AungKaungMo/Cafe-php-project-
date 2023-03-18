@@ -1,0 +1,133 @@
+
+.barChart, .pieChart{
+    background-color: var(--backgroundTertiary);
+    padding: 1em;
+    box-shadow: var(--cardShadow);
+    border-radius: 10px;
+}
+#myChart{
+    width: 700px;
+}
+.navigation ul li:nth-child(2) {
+    background: var(--backgroundPrimary);
+  }
+  .navigation ul li:nth-child(2) a {
+    color: var(--mainColor);
+  }
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--mainColor);
+    box-shadow: 0px 5px 10px var(--mainColor);
+  }
+  
+  tbody,
+  td,
+  tfoot,
+  th,
+  thead,
+  tr {
+    border-style: unset;
+  }
+  @media screen and (max-width: 1200px) {
+    #myChart{
+        width: 500px;
+    }
+    .pieChart{
+        width:250px;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .chartGp{
+        flex-direction: column !important;
+    }
+    .pieChart{
+        width: 300px;
+        margin-top:1.5em;
+    }
+  }
+  @media screen and (max-width:750px){
+    #myChart{
+        width: 400px;
+    }
+  }
+  @media screen and (max-width:630px){
+    #myChart{
+        width: 300px;
+    }
+    .chartGp{
+        margin: 0.8em !important;
+    }
+  }
+  @media screen and (max-width:450px){
+    #myChart{
+        width: 230px ;
+    }
+    #myChart2{
+        width: 240px;
+    }
+    .pieChart{
+        width: auto;
+    }
+    .barChart + div, .pieChart + div{
+        font-size: 1.1em !important;
+    }
+  }
+  @media screen and (max-width: 890px) {
+    .table thead {
+      display: none;
+    }
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+      display: block;
+      width: 100%;
+    }
+    .lineTable {
+      display: none !important;
+    }
+  
+    .table tr {
+      margin-bottom: 1.5em;
+    }
+    .table tbody tr td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+    .table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-align: left;
+    }
+    tr {
+      background-color: var(--backgroundTertiary);
+      padding: 0.9em;
+      box-shadow: var(--cardShadow);
+      border-radius: 10px;
+    }
+  }
+  @media screen and (max-width: 790px) {
+    .table tbody tr td {
+      padding-left: unset;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    td {
+      font-size: 0.8em;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    tr {
+      padding: 0.7em;
+    }
+    td {
+      font-size: 0.7em;
+    }
+  }
+  

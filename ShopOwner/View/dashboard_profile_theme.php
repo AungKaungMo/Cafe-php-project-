@@ -60,7 +60,7 @@ include "./resources/shared/dashboard.php";
 
     </div>
     </div>
-    <script src="./resources/js/dashboard.js"></script>
+
     <script src="./resources/js/dashboard_setting.js"></script>
     <script src="./resources/js/dashboard_profile_theme.js"></script>
 </body>
