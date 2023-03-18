@@ -9,7 +9,7 @@
   transition: all 0.3s;
   cursor: pointer;
 }
-.navBar a{
+.navBar a {
   color: var(--textColorSecondary);
 }
 .navBar h1:hover,
@@ -44,6 +44,9 @@
 @media screen and (max-width: 700px) {
   .line {
     display: none !important;
+  }
+  .navBar h1 a {
+    color: var(--textColorPrimary);
   }
   .navBar {
     flex-direction: column;

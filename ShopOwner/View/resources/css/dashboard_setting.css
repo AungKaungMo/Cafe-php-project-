@@ -24,6 +24,9 @@
   .line {
     display: none !important;
   }
+  .navBar h1 a{
+    color: var(--textColorPrimary);
+  }
   .navBar {
     flex-direction: column;
     align-items: center;

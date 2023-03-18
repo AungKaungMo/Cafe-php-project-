@@ -63,7 +63,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_profile_messagebox.php">
                         <span class="icon"><iconify-icon icon="iconoir:profile-circle"></iconify-icon></span>
                         <span class="title">Profile</span>
                     </a>
