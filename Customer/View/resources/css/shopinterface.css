@@ -232,10 +232,87 @@ today menu
     color: var(--mainColor);
 }
 
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-bottom: 2.5em;
+}
+
+
+.blogcard {
+    width: 24em;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0.5em;
+    transition: all 1s;
+}
+
+.blogcard:hover {
+    transform: scale(1.1);
+}
+
+.text1 {
+    font-family: var(--titleFont);
+}
+
+.text2 {
+    font-family: var(--paragraphFont);
+    line-height: 1.5;
+}
+
+.body {
+    background-color: var(--backgroundTertiary);
+}
+
+.icon {
+    color: var(--mainColor);
+    font-size: 1.5em;
+}
+
+.day {
+    display: flex;
+}
+
+.date {
+    font-size: 1em;
+    color: var(--mainColor);
+}
+
+.like {
+    font-size: 1em;
+    color: var(--mainColor);
+}
+
+
+.readBtn {
+    margin-top: 1.2em;
+}
+
+.readBtn button {
+    width: 150px;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    border: 2px solid var(--mainColor);
+    color: var(--secondMainColor);
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.readBtn button:hover {
+    background-color: transparent;
+    color: var(--mainColor);
+}
 
 
 
-
+.Hoimg:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+}
 
 
 /**

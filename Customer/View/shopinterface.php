@@ -326,11 +326,68 @@
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightcart" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-            <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+            <div class="d-flex">
+                <h5 id="offcanvasRightLabel" class="fs-3 CHcart">Cart</h5>
+                <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 CHcarti"></iconify-icon>
+            </div>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+        <div class="navLine"></div>
         <div class="offcanvas-body">
-            ...
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Product Id</th>
+                        <th scope="col">Preview</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>
+                            <div class="ListImg me-3 col-5">
+                                <img src="./resources/img/cake.jpg" width="100%" height="100%">
+                            </div>
+                        </td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>
+                            <div class="ListImg me-3 col-5">
+                                <img src="./resources/img/cake.jpg" width="100%" height="100%">
+                            </div>
+                        </td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>
+                            <div class="ListImg me-3 col-5">
+                                <img src="./resources/img/cake.jpg" width="100%" height="100%">
+                            </div>
+                        </td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -740,21 +797,21 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="./resources/img/Rectangle 512.png" alt="">
+                        <img src="./resources/img/Rectangle 512.png" alt="" class="Hoimg">
                     </div>
                     <div class="col-md-6">
-                        <img src="./resources/img/Rectangle 514.png" alt="">
+                        <img src="./resources/img/Rectangle 514.png" alt="" class="Hoimg">
                     </div>
                 </div>
                 <div class="row mt-5">
                     <div class="col-md-12">
-                        <img src="./resources/img/Rectangle 513.png" alt="">
+                        <img src="./resources/img/Rectangle 513.png" alt="" class="Hoimg">
                     </div>
 
                 </div>
             </div>
             <div class="col-md-4">
-                <img src="./resources/img/Rectangle 515.png" alt="">
+                <img src="./resources/img/Rectangle 515.png" alt="" class="Hoimg">
             </div>
         </div>
     </div>

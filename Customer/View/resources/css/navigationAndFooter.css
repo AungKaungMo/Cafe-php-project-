@@ -272,6 +272,14 @@
   transform: rotate(45deg);
 }
 
+.CHcart {
+  font-family: var(--titleFont);
+}
+
+.CHcarti {
+  color: var(--mainColor);
+}
+
 @media screen and (max-width: 992px) {
   .signBox {
     right: unset !important;
