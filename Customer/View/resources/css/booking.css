@@ -4,7 +4,7 @@ body {
 }
 
 
-.line {
+.lines {
     width: 90%;
     height: 1px;
     background-color: var(--mainColor);
@@ -33,7 +33,7 @@ body {
 }
 
 .time {
-    width: 6.2em;
+    width: 7em;
     height: 2.8em;
     color: var(--backgroundSecondary);
     border-radius: 0.2em;
@@ -82,7 +82,7 @@ body {
 
 
 .people {
-    width: 6.2em;
+    width: 7em;
     height: 2.8em;
     padding-left: 1em;
     color: var(--backgroundSecondary);
@@ -178,7 +178,7 @@ body {
 }
 
 @media screen and (max-width: 720px) {
-    .line {
+    .lines {
         margin-left: 1em;
     }
 

@@ -377,7 +377,7 @@
 
         </div>
     </div>
-    <div class="line"></div>
+    <div class="lines"></div>
 
 
 

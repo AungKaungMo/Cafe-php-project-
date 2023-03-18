@@ -493,7 +493,7 @@
         </div>
     </div>
 
-    <div class="line mt-5"></div>
+    <div class="lines mt-5"></div>
 
 
 </body>

@@ -1,0 +1,330 @@
+body {
+    background-color: var(--backgroundTertiary);
+}
+
+.backgroundCafeImage1 {
+    background: url(../img/jjcafe.jpg);
+}
+
+.backgroundCafeImage2 {
+    background: url(../img/jjshop.jpg);
+}
+
+.backgroundCafeImage3 {
+    background: url(../img/menu.jpg);
+}
+
+.backImage {
+    width: 100%;
+    height: 87vh;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--paginationColor);
+}
+
+@media screen and (max-width:470px) {
+    .backImage p {
+        font-size: 0.8em;
+    }
+
+    .seemoreBtn {
+        width: 150px;
+        font-size: 0.8em;
+    }
+}
+
+.title::before {
+    content: "";
+    width: 100px;
+    height: 3px;
+    background-color: var(--mainColor);
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.5s;
+}
+
+.title::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: var(--mainColor);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.aboutImage {
+    object-fit: contain;
+}
+
+@media screen and (max-width:470px) {
+    .aboutSection p {
+        font-size: 0.8em;
+    }
+}
+
+.serviceSection .title::before,
+.serviceSection .title::after,
+.contactSection .title::before,
+.contactSection .title::after,
+.customerSection .title::before,
+.customerSection .title::after {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.serviceBox {
+    margin-top: 1.5em;
+    width: 270px;
+    padding: 1em;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.serviceBox iconify-icon {
+    font-size: 2em;
+    color: var(--textColorPrimary);
+}
+
+.serviceBox span {
+    color: var(--textColorPrimary);
+}
+
+@media screen and (max-width:768px) {
+    .serviceImage {
+        margin-top: 6em;
+        width: auto;
+        height: 100%;
+    }
+}
+
+/**
+today menu
+**/
+
+.box1 {
+    background-color: var(--secondMainColor);
+}
+
+.maincard {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 6em;
+    margin-bottom: 5em;
+}
+
+.card {
+    width: 12.4em;
+    height: 11em;
+    background: linear-gradient(120.9deg, #FFFFFF 0%, rgba(217, 217, 217, 0.34) 97.57%);
+    border-radius: 0.8em;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
+.img {
+    position: absolute;
+    top: -3em;
+    left: 3em;
+    transition: all 1s;
+}
+
+.card:hover .img {
+    transform: rotate(360deg);
+}
+
+.text {
+    margin-top: 4.5em;
+    color: var(--mainColor);
+}
+
+
+.minibox {
+    display: flex;
+}
+
+.pbtn {
+    margin-top: 1em;
+}
+
+.pbtn button {
+    width: 2em;
+    height: 2em;
+    background-color: var(--mainColor);
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    margin-left: 20px;
+    transition: all 0.5s;
+}
+
+.pbtn button:hover {
+    transform: scale(1.2);
+}
+
+
+.price {
+    width: 6em;
+    height: 1.6em;
+    border-radius: 8em;
+    background-color: var(--mainColor);
+    font-size: var(--navigationFontSize);
+    color: var(--textColorPrimary);
+    font-family: var(--titleFont);
+    position: absolute;
+    top: 8em;
+    left: 2em;
+    color: var(--secondMainColor);
+}
+
+
+.menubox {
+    background-color: var(--secondMainColor);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.textbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn_text {
+    width: 12em;
+    height: 2em;
+    background-color: var(--mainColor);
+    border-radius: 17em;
+    color: var(--secondMainColor);
+    font-size: var(--paragraphFontSize);
+    border: 2px solid var(--mainColor);
+    transition: 0.5s ease;
+}
+
+
+.seeall {
+    position: absolute;
+    bottom: 1em;
+    right: 2em;
+    font-size: var(--navigationFontSize);
+    color: var(--mainColor);
+}
+
+.seeall:hover {
+    color: var(--mainColor);
+}
+
+
+
+
+
+
+
+/**
+ContactUs
+**/
+.subTitle {
+    color: var(--mainColor);
+}
+
+.contactImage {
+    width: 180px;
+    background-color: var(--secondMainColor);
+}
+
+.contactBox {
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    background-color: var(--mainColor);
+    /* height: 50vh; */
+    margin-bottom: 9em;
+    color: var(--textColorPrimary);
+}
+
+.contactIcons {
+    background-color: transparent;
+    border: 2px solid var(--secondMainColor);
+}
+
+.contactIcons iconify-icon {
+    color: var(--textColorPrimary);
+}
+
+.contactInput {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-top: 3.2em;
+    padding-left: 3em;
+    width: 90%;
+    border-bottom: 1px solid var(--secondMainColor);
+    color: var(--textColorPrimary);
+}
+
+.contactInput::placeholder {
+    color: var(--textColorPrimary);
+}
+
+.contactInputIcon {
+    position: absolute;
+    font-size: 2em;
+    bottom: 0;
+}
+
+.sendBtn {
+    margin-top: 3.2em;
+}
+
+.sendBtn button {
+    width: 150px;
+    background-color: var(--secondMainColor);
+    border-radius: 10px;
+    border: 2px solid var(--secondMainColor);
+    color: var(--mainColor);
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.sendBtn button:hover {
+    background-color: transparent;
+    color: var(--secondMainColor);
+}
+
+@media screen and (max-width:992px) {
+    .contactBox {
+        width: 100% !important;
+    }
+
+    .subTitle {
+        width: 50% !important;
+    }
+}
+
+
+@media screen and (max-width:720px) {
+    .card {
+        margin-top: 5em;
+    }
+
+    .maincard {
+        margin: 2em;
+    }
+}
