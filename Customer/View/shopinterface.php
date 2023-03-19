@@ -494,7 +494,7 @@
 
     <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
         <div>
-            <h1 class=" text-center title fw-bold pb-2 position-relative">Today Speical Menu</h1>
+            <h1 class=" text-center title fw-bold pb-2 position-relative">Promotiom Product</h1>
         </div>
     </div>
     <div class="swiper mySwiper mt-5 box1">
@@ -897,7 +897,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide box">
                 <div class="minibox">
-                    <div class="blogcard me-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>
@@ -921,7 +921,7 @@
                         </div>
                     </div>
 
-                    <div class="blogcard ms-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>
@@ -949,7 +949,7 @@
 
             <div class="swiper-slide box">
                 <div class="minibox">
-                    <div class="blogcard me-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>
@@ -973,7 +973,7 @@
                         </div>
                     </div>
 
-                    <div class="blogcard ms-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>
@@ -1000,7 +1000,7 @@
             </div>
             <div class="swiper-slide box">
                 <div class="minibox">
-                    <div class="blogcard me-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>
@@ -1024,7 +1024,7 @@
                         </div>
                     </div>
 
-                    <div class="blogcard ms-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#in").click(function(){
-        $(".indoor").toggleClass('changein');
+        $(".indoor").toggleClass('toggle');
         $(".outdoor").change().toggleClass('changeout')
     })
 
