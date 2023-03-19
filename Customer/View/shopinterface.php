@@ -77,7 +77,7 @@
                                     <span>(14)</span>
                                 </div>
                                 <div>
-                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon"></iconify-icon>
+                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="modal" data-bs-target="#exampleModal1"></iconify-icon>
                                 </div>
 
                             </div>
@@ -467,13 +467,13 @@
 
         <ul class="">
             <li class="nav-item">
-                <a class="nav-link navtitle navtitleActive pb-2" aria-current="page" href="#">HOME</a>
+                <a class="nav-link navtitle navtitleActive pb-2" aria-current="page" href="./shopinterface.php">HOME</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navtitle my-5 pb-2" href="#">Menu</a>
+                <a class="nav-link navtitle my-5 pb-2" href="./shopinterfacemenu.php">Menu</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link navtitle  pb-2" href="#">Booking</a>
+                <a class="nav-link navtitle  pb-2" href="./booking.php">Booking</a>
             </li>
         </ul>
     </div>
@@ -856,7 +856,7 @@
 
     <!------------------------   our Gallery  -------------------------------->
 
-    <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
+    <!-- <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
         <div>
             <h1 class=" text-center title fw-bold pb-2 position-relative">Our Gallery</h1>
         </div>
@@ -884,7 +884,7 @@
                 <img src="./resources/img/Rectangle 515.png" alt="" class="Hoimg">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!------------------------   Blog  -------------------------------->
 

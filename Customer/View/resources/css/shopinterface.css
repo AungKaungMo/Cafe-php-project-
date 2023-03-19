@@ -529,4 +529,42 @@ ContactUs
         flex-wrap: wrap;
         flex-direction: column;
     }
+
+    .stockbtn {
+        width: 3.5em;
+        height: 1.8em;
+    }
+
+    .text_title {
+        font-size: var(--paragraphFontSize);
+    }
+
+    .text_b {
+        font-size: var(--minisubtitleFontSize);
+    }
+
+    .topi {
+        margin: 0.3em 0.2em 0.3em 0.2em;
+        font-size: var(--minisubtitleFontSize);
+    }
+
+    .number {
+        margin: 0.1em 0.3em 0.2em 0.3em;
+        font-size: var(--minisubtitleFontSize);
+    }
+
+    .downi {
+        margin: 0.3em 0.2em 0.3em 0.2em;
+        font-size: var(--minisubtitleFontSize);
+    }
+
+    .Sotext {
+        margin-right: 9em;
+        font-size: var(--minisubtitleFontSize);
+    }
+
+    .Toprice {
+        margin-right: 2em;
+        font-size: var(--minisubtitleFontSize);
+    }
 }
