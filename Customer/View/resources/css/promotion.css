@@ -156,7 +156,6 @@
     transform: rotate(45deg);
 }
 
-
 /* hero */
 #Hero{
     position: relative;
@@ -193,8 +192,6 @@
     font-size: var(--subTitleFontSize);
     color: var(--mainColor);
 }
-
-
 
 .hero .carousel-item{
 	min-height: 100vh;
