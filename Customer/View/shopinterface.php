@@ -176,7 +176,7 @@
                                     <span>(14)</span>
                                 </div>
                                 <div>
-                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightcart" aria-controls="offcanvasRight"></iconify-icon>
+                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="modal" data-bs-target="#exampleModal1"></iconify-icon>
                                 </div>
 
                             </div>
@@ -323,73 +323,143 @@
     </div>
 
     <!------------cart---------->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex">
+                        <h5 id="offcanvasRightLabel" class="fs-3 CHcart">Cart</h5>
+                        <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 CHcarti"></iconify-icon>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="navLine"></div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text_title">No</th>
+                                <th scope="col" class="text_title">Product Id</th>
+                                <th scope="col" class="text_title">Preview</th>
+                                <th scope="col" class="text_title">Description</th>
+                                <th scope="col" class="text_title">Price</th>
+                                <th scope="col" class="text_title">Stock</th>
+                                <th scope="col" class="text_title">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="text_b">1</th>
+                                <td class="text_b">C1</td>
+                                <td>
+                                    <div class="ListImg me-3 col-5">
+                                        <img src="./resources/img/cake.jpg" width="100%" height="100%">
+                                    </div>
+                                </td>
+                                <td class="text_b">Cake</td>
+                                <td class="text_b">15000MMK</td>
+                                <td>
+                                    <button class="stockbtn d-flex">
+                                        <iconify-icon icon="mdi:arrow-top-drop-circle" class="topi"></iconify-icon>
+                                        <p class="number">2</p>
+                                        <iconify-icon icon="material-symbols:arrow-drop-down-circle" class="downi"></iconify-icon>
+                                    </button>
+                                </td>
+                                <td class="text_b">30000MMk</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text_b">1</th>
+                                <td class="text_b">C1</td>
+                                <td>
+                                    <div class="ListImg me-3 col-5">
+                                        <img src="./resources/img/cake.jpg" width="100%" height="100%">
+                                    </div>
+                                </td>
+                                <td class="text_b">Cake</td>
+                                <td class="text_b">15000MMK</td>
+                                <td>
+                                    <button class="stockbtn d-flex">
+                                        <iconify-icon icon="mdi:arrow-top-drop-circle" class="topi"></iconify-icon>
+                                        <p class="number">2</p>
+                                        <iconify-icon icon="material-symbols:arrow-drop-down-circle" class="downi"></iconify-icon>
+                                    </button>
+                                </td>
+                                <td class="text_b">30000MMk</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text_b">1</th>
+                                <td class="text_b">C1</td>
+                                <td>
+                                    <div class="ListImg me-3 col-5">
+                                        <img src="./resources/img/cake.jpg" width="100%" height="100%">
+                                    </div>
+                                </td>
+                                <td class="text_b">Cake</td>
+                                <td class="text_b">15000MMK</td>
+                                <td>
+                                    <button class="stockbtn d-flex">
+                                        <iconify-icon icon="mdi:arrow-top-drop-circle" class="topi"></iconify-icon>
+                                        <p class="number">2</p>
+                                        <iconify-icon icon="material-symbols:arrow-drop-down-circle" class="downi"></iconify-icon>
+                                    </button>
+                                </td>
+                                <td class="text_b">30000MMk</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="lineSt">
+                        <div class="calprice mt-4">
+                            <div class="d-flex">
+                                <div class="Sotext">Sub total</div>
+                                <div class="Toprice">90000 MMK</div>
+                            </div>
+                        </div>
+                        <div class="lineH"></div>
+                    </div>
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightcart" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <div class="d-flex">
-                <h5 id="offcanvasRightLabel" class="fs-3 CHcart">Cart</h5>
-                <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 CHcarti"></iconify-icon>
+                    <div class="lineSt">
+                        <div class="calprice mt-4">
+                            <div class="d-flex">
+                                <div class="Sotext">Tax 5%</div>
+                                <div class="Toprice">4500 MMK</div>
+                            </div>
+                        </div>
+                        <div class="lineH"></div>
+                    </div>
+
+                    <div class="lineSt">
+                        <div class="calprice mt-4">
+                            <div class="d-flex">
+                                <div class="Sotext">Discount</div>
+                                <div class="Toprice">-500 MMk</div>
+                            </div>
+                        </div>
+                        <div class="lineH"></div>
+                    </div>
+
+                    <div class="lineSt">
+                        <div class="calprice mt-4">
+                            <div class="d-flex">
+                                <div class="Sotext">Grand Ttal<span class="tax">(incl.tax)</span></div>
+                                <div class="Toprice">94000 MMK</div>
+                            </div>
+                        </div>
+                        <div class="lineH"></div>
+                    </div>
+
+                    <div class="lineSt">
+                        <div class="CheckO">
+                            <button class="p-1">Check out</button>
+                        </div>
+                    </div>
+
+
+                    <div class="nextline"></div>
+                </div>
             </div>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="navLine"></div>
-        <div class="offcanvas-body">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Product Id</th>
-                        <th scope="col">Preview</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Stock</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>
-                            <div class="ListImg me-3 col-5">
-                                <img src="./resources/img/cake.jpg" width="100%" height="100%">
-                            </div>
-                        </td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>
-                            <div class="ListImg me-3 col-5">
-                                <img src="./resources/img/cake.jpg" width="100%" height="100%">
-                            </div>
-                        </td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>
-                            <div class="ListImg me-3 col-5">
-                                <img src="./resources/img/cake.jpg" width="100%" height="100%">
-                            </div>
-                        </td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
+
 
     <!-----------------------------   RES side bar   --------------------------->
     <div class="position-absolute top-0 p-5  sideBar d-flex flex-column justify-content-center align-items-center ">
@@ -1106,7 +1176,7 @@
     </script>
 
     <script>
-        var swiper = new Swiper(".mySwiper1", {
+        var swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,
             pagination: {
                 el: ".swiper-pagination",

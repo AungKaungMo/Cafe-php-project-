@@ -354,7 +354,7 @@
 
         <div class="mb-5">
             <div class="bookdate mb-5">
-                <input type="date" name="" id="" class="date">
+                <input type="date" name="" id="" class="date ps-3">
             </div>
             <div class="place">
                 <div class="indoor pt-3" id="in">Indoor</div>
@@ -364,7 +364,7 @@
 
         <div class="mb-5">
             <div class="timer mb-5">
-                <input type="time" name="" id="" class="time">
+                <input type="time" name="" id="" class="time ps-2">
             </div>
             <div class="gp1">
                 <select class="people" aria-label=".form-select-lg example">

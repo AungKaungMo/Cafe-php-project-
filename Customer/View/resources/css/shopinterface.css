@@ -1,5 +1,6 @@
 body {
     background-color: var(--backgroundTertiary);
+    font-family: var(--paragraphFont);
 }
 
 .backgroundCafeImage1 {
@@ -22,8 +23,17 @@ body {
     background-position: center !important;
 }
 
+.swiper-pagination-bullet {
+    opacity: 1;
+    background-color: var(--backgroundPrimary);
+}
+
 .swiper-pagination-bullet-active {
     background-color: var(--paginationColor);
+}
+
+.mySwiper1 {
+    position: unset !important;
 }
 
 @media screen and (max-width:470px) {
@@ -100,6 +110,7 @@ body {
 .serviceBox span {
     color: var(--textColorPrimary);
 }
+
 
 @media screen and (max-width:768px) {
     .serviceImage {
@@ -315,6 +326,11 @@ today menu
 }
 
 
+.blogslide {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /**
 ContactUs
 **/
@@ -380,9 +396,108 @@ ContactUs
     transition: all 0.5s;
 }
 
+.stockbtn {
+    width: 5.4em;
+    height: 2.3em;
+    background-color: var(--mainColor);
+    color: var(--secondMainColor);
+    border: 2px solid var(--mainColor);
+    border-radius: 0.2em;
+    transition: all 0.3s;
+}
+
+.topi {
+    margin: 0.3em 0.2em 0.3em 0.2em;
+    font-size: 1.2em;
+}
+
+.number {
+    margin: 0.1em 0.3em 0.2em 0.3em;
+    font-size: 1.4em;
+}
+
+.downi {
+    margin: 0.3em 0.2em 0.3em 0.2em;
+    font-size: 1.2em;
+}
+
+.stockbtn:hover {
+    background-color: transparent;
+    color: var(--mainColor);
+}
+
 .sendBtn button:hover {
     background-color: transparent;
     color: var(--secondMainColor);
+}
+
+.lineSt {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    font-size: var(--navigationFontSize);
+}
+
+.calprice {
+    display: flex;
+}
+
+.Sotext {
+    margin-right: 16em;
+}
+
+.Toprice {
+    margin-right: 2em;
+}
+
+.lineH {
+    width: 23%;
+    height: 1px;
+    border: 1px solid black;
+    position: absolute;
+    right: 1em;
+    top: 3em;
+}
+
+.nextline {
+    width: 80%;
+    height: 1px;
+    border: 1px solid var(--mainColor);
+    box-shadow: var(--sideBarShadow);
+    margin-left: 5em;
+}
+
+.CheckO {
+    margin-right: 1em;
+    margin-top: 3.2em;
+    margin-bottom: 2em;
+}
+
+.CheckO button {
+    width: 8em;
+    background-color: var(--mainColor);
+    border-radius: 0.2em;
+    border: 2px solid var(--mainColor);
+    color: var(--secondMainColor);
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.CheckO:hover button {
+    background-color: transparent;
+    color: var(--mainColor);
+}
+
+.text_title {
+    font-size: var(--navigationFontSize);
+}
+
+.tax {
+    opacity: 0.7;
+}
+
+.text_b {
+    font-size: 1.3em;
 }
 
 @media screen and (max-width:992px) {
@@ -401,7 +516,17 @@ ContactUs
         margin-top: 5em;
     }
 
+    .seeall {
+        bottom: 0em;
+    }
+
     .maincard {
         margin: 2em;
+    }
+
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 }
