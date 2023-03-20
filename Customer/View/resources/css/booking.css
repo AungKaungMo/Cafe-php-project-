@@ -30,6 +30,7 @@ body {
     display: flex;
     border-radius: 0.2em;
     border: 2px solid var(--mainColor);
+    background-color: var(--mainColor);
 }
 
 .time {
@@ -47,31 +48,24 @@ body {
 .indoor {
     width: 5.6em;
     height: 2.6em;
-    background-color: var(--backgroundSecondary) !important;
-    color: var(--mainColor) !important;
+    background-color: transparent !important;
+    color: var(--secondMainColor) !important;
     border-radius: 0.1em 0em 0em 0.1em;
     cursor: pointer;
 }
 
-.changein {
-    background-color: var(--mainColor) !important;
-    color: var(--backgroundSecondary) !important;
-}
 
 
 .outdoor {
     width: 5.6em;
     height: 2.6em;
-    background-color: var(--mainColor) !important;
-    color: var(--backgroundSecondary) !important;
+    background-color: transparent !important;
+    color: var(--secondMainColor) !important;
     border-radius: 0em 0.1em 0.1em 0em;
     cursor: pointer;
 }
 
-.changeout {
-    background-color: var(--backgroundSecondary) !important;
-    color: var(--mainColor) !important;
-}
+
 
 .main {
     display: flex;
@@ -161,7 +155,7 @@ body {
     width: 18em;
 }
 
-.note {
+.notes {
     border-color: var(--mainColor);
     border-radius: 0.5em;
     padding-left: 3em;
