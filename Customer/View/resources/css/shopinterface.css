@@ -169,6 +169,7 @@ today menu
 
 .minibox {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .pbtn {
@@ -234,8 +235,7 @@ today menu
 
 .box {
     display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
     margin-top: 2em;
     margin-bottom: 2.5em;
@@ -248,8 +248,6 @@ today menu
     background-color: transparent;
     border-radius: 0.5em;
     transition: all 1s;
-    margin-left: 6em;
-    margin-right: 6em;
 }
 
 .blogcard:hover {
@@ -422,33 +420,6 @@ ContactUs
     color: var(--secondMainColor);
 }
 
-.lineSt {
-    display: flex;
-    flex-direction: row-reverse;
-    position: relative;
-    font-size: var(--navigationFontSize);
-}
-
-.calprice {
-    display: flex;
-}
-
-.Sotext {
-    margin-right: 16em;
-}
-
-.Toprice {
-    margin-right: 2em;
-}
-
-.lineH {
-    width: 23%;
-    height: 1px;
-    border: 1px solid black;
-    position: absolute;
-    right: 1em;
-    top: 3em;
-}
 
 .nextline {
     width: 80%;
@@ -457,40 +428,6 @@ ContactUs
     box-shadow: var(--sideBarShadow);
     margin-left: 5em;
 }
-
-.CheckO {
-    margin-right: 1em;
-    margin-top: 3.2em;
-    margin-bottom: 2em;
-}
-
-.CheckO button {
-    width: 8em;
-    background-color: var(--mainColor);
-    border-radius: 0.2em;
-    border: 2px solid var(--mainColor);
-    color: var(--secondMainColor);
-    font-weight: bold;
-    transition: all 0.5s;
-}
-
-.CheckO:hover button {
-    background-color: transparent;
-    color: var(--mainColor);
-}
-
-.text_title {
-    font-size: var(--navigationFontSize);
-}
-
-.tax {
-    opacity: 0.7;
-}
-
-.text_b {
-    font-size: 1.3em;
-}
-
 
 .btn_text {
     width: 12em;
@@ -533,44 +470,6 @@ ContactUs
         margin: 2em;
     }
 
-    .stockbtn {
-        width: 3.5em;
-        height: 1.8em;
-    }
-
-    .text_title {
-        font-size: var(--paragraphFontSize);
-    }
-
-    .text_b {
-        font-size: var(--minisubtitleFontSize);
-    }
-
-    .topi {
-        margin: 0.3em 0.2em 0.3em 0.2em;
-        font-size: var(--minisubtitleFontSize);
-    }
-
-    .number {
-        margin: 0.1em 0.3em 0.2em 0.3em;
-        font-size: var(--minisubtitleFontSize);
-    }
-
-    .downi {
-        margin: 0.3em 0.2em 0.3em 0.2em;
-        font-size: var(--minisubtitleFontSize);
-    }
-
-    .Sotext {
-        margin-right: 9em;
-        font-size: var(--minisubtitleFontSize);
-    }
-
-    .Toprice {
-        margin-right: 2em;
-        font-size: var(--minisubtitleFontSize);
-    }
-
     .minibox {
         display: flex;
         flex-direction: column;
@@ -582,8 +481,7 @@ ContactUs
         background-color: transparent;
         border-radius: 0.5em;
         transition: all 1s;
-        margin-left: 0em;
-        margin-right: 0em;
+        margin-left: 2em;
         margin-bottom: 2em;
     }
 

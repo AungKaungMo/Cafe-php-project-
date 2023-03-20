@@ -286,6 +286,86 @@
   }
 }
 
+.plusBox {
+  text-align: center;
+  border: 1px solid var(--mainColor);
+  background-color: var(--backgroundTertiary);
+  padding-top: 1.2em;
+  margin-right: 0.3em;
+  border-radius: 0.2em;
+}
+
+.plusIcon {
+  font-size: var(--navigationFontSize);
+}
+
+.dashIcon {
+  font-size: var(--navigationFontSize);
+}
+
+.Num {
+  font-size: var(--navigationFontSize);
+}
+
+.Sotext {
+  margin-left: 2em;
+  font-size: var(--minisubtitleFontSize);
+}
+
+.Toprice {
+  margin-left: 13.3em;
+  font-size: var(--minisubtitleFontSize);
+}
+
+.Toprice1 {
+  margin-left: 15em;
+  font-size: var(--minisubtitleFontSize);
+}
+
+.Toprice2 {
+  margin-left: 14em;
+  font-size: var(--minisubtitleFontSize);
+}
+
+.Toprice3 {
+  margin-left: 9em;
+  font-size: var(--minisubtitleFontSize);
+}
+
+
+.lineH {
+  width: 45%;
+  height: 1px;
+  border: 1px solid black;
+  margin-left: 10em;
+}
+
+.tax {
+  opacity: 0.7;
+}
+
+
+.CheckO {
+  margin-left: 14em;
+  margin-top: 3.2em;
+  margin-bottom: 2em;
+}
+
+.CheckO button {
+  width: 6em;
+  background-color: var(--mainColor);
+  border-radius: 0.2em;
+  border: 2px solid var(--mainColor);
+  color: var(--secondMainColor);
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.CheckO:hover button {
+  background-color: transparent;
+  color: var(--mainColor);
+}
+
 
 /**
 Footer

@@ -77,7 +77,7 @@
                                     <span>(14)</span>
                                 </div>
                                 <div>
-                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="modal" data-bs-target="#exampleModal1"></iconify-icon>
+                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
                                 </div>
 
                             </div>
@@ -176,7 +176,7 @@
                                     <span>(14)</span>
                                 </div>
                                 <div>
-                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="modal" data-bs-target="#exampleModal1"></iconify-icon>
+                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
                                 </div>
 
                             </div>
@@ -323,7 +323,7 @@
     </div>
 
     <!------------cart---------->
-    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
@@ -452,12 +452,124 @@
                             <button class="p-1">Check out</button>
                         </div>
                     </div>
-
-
                     <div class="nextline"></div>
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="offcanvas offcanvas-end cartBox" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <div class="d-flex ">
+                <h5 id="offcanvasRightLabel" class="favList fs-3">Cart </h5>
+                <iconify-icon icon="ph:shopping-cart-fill" class=" mt-2 ms-2 fs-3"></iconify-icon>
+            </div>
+
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="navLine"></div>
+        <div class="offcanvas-body">
+            <div class="d-flex">
+                <div class="plusBox">
+                    <iconify-icon icon="ic:baseline-plus" class="plusIcon"></iconify-icon>
+                    <p class="mt-2 Num">2</p>
+                    <iconify-icon icon="ic:sharp-minus" class="dashIcon"></iconify-icon>
+                </div>
+                <div class="ListImg me-3 col-5 mt-2">
+                    <img src="./resources/img/cake.jpg" width="100%" height="100%" class="dashIcon">
+                </div>
+                <div class="col-7">
+                    <div class="d-flex justify-content-between">
+                        <div class="favProductTitle fw-bold">Chocolate Cake</div>
+                    </div>
+                    <p class="mt-3 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
+                    <p class="mt-3 mb-1 favtext">Note - <span class="fw-bold">abcdefghijkl</span></p>
+                    <p class="mt-3 mb-1 favtext">Price - <span class="fw-bold">20000mmk</span></p>
+                    <div class="d-flex justify-content-between">
+                    </div>
+                </div>
+            </div>
+            <div class="navLine my-4"></div>
+
+            <div class="d-flex">
+                <div class="plusBox">
+                    <iconify-icon icon="ic:baseline-plus" class="plusIcon"></iconify-icon>
+                    <p class="mt-2 Num">2</p>
+                    <iconify-icon icon="ic:sharp-minus" class="dashIcon"></iconify-icon>
+                </div>
+                <div class="ListImg me-3 col-5 mt-2">
+                    <img src="./resources/img/cake.jpg" width="100%" height="100%" class="dashIcon">
+                </div>
+                <div class="col-7">
+                    <div class="d-flex justify-content-between">
+                        <div class="favProductTitle fw-bold">Chocolate Cake</div>
+                    </div>
+                    <p class="mt-3 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
+                    <p class="mt-3 mb-1 favtext">Note - <span class="fw-bold">abcdefghijkl</span></p>
+                    <p class="mt-3 mb-1 favtext">Price - <span class="fw-bold">20000mmk</span></p>
+                    <div class="d-flex justify-content-between">
+                    </div>
+                </div>
+            </div>
+            <div class="navLine my-4"></div>
+
+            <div class="d-flex">
+                <div class="plusBox">
+                    <iconify-icon icon="ic:baseline-plus" class="plusIcon"></iconify-icon>
+                    <p class="mt-2 Num">2</p>
+                    <iconify-icon icon="ic:sharp-minus" class="dashIcon"></iconify-icon>
+                </div>
+                <div class="ListImg me-3 col-5 mt-2">
+                    <img src="./resources/img/cake.jpg" width="100%" height="100%" class="dashIcon">
+                </div>
+                <div class="col-7">
+                    <div class="d-flex justify-content-between">
+                        <div class="favProductTitle fw-bold">Chocolate Cake</div>
+                    </div>
+                    <p class="mt-3 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
+                    <p class="mt-3 mb-1 favtext">Note - <span class="fw-bold">abcdefghijkl</span></p>
+                    <p class="mt-3 mb-1 favtext">Price - <span class="fw-bold">20000mmk</span></p>
+                    <div class="d-flex justify-content-between">
+                    </div>
+                </div>
+            </div>
+            <div class="navLine my-4"></div>
+
+
+            <div class="calprice mt-4">
+                <div class="d-flex">
+                    <div class="Sotext fw-bold">Sub total</div>
+                    <div class="Toprice">60000 MMK</div>
+                </div>
+            </div>
+            <div class="lineH"></div>
+            <div class="calprice mt-4">
+                <div class="d-flex">
+                    <div class="Sotext fw-bold">Tax 5%</div>
+                    <div class="Toprice1">4500 MMK</div>
+                </div>
+            </div>
+            <div class="lineH"></div>
+            <div class="calprice mt-4">
+                <div class="d-flex">
+                    <div class="Sotext fw-bold">Discount</div>
+                    <div class="Toprice2">-500 MMK</div>
+                </div>
+            </div>
+            <div class="lineH"></div>
+            <div class="calprice mt-4">
+                <div class="d-flex">
+                    <div class="Sotext fw-bold">Grand Ttal<span class="tax">(incl.tax)</span></div>
+                    <div class="Toprice3">64000 MMK</div>
+                </div>
+            </div>
+            <div class="lineH"></div>
+            <div class="CheckO">
+                <button class="p-1">Check out</button>
+            </div>
+        </div>
+
+
     </div>
 
 
