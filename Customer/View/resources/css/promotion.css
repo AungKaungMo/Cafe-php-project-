@@ -1,15 +1,16 @@
-
 /* Navigation CSS */
 
-.navtitle{
+.navtitle {
     font-family: var(--navigationFont);
     font-size: var(--navigationFontSize);
     position: relative;
     padding-left: 0 !important;
 }
-.navtitle::before, .navtitleActive::before{
+
+.navtitle::before,
+.navtitleActive::before {
     content: '';
-    width: 0; 
+    width: 0;
     height: 3px;
     background-color: var(--mainColor);
     position: absolute;
@@ -17,58 +18,72 @@
     bottom: 5px;
     transition: all 0.5s;
 }
-.navtitleActive::before{
+
+.navtitleActive::before {
     width: 50px;
 }
 
-.navtitle::after, .navtitleActive::after{
+.navtitle::after,
+.navtitleActive::after {
     content: '';
     width: 0;
     height: 3px;
     background-color: var(--mainColor);
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
     left: 0;
     transition: all 0.5s;
 }
-.navtitleActive::after{
+
+.navtitleActive::after {
     width: 30px;
 }
-.navtitle:hover::before{
+
+.navtitle:hover::before {
     width: 50px;
 }
-.navtitle:hover::after{
+
+.navtitle:hover::after {
     width: 30px;
 }
-.searchIcon{
+
+.searchIcon {
     background-color: var(--mainColor);
     color: var(--secondMainColor);
     border-radius: 50%;
     transition: all 0.4s;
 }
-.searchIcon:hover{
+
+.searchIcon:hover {
     opacity: 0.7;
 }
-.userIcon, .userdownIcon{
+
+.userIcon,
+.userdownIcon {
     color: var(--secondMainColor);
 }
-.userText{
+
+.userText {
     color: var(--textColorPrimary);
 }
-.userbox{
+
+.userbox {
     background-color: var(--mainColor);
 }
-.navLine{
+
+.navLine {
     width: 100%;
     height: 1px;
     background-color: var(--mainColor);
 }
-.userimage{
+
+.userimage {
     margin: 0.4em;
 }
- /* responsive side bar */
 
-.sideBar{
+/* responsive side bar */
+
+.sideBar {
     background-color: var(--backgroundTertiary);
     height: 100vh;
     box-shadow: var(--cardShadow);
@@ -76,93 +91,110 @@
     opacity: 0;
     transition: all 0.7s;
 }
-.sideBarChange{
+
+.sideBarChange {
     right: 0;
     opacity: 1;
 }
-#closeSideBar{
+
+#closeSideBar {
     top: 10px;
     right: 10px;
     transition: all 0.4s;
 }
-#closeSideBar:hover{
+
+#closeSideBar:hover {
     color: var(--mainColor);
     transform: rotate(360deg);
 }
-#responsiveSideBarIcon{
+
+#responsiveSideBarIcon {
     font-size: 2.3em;
     margin-left: 0.4em;
 }
-.userIcon{
+
+.userIcon {
     font-size: 2.2em;
 }
+
 @media screen and (max-width:470px) {
-    .logo{
+    .logo {
         height: 40px;
     }
+
     #responsiveSideBarIcon {
         font-size: 1.7em;
     }
+
     .userIcon {
         font-size: 1.7em;
     }
-    .userText{
+
+    .userText {
         font-size: 0.7em;
     }
-    .searchIcon{
+
+    .searchIcon {
         font-size: 1em;
     }
 }
-.searchDropdown{
+
+.searchDropdown {
     background-color: var(--mainColor);
 }
-.searchBox{
+
+.searchBox {
     border: none;
     outline: none;
-    width:80%;
+    width: 80%;
     color: var(--textColorPrimary);
     background-color: transparent;
     border-bottom: 1px solid var(--textColorSecondary);
 }
+
 .searchBox::placeholder {
     color: var(--textColorPrimary);
     opacity: 0.7;
 }
-.inputSearchIcon{
+
+.inputSearchIcon {
     color: var(--secondMainColor);
 }
-.signColor{
+
+.signColor {
     color: var(--textColorPrimary);
     font-family: var(--titleFont);
 }
-.signIcon{
+
+.signIcon {
     color: var(--secondMainColor);
 }
-.signBox{
+
+.signBox {
     background-color: var(--mainColor);
     right: 0;
     top: 80px;
 }
-.signBox::after{
+
+.signBox::after {
     content: '';
-    width:25px;
-    height:25px;
+    width: 25px;
+    height: 25px;
     background-color: var(--mainColor);
     position: absolute;
     top: -11px;
-    left:0;
+    left: 0;
     right: 0;
     margin: auto;
     transform: rotate(45deg);
 }
 
-
 /* hero */
-#Hero{
+#Hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    background:linear-gradient(120deg,#FFFFFF,#765341) ;
+    background: linear-gradient(120deg, #FFFFFF, #765341);
 
 }
 
@@ -173,26 +205,131 @@
 }
 
 /* ============================Hero section================================= */
-.hero{
+.herosection {
+    background-image: url('../img/herosection.png');
+    position: relative;
+    height: 700px;
+}
+
+.herosection .carousel-inner {
     width: 100%;
-    height: 100vh;
+    height: 550px;
+    margin-left: 50px;
 }
 
-.herocontent{
-    padding: 85px;
+.herosection .carousel-item img {
+    position: relative;
+    bottom: -100px;
+    width: 300px;
 }
 
-.herotitle{
+.herosection .herocontent {
+    position: relative;
+    top: 100px;
+}
+
+.herosection .herocontent .herotitle {
     font-family: var(--titleFont);
-    font-size: var(--subTitleFontSize);
+    font-size: var(--titleFontSize);
+}
+
+.herosection .carousel-control {
+    position: absolute;
+    bottom: 0px;
+    width: 500px;
+    background-color: var(--secondMainColor);
+    border-radius: 30px;
+    margin-left: 50px;
+}
+
+
+.herosection .carousel-indicators {
+    position: relative;
+}
+
+
+.herosection .carousel-indicators button {
+    width: 80px;
+    height: 100px;
+    transition: all 0.3s ease-in;
+    padding: 50px;
+}
+
+.carousel-indicators [data-bs-target] {
+    background: transparent;
+}
+
+.herosection .carousel-indicators button.active {
+    transform: scale(1.2);
+}
+
+/* ======================================whatnew===================================== */
+.whatwaveimg {
+    margin-top: 5em;
+    width: 100%;
+    height: 25vh;
+    background: url('../img/whatwaveimg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+.whatnewsection {
+    background-color: var(--backgroundSecondary);
+    height: 350px;
+    width: 100%;
+}
+
+.whatnewsection img {
+    width: 350px;
+}
+
+.whatnewsection .script {
+    width: 400px;
+    margin-left: 30px;
+}
+
+.whatnewsection h2 {
     color: var(--mainColor);
+    font-family: var(--titleFont);
+}
+
+.whatnewsection p {
+    color: var(--mainColor);
+    font-family: var(--paragraphFont);
+}
+
+.whatnewsection .search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: -26px;
+}
+
+.whatnewsection .search input {
+    border-radius: 30px;
+    width: 300px;
+    height: 60px;
+    background-color: var(--mainColor);
+    border-style: none;
+    color: var(--textColorPrimary);
+    font-size: var(--subTitleFontSize);
+    text-align: center;
+}
+
+.whatnewsection .search iconify-icon {
+    position: absolute;
+    right: 496px;
+    top: 5px;
 }
 
 /* =========================discount items========================= */
-.disitems{
+.disitems {
     width: 500px;
-    height:150px;
-    background-color:var(--backgroundSecondary);
+    height: 150px;
+    background-color: var(--backgroundSecondary);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -200,54 +337,55 @@
     overflow: hidden;
 }
 
-.disitems .carousel{
+.disitems .carousel {
     font-size: 0px;
     cursor: pointer;
     white-space: nowrap;
 }
 
-.carousel img{
+.carousel img {
     object-fit: cover;
     margin-left: 60px;
     width: calc(100%/6);
 }
 
-.container{
+.container {
     width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.subtitle{
+.subtitle {
     float: left;
     font-family: var(--titleFont);
     font-size: var(--subTitleFontSize);
     color: var(--mainColor);
 }
 
-.seemore{
+.seemore {
     float: right;
     font-family: var(--titleFont);
     font-size: var(--paragraphFontSize);
     color: var(--mainColor);
 }
 
-.row{
+.row {
     clear: both;
 }
 
-.box:hover{
+.box:hover {
     transform: scale(1.1);
 }
 
-.box , .box img{
+.box,
+.box img {
     height: 220px;
     width: 200px;
     border-radius: 30px;
     margin-bottom: 20px;
 }
 
-.box_ribbon{
+.box_ribbon {
     width: 12em;
     height: 12em;
 
@@ -258,7 +396,7 @@
     overflow: hidden;
 }
 
-.box_ribbon::after{
+.box_ribbon::after {
     content: '10 % Off';
     position: absolute;
     width: 100%;
@@ -272,17 +410,17 @@
     align-items: center;
 
     text-transform: uppercase;
-    color:var(--textColorPrimary);
+    color: var(--textColorPrimary);
     font-weight: 600;
     letter-spacing: 0.1em;
 
-    box-shadow: 0 0.3em 0.6em rgba(0,0,0,0.2);
+    box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.2);
 }
 
 
 /* =================================footer================================ */
 
-.footerImg{
+.footerImg {
     margin-top: 5em;
     width: 100%;
     height: 25vh;
@@ -290,51 +428,62 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-  }
-  .footer{
+}
+
+.footer {
     width: 100%;
     background-color: var(--mainColor);
     color: var(--textColorPrimary);
-  }
-  .footerTitle{
+}
+
+.footerTitle {
     font-size: var(--navigationFontSize);
     font-weight: bold;
-  }
-  .footerDetails a{
+}
+
+.footerDetails a {
     margin-top: 1em;
     color: var(--textColorPrimary);
     opacity: 0.7;
     transition: all 0.5s;
-  }
-  .footerDetails a:hover{
+}
+
+.footerDetails a:hover {
     color: var(--secondMainColor);
     opacity: 1;
-  }
-  .footerDetails a iconify-icon{
+}
+
+.footerDetails a iconify-icon {
     font-size: 2em;
     margin-right: 0.7em;
-  }
-  .copyRight div{
+}
+
+.copyRight div {
     background-color: var(--textColorPrimary);
     height: 2px;
-  }
-  @media screen and (max-width:470px) {
-    .footerLogo{
+}
+
+@media screen and (max-width:470px) {
+    .footerLogo {
         width: 100%;
     }
-    .navigation{
+
+    .navigation {
         width: 40%;
     }
+
     .navigation {
         margin-left: 2em;
         margin-top: 1.5em;
     }
-    .someLinks{
-        margin-right: 2em ;
+
+    .someLinks {
+        margin-right: 2em;
         margin-top: 1.5em;
     }
-    .socialMedia{
+
+    .socialMedia {
         margin-left: 2em;
         margin-top: 1.5em;
     }
-  }
+}
