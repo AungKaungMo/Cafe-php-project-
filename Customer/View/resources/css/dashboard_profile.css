@@ -1,0 +1,78 @@
+.navigation ul li:nth-child(2) {
+  background: var(--backgroundPrimary);
+}
+.navigation ul li:nth-child(2) a {
+  color: var(--mainColor);
+}
+.navBar h1 {
+  font-size: 1.2em;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.navBar a{
+  color: var(--textColorSecondary);
+}
+.navBar h1:hover,
+.navBar a:hover {
+  color: var(--mainColor);
+}
+.navBar h1:first-child,
+.navBar h1:nth-child(2) {
+  position: relative;
+}
+.navBar h1:first-child::after,
+.navBar h1:nth-child(2)::after {
+  content: attr(data-msg);
+  position: absolute;
+  padding: 0.5em;
+  background-color: red;
+  border-radius: 50%;
+  color: var(--textColorPrimary);
+  font-size: 0.7em;
+  top: -13px;
+}
+.navBar h1:nth-child(2)::after {
+  content: attr(data-noti);
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--mainColor);
+  box-shadow: 0px 5px 10px var(--mainColor);
+}
+@media screen and (max-width: 700px) {
+  .line {
+    display: none !important;
+  }
+  .navBar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center !important;
+    height: 80vh;
+    background-color: var(--mainColor);
+    color: var(--textColorPrimary);
+    position: absolute;
+    padding: 2.3em;
+    top: 2em;
+    right: -300px;
+    opacity: 0;
+    transition: all 0.7s;
+    z-index: 111;
+  }
+  .navBar h1 {
+    margin-bottom: 2em;
+  }
+  .toggleNavBar {
+    display: flex !important;
+    justify-content: end;
+  }
+  .navBar h1:hover,
+  .navBar a:hover {
+    color: var(--secondMainColor);
+  }
+}
+.navBarSlide {
+  right: 0;
+  opacity: 1;
+}

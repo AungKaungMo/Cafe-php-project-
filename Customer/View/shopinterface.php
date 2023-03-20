@@ -77,7 +77,7 @@
                                     <span>(14)</span>
                                 </div>
                                 <div>
-                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon"></iconify-icon>
+                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="modal" data-bs-target="#exampleModal1"></iconify-icon>
                                 </div>
 
                             </div>
@@ -467,13 +467,13 @@
 
         <ul class="">
             <li class="nav-item">
-                <a class="nav-link navtitle navtitleActive pb-2" aria-current="page" href="#">HOME</a>
+                <a class="nav-link navtitle navtitleActive pb-2" aria-current="page" href="./shopinterface.php">HOME</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navtitle my-5 pb-2" href="#">Menu</a>
+                <a class="nav-link navtitle my-5 pb-2" href="./shopinterfacemenu.php">Menu</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link navtitle  pb-2" href="#">Booking</a>
+                <a class="nav-link navtitle  pb-2" href="./booking.php">Booking</a>
             </li>
         </ul>
     </div>
@@ -494,7 +494,7 @@
 
     <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
         <div>
-            <h1 class=" text-center title fw-bold pb-2 position-relative">Today Speical Menu</h1>
+            <h1 class=" text-center title fw-bold pb-2 position-relative">Promotiom Product</h1>
         </div>
     </div>
     <div class="swiper mySwiper mt-5 box1">
@@ -856,7 +856,7 @@
 
     <!------------------------   our Gallery  -------------------------------->
 
-    <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
+    <!-- <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
         <div>
             <h1 class=" text-center title fw-bold pb-2 position-relative">Our Gallery</h1>
         </div>
@@ -884,7 +884,7 @@
                 <img src="./resources/img/Rectangle 515.png" alt="" class="Hoimg">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!------------------------   Blog  -------------------------------->
 
@@ -897,7 +897,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide box">
                 <div class="minibox">
-                    <div class="blogcard me-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>
@@ -921,7 +921,7 @@
                         </div>
                     </div>
 
-                    <div class="blogcard ms-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>
@@ -949,7 +949,7 @@
 
             <div class="swiper-slide box">
                 <div class="minibox">
-                    <div class="blogcard me-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>
@@ -973,7 +973,7 @@
                         </div>
                     </div>
 
-                    <div class="blogcard ms-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>
@@ -1000,7 +1000,7 @@
             </div>
             <div class="swiper-slide box">
                 <div class="minibox">
-                    <div class="blogcard me-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>
@@ -1024,7 +1024,7 @@
                         </div>
                     </div>
 
-                    <div class="blogcard ms-5">
+                    <div class="blogcard">
                         <div class="part1">
                             <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
                         </div>

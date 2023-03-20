@@ -341,7 +341,7 @@
                 <a class="nav-link navtitle pb-2" aria-current="page" href="#">HOME</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navtitle my-5 pb-2" href="#">SHOP</a>
+                <a class="nav-link navtitle my-5 pb-2" href="#">Menu</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link navtitle navtitleActive pb-2" href="#">Booking</a>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopDashboard</title>
+    <title>UserDashboard</title>
     <!-------------------------    GOOGLE FONTS   ------------------------------>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -82,7 +82,7 @@
                     <iconify-icon icon="material-symbols:menu"></iconify-icon>
                 </div>
                 <!-- userImg -->
-                <div class="fs-4 fw-bold">Shop Owner</div>
+                <div class="fs-4 fw-bold">User</div>
                 <div class="owner">
                     <img src="./resources/img/profile.jpg">
                 </div>

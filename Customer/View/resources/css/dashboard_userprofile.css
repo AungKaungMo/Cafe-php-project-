@@ -1,0 +1,63 @@
+.navBar h1:nth-child(2) a {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+@media screen and (max-width: 700px) {
+  .navBar h1:nth-child(2) a {
+    color: var(--secondMainColor);
+    font-weight: bold;
+  }
+}
+.uploadImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--mainColor);
+}
+.uploadImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.uploadImage ~ iconify-icon {
+  color: var(--mainColor);
+  right: -10px;
+}
+.informtaionBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+  color: var(--mainColor);
+}
+.informtaionBox input {
+  width: 250px;
+  margin-left: 0.8em;
+  padding: 0.1em;
+  border: 1px solid var(--mainColor);
+  outline: none;
+  border-radius: 15px; 
+}
+.informtaionBox input[type="file"] {
+  background-color: var(--backgroundTertiary);
+  padding: 0;
+  font-size: 0.8em;
+}
+
+.autentication{
+  color: var(--mainColor);
+}
+
+@media screen and (max-width: 750px) {
+  .informtaionBox input {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .informtaionBox label {
+    font-size: 0.8em;
+  }
+  .informtaionBox input {
+    width: 160px;
+  }
+}

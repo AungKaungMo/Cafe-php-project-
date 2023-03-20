@@ -1,0 +1,20 @@
+.navBar h1:nth-child(3) {
+    color: var(--mainColor);
+    font-weight: bold;
+  }
+  @media screen and (max-width: 700px) {
+    .navBar h1:nth-child(3) {
+      color: var(--secondMainColor);
+      font-weight: bold;
+    }
+  }
+
+  .sliderTitle{
+    padding: 0.7em;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    color: var(--textColorPrimary);
+    width: 120px;
+    text-align: center;
+    margin-bottom: 1em;
+  }

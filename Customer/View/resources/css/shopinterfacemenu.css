@@ -4,6 +4,9 @@ body {
     background-color: var(--secondMainColor);
 }
 
+.back_body {
+    background-color: #FFFFFF;
+}
 
 .serviceSection .title::before,
 .serviceSection .title::after {
@@ -124,7 +127,7 @@ body {
 .img {
     position: absolute;
     top: -3em;
-    left: 2.4em;
+    left: 2.7em;
     transition: all 1s;
 }
 
@@ -142,7 +145,6 @@ body {
     margin-left: 3em;
     width: 90%;
     border: 1.5px solid var(--mainColor);
-    margin-bottom: 3em;
 
 }
 
