@@ -3,6 +3,7 @@ include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_review.css">
 </head>
+
 <body>
     <form>
         <div class="d-flex flex-column justify-content-center align-items-center mt-4">
@@ -32,4 +33,5 @@ include "./resources/shared/dashboard.php";
     </div>
     <script src="./resources/js/dashboard_review.js"></script>
 </body>
+
 </html>

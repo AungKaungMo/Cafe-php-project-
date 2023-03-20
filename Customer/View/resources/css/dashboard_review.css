@@ -1,38 +1,39 @@
 .navigation ul li:nth-child(4) {
-    background: var(--backgroundPrimary);
+  background: var(--backgroundPrimary);
+}
+.navigation ul li:nth-child(4) a {
+  color: var(--mainColor);
+}
+.commentBox label {
+  color: var(--mainColor);
+}
+.commentBox textarea {
+  width: 500px;
+  height: 150px;
+}
+.rating p {
+  color: var(--mainColor);
+}
+.rating iconify-icon,
+.starBox iconify-icon {
+  color: var(--mainColor);
+  font-size: 2em;
+  user-select: none;
+}
+
+.starBox {
+  width: 200px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid var(--mainColor);
+}
+@media screen and (max-width: 620px) {
+  .commentBox textarea {
+    width: 300px;
   }
-  .navigation ul li:nth-child(4) a {
-    color: var(--mainColor);
-  }
-  .commentBox label{
-    color: var(--mainColor);
-  }
-  .commentBox textarea{
-    width: 500px;
-    height: 150px;
-  }
-  .rating p{
-    color: var(--mainColor);
-  }
-  .rating iconify-icon, .starBox iconify-icon{
-    color: var(--mainColor);
-    font-size: 2em;
-    user-select: none;
-  }
-  
-  .starBox{
+}
+@media screen and (max-width: 430px) {
+  .commentBox textarea {
     width: 200px;
-    background-color: transparent;
-    border-radius: 10px;
-    border: 2px solid var(--mainColor);
   }
-  @media screen and (max-width:620px){
-    .commentBox textarea{
-        width: 300px;
-    }
-  }
-  @media screen and (max-width:430px){
-    .commentBox textarea{
-        width: 200px;
-    }
-  }
+}

@@ -9,8 +9,7 @@
   font-weight: bold;
 }
 
-.navtitle::before,
-.navtitleActive::before {
+.navtitle::before {
   content: "";
   width: 0;
   height: 3px;
@@ -21,12 +20,7 @@
   transition: all 0.5s;
 }
 
-.navtitleActive::before {
-  width: 50px;
-}
-
-.navtitle::after,
-.navtitleActive::after {
+.navtitle::after {
   content: "";
   width: 0;
   height: 3px;
@@ -35,10 +29,6 @@
   bottom: 0;
   left: 0;
   transition: all 0.5s;
-}
-
-.navtitleActive::after {
-  width: 30px;
 }
 
 .navtitle:hover::before {
@@ -191,7 +181,7 @@
   font-size: 1.2em;
 }
 
-.cartText+span {
+.cartText + span {
   color: var(--secondMainColor);
 }
 
@@ -207,7 +197,7 @@
   font-family: var(--titleFont);
 }
 
-.favList+iconify-icon {
+.favList + iconify-icon {
   color: var(--mainColor);
 }
 
@@ -286,7 +276,6 @@
   }
 }
 
-
 /**
 Footer
 **/
@@ -334,7 +323,7 @@ Footer
   height: 2px;
 }
 
-@media screen and (max-width:470px) {
+@media screen and (max-width: 470px) {
   .footerLogo {
     width: 100%;
   }

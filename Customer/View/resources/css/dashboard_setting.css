@@ -1,25 +1,25 @@
 .navigation ul li:nth-child(6) {
-    background: var(--backgroundPrimary);
-  }
-  .navigation ul li:nth-child(6) a {
-    color: var(--mainColor);
-  }
-.password input{
-    width: 300px;
-    padding: 0.7em;
-    background-color: var(--mainColor);
-    border-radius: 25px;
-    outline: none;
-    border: none;
-    color: var(--textColorPrimary);
-    margin-top: 1.5em;
+  background: var(--backgroundPrimary);
 }
-.password input::placeholder{
-    color: var(--textColorPrimary);
-    opacity: 0.7;
+.navigation ul li:nth-child(6) a {
+  color: var(--mainColor);
 }
-@media screen and (max-width:430px) {
-    .password input{
-        width: 100%;
-    }
+.password input {
+  width: 300px;
+  padding: 0.7em;
+  background-color: var(--mainColor);
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  color: var(--textColorPrimary);
+  margin-top: 1.5em;
+}
+.password input::placeholder {
+  color: var(--textColorPrimary);
+  opacity: 0.7;
+}
+@media screen and (max-width: 430px) {
+  .password input {
+    width: 100%;
+  }
 }

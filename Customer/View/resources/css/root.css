@@ -23,6 +23,7 @@
 }
 a {
     text-decoration: none;
+    color: var(--textColorPrimary);
 }
 li {
     list-style-type: none;
