@@ -8,7 +8,7 @@
   <title>Payment Success</title>
   <!-------css links----->
   <link rel="stylesheet" href="./resources/css/root.css">
-  <link rel="stylesheet" href="./resources/css/paymentsuccess.css">
+  <link rel="stylesheet" href="./resources/css/confirmpopup.css">
 
   <!--------bootstrap5-------->
   <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
@@ -21,7 +21,7 @@
 <body>
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    KBZ payment Success
+   Confirm 
   </button>
 
   <!-- Modal -->
@@ -33,14 +33,14 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div>
-          <div><iconify-icon class="circleClick" icon="material-symbols:check-circle"></iconify-icon></div>
+          <div><iconify-icon class= "circleClick"icon="mdi:question-mark-circle-outline"></iconify-icon></div>
           </div>
           <div class="modal-body text-center">
             <div class="mainPop">         
-            <div class="h2 mb-3 fw-bold">Payment Successful</div>
-            <div class="mb-4 thankPurchase">Thank you for purchasing. 
-            Your payment was successful.</div>     
-            <button type="button" class="btn text-white Back2Home">Back to Home Page</button>
+            <div class="h2 mb-3 fw-bold">Confirm Title</div>
+            <div class="mb-5 thankPurchase">Confirm Message</div>     
+            <button type="button" class="btn text-white Back2Home me-5">Cancel </button>
+            <button type="button" class="btn text-white Back2Home ms-5">Confirm</button>
             </div>       
           </div> 
         </div>
