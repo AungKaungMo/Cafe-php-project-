@@ -99,7 +99,8 @@
 
 
             <div class="comBtn text-center">
-                <button class="p-1">Enter To Comfirm</button>
+                <a href="./wavepay3.php">
+                    <button class="p-1">Enter To Comfirm</button></a>
             </div>
 
         </div>

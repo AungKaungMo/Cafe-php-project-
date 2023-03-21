@@ -39,7 +39,7 @@
 
   <!------------------  Header Navigation   --------------------->
   <?php
-    include "./resources/shared/nav.php";
+  include "./resources/shared/nav.php";
   ?>
 
   <!-----------------------------   Header SLider    --------------------->
@@ -54,10 +54,9 @@
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
-            <span class="collapse" id="collapseExample"> Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
           </p>
           <div class="mt-5">
-            <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">See More</button>
+            <a href="./shopinterface.php"><button class="btn px-2 py-3 fw-bold seemoreBtn">Go Now</button></a>
           </div>
 
         </div>
@@ -71,10 +70,9 @@
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
-            <span class="collapse" id="collapseExample2"> Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
           </p>
           <div class="mt-5">
-            <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">See More</button>
+            <a href="./shopinterface.php"><button class="btn px-2 py-3 fw-bold seemoreBtn">Go Now</button></a>
           </div>
         </div>
       </div>
@@ -87,10 +85,9 @@
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
-            <span class="collapse" id="collapseExample3"> Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
           </p>
           <div class="mt-5">
-            <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">See More</button>
+            <a href="./shopinterface.php"><button class="btn px-2 py-3 fw-bold seemoreBtn">Go Now</button></a>
           </div>
         </div>
       </div>
@@ -110,7 +107,6 @@
         ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
         ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
         <span class="collapse" id="collapseExample4">Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
-
       </p>
       <div class="mt-5">
         <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">See More</button>
@@ -373,10 +369,10 @@
 
   <!-----------------------   Footer   ---------------------------->
 
- <?php
-    include "./resources/shared/footer.php";
+  <?php
+  include "./resources/shared/footer.php";
 
-?>
+  ?>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

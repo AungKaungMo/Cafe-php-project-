@@ -7,10 +7,10 @@
           <div class="navigation">
               <div class="footerTitle">Navigation</div>
               <div class="mt-4 d-flex flex-column footerDetails">
-                  <a href="#">Home</a>
-                  <a href="#">Shop</a>
-                  <a href="#">Promotions</a>
-                  <a href="#">Buy Shop</a>
+                  <a href="./h.php">Home</a>
+                  <a href="./shop.php">Shop</a>
+                  <a href="./promotion.php">Promotions</a>
+                  <a href="./buyShop.php">Buy Shop</a>
               </div>
           </div>
 

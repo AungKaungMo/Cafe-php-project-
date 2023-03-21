@@ -3,9 +3,10 @@ include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_notification.css">
 </head>
+
 <body>
 
-<div class="notificationsBoxContainer mx-sm-5 mx-3 my-5">
+    <div class="notificationsBoxContainer mx-sm-5 mx-3 my-5">
         <div class="notificationsBox p-4 mt-5">
             <div class="d-flex justify-content-between">
                 <div>
@@ -61,6 +62,7 @@ include "./resources/shared/dashboard.php";
     <!----------------  End Tab  ------------------>
     </div>
     </div>
-    
+
 </body>
+
 </html>

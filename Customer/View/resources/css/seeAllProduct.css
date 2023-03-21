@@ -1,13 +1,13 @@
-#responsiveSideBar ul li:nth-child(3) a::before {
+#responsiveSideBar ul li:nth-child(2) a::before {
   width: 50px;
 }
-#responsiveSideBar ul li:nth-child(3) a::after {
+#responsiveSideBar ul li:nth-child(2) a::after {
   width: 30px;
 }
-.slideBar ul li:nth-child(3) a::before {
+.slideBar ul li:nth-child(2) a::before {
   width: 50px;
 }
-.slideBar ul li:nth-child(3) a::after {
+.slideBar ul li:nth-child(2) a::after {
   width: 30px;
 }
 
@@ -85,29 +85,6 @@ h1 {
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 1px 1px 2px;
   margin-bottom: 6.5em;
-}
-
-.disticket {
-  padding: 0 0 10px 10px;
-  font-size: var(--subTitleFontSize);
-  color: var(--textColorPrimary);
-  width: 75px;
-  height: 36px;
-  top: 40px;
-  left: -24px;
-  border-radius: 5px;
-  background-color: var(--mainColor);
-  position: absolute;
-  z-index: -1;
-}
-
-.distickettri {
-  position: absolute;
-  border: 18px solid transparent;
-  border-left-color: var(--mainColor);
-  top: 40px;
-  left: 48px;
-  z-index: -1;
 }
 
 .carditems img {
