@@ -375,8 +375,6 @@
     </div>
 
 
-
-
     <!------------------------   Blog  -------------------------------->
 
     <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
