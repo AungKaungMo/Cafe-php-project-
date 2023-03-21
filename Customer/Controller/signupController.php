@@ -36,5 +36,5 @@ if (isset($_POST["send"])) {
     $sql->bindValue(":password", $password);
     $sql->bindValue(":address", $township);
 
-    $sql->execute();
+    // $sql->execute();
 }

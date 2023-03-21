@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-------css links----->
-    <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/adminlogin.css">
 
     <!--------bootstrap5-------->
     <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
@@ -16,6 +13,10 @@
 
     <!------icons link------->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+    <!-------css links----->
+    <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/adminlogin.css">
 </head>
 
 <body class="back">
@@ -38,7 +39,7 @@
                                         <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                                     </div>
                                     <div class="loginBtn">
-                                        <button class="p-2">login</button>
+                                        <button class="p-2"><a href="./dashboard_manageList_ShopList.php">login</a></button>
                                     </div>
 
                             </div>

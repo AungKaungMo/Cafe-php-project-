@@ -1,90 +1,108 @@
 .part1 {
-    background-color: var(--mainColor);
-    text-align: center;
-    height: 100vh;
+  background-color: var(--mainColor);
+  text-align: center;
 }
 
 .part2 {
-    background-color: var(--backgroundSecondary);
-    text-align: center !important;
+  background-color: var(--backgroundSecondary);
+  text-align: center !important;
 }
 
 .box {
-    width: 20em !important;
-    height: 2.8em !important;
-    border-style: none !important;
-    border-radius: 15em !important;
-    background-color: var(--mainColor) !important;
-    color: var(--backgroundSecondary) !important;
-    padding-left: 3.5em !important;
-    padding-right: 0.5em !important;
-    font-family: var(--inputAndPaymentCardFont) !important;
+  width: 20em !important;
+  height: 2.8em !important;
+  border-style: none !important;
+  border-radius: 15em !important;
+  background-color: var(--mainColor) !important;
+  color: var(--backgroundSecondary) !important;
+  padding-left: 3.5em !important;
+  padding-right: 0.5em !important;
+  font-family: var(--inputAndPaymentCardFont) !important;
+  outline: none;
 }
 
 .box::placeholder {
-    color: var(--backgroundSecondary);
+  color: var(--backgroundSecondary);
 }
 
 .button {
-    width: 8em;
-    height: 2.5em;
-    background-color: var(--mainColor);
-    color: var(--backgroundSecondary) !important;
-    font-family: var(--inputAndPaymentCardFont);
-    border-radius: 0.3em;
-    border-style: none;
-    font-size: var(--paragraphFontSize);
+  width: 8em;
+  height: 2.5em;
+  background-color: var(--mainColor);
+  color: var(--backgroundSecondary) !important;
+  font-family: var(--inputAndPaymentCardFont);
+  border-radius: 0.3em;
+  border: 2px solid var(--mainColor);
+  font-size: var(--paragraphFontSize);
+  transition: all 0.5s;
+}
+.button:hover {
+  background-color: transparent;
+}
+
+.button a {
+  text-decoration: none;
+  color: var(--secondMainColor);
+}
+.button:hover a {
+  color: var(--mainColor) !important;
 }
 
 .photo2 {
-    width: 70%;
+  width: 70%;
 }
 
 .gp1 {
-    position: relative;
-    margin: auto;
-    width: 20em;
+  position: relative;
+  margin: auto;
+  width: 20em;
 }
 
 .icon1 {
-    position: absolute;
-    color: var(--backgroundSecondary);
-    left: 0.3em;
-    font-size: 2em;
-    top: 0.2em;
+  position: absolute;
+  color: var(--backgroundSecondary);
+  left: 0.3em;
+  font-size: 2em;
+  top: 0.2em;
 }
 
-
-
 @media screen and (max-width: 720px) {
-    .box {
-        width: 18em;
-        height: 2em;
-    }
+  .box {
+    width: 18em;
+    height: 2em;
+  }
 
-    .photo2 {
-        width: 100%;
-    }
-
+  .photo2 {
+    width: 100%;
+  }
 }
 
 .body {
-    width: 100%;
-    height: 100vh;
-    background-color: var(--backgroundSecondary);
+  width: 100%;
+  height: 100vh;
+  background-color: var(--backgroundSecondary);
 }
 
 h2 {
-    color: var(--mainColor);
+  color: var(--mainColor);
 }
 
 .forgot {
-    font-size: var(--navigationFontSize) !important;
-
+  font-size: var(--navigationFontSize) !important;
 }
 
 @media screen and (max-width: 720px) {
-    .gp1 {
-        width: 15em;
-    }
+  .gp1 {
+    width: 15em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .gp1 {
+    margin-left: 1em;
+  }
+}
+@media screen and (max-width: 380px) {
+  .gp1 .box {
+    width: 17em !important;
+  }
 }
