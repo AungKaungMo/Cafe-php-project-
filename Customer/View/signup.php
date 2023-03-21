@@ -44,8 +44,7 @@
                         <select class="box fw-bold" aria-label="Default select example">
                             <option selected class="">Gender</option>
                             <option value="1">Male</option>
-                            <option value="2">Female</option>
-                            <option value="3">Other</option>
+                            <option value="2">Female</option> 
                         </select>
                         <iconify-icon icon="bx:male-female" class="icon1"></iconify-icon>
                     </div>
@@ -63,10 +62,42 @@
                     <div class="form-outline form-white mb-5 gp1">
                         <select class="box fw-bold" aria-label="Default select example">
                             <option selected class="">Township</option>
+                            <option value="Ahlon">Ahlon</option>
+                            <option value="Bahan">Bahan</option> 
+                            <option value="Dagon">Dagon</option>
+                            <option value="Hlaing">Hlaing</option> 
+                            <option value="Kamayut">Kamayut</option>
+                            <option value="Kyauktada">Kyauktada</option>  
+                            <option value="Ahlon">Kyimyindaing</option>
+                            <option value="Bahan">Lanmadaw</option> 
+                            <option value="Dagon">Latha</option>
+                            <option value="Hlaing">Mayangon</option> 
+                            <option value="Kamayut">Pabedan</option>
+                            <option value="Sanchaung">Sanchaung</option>
+                            <option value="Botataung">Botataung</option> 
+                            <option value="Dagon Seikkan">Dagon Seikkan</option>
+                            <option value="Dawbon">Dawbon</option> 
+                            <option value="Dagon">Latha</option>
+                            <option value="Mingala Taungnyunt">Mingala Taungnyunt</option> 
+                            <option value="East(New Dagon)">East(New Dagon)</option>
+                            <option value="West(New Dagon)">West(New Dagon)</option>
+                            <option value="North(New Dagon)">North(New Dagon)</option>
+                            <option value="South(New Dagon)">South(New Dagon)</option> 
+                            <option value="North Okkalapa">North Okkalapa</option> 
+                            <option value="South Okkalapa">South Okkalapa</option>
+                            <option value="Pazundaung">Pazundaung</option> 
+                            <option value="Tamwe">Tamwe</option>
+                            <option value="Thaketa">Thaketa</option>
+                            <option value="Thingangyun">Thingangyun</option> 
+                            <option value="Yankin">Yankin</option>
+                            <option value="Insein">Insein</option> 
+                            <option value="Hlaingthaya">Hlaingthaya</option>
+                            <option value="Mingaladon">Mingaladon</option> 
+                            <option value="Yankin">Yankin</option>
+                            <option value="Insein">Insein</option> 
                         </select>
                         <iconify-icon icon="material-symbols:location-on" class="icon1"></iconify-icon>
                     </div>
-
 
                     <button class="button mb-5 fw-bold" type="submit" name="send"> <a href="./h.php">Register</a></button>
                     <br>
