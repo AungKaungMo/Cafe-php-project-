@@ -788,8 +788,8 @@
         <div><a href="./shopinterfacemenu.php" class="seeall fw-bold">See All...</a></div>
     </div>
 
-    <!---------- cart popup--------->
 
+    <!---------- cart popup--------->
     <div class="modal fade modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
