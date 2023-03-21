@@ -375,39 +375,6 @@
     </div>
 
 
-
-    <!------------------------   our Gallery  -------------------------------->
-
-    <!-- <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
-        <div>
-            <h1 class=" text-center title fw-bold pb-2 position-relative">Our Gallery</h1>
-        </div>
-    </div>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="./resources/img/Rectangle 512.png" alt="" class="Hoimg">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="./resources/img/Rectangle 514.png" alt="" class="Hoimg">
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-md-12">
-                        <img src="./resources/img/Rectangle 513.png" alt="" class="Hoimg">
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-4">
-                <img src="./resources/img/Rectangle 515.png" alt="" class="Hoimg">
-            </div>
-        </div>
-    </div> -->
-
     <!------------------------   Blog  -------------------------------->
 
     <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
