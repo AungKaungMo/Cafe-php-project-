@@ -89,7 +89,8 @@
 
 
             <div class="comBtn text-center">
-                <button class="p-2">Back To Cafe</button>
+                <a href="./home.php">
+                    <button class="p-2">Back To Cafe</button></a>
             </div>
 
         </div>

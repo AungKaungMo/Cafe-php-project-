@@ -1,0 +1,50 @@
+.navigation ul li:nth-child(3) {
+    background: var(--backgroundPrimary);
+  }
+  .navigation ul li:nth-child(3) a {
+    color: var(--mainColor);
+  }
+  .historyBox {
+    background-color: var(--backgroundTertiary);
+    border-radius: 10px;
+    box-shadow: var(--cardShadow);
+  }
+  .closeIcon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--backgroundPrimary);
+    transition: all 0.5s;
+  }
+  .closeIcon iconify-icon {
+    color: var(--mainColor);
+  }
+  .closeIcon:hover {
+    background-color: var(--mainColor);
+  }
+  .closeIcon:hover iconify-icon {
+    color: var(--backgroundPrimary);
+  }
+  @media screen and (max-width: 630px) {
+    .historyBox h1 {
+      font-size: 1.2em !important;
+    }
+    .historyBox span {
+      font-size: 0.7em !important;
+    }
+    .historyText {
+      font-size: 0.8em !important;
+    }
+    .closeIcon {
+      width: 30px;
+      height: 30px;
+    }
+    .closeIcon iconify-icon {
+      font-size: 1em !important;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .historyBox {
+      padding: 0.5em !important;
+    }
+  }
+  

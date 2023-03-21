@@ -1,10 +1,21 @@
-.navBar h1:nth-child(4) {
+.navBar h1:nth-child(4) a {
   color: var(--mainColor);
   font-weight: bold;
 }
 @media screen and (max-width: 700px) {
-  .navBar h1:nth-child(4) {
+  .navBar h1:nth-child(4) a {
     color: var(--secondMainColor);
     font-weight: bold;
   }
+}
+.colorBox{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+.colorBox input[type="color"]{
+  width: 200px;
+  padding: 0.1em;
+  border: 1px solid var(--mainColor);
+  margin-left: 0.4em;
 }

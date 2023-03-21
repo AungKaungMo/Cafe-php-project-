@@ -56,7 +56,6 @@ include "./resources/shared/dashboard.php";
     </div>
 
     <!--------------------------   JS   ------------------------------->
-    <script src="./resources/js/dashboard.js"></script>
     <script src="./resources/js/dashboard_order.js"></script>
 </body>
 

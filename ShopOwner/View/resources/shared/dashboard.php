@@ -24,7 +24,11 @@
     <!------------------------   CSS   ----------------------------->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/dashboard.css">
-    
+
+    <!---------------------- JS   ---------------------------------------->
+    <script src="./resources/js/dashboard.js" defer></script>
+    <script src="./resources/js/color_theme.js" defer></script>
+
     <div class="admindsh_container">
         <div class="navigation active">
             <ul>
@@ -35,43 +39,43 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_salechart.php">
                         <span class="icon"><iconify-icon icon="material-symbols:area-chart-rounded"></iconify-icon></span>
                         <span class="title">Sale Chart</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_history.php">
                         <span class="icon"><iconify-icon icon="ic:baseline-history"></iconify-icon></span>
                         <span class="title">History</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_order.php">
                         <span class="icon"><iconify-icon icon="mdi:truck-delivery"></iconify-icon></span>
                         <span class="title">Order</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_booking.php">
                         <span class="icon"><iconify-icon icon="material-symbols:book"></iconify-icon></span>
                         <span class="title">Booking</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_profile_messagebox.php">
                         <span class="icon"><iconify-icon icon="iconoir:profile-circle"></iconify-icon></span>
                         <span class="title">Profile</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_shop.php">
                         <span class="icon"><iconify-icon icon="simple-icons:shopee"></iconify-icon></span>
                         <span class="title">Shop</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_setting_gallery.php">
                         <span class="icon"><iconify-icon icon="uiw:setting"></iconify-icon></span>
                         <span class="title">Setting</span>
                     </a>
@@ -87,17 +91,14 @@
         <!-- main -->
         <div class="main active">
             <div class="topbar">
-                <div class="toggle">   
-                <iconify-icon icon="material-symbols:menu"></iconify-icon>
+                <div class="toggle">
+                    <iconify-icon icon="material-symbols:menu"></iconify-icon>
                 </div>
                 <!-- userImg -->
                 <div class="fs-4 fw-bold">Shop Owner</div>
-                <div class="owner">   
-                <img src="./resources/img/shopOwner.jpg">
+                <div class="owner">
+                    <img src="./resources/img/shopOwner.jpg">
                 </div>
-            </div>  
-           <hr>
-            <!-- Second Nav Bar ---> 
- 
-
-     
+            </div>
+            <hr>
+            <!-- Second Nav Bar --->

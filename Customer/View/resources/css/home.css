@@ -1,270 +1,280 @@
-.backgroundCafeImage1{
-    background: url(../img/cafeshopOne.jpg);
+#responsiveSideBar ul li:nth-child(1) a::before {
+  width: 50px;
 }
-.backgroundCafeImage2{
-    background: url(../img/cafeshopTwo.jpg);
+#responsiveSideBar ul li:nth-child(1) a::after {
+  width: 30px;
 }
-.backgroundCafeImage3{
-    background: url(../img/cafeshopThree.jpg);
+.slideBar ul li:nth-child(1) a::before {
+  width: 50px;
 }
-.backImage{
-    width: 100%;
-    height: 87vh;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
+.slideBar ul li:nth-child(1) a::after {
+  width: 30px;
 }
-.backImage h1{
-    color: var(--mainColor);
+.backgroundCafeImage1 {
+  background: url(../img/cafeshopOne.jpg);
 }
-.backImage p{
-    color: var(--textColorPrimary);
+.backgroundCafeImage2 {
+  background: url(../img/cafeshopTwo.jpg);
+}
+.backgroundCafeImage3 {
+  background: url(../img/cafeshopThree.jpg);
+}
+.backImage {
+  width: 100%;
+  height: 87vh;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+.backImage h1 {
+  color: var(--mainColor);
+}
+.backImage p {
+  color: var(--textColorPrimary);
 }
 .seemoreBtn {
-    width: 200px;
-    background-color: var(--mainColor);
-    color: var(--textColorPrimary);
-    transition: all 0.5s;
+  width: 200px;
+  background-color: var(--mainColor);
+  color: var(--textColorPrimary);
+  transition: all 0.5s;
 }
-.seemoreBtn:hover{
-    background-color: var(--secondMainColor);
-    color: var(--mainColor);
+.seemoreBtn:hover {
+  background-color: var(--secondMainColor);
+  color: var(--mainColor);
 }
-.swiper-pagination-bullet{
-    opacity: 1;
-    background-color: var(--backgroundTertiary);
+.swiper-pagination-bullet {
+  opacity: 1;
+  background-color: var(--backgroundTertiary);
 }
-.swiper-pagination-bullet-active{
-    background-color: var(--paginationColor);
+.swiper-pagination-bullet-active {
+  background-color: var(--paginationColor);
 }
-@media screen and (max-width:470px) {
-    .backImage p{
-        font-size: 0.8em;
-    }
-    .seemoreBtn {
-        width: 150px;
-        font-size: 0.8em;
-    }
-}
-
-
-.title::before{
-    content: "";
-    width: 100px;
-    height: 3px;
-    background-color: var(--mainColor);
-    position: absolute;
-    left: 0;
-    bottom: 5px;
-    transition: all 0.5s;
-}   
- .title::after{
-    content: "";
-    width: 80px;
-    height: 3px;
-    background-color: var(--mainColor);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: all 0.5s;
-}   
-.aboutImage{
-    object-fit: contain;
+@media screen and (max-width: 470px) {
+  .backImage p {
+    font-size: 0.8em;
+  }
+  .seemoreBtn {
+    width: 150px;
+    font-size: 0.8em;
+  }
 }
 
-@media screen and (max-width:470px) {
-    .aboutSection p{
-        font-size: 0.8em;
-    }
+.title::before {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: var(--mainColor);
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  transition: all 0.5s;
+}
+.title::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: var(--mainColor);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.aboutImage {
+  object-fit: contain;
+}
+
+@media screen and (max-width: 470px) {
+  .aboutSection p {
+    font-size: 0.8em;
+  }
 }
 
 /** 
 Service
 **/
 
-.serviceSection .title::before, .serviceSection .title::after,
-.contactSection .title::before, .contactSection .title::after,
-.customerSection .title::before, .customerSection .title::after
-{
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
+.serviceSection .title::before,
+.serviceSection .title::after,
+.contactSection .title::before,
+.contactSection .title::after,
+.customerSection .title::before,
+.customerSection .title::after {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 .serviceBox {
-    margin-top: 1.5em;
-    width: 270px;
-    padding: 1em;
-    background-color: var(--mainColor);
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
+  margin-top: 1.5em;
+  width: 270px;
+  padding: 1em;
+  background-color: var(--mainColor);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
 }
-.serviceBox iconify-icon{
-    font-size: 2em;
-    color: var(--textColorPrimary);
+.serviceBox iconify-icon {
+  font-size: 2em;
+  color: var(--textColorPrimary);
 }
-.serviceBox span{
-    color: var(--textColorPrimary);
+.serviceBox span {
+  color: var(--textColorPrimary);
 }
-@media screen and (max-width:768px) {
-    .serviceImage{
-        margin-top: 6em;
-        width: auto;
-        height: 100%;
-    }
+@media screen and (max-width: 768px) {
+  .serviceImage {
+    margin-top: 6em;
+    width: auto;
+    height: 100%;
+  }
 }
 
 /**
 Customers Reviews
 **/
-.customerSection h6{
-    color: var(--mainColor);
+.customerSection h6 {
+  color: var(--mainColor);
 }
-.reviewBox{
-    margin:9.5em 0 6.5em 0;
-    color: var(--textColorPrimary);
+.reviewBox {
+  margin: 9.5em 0 6.5em 0;
+  color: var(--textColorPrimary);
 }
-.reviewRightSide{
-    height: 50vh;
-    background-color: var(--mainColor);
+.reviewRightSide {
+  height: 50vh;
+  background-color: var(--mainColor);
 }
-.testiRight h1::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100px;
-    height: 3px;
-    background-color: var(--textColorPrimary);
+.testiRight h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background-color: var(--textColorPrimary);
 }
-.reviewImage{
-    top: -110px;
-    right: -150px;
+.reviewImage {
+  top: -110px;
+  right: -150px;
 }
-.customersBox{
-    max-width: 450px;
-    padding: 0.4em;
-    padding-bottom: 1em;
-    background-color: var(--mainColor);
-    box-shadow: var(--cardShadow);
-    border-radius: 10px;
-    position: absolute;
-    top: -90px;
-    left: -130px;
+.customersBox {
+  max-width: 450px;
+  padding: 0.4em;
+  padding-bottom: 1em;
+  background-color: var(--mainColor);
+  box-shadow: var(--cardShadow);
+  border-radius: 10px;
+  position: absolute;
+  top: -90px;
+  left: -130px;
 }
-.customersBox h6{
-    color: var(--textColorPrimary);
-    opacity: 0.7;
-    margin-top: 0.4em;
+.customersBox h6 {
+  color: var(--textColorPrimary);
+  opacity: 0.7;
+  margin-top: 0.4em;
 }
 .customersProfile {
-    width: 80px;
-    height: 80px;
-    border: 1px solid var(--secondMainColor);
-    border-radius: 50%;
-   
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--secondMainColor);
+  border-radius: 50%;
 }
-.customersProfile img{
-    object-fit: cover;
+.customersProfile img {
+  object-fit: cover;
 }
-.customersText{
-    font-size: 0.9em;
-    line-height: 23px;
-    opacity: 0.8;
+.customersText {
+  font-size: 0.9em;
+  line-height: 23px;
+  opacity: 0.8;
 }
-.mySwiper1{
-    position: unset !important;
+.mySwiper1 {
+  position: unset !important;
 }
-.testimonialBullet{
-    bottom: -40px !important;
+.testimonialBullet {
+  bottom: -40px !important;
 }
-@media screen and (max-width:992px) {
-    .reviewRightSide {
-        height: 40vh;
-        width: 100% !important;
-    } 
-    .customersBox{
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    .reviewBox{
-        margin-bottom: 4em;
-    }
+@media screen and (max-width: 992px) {
+  .reviewRightSide {
+    height: 40vh;
+    width: 100% !important;
+  }
+  .customersBox {
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .reviewBox {
+    margin-bottom: 4em;
+  }
 }
-@media screen and (max-width:576px) {
-    .reviewRightSide {
-      background-color: transparent;
-    } 
- 
+@media screen and (max-width: 576px) {
+  .reviewRightSide {
+    background-color: transparent;
+  }
 }
 /**
 ContactUs
 **/
 .subTitle {
-    color: var(--mainColor);
+  color: var(--mainColor);
 }
-.contactImage{
-    width: 180px;
-    background-color: var(--secondMainColor);
+.contactImage {
+  width: 180px;
+  background-color: var(--secondMainColor);
 }
-.contactBox{
-    padding-top: 1.3em;
-    padding-bottom: 1.3em;
-    background-color: var(--mainColor);
-    /* height: 50vh; */
-    margin-bottom: 9em;
-    color: var(--textColorPrimary);
+.contactBox {
+  padding-top: 1.3em;
+  padding-bottom: 1.3em;
+  background-color: var(--mainColor);
+  /* height: 50vh; */
+  margin-bottom: 9em;
+  color: var(--textColorPrimary);
 }
-.contactIcons{
-    background-color: transparent;
-    border: 2px solid var(--secondMainColor);
+.contactIcons {
+  background-color: transparent;
+  border: 2px solid var(--secondMainColor);
 }
-.contactIcons iconify-icon{
-    color: var(--textColorPrimary);
+.contactIcons iconify-icon {
+  color: var(--textColorPrimary);
 }
-.contactInput{
-    border: none;
-    outline: none;
-    background-color: transparent;
-    margin-top: 3.2em;
-    padding-left: 3em;
-    width: 90%;
-    border-bottom: 1px solid var(--secondMainColor);
-    color: var(--textColorPrimary);
+.contactInput {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin-top: 3.2em;
+  padding-left: 3em;
+  width: 90%;
+  border-bottom: 1px solid var(--secondMainColor);
+  color: var(--textColorPrimary);
 }
-.contactInput::placeholder{
-    color: var(--textColorPrimary);
+.contactInput::placeholder {
+  color: var(--textColorPrimary);
 }
-.contactInputIcon{
-    position: absolute;
-    font-size: 2em;
-    bottom: 0;
+.contactInputIcon {
+  position: absolute;
+  font-size: 2em;
+  bottom: 0;
 }
-.sendBtn{
-    margin-top: 3.2em;
+.sendBtn {
+  margin-top: 3.2em;
 }
-.sendBtn button{
-    width: 150px;
-    background-color: var(--secondMainColor);
-    border-radius: 10px;
-    border: 2px solid var(--secondMainColor);
-    color: var(--mainColor);
-    font-weight: bold;
-    transition: all 0.5s;
+.sendBtn button {
+  width: 150px;
+  background-color: var(--secondMainColor);
+  border-radius: 10px;
+  border: 2px solid var(--secondMainColor);
+  color: var(--mainColor);
+  font-weight: bold;
+  transition: all 0.5s;
 }
-.sendBtn button:hover{
-    background-color: transparent;
-    color: var(--secondMainColor);
+.sendBtn button:hover {
+  background-color: transparent;
+  color: var(--secondMainColor);
 }
-@media screen and (max-width:992px) {
-    .contactBox{
-        width: 100% !important;
-    }
-    .subTitle{
-        width: 50% !important;
-    }
+@media screen and (max-width: 992px) {
+  .contactBox {
+    width: 100% !important;
+  }
+  .subTitle {
+    width: 50% !important;
+  }
 }
-

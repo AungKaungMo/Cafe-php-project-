@@ -1,0 +1,112 @@
+.cartbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartbox1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#changeNum {
+    color: var(--mainColor);
+    font-size: var(--paragraphFontSize);
+    padding-top: 0.5em;
+}
+
+#mine {
+    font-size: var(--navigationFontSize);
+    color: var(--mainColor);
+}
+
+#plus {
+    font-size: 1.4em;
+    color: var(--mainColor);
+}
+
+.babyline {
+    width: 7em;
+    border-bottom: 3px solid var(--mainColor);
+    text-align: center;
+}
+
+.changeNum {
+    color: var(--mainColor);
+    font-size: var(--paragraphFontSize);
+    padding-top: 1em;
+}
+
+.note {
+    width: 14em;
+    height: 5em;
+    border-color: var(--mainColor);
+    border-radius: 0.5em;
+    padding-left: 1em;
+}
+
+.note::placeholder {
+    color: var(--mainColor);
+}
+
+.cake {
+    color: var(--mainColor);
+    font-size: var(--subTitleFontSize);
+}
+
+.cart {
+    color: var(--mainColor);
+    font-size: var(--subTitleFontSize);
+}
+
+.carti {
+    color: var(--mainColor);
+    font-size: var(--subTitleFontSize);
+}
+
+.image {
+    width: 50%;
+}
+
+.addtocart button {
+    width: 150px;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    border: 2px solid var(--mainColor);
+    color: var(--secondMainColor);
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.addtocart button:hover {
+    background-color: transparent;
+    color: var(--mainColor);
+}
+
+@media screen and (max-width:720px) {
+
+    .cart {
+        font-size: 1em;
+    }
+
+    .carti {
+        font-size: 1em;
+    }
+
+    .cake {
+        font-size: 1.2em;
+        font-weight: 800;
+    }
+
+    .note {
+        width: 10em;
+        height: 5em;
+        padding-left: 1em;
+    }
+
+    .image {
+        width: 100%;
+    }
+}

@@ -1,0 +1,188 @@
+#responsiveSideBar ul li:nth-child(2) a::before {
+  width: 50px;
+}
+#responsiveSideBar ul li:nth-child(2) a::after {
+  width: 30px;
+}
+.slideBar ul li:nth-child(2) a::before {
+  width: 50px;
+}
+.slideBar ul li:nth-child(2) a::after {
+  width: 30px;
+}
+
+/* ------------------------------little nav------------------------------ */
+.btn {
+  float: right;
+  border-style: none;
+}
+
+.btn .choose {
+  margin-left: 20px;
+  padding: 30px;
+  border-style: none;
+}
+
+.btn .choose a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--mainColor);
+}
+
+.activechoose {
+  background-image: radial-gradient(
+    closest-side,
+    var(--mainColor),
+    transparent
+  );
+}
+
+.btn .choose:hover {
+  background-image: radial-gradient(
+    closest-side,
+    var(--mainColor),
+    transparent
+  );
+}
+
+.btn .choose a:hover {
+  color: var(--backgroundSecondary);
+}
+
+/* ======================================Product===================================== */
+
+.row {
+  margin-bottom: 150px;
+}
+
+h1 {
+  margin-top: 50px;
+  margin-left: 80px;
+  color: var(--mainColor);
+}
+
+.container {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10;
+}
+.card {
+  position: relative;
+  width: 250px;
+  height: 200px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255),
+    rgba(217, 217, 217, 0.17)
+  );
+  border: solid var(--textColorPrimary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 1px 1px 2px;
+  margin-bottom: 6.5em;
+}
+
+.carditems img {
+  position: absolute;
+  left: 48px;
+  top: -75px;
+}
+
+.carditems p {
+  font-size: var(--subTitleFontSize);
+  color: var(--mainColor);
+  margin-top: 80px;
+  margin-left: 20px;
+}
+
+.carditems .pbtn {
+  margin-left: 22%;
+  margin-bottom: 5px;
+}
+
+.carditems .pbtn button {
+  width: 34px;
+  height: 34px;
+  background-color: var(--mainColor);
+  border: none;
+  border-radius: 10px;
+  padding: 4px;
+  margin-left: 20px;
+}
+
+.price {
+  width: 110px;
+  height: 40px;
+  border-radius: 30px;
+  padding: 5px 0px 0px 10px;
+  background-color: var(--mainColor);
+  font-size: var(--navigationFontSize);
+  color: var(--textColorPrimary);
+  font-family: var(--titleFont);
+  position: absolute;
+  left: 66px;
+}
+
+.line {
+  width: 90%;
+  height: 2px;
+  background-color: var(--mainColor);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1171px) {
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 0 0 200px;
+  }
+  .btn .choose {
+    padding: 30px;
+  }
+  .card {
+    margin-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 500px;
+  }
+
+  .row {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .cardContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 560px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}

@@ -8,6 +8,10 @@ body {
     background-color: var(--backgroundSecondary);
 }
 
+.FAQsBox{
+ margin-bottom: 3em;
+}
+
 .Title{
     margin: 1em 0em 2em 7em; 
 }
@@ -16,7 +20,7 @@ body {
     width: 100%;  
     margin: 1em 5em 1em 12em;
     border: 3px solid #765341; 
-    box-shadow: 5px 0px 2px #765341;
+    box-shadow: 5px 0px 2px #765341; 
 
 }
 
@@ -24,7 +28,7 @@ body {
 
     .Question{
         width: 100%;  
-        margin: 1em 5em 1em 1em;
+        margin: 1em 6em 1em 0.5em;
         border: 3px solid #765341; 
         box-shadow: 5px 0px 2px #765341;
     
@@ -34,13 +38,26 @@ body {
 
 /* Privacy & Policy */
 
-.Privacy{
-    width: 80%;
-    height: 50vh;
-    border: 3px solid #765341; 
-    margin: auto;
+.Privacy{  
+    margin-left: 8em;
+    width: 80%; 
+    height: auto !important;
+    border: 3px solid #765341;  
     margin-top: 4em;
     border-radius: 10px;
+    margin-bottom: 3em;
+}
+
+@media screen and (max-width: 720px) {
+    .Privacy{ 
+        width: 80%; 
+        height: auto !important;
+        border: 3px solid #765341; 
+        margin: auto;
+        margin-top: 4em;
+        border-radius: 10px;
+    }
+    
 }
 
 

@@ -39,72 +39,73 @@
     <div class="mt-5 fw-bold fs-4">Please fill the following informations.</div>
     <div class="mt-5 row">
       <div class="col-md-6 col-12">
-      <div>
-      <label for="package">
-        Package Type
-      </label><br><br>
-      <select id="package">
-        <option value="basic">Basic</option>
-        <option value="standard">Standard</option>
-        <option value="premium">Premium</option>
-      </select>
+        <div>
+          <label for="package">
+            Package Type
+          </label><br><br>
+          <select id="package">
+            <option value="basic">Basic</option>
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
+          </select>
+        </div>
+
+        <div>
+          <input type="text" placeholder="Email" class="inputFill">
+        </div>
+
+        <div>
+          <input type="text" placeholder="Password" class="inputFill">
+        </div>
+
+        <div>
+          <input type="text" placeholder="Confirm Password" class="inputFill">
+        </div>
+
       </div>
 
-      <div>
-        <input type="text" placeholder="Email" class="inputFill">
+      <div class="col-md-6 col-12">
+        <div class="fw-bold fs-4 mt-md-0 mt-5">Billing Info</div>
+        <div>
+          <input type="text" placeholder="Name" class="inputFill">
+        </div>
+
+        <div>
+          <input type="phone" placeholder="Phone Number" class="inputFill">
+        </div>
+
+        <div>
+          <input type="text" placeholder="Address" class="inputFill">
+        </div>
+
+        <div>
+          <label for="township" class="township">
+            Township
+          </label><br><br>
+          <select id="township">
+            <option value="north dagon">North Dagon</option>
+            <option value="south dagon">South Dagon</option>
+            <option value="thingangyun">Thingangyun</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="payment" class="payment">
+            Payment Type
+          </label><br><br>
+          <select id="payment">
+            <option value="Credit Card">Credit Card</option>
+            <option value="KBZ">KBZ</option>
+            <option value="Wave">Wave</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="text-center submitBtn my-5">
+        <a href="./wavepay1.php" target="_blank">
+          <button class="fw-bold px-2 py-3">Submit</button></a>
       </div>
 
-      <div>
-        <input type="text" placeholder="Password" class="inputFill">
-      </div>
-
-      <div>
-        <input type="text" placeholder="Confirm Password" class="inputFill">
-      </div>
-
-      </div>
-     
-     <div class="col-md-6 col-12">
-      <div class="fw-bold fs-4 mt-md-0 mt-5">Billing Info</div>
-      <div>
-        <input type="text" placeholder="Name" class="inputFill">
-      </div>
-
-      <div>
-        <input type="phone" placeholder="Phone Number" class="inputFill">
-      </div>
-
-      <div>
-        <input type="text" placeholder="Address" class="inputFill">
-      </div>
-
-      <div>
-      <label for="township" class="township">
-        Township
-      </label><br><br>
-      <select id="township">
-        <option value="north dagon">North Dagon</option>
-        <option value="south dagon">South Dagon</option>
-        <option value="thingangyun">Thingangyun</option>
-      </select>
-      </div>
-
-      <div>
-      <label for="payment" class="payment">
-        Payment Type
-      </label><br><br>
-      <select id="payment">
-        <option value="Credit Card">Credit Card</option>
-        <option value="KBZ">KBZ</option>
-        <option value="Wave">Wave</option>
-      </select>
-      </div>
-
-     </div>
-     <div class="text-center submitBtn my-5">
-      <button class="fw-bold px-2 py-3">Submit</button>
-     </div>
-      
     </div>
   </div>
 </body>

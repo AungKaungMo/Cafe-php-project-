@@ -1,0 +1,66 @@
+.navBar h1:nth-child(4) a {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+@media screen and (max-width: 700px) {
+  .navBar h1:nth-child(4) a {
+    color: var(--secondMainColor);
+    font-weight: bold;
+  }
+}
+
+.activeSubNav {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+.subLine {
+  width: 50%;
+  margin: auto;
+  height: 2px;
+  background-color: var(--mainColor);
+}
+.subnav h1 {
+  cursor: pointer;
+}
+.chooseMenu h1 {
+  cursor: pointer;
+}
+.subnav h1:hover,
+.chooseMenu h1:hover {
+  color: var(--mainColor);
+}
+.menuBox {
+  width: 350px;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: var(--backgroundTertiary);
+  box-shadow: var(--cardShadow);
+}
+.updatedName {
+  width: 120px;
+  opacity: 0.7;
+  margin-left: 0;
+}
+.updatedInstock {
+  width: 50px;
+  opacity: 0.7;
+  margin-left: 0;
+}
+.menuBox span {
+  font-size: 0.8em;
+}
+.question {
+  font-size: 0.8em;
+  margin-top: 0.8em;
+}
+.bin:hover {
+  color: var(--mainColor);
+}
+@media screen and (max-width: 500px) {
+  .menuBox {
+    width: 250px;
+  }
+  .updatedName {
+    width: 100px;
+  }
+}

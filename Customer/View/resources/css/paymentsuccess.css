@@ -1,0 +1,19 @@
+body{
+   font-family: var(--inputAndPaymentCardFont);
+}
+
+.circleClick{
+   font-size: 5em;
+   color: var(--mainColor);
+}
+
+.subPop{
+   background-color: var( --backgroundSecondary) !important;  
+   border-radius: 15px;
+}
+
+ 
+.Back2Home{
+   background-color: var(--mainColor) !important; 
+   border-radius: 12em !important;
+}
