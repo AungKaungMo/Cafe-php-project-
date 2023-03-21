@@ -17,9 +17,9 @@
           <div class="someLinks">
               <div class="footerTitle">Some Links</div>
               <div class="mt-4 d-flex flex-column footerDetails">
-                  <a href="#">FAQS</a>
-                  <a href="#">User Guide</a>
-                  <a href="#">Privacy Policy</a>
+                  <a href=".//FAQs.php">FAQS</a>
+                  <a href="">User Guide</a>
+                  <a href="./PrivacyPolicy.php">Privacy Policy</a>
 
               </div>
           </div>

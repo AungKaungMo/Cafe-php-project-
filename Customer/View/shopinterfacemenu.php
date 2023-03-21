@@ -32,8 +32,9 @@
 
     <!----------- css---------->
     <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/shopinterfacemenu.css">
     <link rel="stylesheet" href="./resources/css/navigationAndFooter.css">
+    <link rel="stylesheet" href="./resources/css/cartpopup.css">
+    <link rel="stylesheet" href="./resources/css/shopinterfacemenu.css">
 
 </head>
 
@@ -59,134 +60,138 @@
 
 
     <div class="maincard">
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
+        <div class="mainCardContainer">
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
             </div>
-            <div class="price text-center">
-                1500MMK
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
             </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
         </div>
 
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-    </div>
-
-    <div class="maincard">
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-    </div>
-
-    <div class="lines mt-5 mb-5"></div>
+        <div class="lines mt-5 mb-5"></div>
 
 
 

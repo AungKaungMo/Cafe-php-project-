@@ -243,7 +243,9 @@
   border: 2px solid var(--mainColor);
   font-size: 0.8em;
 }
-
+.gowebsite button:hover a{
+    color: var(--mainColor);
+}
 .gowebsite button:hover {
   background-color: transparent;
   color: var(--mainColor);
@@ -261,6 +263,8 @@
   margin: auto;
   transform: rotate(45deg);
 }
+
+    /************************************* Cart *********************************** */
 
 .CHcart {
   font-family: var(--titleFont);

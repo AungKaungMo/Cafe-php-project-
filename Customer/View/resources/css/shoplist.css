@@ -4,13 +4,12 @@
 #responsiveSideBar ul li:nth-child(2) a::after {
   width: 30px;
 }
-.slideBar ul li:nth-child(2) a::before {
+.shoptitle::before {
   width: 50px;
 }
-.slideBar ul li:nth-child(2) a::after {
+.shoptitle::after {
   width: 30px;
 }
-
 /* ======================hero css========================= */
 
 .text-label,
@@ -118,8 +117,12 @@
   background-color: var(--backgroundSecondary);
   bottom: 15px;
   right: 40px;
+  color: var(--mainColor);
+  transition: all 0.5s;
 }
-
+.icon iconify-icon:hover{
+  transform: scale(1.1);
+}
 .rightseemore {
   width: 150px;
   height: 40px;

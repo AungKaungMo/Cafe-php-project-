@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./dashboard_history.php">
+                    <a href="./dashboard_history_order.php">
                         <span class="icon"><iconify-icon icon="ic:baseline-history"></iconify-icon></span>
                         <span class="title">History</span>
                     </a>

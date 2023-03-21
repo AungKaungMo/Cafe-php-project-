@@ -10,10 +10,10 @@
     transition: all 0.3s;
     cursor: pointer;
   }
-  .navBar h1:hover {
+  .navBar h1:hover,
+  .navBar a:hover {
     color: var(--mainColor);
   }
-  
   .line {
     width: 100%;
     height: 3px;
@@ -46,7 +46,8 @@
       display: flex !important;
       justify-content: end;
     }
-    .navBar h1:hover {
+    .navBar h1:hover,
+    .navBar a:hover {
       color: var(--secondMainColor);
     }
   }

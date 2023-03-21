@@ -16,9 +16,8 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
 
   <!------------------------  BOOTSTRAP  --------------------------------------------->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
+  <script src="./lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-----------------------    Jquery   ---------------------------->
   <script src="./lib/Jquery/jquery3.6.0.js"></script>
   <!------------------------   JS   -------------------------------->
@@ -28,6 +27,7 @@
   <!------------------------   CSS   ----------------------------->
   <link rel="stylesheet" href="./resources/css/root.css">
   <link rel="stylesheet" href="./resources/css/navigationAndFooter.css">
+  <link rel="stylesheet" href="./resources/css/cartpopup.css">
   <link rel="stylesheet" href="./resources/css/Promotionshopmenu.css" />
 
 
@@ -42,7 +42,7 @@
   <!-- ===========================================arrow========================================== -->
 
   <a href="./promotion.php">
-    <iconify-icon icon="material-symbols:arrow-back" style="color: #765341;" width="109" height="93"></iconify-icon>
+    <iconify-icon icon="material-symbols:arrow-back" class="backArrow" width="109" height="93"></iconify-icon>
   </a>
   <!-- ===============================================shop============================================= -->
 
@@ -55,12 +55,12 @@
         <img src="./resources/img/pshop.png" alt="">
         <div class="script">
           <div class="icon">
-            <iconify-icon icon="mdi:shop" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>
             <span class="sinfor">CJ Cafe</span>
           </div>
 
           <div class="icon">
-            <iconify-icon icon="material-symbols:location-on-rounded" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="material-symbols:location-on-rounded" width="30" height="30"></iconify-icon>
             <span class="sinfor">Mingalar Taung Nyunt</span>
           </div>
         </div>
@@ -74,12 +74,12 @@
         <img src="./resources/img/pshop.png" alt="">
         <div class="script">
           <div class="icon">
-            <iconify-icon icon="mdi:shop" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>
             <span class="sinfor">CJ Cafe</span>
           </div>
 
           <div class="icon">
-            <iconify-icon icon="material-symbols:location-on-rounded" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="material-symbols:location-on-rounded" width="30" height="30"></iconify-icon>
             <span class="sinfor">Mingalar Taung Nyunt</span>
           </div>
         </div>
@@ -93,12 +93,12 @@
         <img src="./resources/img/pshop.png" alt="">
         <div class="script">
           <div class="icon">
-            <iconify-icon icon="mdi:shop" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>
             <span class="sinfor">CJ Cafe</span>
           </div>
 
           <div class="icon">
-            <iconify-icon icon="material-symbols:location-on-rounded" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="material-symbols:location-on-rounded" width="30" height="30"></iconify-icon>
             <span class="sinfor">Mingalar Taung Nyunt</span>
           </div>
         </div>
@@ -112,12 +112,12 @@
         <img src="./resources/img/pshop.png" alt="">
         <div class="script">
           <div class="icon">
-            <iconify-icon icon="mdi:shop" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>
             <span class="sinfor">CJ Cafe</span>
           </div>
 
           <div class="icon">
-            <iconify-icon icon="material-symbols:location-on-rounded" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="material-symbols:location-on-rounded" width="30" height="30"></iconify-icon>
             <span class="sinfor">Mingalar Taung Nyunt</span>
           </div>
         </div>
@@ -131,12 +131,12 @@
         <img src="./resources/img/pshop.png" alt="">
         <div class="script">
           <div class="icon">
-            <iconify-icon icon="mdi:shop" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>
             <span class="sinfor">CJ Cafe</span>
           </div>
 
           <div class="icon">
-            <iconify-icon icon="material-symbols:location-on-rounded" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="material-symbols:location-on-rounded" width="30" height="30"></iconify-icon>
             <span class="sinfor">Mingalar Taung Nyunt</span>
           </div>
         </div>
@@ -150,12 +150,12 @@
         <img src="./resources/img/pshop.png" alt="">
         <div class="script">
           <div class="icon">
-            <iconify-icon icon="mdi:shop" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>
             <span class="sinfor">CJ Cafe</span>
           </div>
 
           <div class="icon">
-            <iconify-icon icon="material-symbols:location-on-rounded" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="material-symbols:location-on-rounded" width="30" height="30"></iconify-icon>
             <span class="sinfor">Mingalar Taung Nyunt</span>
           </div>
         </div>
@@ -169,12 +169,12 @@
         <img src="./resources/img/pshop.png" alt="">
         <div class="script">
           <div class="icon">
-            <iconify-icon icon="mdi:shop" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>
             <span class="sinfor">CJ Cafe</span>
           </div>
 
           <div class="icon">
-            <iconify-icon icon="material-symbols:location-on-rounded" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="material-symbols:location-on-rounded" width="30" height="30"></iconify-icon>
             <span class="sinfor">Mingalar Taung Nyunt</span>
           </div>
         </div>
@@ -188,12 +188,12 @@
         <img src="./resources/img/pshop.png" alt="">
         <div class="script">
           <div class="icon">
-            <iconify-icon icon="mdi:shop" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>
             <span class="sinfor">CJ Cafe</span>
           </div>
 
           <div class="icon">
-            <iconify-icon icon="material-symbols:location-on-rounded" style="color: #ffecce;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="material-symbols:location-on-rounded" width="30" height="30"></iconify-icon>
             <span class="sinfor">Mingalar Taung Nyunt</span>
           </div>
         </div>

@@ -24,7 +24,7 @@
     <!------------------------   CSS   ----------------------------->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/dashboard.css">
-    
+
     <div class="admindsh_container">
         <div class="navigation active">
             <ul>
@@ -35,31 +35,31 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_manageList_ShopList.php">
                         <span class="icon"><iconify-icon icon="material-symbols:list-alt"></iconify-icon></span>
                         <span class="title">Manage Lists</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_messagebox.php">
                         <span class="icon"><iconify-icon icon="material-symbols:mark-chat-unread"></iconify-icon></span>
                         <span class="title">Chat Box</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_managePage_Slider.php">
                         <span class="icon"><iconify-icon icon="material-symbols:edit-document-rounded"></iconify-icon></span>
                         <span class="title">Manage Page</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_ManageReviews.php">
                         <span class="icon"><iconify-icon icon="material-symbols:edit-document-rounded"></iconify-icon></span>
                         <span class="title">Manage Reviews</span>
                     </a>
-                </li>  
+                </li>
                 <li>
-                    <a href="">
+                    <a href="./dashboard_setting_Option&Fill.php">
                         <span class="icon"><iconify-icon icon="uiw:setting"></iconify-icon></span>
                         <span class="title">Setting</span>
                     </a>
@@ -75,17 +75,14 @@
         <!-- main -->
         <div class="main active">
             <div class="topbar">
-                <div class="toggle">   
-                <iconify-icon icon="material-symbols:menu"></iconify-icon>
+                <div class="toggle">
+                    <iconify-icon icon="material-symbols:menu"></iconify-icon>
                 </div>
                 <!-- userImg -->
                 <div class="fs-4 fw-bold">Admin</div>
-                <div class="owner">   
-                <!-- <img src="./resources/img/shopOwner.jpg"> -->
+                <div class="owner">
+                    <!-- <img src="./resources/img/shopOwner.jpg"> -->
                 </div>
-            </div>  
-           <hr>
-            <!-- Second Nav Bar ---> 
- 
-
-     
+            </div>
+            <hr>
+            <!-- Second Nav Bar --->

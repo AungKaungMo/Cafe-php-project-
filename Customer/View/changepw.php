@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CangePassword</title>
-    <!-------css links----->
-    <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/changepw.css">
 
     <!--------bootstrap5-------->
     <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
@@ -16,6 +13,10 @@
 
     <!------icons link------->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+    <!-------css links----->
+    <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/changepw.css">
 </head>
 
 <body class="back">
@@ -35,7 +36,8 @@
                                     <div class=" form-outline form-white mb-4">
                                         <input type="password" id="typePasswordX" class="box fw-bold " placeholder="Comfirm your password" name="" />
                                     </div>
-                                    <button class="button mb-5 fw-bold" type="submit" name="send">Change</button>
+
+                                    <button class="button mb-5 fw-bold" type="submit" name="send"> <a href="./h.php">Change</a></button>
                                     <br>
                             </div>
                             </form>
