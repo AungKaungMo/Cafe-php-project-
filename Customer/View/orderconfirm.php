@@ -22,30 +22,18 @@
     <!-----------------------    Jquery   ---------------------------->
     <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
-    <!------------------------   JS   -------------------------------->
-    <!-- <script src="./promotion.js" defer></script> -->
-
-
     <!------------------------   CSS   ----------------------------->
-    <link rel="stylesheet" href="./resources/css/orderconfirm.css">
     <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/confirmpopup.css">
+    <link rel="stylesheet" href="./resources/css/orderconfirm.css">
 
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg mx-sm-5 mx-2 ">
-        <div class="container-fluid">
-            <p class="order"><i>Order</i></p>
-            <button class="close">
-                <iconify-icon icon="ic:baseline-close" style="color: white;" width="48" height="48"></iconify-icon>
-            </button>
-        </div>
 
-    </nav>
-    <div class="navLine"></div>
 
-    <form action="">
+    <form action="" class="my-4">
         <p class="formtitle">Fill Information</p>
         <div class="txt_field">
             <input type="text" required>
@@ -92,12 +80,63 @@
             <textarea name="" id="" cols="30" rows="10" placeholder="Note To Order"></textarea>
         </div>
 
+        <div class="formline"></div>
+
+        <div>
+            <input type="reset" value="Cancel">
+            <input type="submit" value="Order" data-bs-toggle="modal" data-bs-target="#staticBackdropConfirm">
+        </div>
+
     </form>
-    <div class="formline"></div>
 
-    <input type="reset" value="Cancel">
-    <input type="submit" value="Order">
+    <!-- Confirm Modal -->
+    <div class="modal fade " id="staticBackdropConfirm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  ">
+            <div>
+                <div class="modal-content text-center subPop">
+                    <div class=" text-end">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div>
+                        <div><iconify-icon class="circleClick" icon="mdi:question-mark-circle-outline"></iconify-icon></div>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="mainPop">
+                            <div class="h2 mb-3 fw-bold">Confirm Title</div>
+                            <div class="mb-5 thankPurchase">Confirm Message</div>
+                            <button type="button" class="btn text-white Back2Home me-5">Cancel </button>
+                            <button type="button" class="btn text-white Back2Home ms-5" data-bs-toggle="modal" data-bs-target="#staticBackdropPaymentSuccessful">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+    <!-- Payment Successful Modal -->
+    <div class="modal fade " id="staticBackdropPaymentSuccessful" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  ">
+            <div>
+                <div class="modal-content text-center subPop">
+                    <div class=" text-end">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div>
+                        <div><iconify-icon class="circleClick" icon="material-symbols:check-circle"></iconify-icon></div>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="mainPop">
+                            <div class="h2 mb-3 fw-bold">Payment Successful</div>
+                            <div class="mb-4 thankPurchase">Thank you for purchasing.
+                                Your payment was successful.</div>
+                            <button type="button" class="btn text-white Back2Home"><a href="./h.php">Back to Home Page</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

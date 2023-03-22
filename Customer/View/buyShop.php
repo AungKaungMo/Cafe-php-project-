@@ -28,6 +28,7 @@
   <!------------------------   CSS   ----------------------------->
   <link rel="stylesheet" href="./resources/css/root.css">
   <link rel="stylesheet" href="./resources/css/navigationAndFooter.css">
+  <link rel="stylesheet" href="./resources/css/cartpopup.css">
   <link rel="stylesheet" href="./resources/css/buyShop.css">
 </head>
 

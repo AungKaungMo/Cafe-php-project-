@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-------css links----->
-    <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/login.css">
 
     <!--------bootstrap5-------->
     <link rel="stylesheet" href="./lib/Bootstrap/css/bootstrap.min.css">
@@ -16,6 +13,10 @@
 
     <!------icons link------->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+    <!-------css links----->
+    <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/login.css">
 </head>
 
 <body class="back">
@@ -37,9 +38,10 @@
                                         <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" />
                                         <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                                     </div>
-                                    <button class="button mb-5 fw-bold" type="submit" name="send">log in</button>
+
+                                    <button class="button mb-5 fw-bold" type="submit" name="send"> <a href="./h.php">log in</a></button>
                                     <br>
-                                    <p class="forgot">Forgot Password? <a href="#" class="text-white fw-bold">Click Here</a></p>
+                                    <p class="forgot">Forgot Password? <a href="./forgotpwGetotp.php" class="text-white fw-bold">Click Here</a></p>
                             </div>
                             </form>
                         </div>

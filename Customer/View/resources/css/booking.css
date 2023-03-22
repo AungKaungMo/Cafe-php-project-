@@ -11,11 +11,11 @@ body {
   width: 30px;
 }
 
-.slideBar ul li:nth-child(3) a::before {
+.bookingtitle::before {
   width: 50px;
 }
 
-.slideBar ul li:nth-child(3) a::after {
+.bookingtitle::after {
   width: 30px;
 }
 

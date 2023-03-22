@@ -4,10 +4,10 @@
 #responsiveSideBar ul li:nth-child(4) a::after {
   width: 30px;
 }
-.slideBar ul li:nth-child(4) a::before {
+.buyshoptitle::before {
   width: 50px;
 }
-.slideBar ul li:nth-child(4) a::after {
+.buyshoptitle::after {
   width: 30px;
 }
 

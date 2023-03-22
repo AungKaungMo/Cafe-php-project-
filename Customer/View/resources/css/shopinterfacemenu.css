@@ -9,10 +9,10 @@ body {
 #responsiveSideBar ul li:nth-child(2) a::after {
   width: 30px;
 }
-.slideBar ul li:nth-child(2) a::before {
+.menutitle::before {
   width: 50px;
 }
-.slideBar ul li:nth-child(2) a::after {
+.menutitle::after {
   width: 30px;
 }
 
@@ -75,14 +75,14 @@ body {
 }
 
 .maincard {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
   margin-top: 6em;
 }
-
+.mainCardContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8;
+  place-items: center;
+}
 .card {
   width: 12.4em;
   height: 11em;
@@ -93,6 +93,7 @@ body {
   );
   border-radius: 0.8em;
   transition: all 0.5s;
+  margin-bottom: 6.5em;
 }
 
 .card:hover {
@@ -117,7 +118,9 @@ body {
 .pbtn button:hover {
   transform: scale(1.2);
 }
-
+.pbtn iconify-icon{
+  color: var(--secondMainColor);
+}
 .price {
   width: 6em;
   height: 1.6em;
@@ -172,5 +175,21 @@ body {
   .lines {
     margin-left: 1em;
     margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .mainCardContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .mainCardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 560px) {
+  .mainCardContainer {
+    grid-template-columns: 1fr;
+    place-items: center;
   }
 }

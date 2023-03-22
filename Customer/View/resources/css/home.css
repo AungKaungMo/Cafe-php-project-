@@ -4,10 +4,10 @@
 #responsiveSideBar ul li:nth-child(1) a::after {
   width: 30px;
 }
-.slideBar ul li:nth-child(1) a::before {
+.hometitle::before {
   width: 50px;
 }
-.slideBar ul li:nth-child(1) a::after {
+.hometitle::after {
   width: 30px;
 }
 .backgroundCafeImage1 {

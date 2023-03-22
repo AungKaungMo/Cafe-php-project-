@@ -32,9 +32,9 @@
 
     <!----------- css---------->
     <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/shopinterfacemenu.css">
     <link rel="stylesheet" href="./resources/css/navigationAndFooter.css">
     <link rel="stylesheet" href="./resources/css/cartpopup.css">
+    <link rel="stylesheet" href="./resources/css/shopinterfacemenu.css">
 
 </head>
 
@@ -60,179 +60,183 @@
 
 
     <div class="maincard">
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-    </div>
-
-    <div class="maincard">
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-        <div class="card">
-            <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-            <div class="text ms-3">Black Coffee</div>
-            <div class="pbtn ms-4">
-                <button>
-                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-                <button>
-                    <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                </button>
-            </div>
-            <div class="price text-center">
-                1500MMK
-            </div>
-        </div>
-    </div>
-
-    <div class="lines mt-5 mb-5"></div>
-
-
-    <!---------- cart popup--------->
-
-    <div class="modal fade modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title cart" id="staticBackdropLabel">Cart</h5>
-                    <iconify-icon icon="ph:shopping-cart-fill" class="carti"></iconify-icon>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="mainCardContainer">
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
                 </div>
-                <div class="modal-body">
-                    <div class="row mb-3">
-                        <div class="col-6 text-center mt-5">
-                            <img src="./resources/img/cake.jpg" alt="" class="image">
-                        </div>
-                        <div class="col-6 text-center">
-                            <h5 class="cake">Cake</h5>
-                            <div class="cartbox">
-                                <div class="cartbox1">
-                                    <iconify-icon icon="bi:dash-circle-fill" id="mine" class=" me-3"></iconify-icon>
-                                    <h6 id="changeNum" class="fw-bold me-3">1</h6>
-                                    <iconify-icon icon="mdi:plus-circle" id="plus"></iconify-icon>
-                                </div>
-                                <div class="line"></div>
-                            </div>
-                            <div class="cartbox">
-                                <div class="cartbox1">
-                                    <h6 class="fw-bold changeNum">15000MMk</h6>
-                                </div>
-                                <div class="babyline"></div>
-                            </div>
-                            <div class="input4 mt-4 text-center">
-                                <textarea name="" id="" class="note" placeholder="Note to order"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="addtocart modal-footer">
-                        <button class="p-2" data-bs-dismiss="modal">Add to Cart</button>
-                    </div>
+                <div class="price text-center">
+                    1500MMK
                 </div>
             </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                <div class="text ms-3">Black Coffee</div>
+                <div class="pbtn ms-4">
+                    <button>
+                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                    </button>
+                    <button>
+                        <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+                <div class="price text-center">
+                    1500MMK
+                </div>
+            </div>
+
         </div>
-    </div>
+
+        <div class="lines mt-5 mb-5"></div>
+
+
+        <!---------- cart popup--------->
+
+        <div class="modal fade modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title cart" id="staticBackdropLabel">Cart</h5>
+                        <iconify-icon icon="ph:shopping-cart-fill" class="carti"></iconify-icon>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row mb-3">
+                            <div class="col-6 text-center mt-5">
+                                <img src="./resources/img/cake.jpg" alt="" class="image">
+                            </div>
+                            <div class="col-6 text-center">
+                                <h5 class="cake">Cake</h5>
+                                <div class="cartbox">
+                                    <div class="cartbox1">
+                                        <iconify-icon icon="bi:dash-circle-fill" id="mine" class=" me-3"></iconify-icon>
+                                        <h6 id="changeNum" class="fw-bold me-3">1</h6>
+                                        <iconify-icon icon="mdi:plus-circle" id="plus"></iconify-icon>
+                                    </div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="cartbox">
+                                    <div class="cartbox1">
+                                        <h6 class="fw-bold changeNum">15000MMk</h6>
+                                    </div>
+                                    <div class="babyline"></div>
+                                </div>
+                                <div class="input4 mt-4 text-center">
+                                    <textarea name="" id="" class="note" placeholder="Note to order"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addtocart modal-footer">
+                            <button class="p-2" data-bs-dismiss="modal">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 </body>
 

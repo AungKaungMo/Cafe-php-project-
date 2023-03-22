@@ -1,16 +1,11 @@
 <?php
 include "./resources/shared/dashboard.php";
 ?>
-<link rel="stylesheet" href="./resources/css/dashboard_profile.css">
-<link rel="stylesheet" href="./resources/css/dashboard_profile_messagebox.css">
+<link rel="stylesheet" href="./resources/css/dashboard_messagebox.css">
 
 </head>
 
 <body>
-
-    <?php
-    include "./resources/shared/dashboard_profile.php";
-    ?>
 
     <div class="chatContainer row m-4">
         <div class=" col-md-8 col-12 position-relative chatBoxConatiner">
@@ -95,7 +90,7 @@ include "./resources/shared/dashboard.php";
     </div>
     </div>
 
-    <script src="./resources/js/dashboard_profile.js"></script>
+    <script src="./resources/js/dashboard.js"></script>
     <script src="./resources/js/dashboard_profile_messagebox.js"></script>
 </body>
 

@@ -4,10 +4,10 @@
 #responsiveSideBar ul li:nth-child(2) a::after {
   width: 30px;
 }
-.slideBar ul li:nth-child(2) a::before {
+.shoptitle::before {
   width: 50px;
 }
-.slideBar ul li:nth-child(2) a::after {
+.shoptitle::after {
   width: 30px;
 }
 
@@ -58,7 +58,9 @@ h1 {
   font-size: var(--navigationFontSize);
   color: var(--secondMainColor);
 }
-
+.icon iconify-icon{
+  color: var(--secondMainColor);
+}
 .card button {
   position: absolute;
   left: 45px;

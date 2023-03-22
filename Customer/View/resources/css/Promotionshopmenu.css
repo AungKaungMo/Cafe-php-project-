@@ -4,13 +4,12 @@
 #responsiveSideBar ul li:nth-child(3) a::after {
   width: 30px;
 }
-.slideBar ul li:nth-child(3) a::before {
+.promotiontitle::before {
   width: 50px;
 }
-.slideBar ul li:nth-child(3) a::after {
+.promotiontitle::after {
   width: 30px;
 }
-
 /* hero */
 #Hero {
   position: relative;
@@ -23,6 +22,9 @@
   .signBox {
     right: unset !important;
   }
+}
+.backArrow{
+  color: var(--mainColor);
 }
 /* ========================Shop========================== */
 
@@ -90,7 +92,9 @@ h1 {
   font-size: var(--navigationFontSize);
   color: var(--secondMainColor);
 }
-
+.icon iconify-icon {
+  color: var(--secondMainColor);
+}
 .card button {
   position: absolute;
   left: 45px;
