@@ -15,8 +15,9 @@
 }
 .slideBar ul li:nth-child(3) a::after {
   width: 30px;
+
 }
-<<<<<<< HEAD
+
 .navtitle:hover::after{
     width: 30px;
 }
