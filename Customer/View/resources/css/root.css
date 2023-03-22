@@ -72,6 +72,7 @@ html::-webkit-scrollbar-track{
 body {
     overflow-x: hidden;
     font-family: var(--paragraphFont);
+    color: var(--textColorSecondary);
     background-color: var(--backgroundPrimary);
 }
 @media screen and (max-width:470px){

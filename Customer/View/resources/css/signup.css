@@ -36,6 +36,7 @@
   font-size: var(--paragraphFontSize);
   transition: all 0.5s;
 }
+
 .button:hover {
   background-color: transparent;
 }
@@ -44,6 +45,7 @@
   text-decoration: none;
   color: var(--secondMainColor);
 }
+
 .button:hover a {
   color: var(--mainColor) !important;
 }
@@ -96,11 +98,13 @@ h2 {
     width: 15em;
   }
 }
+
 @media screen and (max-width: 500px) {
   .gp1 {
     margin-left: 1em;
   }
 }
+
 @media screen and (max-width: 380px) {
   .gp1 .box {
     width: 17em !important;
