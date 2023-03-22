@@ -36,12 +36,12 @@
 
 
                     <div class="form-outline form-white mb-5 gp1">
-                        <input type="text" id="typeEmailX" class="box fw-bold " placeholder="Name" name="name" />
+                        <input type="text" class="box fw-bold " placeholder="Name" name="name" require />
                         <iconify-icon icon="mdi:user" class="icon1"></iconify-icon>
                     </div>
 
                     <div class="form-outline form-white mb-5 gp1">
-                        <select class="box fw-bold" aria-label="Default select example">
+                        <select class="box fw-bold" aria-label="Default select example" name="gender" require>
                             <option selected class="">Gender</option>
                             <option value="1">Male</option>
                             <option value="2">Female</option> 
@@ -50,17 +50,17 @@
                     </div>
 
                     <div class="form-outline form-white mb-5 gp1">
-                        <input type="text" id="typeEmailX" class="box fw-bold " placeholder="Email" name="name" />
+                        <input type="text" class="box fw-bold " placeholder="Email" name="email" require />
                         <iconify-icon icon="ic:baseline-mail" class="icon1"></iconify-icon>
                     </div>
 
                     <div class=" form-outline form-white mb-5 gp1">
-                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" />
+                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" require />
                         <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                     </div>
 
                     <div class="form-outline form-white mb-5 gp1">
-                        <select class="box fw-bold" aria-label="Default select example">
+                        <select class="box fw-bold" aria-label="Default select example" name="township" require>
                             <option selected class="">Township</option>
                             <option value="Ahlon">Ahlon</option>
                             <option value="Bahan">Bahan</option> 
