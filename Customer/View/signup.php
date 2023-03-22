@@ -77,7 +77,6 @@
                             <option value="Botataung">Botataung</option>
                             <option value="Dagon Seikkan">Dagon Seikkan</option>
                             <option value="Dawbon">Dawbon</option>
-                            <option value="Dagon">Latha</option>
                             <option value="Mingala Taungnyunt">Mingala Taungnyunt</option>
                             <option value="East(New Dagon)">East(New Dagon)</option>
                             <option value="West(New Dagon)">West(New Dagon)</option>
