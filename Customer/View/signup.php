@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-7 col-12 part2">
                 <h2 class="mt-5 mb-5">Sign Up</h2>
-                <form action="" method="post">
+                <form action="../Controller/signupController.php" method="post">
 
 
                     <div class="form-outline form-white mb-5 gp1">
@@ -68,7 +68,7 @@
                     </div>
 
 
-                    <button class="button mb-5 fw-bold" type="submit" name="send"> <a href="./h.php">Register</a></button>
+                    <button class="button mb-5 fw-bold" type="submit" name="send">Register</button>
                     <br>
 
                     <p class="forgot">Already have an account?<a href="./login.php" class="text-dark fw-bold">Sign In</a></p>

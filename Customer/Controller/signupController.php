@@ -20,7 +20,7 @@ if (isset($_POST["send"])) {
             cus_password,
             cus_address
         )
-
+            VALUES
         (
             :name,
             :gender,
@@ -36,5 +36,7 @@ if (isset($_POST["send"])) {
     $sql->bindValue(":password", $password);
     $sql->bindValue(":address", $township);
 
-    // $sql->execute();
+    $sql->execute();
+
+    header("Location: ../View/h.php");
 }
