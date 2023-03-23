@@ -29,17 +29,17 @@
                             <div class="mb-md-3 mt-md-5 pb-3">
                                 <h2 class="fw-bold mb-1 text-white letter">SignIn on</h2>
                                 <img src="./resources/img/footerlogo.png" alt="" class="mb-4" width="30%">
-                                <form action="" method="post">
+                                <form action="../Controller/loginController.php" method="post">
                                     <div class="form-outline form-white mb-4 gp1">
-                                        <input type="email" id="typeEmailX" class="box fw-bold " placeholder="EMAIL" name="email" />
+                                        <input type="email" id="typeEmailX" class="box fw-bold " placeholder="EMAIL" name="email" required />
                                         <iconify-icon icon="ic:baseline-mail" class="icon1"></iconify-icon>
                                     </div>
                                     <div class=" form-outline form-white mb-4 gp1">
-                                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" />
+                                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" required />
                                         <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                                     </div>
 
-                                    <button class="button mb-5 fw-bold" type="submit" name="send"> <a href="./h.php">log in</a></button>
+                                    <button class="button mb-5 fw-bold" type="submit" name="login">log in</button>
                                     <br>
                                     <p class="forgot">Forgot Password? <a href="./forgotpwGetotp.php" class="text-white fw-bold">Click Here</a></p>
                             </div>

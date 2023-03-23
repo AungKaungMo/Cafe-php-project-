@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+?>
+
+
+
+
+
 <nav class="navbar navbar-expand-lg mx-sm-5 mx-2 ">
   <div class="container-fluid">
 
@@ -25,17 +35,17 @@
             <!-----------------   Before Login  ------------------------>
 
             <div class="d-flex justify-content-between mt-2">
-                <p class="fw-bold signColor">Sign In</p>
-                <a href="./login.php">
+              <p class="fw-bold signColor">Sign In</p>
+              <a href="./login.php">
                 <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
-                </a>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="fw-bold signColor">Sign Up</p>
-                <a href="./signup.php">
+              </a>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="fw-bold signColor">Sign Up</p>
+              <a href="./signup.php">
                 <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
-                </a>
-              </div>
+              </a>
+            </div>
 
             <!------------------  After Login   -------------------------->
 
@@ -76,7 +86,7 @@
             </div>
             <div class="line"></div>-->
 
-              <!--------------------  End After Login  ------------------------>
+            <!--------------------  End After Login  ------------------------>
 
           </div>
         </div>
@@ -84,7 +94,7 @@
         <iconify-icon icon="fluent:navigation-16-filled" id="responsiveSideBarIcon"></iconify-icon>
 
       </div>
-    </div> 
+    </div>
 
     <!---------------------   dropdown searchBar   --------------------->
 
@@ -133,17 +143,17 @@
             <!-------------   BEFORE SIGN IN/ SIGN UP   ------------------->
 
             <div class="d-flex justify-content-between mt-2">
-                <p class="fw-bold signColor">Sign In</p>
-                <a href="./login.php">
+              <p class="fw-bold signColor">Sign In</p>
+              <a href="./login.php">
                 <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
-                </a>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="fw-bold signColor">Sign Up</p>
-                <a href="./signup.php">
+              </a>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="fw-bold signColor">Sign Up</p>
+              <a href="./signup.php">
                 <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
-                </a>
-              </div>
+              </a>
+            </div>
 
             <!-------------   AFTER SIGN IN/ SIGN UP   ------------------->
 
@@ -192,11 +202,11 @@
       </div>
     </div>
 </nav>
-   
-    
-  <?php
-    include "./resources/shared/afterLogin.php";
-  ?>  
+
+
+<?php
+include "./resources/shared/afterLogin.php";
+?>
 
 
 <!-----------------------------   RES side bar   --------------------------->
