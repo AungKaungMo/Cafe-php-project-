@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +22,7 @@
 </head>
 
 <body class="back">
+    <form method="post" action="../Controller/shopLoginController.php">
     <section class="vh-100 gradient-custom">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -28,16 +32,17 @@
                             <div class="mb-md-3 mt-md-5 pb-3">
                                 <h2 class="fw-bold mb-1 text-white letter">SignIn on</h2>
                                 <img src="./resources/img/footerlogo.png" alt="" class="mb-4" width="30%">
+                                <p class="text-danger fw-bold"><?php echo $_SESSION["shopEmail"].''.$_SESSION["shopPassword"] ?></p>
                                 <form action="" method="post">
                                     <div class="form-outline form-white mb-4 gp1">
-                                        <input type="text" id="typeEmailX" class="box fw-bold " placeholder="NAME" name="name" />
-                                        <iconify-icon icon="mdi:user" class="icon1"></iconify-icon>
+                                        <input type="email" id="typeEmailX" class="box fw-bold " placeholder="EMAIL" name="email" required/>
+                                        <iconify-icon icon="ic:round-email" class="icon1"></iconify-icon>
                                     </div>
                                     <div class=" form-outline form-white mb-4 gp1">
-                                        <input type="password" id="typePasswordX" class="box fw-bold" placeholder="PASSWORD" name="password" />
+                                        <input type="password" id="typePasswordX" class="box fw-bold" placeholder="PASSWORD" name="password" required/>
                                         <iconify-icon icon="material-symbols:key-rounded" class="icon1"></iconify-icon>
                                     </div>
-                                    <button class="button mb-5 fw-bold" type="submit" name="send">Log in</button>
+                                    <button class="button mb-5 fw-bold" type="submit" name="logIn">Log in</button>
                                     <br>
                                     <p class="forgot">Forgot Password? <a href="#" class="text-white fw-bold">Click Here</a></p>
                             </div>
@@ -49,6 +54,7 @@
         </div>
 
     </section>
+    </form>
 </body>
 
 </html>
