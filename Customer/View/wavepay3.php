@@ -117,7 +117,7 @@
             </table>
 
             <div class="comBtn text-center mb-4">
-                <a href="./wavepay4.php">
+                <a href="../Controller/paymentController.php">
                     <button class="p-2">Comfirm</button></a>
             </div>
 
