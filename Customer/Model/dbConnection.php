@@ -1,12 +1,27 @@
 <?php
- $hostname = "localhost";
- $port = 3306;
- $dbname = "cafe_project_db";
- $username = "root";
- $password = "";
 
-    $pdo = new PDO("mysql:host=$hostname;port=$port;dbname=$dbname", $username, $password);
 
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
- 
-?>
+class DBConnection
+{
+    // Setting
+    private $hostname = "localhost";
+    private $port = 3306;
+    private $dbname = "cafe_project_db";
+    private $username = "root";
+    private $password = "";
+
+
+    public function connect()
+    {
+        #//Connection Connect
+        $pdo = new PDO(
+            "mysql:host=$this->hostname;port=$this->port;dbname=$this->dbname",
+            $this->username,
+            $this->password
+        );
+
+        // if error occurs, php show
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $pdo;
+    }
+}
