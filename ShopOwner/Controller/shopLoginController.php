@@ -7,7 +7,7 @@ if (isset($_POST["logIn"])) {
 
     $sql = $pdo->prepare(
         "
-            SELECT shop_password FROM m_shop WHERE shop_email = :shopEmail AND del_flg = 0
+            SELECT * FROM m_shop WHERE shop_email = :shopEmail AND del_flg = 0
             "
     );
     $sql->bindValue(":shopEmail", $shopEmail);
