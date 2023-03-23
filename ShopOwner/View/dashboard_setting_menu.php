@@ -22,7 +22,7 @@ include "./resources/shared/dashboard.php";
     </div>
     <hr class="subLine">
 
-    <form>
+    <form action="../Controller/menuController.php" method="post" enctype="multipart/form-data">
         <div class=" flex-column d-flex justify-content-center align-items-center">
             <div>
 
@@ -206,7 +206,7 @@ include "./resources/shared/dashboard.php";
 
         </div>
         <div class="saveBtn ">
-            <button>Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
+            <button name="save">Save Change<iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>
 
     </form>

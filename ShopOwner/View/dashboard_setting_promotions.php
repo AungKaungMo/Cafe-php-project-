@@ -17,9 +17,9 @@ include "./resources/shared/dashboard.php";
             <h1 class="fs-3">Slider & Text</h1>
 
             <div class="my-3">
-               <div class="sliderTitle">Slider 1</div>
+                <div class="sliderTitle">Slider 1</div>
 
-               <div class="box">
+                <div class="box">
                     <label for="title">Title</label>
                     <input type="text" id="title">
                 </div>
@@ -37,9 +37,9 @@ include "./resources/shared/dashboard.php";
             </div>
 
             <div class="my-3">
-               <div class="sliderTitle">Slider 2</div>
+                <div class="sliderTitle">Slider 2</div>
 
-               <div class="box">
+                <div class="box">
                     <label for="title">Title</label>
                     <input type="text" id="title">
                 </div>
@@ -57,9 +57,9 @@ include "./resources/shared/dashboard.php";
             </div>
 
             <div class="my-3">
-               <div class="sliderTitle">Slider 3</div>
+                <div class="sliderTitle">Slider 3</div>
 
-               <div class="box">
+                <div class="box">
                     <label for="title">Title</label>
                     <input type="text" id="title">
                 </div>
@@ -80,7 +80,7 @@ include "./resources/shared/dashboard.php";
             <button>Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>
 
-        </form>
+    </form>
     <!----------  Ending Tab ------>
     </div>
     </div>

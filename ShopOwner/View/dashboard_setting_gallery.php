@@ -12,7 +12,7 @@ include "./resources/shared/dashboard.php";
     include "./resources/shared/dashboard_setting.php";
     ?>
 
-    <form>
+    <form action="../Controller/galleryController.php" method="post" enctype="multipart/form-data">
 
         <div class="d-flex justify-content-center flex-column align-items-center">
             <h1 class="fs-2">Gallery</h1>
@@ -79,7 +79,7 @@ include "./resources/shared/dashboard.php";
 
         </div>
         <div class="saveBtn ">
-            <button>Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
+            <button name="save">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
 
         </div>
     </form>
@@ -90,6 +90,8 @@ include "./resources/shared/dashboard.php";
     </div>
 
     <script src="./resources/js/dashboard_setting.js"></script>
+
+
 </body>
 
 </html>

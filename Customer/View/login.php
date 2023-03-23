@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,6 +45,12 @@
                                     <div class=" form-outline form-white mb-4 gp1">
                                         <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" required />
                                         <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
+                                        <p class="text-danger">
+                                            <?php
+                                            if (isset($_SESSION["error"])) {
+                                                echo $_SESSION["error"];
+                                            }
+                                            ?>
                                     </div>
 
                                     <button class="button mb-5 fw-bold" type="submit" name="login">log in</button>
