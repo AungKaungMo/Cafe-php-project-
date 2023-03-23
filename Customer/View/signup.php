@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +31,7 @@
 </head>
 
 <body>
-    <div class="container-fluid body">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-5 d-md-block d-none part1">
                 <div class="mb-4">
@@ -36,12 +47,12 @@
 
 
                     <div class="form-outline form-white mb-5 gp1">
-                        <input type="text" class="box fw-bold " placeholder="Name" name="name" require />
+                        <input type="text" class="box fw-bold " placeholder="Name" name="name" required />
                         <iconify-icon icon="mdi:user" class="icon1"></iconify-icon>
                     </div>
 
                     <div class="form-outline form-white mb-5 gp1">
-                        <select class="box fw-bold" aria-label="Default select example" name="gender" require>
+                        <select class="box fw-bold" aria-label="Default select example" name="gender" required>
                             <option selected class="">Gender</option>
                             <option value="1">Male</option>
                             <option value="2">Female</option>
@@ -50,19 +61,25 @@
                     </div>
 
                     <div class="form-outline form-white mb-5 gp1">
-                        <input type="text" class="box fw-bold " placeholder="Email" name="email" require />
+                        <input type="text" class="box fw-bold " placeholder="Email" name="email" required />
                         <iconify-icon icon="ic:baseline-mail" class="icon1"></iconify-icon>
+                        <p class="text-danger">
+                            <?php
+                            if (isset($_SESSION["signuperror"])) {
+                                echo  $_SESSION["signuperror"];
+                            }
+                            ?>
+                        </p>
                     </div>
 
                     <div class=" form-outline form-white mb-5 gp1">
-                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" require />
+                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" required />
                         <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                     </div>
 
                     <div class="form-outline form-white mb-5 gp1">
-                        <select class="box fw-bold" aria-label="Default select example" name="township" require>
-                            <option selected class="">Township</option>
-                            <option value="1">Ahlon</option>
+                        <select class="box fw-bold" aria-label="Default select example" name="township" required>
+                            <option selected value="1">Ahlon</option>
                             <option value="2">Bahan</option>
                             <option value="3">Dagon</option>
                             <option value="4">Hlaing</option>
