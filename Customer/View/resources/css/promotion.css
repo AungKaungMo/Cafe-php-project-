@@ -44,14 +44,7 @@
 }
  /* responsive side bar */
 
-.sideBar{
-    background-color: var(--backgroundTertiary);
-    height: 100vh;
-    box-shadow: var(--cardShadow);
-    right: -400px;
-    opacity: 0;
-    transition: all 0.7s;
-}
+
 .sideBarChange{
     right: 0;
     opacity: 1;
