@@ -23,7 +23,7 @@ include "./resources/shared/dashboard.php";
     <hr class="subLine">
 
     <!---------------  Add Menu  -------------->
-    <form>
+    <form action="../Controller/addmenuController.php" method="post" enctype="multipart/form-data">
 
         <div class=" flex-column d-flex justify-content-center align-items-center">
             <div>
@@ -47,13 +47,16 @@ include "./resources/shared/dashboard.php";
                 </div>
             </div>
             <div class="saveBtn ">
-                <button>Add</button>
+                <button name="add">Add</button>
             </div>
         </div>
     </form>
+
+
     <!-----------------  Updated Menu  ----------------->
 
-    <form>
+
+    <form action="../Controller/updatemenu.php" method="post" enctype="multipart/form-data">
         <div class=" flex-column d-flex justify-content-center align-items-center mb-5">
             <div>
 
@@ -175,7 +178,7 @@ include "./resources/shared/dashboard.php";
         </div>
 
         <div class="saveBtn ">
-            <button>Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
+            <button class="savechange">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>
     </form>
 
