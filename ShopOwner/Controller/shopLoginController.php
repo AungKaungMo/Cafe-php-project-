@@ -22,6 +22,7 @@ if (isset($_POST["logIn"])) {
         $dbPass = $result[0]["shop_password"];
         if (password_verify($pass, $dbPass)) {
             $_SESSION["shopPassword"] = "";
+            $_SESSION["shopid"] = $result[0]["shop_id"];
             header("location: ../View/dashboard_profile_informtaions.php");
         } else {
             $_SESSION["shopPassword"] = "Password is incorrect";
