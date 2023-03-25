@@ -4,6 +4,8 @@ if (isset($_POST["logIn"])) {
     $shopEmail = $_POST["email"];
     $pass = $_POST["password"];
     include "../Model/dbConnection.php";
+    $db = new DBConnection();
+    $pdo = $db->connect();
 
     $sql = $pdo->prepare(
         "
@@ -22,6 +24,7 @@ if (isset($_POST["logIn"])) {
         $dbPass = $result[0]["shop_password"];
         if (password_verify($pass, $dbPass)) {
             $_SESSION["shopPassword"] = "";
+            $_SESSION["shopId"] = $result[0]["shop_id"];
             header("location: ../View/dashboard_profile_informtaions.php");
         } else {
             $_SESSION["shopPassword"] = "Password is incorrect";

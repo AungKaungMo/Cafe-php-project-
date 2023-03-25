@@ -1,10 +1,12 @@
 <?php
-include  "../Model/dbConnection.php";
 session_start();
+
+
 if (isset($_POST["login"])) {
     $email = $_POST["email"];
     $userpassword = $_POST["password"];
 
+    include  "../Model/dbConnection.php";
     $db = new DBConnection();
     $pdo = $db->connect();
 
@@ -18,27 +20,29 @@ if (isset($_POST["login"])) {
     $sql->execute();
 
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-    echo "<pre>";
-    print_r($result);
-
-    $pwd = password_hash($userpassword, PASSWORD_DEFAULT);
-
-    echo  $pwd;
-    echo "<pre>";
+    echo count($result);
 
     if (count($result) == 0) {
         //fail login
         $_SESSION["error"] = "UserEmail OR Password not match!!";
         header("Location: ../View/login.php");
     } else {
-        $dbpasssword = $result[0]["cus_password"];
-        if (password_verify($userpassword, $dbpasssword)) {
-            $_SESSION["error"] = "";
-            header("Location: ../View/h.php");
-        } else {
-            // $_SESSION["error"] = "UserEmail OR Password not match!!";
-            // header("Location: ../View/login.php");
-            echo "error";
+        if(password_verify( $result[0]["cus_password"], $userpassword))
+        {
+            echo "right";
+        }else {
+            echo "wrong";
         }
+        // if(password_verify($))
     }
 }
+// $dbpasssword = $result[0]["cus_password"];
+//         if (password_verify($dbpasssword, $userpassword)) {
+//             $_SESSION["error"] = "";
+//             echo "right";
+            // header("Location: ../View/h.php");
+        // } else {
+            // $_SESSION["error"] = "UserEmail OR Password not match!!";
+            // header("Location: ../View/login.php");
+        //     echo "error";
+        // }

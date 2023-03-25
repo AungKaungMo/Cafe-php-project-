@@ -32,7 +32,13 @@
                             <div class="mb-md-3 mt-md-5 pb-3">
                                 <h2 class="fw-bold mb-1 text-white letter">SignIn on</h2>
                                 <img src="./resources/img/footerlogo.png" alt="" class="mb-4" width="30%">
-                                <p class="text-danger fw-bold"><?php echo $_SESSION["shopEmail"].''.$_SESSION["shopPassword"] ?></p>
+                                <p class="text-danger fw-bold"><?php 
+                                if(empty($_SESSION["shopEmail"]) || $_SESSION["shopPassword"]){
+                                    echo "";
+                                }else {
+                                    echo $_SESSION["shopEmail"].''.$_SESSION["shopPassword"];
+                                }
+                                 ?></p>
                                 <form action="" method="post">
                                     <div class="form-outline form-white mb-4 gp1">
                                         <input type="email" id="typeEmailX" class="box fw-bold " placeholder="EMAIL" name="email" required/>

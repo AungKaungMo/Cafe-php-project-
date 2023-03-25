@@ -3,6 +3,7 @@ session_start();
 
 include "../Model/dbConnection.php";
 
+
 if (isset($_POST["submit"])) {
 
     $email = $_POST["email"];
@@ -20,6 +21,8 @@ if (isset($_POST["submit"])) {
         header("location: ../View/buyShopFillInformation.php");
     } else {
 
+        $db = new DBConnection();
+$pdo = $db->connect();
         $sql = $pdo->prepare(
             "SELECT shop_name FROM m_shop WHERE shop_name = :name"
         );
