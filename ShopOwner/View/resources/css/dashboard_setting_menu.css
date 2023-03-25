@@ -29,7 +29,7 @@
 .chooseMenu h1:hover {
   color: var(--mainColor);
 }
-.menuBox {
+/* .menuBox {
   width: 350px;
   padding: 1em;
   border-radius: 10px;
@@ -63,4 +63,67 @@
   .updatedName {
     width: 100px;
   }
+} */
+.uploadImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+.uploadImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menubox{
+  padding: 1.5em;
+  background-color: var(--backgroundTertiary);
+  box-shadow: var(--cardShadow);
+  border-radius: 10px;
+}
+.updateImage{
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin: auto;
+}
+.updateImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.updateName{
+  width: 150px ;
+  margin-left: unset;
+}
+.p_stock{
+  display: flex;
+  justify-content: space-between;
+}
+.updateInstock{
+  width: 50px;
+}
+.ammount{
+  display: flex;
+  justify-content: space-between;
+}
+.ammount input{
+  width: 60px;
+}
+.del {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.del p{
+  font-size: 0.9em;
+}
+.del iconify-icon{
+  transition: all 0.4s;
+}
+.del iconify-icon:hover{
+  color: var(--mainColor);
 }

@@ -23,27 +23,40 @@ include "./resources/shared/dashboard.php";
     <hr class="subLine">
 
     <!---------------  Add Menu  -------------->
-    <form action="../Controller/addmenuController.php" method="post" enctype="multipart/form-data">
+    <form action="../Controller/shop_setting_menu_twoController.php" method="post" enctype="multipart/form-data">
 
         <div class=" flex-column d-flex justify-content-center align-items-center">
             <div>
 
                 <h1 class="fs-5 my-5">Add New Menu</h1>
                 <div class="box">
-                    <label for="pi1">Product Image1</label>
-                    <input type="file" id="pi1" accept="image/png, image/jpeg">
+                    <div class="uploadImage">
+                        <img src="./resources/img/default.png" id="acceptImage">
+                    </div>
                 </div>
                 <div class="box">
-                    <label for="pn1">Product Name1</label>
-                    <input type="text" id="pn1">
+                    <label for="pi1">Product Image</label>
+                    <input type="file" id="pi1" accept="image/png" name="pphoto" required>
+                </div>
+                <div class="box">
+                    <label for="pn1">Product Name</label>
+                    <input type="text" name="pname" id="pn1" required>
+                </div>
+                <div class="box">
+                    <label for="pdis">Discount</label>
+                    <input type="number" name="pdis" id="pdis">
                 </div>
                 <div class="box">
                     <label for="price">Price</label>
-                    <input type="text" id="price">
+                    <input type="number" name="pprice" id="price" required>
                 </div>
                 <div class="box">
-                    <label for="instock">Instock1</label>
-                    <input type="text" id="instock">
+                    <label for="instock">Instock</label>
+                    <input type="number" name="pinstock" id="instock" required>
+                </div>
+                <div class="box">
+                    <label for="coinPrice">Coin Price</label>
+                    <input type="number" name="pcoinprice" id="coinPrice" required>
                 </div>
             </div>
             <div class="saveBtn ">
@@ -57,126 +70,167 @@ include "./resources/shared/dashboard.php";
 
 
     <form action="../Controller/updatemenu.php" method="post" enctype="multipart/form-data">
-        <div class=" flex-column d-flex justify-content-center align-items-center mb-5">
-            <div>
+    <h1 class="fs-4 ms-4 my-5">Updated Menu</h1>
+        <div class=" d-flex flex-wrap mb-5">
+    
 
-                <h1 class="fs-5 my-5">Updated Menu</h1>
-                <div class="menuBox">
-                    <div class="row">
-                        <div class="col-5">
-                            <div class=""><img src="./resources/img/cake.jpg" width="100%" height="100%" class="rounded-3"></div>
-                        </div>
-                        <div class="col-7 menuDetails">
-                            <div class="mb-3">
-                                <input type="text" value="Espresso" class="updatedName">
-                            </div>
-                            <div class="d-flex justify-content-between mb-3">
-                                <div>
-                                    <span>Sold - <span class="fw-bold"> 32 </span></span>
-                                </div>
-                                <div>
-                                    <span>Instock - <input type="number" value="40" class="updatedInstock"></span>
-                                </div>
-                            </div>
-                            <div>
-                                <span>Remain - </span><span>8</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="question">Do u want to delete this items from menu?</div>
-                        <iconify-icon icon="ion:trash-sharp" class="fs-4 bin"></iconify-icon>
-                    </div>
-                </div>
-
-                <div class="menuBox mt-3">
-                    <div class="row">
-                        <div class="col-5">
-                            <div class=""><img src="./resources/img/cake.jpg" width="100%" height="100%" class="rounded-3"></div>
-                        </div>
-                        <div class="col-7 menuDetails">
-                            <div class="mb-3">
-                                <input type="text" value="Espresso" class="updatedName">
-                            </div>
-                            <div class="d-flex justify-content-between mb-3">
-                                <div>
-                                    <span>Sold - <span class="fw-bold"> 32 </span></span>
-                                </div>
-                                <div>
-                                    <span>Instock - <input type="number" value="40" class="updatedInstock"></span>
-                                </div>
-                            </div>
-                            <div>
-                                <span>Remain - </span><span>8</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="question">Do u want to delete this items from menu?</div>
-                        <iconify-icon icon="ion:trash-sharp" class="fs-4 bin"></iconify-icon>
-                    </div>
-                </div>
-
-                <div class="menuBox mt-3">
-                    <div class="row">
-                        <div class="col-5">
-                            <div class=""><img src="./resources/img/cake.jpg" width="100%" height="100%" class="rounded-3"></div>
-                        </div>
-                        <div class="col-7 menuDetails">
-                            <div class="mb-3">
-                                <input type="text" value="Espresso" class="updatedName">
-                            </div>
-                            <div class="d-flex justify-content-between mb-3">
-                                <div>
-                                    <span>Sold - <span class="fw-bold"> 32 </span></span>
-                                </div>
-                                <div>
-                                    <span>Instock - <input type="number" value="40" class="updatedInstock"></span>
-                                </div>
-                            </div>
-                            <div>
-                                <span>Remain - </span><span>8</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="question">Do u want to delete this items from menu?</div>
-                        <iconify-icon icon="ion:trash-sharp" class="fs-4 bin"></iconify-icon>
-                    </div>
-                </div>
-
-                <div class="menuBox mt-3">
-                    <div class="row">
-                        <div class="col-5">
-                            <div class=""><img src="./resources/img/cake.jpg" width="100%" height="100%" class="rounded-3"></div>
-                        </div>
-                        <div class="col-7 menuDetails">
-                            <div class="mb-3">
-                                <input type="text" value="Espresso" class="updatedName">
-                            </div>
-                            <div class="d-flex justify-content-between mb-3">
-                                <div>
-                                    <span>Sold - <span class="fw-bold"> 32 </span></span>
-                                </div>
-                                <div>
-                                    <span>Instock - <input type="number" value="40" class="updatedInstock"></span>
-                                </div>
-                            </div>
-                            <div>
-                                <span>Remain - </span><span>8</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="question">Do u want to delete this items from menu?</div>
-                        <iconify-icon icon="ion:trash-sharp" class="fs-4 bin"></iconify-icon>
-                    </div>
-                </div>
-
-            </div>
-
+<div class="menubox m-4">
+    <div class="updateImage">
+        <img src="./resources/img/cake.jpg">
+    </div>
+    <div class=" mt-3">
+        <div>
+            <input type="text" value="Espresso" class="updateName">
         </div>
+        <div class="p_stock  mt-3">
+            <div>
+            <span>Instock - </span>
+            <input type="number" value="40" class="updateInstock">
+            </div>
+            <div>
+            <span>Sold - <span class="fw-bold"> 30 </span></span>
+            </div>
+        </div>
+        <div class="remain mt-3">
+        <span>Remain - </span><span>10</span>
+        </div>
+        <div class="ammount mt-3">
+            <div class="price">
+                <span>Price - </span>
+                <input type="number">
+            </div>
+            <div class="coin">
+                <span>Coin - </span>
+                <input type="number">
+            </div>
+        </div>
+        <div class="mt-3 del">
+            <p>
+            Do you want to delete this item from menu?
+            </p>
+            <iconify-icon icon="ion:trash-sharp" class="fs-3"></iconify-icon>
+        </div>
+    </div>
+</div>
 
+<div class="menubox m-4">
+    <div class="updateImage">
+        <img src="./resources/img/cake.jpg">
+    </div>
+    <div class=" mt-3">
+        <div>
+            <input type="text" value="Espresso" class="updateName">
+        </div>
+        <div class="p_stock  mt-3">
+            <div>
+            <span>Instock - </span>
+            <input type="number" value="40" class="updateInstock">
+            </div>
+            <div>
+            <span>Sold - <span class="fw-bold"> 30 </span></span>
+            </div>
+        </div>
+        <div class="remain mt-3">
+        <span>Remain - </span><span>10</span>
+        </div>
+        <div class="ammount mt-3">
+            <div class="price">
+                <span>Price - </span>
+                <input type="number">
+            </div>
+            <div class="coin">
+                <span>Coin - </span>
+                <input type="number">
+            </div>
+        </div>
+        <div class="mt-3 del">
+            <p>
+            Do you want to delete this item from menu?
+            </p>
+            <iconify-icon icon="ion:trash-sharp" class="fs-3"></iconify-icon>
+        </div>
+    </div>
+</div>
+
+<div class="menubox m-4">
+    <div class="updateImage">
+        <img src="./resources/img/cake.jpg">
+    </div>
+    <div class=" mt-3">
+        <div>
+            <input type="text" value="Espresso" class="updateName">
+        </div>
+        <div class="p_stock  mt-3">
+            <div>
+            <span>Instock - </span>
+            <input type="number" value="40" class="updateInstock">
+            </div>
+            <div>
+            <span>Sold - <span class="fw-bold"> 30 </span></span>
+            </div>
+        </div>
+        <div class="remain mt-3">
+        <span>Remain - </span><span>10</span>
+        </div>
+        <div class="ammount mt-3">
+            <div class="price">
+                <span>Price - </span>
+                <input type="number">
+            </div>
+            <div class="coin">
+                <span>Coin - </span>
+                <input type="number">
+            </div>
+        </div>
+        <div class="mt-3 del">
+            <p>
+            Do you want to delete this item from menu?
+            </p>
+            <iconify-icon icon="ion:trash-sharp" class="fs-3"></iconify-icon>
+        </div>
+    </div>
+</div>
+
+<div class="menubox m-4">
+    <div class="updateImage">
+        <img src="./resources/img/cake.jpg">
+    </div>
+    <div class=" mt-3">
+        <div>
+            <input type="text" value="Espresso" class="updateName">
+        </div>
+        <div class="p_stock  mt-3">
+            <div>
+            <span>Instock - </span>
+            <input type="number" value="40" class="updateInstock">
+            </div>
+            <div>
+            <span>Sold - <span class="fw-bold"> 30 </span></span>
+            </div>
+        </div>
+        <div class="remain mt-3">
+        <span>Remain - </span><span>10</span>
+        </div>
+        <div class="ammount mt-3">
+            <div class="price">
+                <span>Price - </span>
+                <input type="number">
+            </div>
+            <div class="coin">
+                <span>Coin - </span>
+                <input type="number">
+            </div>
+        </div>
+        <div class="mt-3 del">
+            <p>
+            Do you want to delete this item from menu?
+            </p>
+            <iconify-icon icon="ion:trash-sharp" class="fs-3"></iconify-icon>
+        </div>
+    </div>
+</div>
+
+        </div> 
         <div class="saveBtn ">
             <button class="savechange">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>
@@ -188,7 +242,12 @@ include "./resources/shared/dashboard.php";
 
     <script src="./resources/js/dashboard_setting.js"></script>
     <script src="./resources/js/dashboard_setting_menu.js"></script>
+    <script>
+        $("#pi1").change(function() {
+          document.getElementById("acceptImage").src = window.URL.createObjectURL(event.target.files[0]); 
+        })
+      
+    </script>
 
 </body>
-
 </html>

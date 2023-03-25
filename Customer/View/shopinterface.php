@@ -41,6 +41,7 @@
 
     <?php
     include "./resources/shared/shopnav.php";
+    include "../Controller/shopInterfacePromotionMenuController.php";
     ?>
 
     <!-----------------------------   Header SLider    --------------------->
@@ -61,165 +62,49 @@
             <h1 class=" text-center title fw-bold pb-2 position-relative">Promotiom Product</h1>
         </div>
     </div>
-    <div class="swiper mySwiper mt-5 box1">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="maincard">
-                    <div class="card">
-                        <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                        <div class="text ms-3">Black Coffee</div>
-                        <div class="pbtn ms-4">
-                            <button>
-                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                            <button>
-                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                        </div>
-                        <div class="price text-center">
-                            1500MMK
-                        </div>
-                    </div>
 
-                    <div class="card">
-                        <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                        <div class="text ms-3">Black Coffee</div>
-                        <div class="pbtn ms-4">
-                            <button>
-                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                            <button>
-                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                        </div>
-                        <div class="price text-center">
-                            1500MMK
-                        </div>
-                    </div>
+    <div class=" box1 position-relative">
 
-                    <div class="card">
-                        <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                        <div class="text ms-3">Black Coffee</div>
-                        <div class="pbtn ms-4">
-                            <button>
-                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                            <button>
-                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                        </div>
-                        <div class="price text-center">
-                            1500MMK
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="swiper mySwiper1 mt-5">
+            <div class="swiper-wrapper discountCardContainer">
 
 
-            <div class="swiper-slide box1">
-                <div class="maincard mb-4">
-                    <div class="card">
-                        <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                        <div class="text ms-3">Black Coffee</div>
-                        <div class="pbtn ms-4">
-                            <button>
-                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                            <button>
-                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                        </div>
-                        <div class="price text-center">
-                            1500MMK
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                        <div class="text ms-3">Black Coffee</div>
-                        <div class="pbtn ms-4">
-                            <button>
-                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                            <button>
-                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                        </div>
-                        <div class="price text-center">
-                            1500MMK
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                        <div class="text ms-3">Black Coffee</div>
-                        <div class="pbtn ms-4">
-                            <button>
-                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                            <button>
-                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                        </div>
-                        <div class="price text-center">
-                            1500MMK
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide box1">
-                <div class="maincard">
-                    <div class="card">
-                        <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                        <div class="text ms-3">Black Coffee</div>
-                        <div class="pbtn ms-4">
-                            <button>
-                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                            <button>
-                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                        </div>
-                        <div class="price text-center">
-                            1500MMK
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                        <div class="text ms-3">Black Coffee</div>
-                        <div class="pbtn ms-4">
-                            <button>
-                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                            <button>
-                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                        </div>
-                        <div class="price text-center">
-                            1500MMK
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                        <div class="text ms-3">Black Coffee</div>
-                        <div class="pbtn ms-4">
-                            <button>
-                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                            <button>
-                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                            </button>
-                        </div>
-                        <div class="price text-center">
-                            1500MMK
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <?php for ($i = 0; $i < count($result); $i++) { ?>
+                    <div class="swiper-slide disCard">
+        <div class="disticket">
+         <?php echo $result[$i]["product_discount"]." %" ?>
         </div>
-        <div class="swiper-pagination mt-4"></div>
+        <div class="distickettri"></div>
+        <div class="carditems">
+            <div class="disphoto">
+          <img src="../../Storages/<?php echo $result[$i]["product_photo"] ?>" alt="">
+            </div>
+          <p class="pname"><?php echo $result[$i]["product_name"] ?></p>
+          <div class="disbtn">
+            <button>
+              <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+            </button>
+
+            <button>
+              <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+            </button>
+          </div>
+          <div class="disprice">
+            <?php
+              $percentPrice = $result[$i]["product_price"] - (($result[$i]["product_price"] * $result[$i]["product_discount"] ) / 100);
+            echo $percentPrice ?>MMK
+          </div>
+        </div>
+      </div>
+
+
+                <?php } ?>
+
+  
+            </div>
+            <div class="swiper-pagination card-swiper"></div>
+
+        </div>
     </div>
 
 
@@ -630,8 +515,11 @@
     </script>
 
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".mySwiper1", {
+            slidesPerView: 4,
+            //   centeredSlides: true,
             spaceBetween: 30,
+            //   grabCursor: true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
