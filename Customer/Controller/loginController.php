@@ -20,7 +20,19 @@ if (isset($_POST["login"])) {
     $sql->execute();
 
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-    echo count($result);
+    echo "<pre>";
+    print_r($result);
+    $hash_pwd = $result[0]["cus_password"];
+    $hash = password_verify($userpassword, $hash_pwd);
+
+    echo   $hash_pwd;
+    echo "<br>";
+    echo   $userpassword;
+    // echo   (int) $hash;
+    echo "<br>";
+
+
+
 
     if (count($result) == 0) {
         //fail login

@@ -1,5 +1,7 @@
 <?php
 include "./resources/shared/dashboard.php";
+session_start();
+$result = $_SESSION["mypf"];
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_profile.css">
 <link rel="stylesheet" href="./resources/css/dashboard_userprofile.css">
@@ -9,8 +11,8 @@ include "./resources/shared/dashboard.php";
 <body>
 
     <!-- <?php
-    include "./resources/shared/dashboard_profile.php";
-    ?> -->
+            include "./resources/shared/dashboard_profile.php";
+            ?> -->
     <form>
         <div class="mt-5 mx-3 d-flex flex-column justify-content-center align-items-center">
             <div class=" position-relative">
@@ -25,21 +27,21 @@ include "./resources/shared/dashboard.php";
 
                 <div class="informtaionBox">
                     <label for="username">UserName</label>
-                    <input type="text" id="username">
+                    <input type="text" id="username" value="<?= $result[0]["cus_name"] ?>">
                 </div>
 
                 <div class="informtaionBox">
                     <label for="phone">Phone</label>
-                    <input type="phone" id="phone">
+                    <input type="phone" id="phone" value="<?= $result[0]["cus_phone"] ?>">
                 </div>
 
                 <div class="informtaionBox">
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" value="<?= $result[0]["cus_email"] ?>">
                 </div>
 
-               <div class="autentication">Authentiation</div>
-               <div class="autentication">cafe1234@gmail.com</div>
+                <div class="autentication">Authentiation</div>
+                <div class="autentication">cafe1234@gmail.com</div>
 
             </div>
         </div>

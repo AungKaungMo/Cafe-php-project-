@@ -1,6 +1,8 @@
 <?php
-
+session_start();
+include "../Model/dbConnection.php";
 if (isset($_POST["save"])) {
-    echo "hello";
-    include "../Model/dbConnection.php";
+    $shopid = $_SESSION["shopid"];
+
+    echo $shopid;
 }

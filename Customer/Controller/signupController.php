@@ -53,14 +53,15 @@ if (isset($_POST["send"])) {
         //
         $sql = $pdo->prepare(
             "
-        SELECT cus_id FROM m_customer WHERE cus_email = :email;
+        SELECT * FROM m_customer WHERE cus_email = :email;
         "
         );
         $sql->bindValue(":email", $email);
         $sql->execute();
         $emailResult = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $_SESSION["userid"] = $emailResult[0]["cus_id"];
+        $_SESSION["username"] = $emailResult[0]["cus_name"];
 
-        $_SESSION = $emailResult[0]["cus_id"];
         header("Location: ../View/h.php");
         $_SESSION["signuperror"] = "";
     } else {

@@ -29,19 +29,18 @@
                             <div class="mb-md-3 mt-md-5 pb-3">
                                 <h2 class="fw-bold mb-1 text-white letter">Admin Login</h2>
                                 <img src="./resources/img/footerlogo.png" alt="" class="mb-4" width="30%">
-                                <form action="" method="post">
+                                <form action="../Controller/adminloginController.php" method="post">
                                     <div class="form-outline form-white mb-4 gp1">
                                         <input type="email" id="typeEmailX" class="box fw-bold " placeholder="EMAIL" name="email" />
                                         <iconify-icon icon="ic:baseline-mail" class="icon1"></iconify-icon>
                                     </div>
                                     <div class=" form-outline form-white mb-4 gp1">
-                                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="password" />
+                                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="PASSWORD" name="userpassword" />
                                         <iconify-icon icon="ic:outline-key" class="icon1"></iconify-icon>
                                     </div>
                                     <div class="loginBtn">
-                                        <button class="p-2"><a href="./dashboard_manageList_ShopList.php">login</a></button>
+                                        <button class="p-2" name="login">login</button>
                                     </div>
-
                             </div>
                             </form>
                         </div>
