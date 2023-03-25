@@ -11,61 +11,19 @@ include "./resources/shared/dashboard.php";
     <?php
     include "./resources/shared/dashboard_setting.php";
     ?>
-    <form>
-
+    <form action="../Controller/privacyController.php" method="post">
         <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="sliderTitle">Rule</div>
-
-            <div class="my-3"> 
+            <div class="my-3">
+                <div class="sliderTitle">Rule</div>
                 <div class="box">
-                    <label for="question1">Question 1</label>
-                    <input type="text" id="question1">
+                    <textarea id="paragraph" name="paragraph"></textarea>
                 </div>
-                <div class="box">
-                    <label for="answer1">Answer 1</label>
-                    <textarea id="answer1"></textarea>
-                </div>
-                <div class="box">
-                    <label for="question2">Question 2</label>
-                    <input type="text" id="question2">
-                </div>
-                <div class="box">
-                    <label for="answer2">Answer 2</label>
-                    <textarea id="answer2"></textarea>
-                </div>
-                <div class="box">
-                    <label for="question3">Question 3</label>
-                    <input type="text" id="question3">
-                </div>
-                <div class="box">
-                    <label for="answer3">Answer 3</label>
-                    <textarea id="answer3"></textarea>
-                </div>
-                <div class="box">
-                    <label for="question4">Question 4</label>
-                    <input type="text" id="question4">
-                </div>
-                <div class="box">
-                    <label for="answer4">Answer 4</label>
-                    <textarea id="answer4"></textarea>
-                </div>
-                <div class="box">
-                    <label for="question5">Question 5</label>
-                    <input type="text" id="question5">
-                </div>
-                <div class="box">
-                    <label for="answer5">Answer 5</label>
-                    <textarea id="answer5"></textarea>
-                </div>
-                 
-                
             </div>
-
         </div>
         <div class="saveBtn mb-5 ">
-            <button>Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
+            <button name="saveChange">Save Change 
+                <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>
-
     </form>
     <!----------  Ending Tab ------>
     </div>
