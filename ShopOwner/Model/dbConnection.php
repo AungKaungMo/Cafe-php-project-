@@ -3,11 +3,10 @@
 
 class DBConnection
 {
-
     // Setting
     private $hostname = "localhost";
-    private $port = 3307;
-    private $dbname = "";
+    private $port = 3306;
+    private $dbname = "cafe_project_db";
     private $username = "root";
     private $password = "";
 
@@ -16,7 +15,7 @@ class DBConnection
     {
         #//Connection Connect
         $pdo = new PDO(
-            "mysql:host=$this->hostname;port=$this->port;dbname=d$this->dbname",
+            "mysql:host=$this->hostname;port=$this->port;dbname=$this->dbname",
             $this->username,
             $this->password
         );

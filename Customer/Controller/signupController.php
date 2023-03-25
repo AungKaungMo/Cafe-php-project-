@@ -1,6 +1,6 @@
 <?php
 include "../Model/dbConnection.php";
-
+session_start();
 if (isset($_POST["send"])) {
     $name = $_POST["name"];
     $gender = $_POST["gender"];
@@ -10,8 +10,21 @@ if (isset($_POST["send"])) {
 
     $db = new DBConnection();
     $pdo = $db->connect();
+
     $sql = $pdo->prepare(
         "
+        SELECT cus_email FROM m_customer WHERE cus_email = :email
+        "
+    );
+    $sql->bindValue(":email", $email);
+    $sql->execute();
+    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+
+    if (count($result) == 0) {
+
+        $sql = $pdo->prepare(
+            "
         INSERT INTO m_customer
         (
             cus_name,
@@ -20,7 +33,7 @@ if (isset($_POST["send"])) {
             cus_password,
             cus_address
         )
-
+            VALUES
         (
             :name,
             :gender,
@@ -29,12 +42,30 @@ if (isset($_POST["send"])) {
             :address
         );
         "
-    );
-    $sql->bindValue(":name", $name);
-    $sql->bindValue(":gender", $gender);
-    $sql->bindValue(":email", $email);
-    $sql->bindValue(":password", $password);
-    $sql->bindValue(":address", $township);
+        );
+        $sql->bindValue(":name", $name);
+        $sql->bindValue(":gender", $gender);
+        $sql->bindValue(":email", $email);
+        $sql->bindValue(":password", password_hash($password, PASSWORD_DEFAULT));
+        $sql->bindValue(":address", $township);
+        $sql->execute();
 
-    // $sql->execute();
+        //
+        $sql = $pdo->prepare(
+            "
+        SELECT * FROM m_customer WHERE cus_email = :email;
+        "
+        );
+        $sql->bindValue(":email", $email);
+        $sql->execute();
+        $emailResult = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $_SESSION["userid"] = $emailResult[0]["cus_id"];
+        $_SESSION["username"] = $emailResult[0]["cus_name"];
+
+        header("Location: ../View/h.php");
+        $_SESSION["signuperror"] = "";
+    } else {
+        header("Location: ../View/signup.php");
+        $_SESSION["signuperror"] = "User email is taken .Use another email";
+    }
 }

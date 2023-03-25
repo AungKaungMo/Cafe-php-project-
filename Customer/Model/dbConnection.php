@@ -1,5 +1,6 @@
 <?php
 
+
 class DBConnection
 {
     // Setting

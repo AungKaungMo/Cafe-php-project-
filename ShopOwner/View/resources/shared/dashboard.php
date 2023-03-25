@@ -81,7 +81,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./ShopOwner/View/shoplogin.php">
                         <span class="icon"><iconify-icon icon="basil:logout-solid"></iconify-icon></span>
                         <span class="title">Logout</span>
                     </a>

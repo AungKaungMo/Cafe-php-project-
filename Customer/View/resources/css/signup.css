@@ -36,14 +36,17 @@
   font-size: var(--paragraphFontSize);
   transition: all 0.5s;
 }
+
 .button:hover {
   background-color: transparent;
+  color: var(--mainColor) !important;
 }
 
 .button a {
   text-decoration: none;
   color: var(--secondMainColor);
 }
+
 .button:hover a {
   color: var(--mainColor) !important;
 }
@@ -66,6 +69,17 @@
   top: 0.2em;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--secondMainColor) !important;
+}
+
 @media screen and (max-width: 720px) {
   .box {
     width: 18em;
@@ -79,7 +93,7 @@
 
 .body {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: var(--backgroundSecondary);
 }
 
@@ -96,11 +110,13 @@ h2 {
     width: 15em;
   }
 }
+
 @media screen and (max-width: 500px) {
   .gp1 {
     margin-left: 1em;
   }
 }
+
 @media screen and (max-width: 380px) {
   .gp1 .box {
     width: 17em !important;

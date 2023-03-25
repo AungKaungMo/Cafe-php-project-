@@ -7,8 +7,7 @@
     --paginationColor: #3D251E;
     --mainColor: #765341;
     --secondMainColor: #FFEBCD;
-    --saleChartColorOne: #3500F2;
-    --saleChartColorTwo: #8666F7;
+    --wranningColor: red;
     --navigationFont: 'Ubuntu', sans-serif;
     --titleFont: 'Inria Serif', serif;
     --paragraphFont: 'Roboto', sans-serif;
@@ -72,6 +71,7 @@ html::-webkit-scrollbar-track{
 body {
     overflow-x: hidden;
     font-family: var(--paragraphFont);
+    color: var(--textColorSecondary);
     background-color: var(--backgroundPrimary);
 }
 @media screen and (max-width:470px){
