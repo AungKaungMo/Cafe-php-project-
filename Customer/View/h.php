@@ -297,11 +297,19 @@
 
   <!------------------------   Contact Us   ------------------------>
 
+  <?php
+  include "../Controller/contactusController.php";
+
+  ?>
+
+
+
   <div class="mt-3 mx-sm-5 mx-2 pt-5 contactSection">
     <div class="text-center">
 
       <h1 class="position-relative pb-2 fw-bold title">Contact Us</h1>
-      <h6 class=" w-25 m-auto subTitle">Lorem ip dolor sit amet cconsectRecusandae, temporibus!r adipisicing elit. Recusandae</h6>
+      <!-- <h6 class=" w-25 m-auto subTitle">Lorem ip dolor sit amet cconsectRecusandae, temporibus!r adipisicing elit. Recusandae</h6> -->
+      <h6 class=" w-25 m-auto subTitle"><?= $contactR[0]["paragraph"] ?></h6>
     </div>
 
     <div class="row mt-5 w-75 m-auto contactBox ">
@@ -316,22 +324,25 @@
             <div class="me-3 p-2 rounded-circle d-flex justify-content-center align-items-center contactIcons">
               <iconify-icon icon="material-symbols:location-on-rounded" class="fs-3"></iconify-icon>
             </div>
-            <p class="mt-3 text-start">No.135, Min ma haw lane, Yangon,
-              Myanmar</p>
+            <!-- <p class="mt-3 text-start">No.135, Min ma haw lane, Yangon,
+              Myanmar</p> -->
+            <p class="mt-3 text-start"><?= $contactR[0]["address"] ?></p>
           </div>
 
           <div class="d-flex mt-3 align-items-center">
             <div class="me-3 p-2 rounded-circle d-flex justify-content-center align-items-center contactIcons">
               <iconify-icon icon="material-symbols:phone-in-talk" class="fs-3"></iconify-icon>
             </div>
-            <p class="mt-3 text-start">+959 123 456 789</p>
+            <!-- <p class="mt-3 text-start">+959 123 456 789</p> -->
+            <p class="mt-3 text-start"><?= $contactR[0]["phone"] ?></p>
           </div>
 
           <div class="d-flex mt-3 align-items-center">
             <div class="me-3 p-2 rounded-circle d-flex justify-content-center align-items-center contactIcons">
               <iconify-icon icon="ic:baseline-email" class="fs-3"></iconify-icon>
             </div>
-            <p class="mt-3 text-start">GroupTwo@gmail.com</p>
+            <!-- <p class="mt-3 text-start">GroupTwo@gmail.com</p> -->
+            <p class="mt-3 text-start"><?= $contactR[0]["email"] ?></p>
           </div>
         </div>
 

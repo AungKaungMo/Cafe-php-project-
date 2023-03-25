@@ -53,15 +53,15 @@
     </div>
 
     <div class="slidebtn mt-5">
-        <div class="box text-center change" id="cg1">Featured Menu</div>
-        <div class="box text-center" id="cg2">Popular Menu</div>
-        <div class="box text-center" id="cg3">New Menu</div>
+        <div class="box text-center change">All</div>
+        <div class="box text-center">Featured Menu</div>
+        <div class="box text-center">Most Popular Menu</div>
     </div>
 
 
     <div class="maincard">
         <div class="mainCardContainer">
-            <div class="card">
+            <div class="card featured">
                 <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                 <div class="text ms-3">Black Coffee</div>
                 <div class="pbtn ms-4">
@@ -77,7 +77,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card most">
                 <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                 <div class="text ms-3">Black Coffee</div>
                 <div class="pbtn ms-4">
@@ -93,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card featured">
                 <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                 <div class="text ms-3">Black Coffee</div>
                 <div class="pbtn ms-4">
@@ -109,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card most">
                 <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                 <div class="text ms-3">Black Coffee</div>
                 <div class="pbtn ms-4">
@@ -125,7 +125,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card featured">
                 <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                 <div class="text ms-3">Black Coffee</div>
                 <div class="pbtn ms-4">
@@ -141,7 +141,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card most">
                 <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                 <div class="text ms-3">Black Coffee</div>
                 <div class="pbtn ms-4">
@@ -157,7 +157,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card featured">
                 <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                 <div class="text ms-3">Black Coffee</div>
                 <div class="pbtn ms-4">
@@ -173,7 +173,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card most">
                 <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                 <div class="text ms-3">Black Coffee</div>
                 <div class="pbtn ms-4">
@@ -237,6 +237,21 @@
                 </div>
             </div>
         </div>
+
+
+        <script src="./lib/isotope.pkgd.min.js"></script>
+        <script>
+            var $grid = $('.card-detail').isotope({
+                // options
+            });
+            // filter cards on button click
+            $('.card-menu').on('click', 'button', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+        </script>
 
 </body>
 
