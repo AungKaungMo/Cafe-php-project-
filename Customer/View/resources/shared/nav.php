@@ -1,12 +1,10 @@
 <?php
 
 session_start();
-$name = $_SESSION["username"];
+
+
 
 ?>
-
-
-
 
 
 <nav class="navbar navbar-expand-lg mx-sm-5 mx-2 ">
@@ -27,7 +25,18 @@ $name = $_SESSION["username"];
           <iconify-icon icon="mdi:user-circle" class="userIcon m-1"></iconify-icon>
 
           <div class="d-flex  align-items-center">
-            <p class="mt-3 userText ">New User</p>
+            <p class="mt-3 userText ">
+              <?php
+              $user = $_SESSION["userid"];
+              $name = $_SESSION["username"];
+              if (isset($user)) {
+                echo $name;
+              } else {
+                echo "New User";
+              }
+              ?>
+
+            </p>
             <iconify-icon icon="material-symbols:keyboard-arrow-down" class=" p-1 userdownIcon" width="25" height="25"></iconify-icon>
 
           </div>
@@ -35,57 +44,25 @@ $name = $_SESSION["username"];
 
             <!-----------------   Before Login  ------------------------>
 
-            <div class="d-flex justify-content-between mt-2">
-              <p class="fw-bold signColor">Sign In</p>
-              <a href="./login.php">
-                <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
-              </a>
-            </div>
-            <div class="d-flex justify-content-between">
-              <p class="fw-bold signColor">Sign Up</p>
-              <a href="./signup.php">
-                <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
-              </a>
-            </div>
+            <?php
+            if (isset($user)) {
 
-            <!------------------  After Login   -------------------------->
-
-            <!-- <div class="d-flex justify-content-between mt-2 afterLogin">
-              <div>
-                <span class="cartText">Cart </span>
-                <span>(14)</span>
+              include "./resources/shared/afterLogin.php";
+            } else { ?>
+              <div class="d-flex justify-content-between mt-2">
+                <p class="fw-bold signColor">Sign In</p>
+                <a href="./login.php">
+                  <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
+                </a>
               </div>
-              <div>
-                <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
+              <div class="d-flex justify-content-between">
+                <p class="fw-bold signColor">Sign Up</p>
+                <a href="./signup.php">
+                  <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
+                </a>
               </div>
+            <?php   } ?>
 
-            </div>
-            <div class="line"></div>
-
-            <div class="d-flex justify-content-between mt-2 afterLogin">
-              <div>
-                <span class="cartText">Fav</span>
-                <span>(14)</span>
-              </div>
-              <div>
-                <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
-              </div>
-
-            </div>
-            <div class="line"></div>
-
-            <div class="d-flex justify-content-between mt-2 afterLogin">
-              <div>
-                <span class="cartText">Profile </span>
-
-              </div>
-              <div>
-                <a href="./dashboard_userprofile.php">
-                  <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 cartIcon"></iconify-icon></a>
-              </div>
-
-            </div>
-            <div class="line"></div>-->
 
             <!--------------------  End After Login  ------------------------>
 
@@ -136,65 +113,40 @@ $name = $_SESSION["username"];
           <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon>
 
           <div class="d-flex  align-items-center">
-            <p class="mt-3 userText">New User</p>
+            <p class="mt-3 userText">
+              <?php
+              $user = $_SESSION["userid"];
+              $name = $_SESSION["username"];
+              if (isset($user)) {
+                echo $name;
+              } else {
+                echo "New User";
+              }
+              ?>
+            </p>
             <iconify-icon icon="material-symbols:keyboard-arrow-down" class=" p-1 userdownIcon" width="25" height="25"></iconify-icon>
           </div>
           <div class=" w-75 p-3 position-absolute rounded-4 signBox d-none">
 
-            <!-------------   BEFORE SIGN IN/ SIGN UP   ------------------->
 
-            <div class="d-flex justify-content-between mt-2">
-              <p class="fw-bold signColor">Sign In</p>
-              <a href="./login.php">
-                <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
-              </a>
-            </div>
-            <div class="d-flex justify-content-between">
-              <p class="fw-bold signColor">Sign Up</p>
-              <a href="./signup.php">
-                <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
-              </a>
-            </div>
+            <?php
+            if (isset($user)) {
 
-            <!-------------   AFTER SIGN IN/ SIGN UP   ------------------->
-
-            <!-- <div class="d-flex justify-content-between mt-2 afterLogin">
-              <div>
-                <span class="cartText">Cart </span>
-                <span>(14)</span>
+              include "./resources/shared/afterLogin.php";
+            } else { ?>
+              <div class="d-flex justify-content-between mt-2">
+                <p class="fw-bold signColor">Sign In</p>
+                <a href="./login.php">
+                  <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
+                </a>
               </div>
-              <div>
-                <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
+              <div class="d-flex justify-content-between">
+                <p class="fw-bold signColor">Sign Up</p>
+                <a href="./signup.php">
+                  <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 signIcon"></iconify-icon>
+                </a>
               </div>
-
-            </div>
-            <div class="line"></div>
-
-            <div class="d-flex justify-content-between mt-2 afterLogin">
-              <div>
-                <span class="cartText">Fav</span>
-                <span>(14)</span>
-              </div>
-              <div>
-                <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
-              </div>
-
-            </div>
-            <div class="line"></div>
-
-            <div class="d-flex justify-content-between mt-2 afterLogin">
-              <div>
-                <span class="cartText">Profile </span>
-
-              </div>
-              <div>
-                <a href="./dashboard_userprofile.php">
-                  <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 cartIcon"></iconify-icon></a>
-              </div>
-
-            </div>
-            <div class="line"></div> -->
-
+            <?php   } ?>
 
             <!--------------------  End After Login  ------------------------>
           </div>

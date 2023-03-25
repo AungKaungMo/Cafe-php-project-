@@ -1,3 +1,20 @@
+<?php
+    include "../Model/dbconnection.php";
+
+    $db = new DBConnection();
+    $pdo = $db->connect();
+    $sql = $pdo->prepare(
+
+        "SELECT paragraph FROM m_privacy 
+        WHERE privacy_id=1
+        "
+    );
+    $sql->execute();
+    $result1 = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,15 +65,16 @@
 
         <p class="display-3 fw-2 text-center mt-3 mb-5">Privacy Policy</p>
         <p class="fs-3 text-center mt-1 mx-3">
-            This Privacy Policy describes Our policies and procedures on the collection,
+        <?php                                        
+                         echo $result1[0]["paragraph"];                                            
+                      ?>
+            <!-- This Privacy Policy describes Our policies and procedures on the collection,
             use and disclosure of Your information when You use the Service and tells You
-            about Your privacy rights and how the law protects You. </p>
-        <p class=" fs-3 text-center mt-1 mx-3 mb-3">
+            about Your privacy rights and how the law protects You. 
             We use Your Personal data to provide and improve the Service. By using the
             Service, You agree to the collection and use of information in accordance with
-            this Privacy Policy.
+            this Privacy Policy. -->
         </p>
-
     </div>
 
     <?php

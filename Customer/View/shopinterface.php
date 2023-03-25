@@ -117,9 +117,9 @@
     </div>
     <div class="menubox mt-5">
         <div class="textbox mt-5">
+            <button class="btn_text">ALL</button>
             <button class="btn_text">Featured Menu</button>
             <button class="btn_text">Most Popular Menu</button>
-            <button class="btn_text">New Menu</button>
         </div>
 
         <div class="boxmenu">
@@ -190,7 +190,7 @@
             </div>
 
             <div class="maincard">
-                <div class="card">
+                <div class="card ">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -501,6 +501,13 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!----filter js----->
+    <script src="./lib/isotope.pkgd.min.js"></script>
+
+
+
+
 
     <!-- Initialize Swiper -->
     <script>

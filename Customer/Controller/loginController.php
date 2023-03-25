@@ -39,10 +39,11 @@ if (isset($_POST["login"])) {
         $_SESSION["error"] = "UserEmail OR Password not match!!";
         header("Location: ../View/login.php");
     } else {
-        if(password_verify( $result[0]["cus_password"], $userpassword))
-        {
-            echo "right";
-        }else {
+        if (password_verify($userpassword, $result[0]["cus_password"])) {
+            $_SESSION["userid"] = $result[0]["cus_id"];
+            $_SESSION["username"] = $result[0]["cus_name"];
+            header("Location: ../View/h.php");
+        } else {
             echo "wrong";
         }
         // if(password_verify($))
