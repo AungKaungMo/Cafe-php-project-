@@ -91,19 +91,7 @@
 
 
 
-        <script src="./lib/isotope.pkgd.min.js"></script>
-        <script>
-            var $grid = $('.card-detail').isotope({
-                // options
-            });
-            // filter cards on button click
-            $('.card-menu').on('click', 'button', function() {
-                var filterValue = $(this).attr('data-filter');
-                $grid.isotope({
-                    filter: filterValue
-                });
-            });
-        </script>
+    <script src="./lib/isotope.pkgd.min.js"></script>
 
 </body>
 

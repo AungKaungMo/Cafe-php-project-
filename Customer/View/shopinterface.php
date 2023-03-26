@@ -70,37 +70,37 @@
 
 
                 <?php for ($i = 0; $i < count($result); $i++) { ?>
-                    <div class="swiper-slide disCard">
-        <div class="disticket">
-         <?php echo $result[$i]["product_discount"]." %" ?>
-        </div>
-        <div class="distickettri"></div>
-        <div class="carditems">
-            <div class="disphoto">
-          <img src="../../Storages/<?php echo $result[$i]["product_photo"] ?>" alt="">
-            </div>
-          <p class="pname"><?php echo $result[$i]["product_name"] ?></p>
-          <div class="disbtn">
-            <button>
-              <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
-            </button>
+                    <div class="swiper-slide disCard mt-5">
+                        <div class="disticket">
+                            <?php echo $result[$i]["product_discount"] . " %" ?>
+                        </div>
+                        <div class="distickettri"></div>
+                        <div class="carditems">
+                            <div class="disphoto">
+                                <img src="../../Storages/<?php echo $result[$i]["product_photo"] ?>" alt="">
+                            </div>
+                            <p class="pname"><?php echo $result[$i]["product_name"] ?></p>
+                            <div class="disbtn">
+                                <button>
+                                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                                </button>
 
-            <button>
-              <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
-            </button>
-          </div>
-          <div class="disprice">
-            <?php
-              $percentPrice = $result[$i]["product_price"] - (($result[$i]["product_price"] * $result[$i]["product_discount"] ) / 100);
-            echo $percentPrice ?>MMK
-          </div>
-        </div>
-      </div>
+                                <button>
+                                    <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                                </button>
+                            </div>
+                            <div class="disprice">
+                                <?php
+                                $percentPrice = $result[$i]["product_price"] - (($result[$i]["product_price"] * $result[$i]["product_discount"]) / 100);
+                                echo $percentPrice ?>MMK
+                            </div>
+                        </div>
+                    </div>
 
 
                 <?php } ?>
 
-  
+
             </div>
             <div class="swiper-pagination card-swiper"></div>
 
@@ -116,15 +116,15 @@
         </div>
     </div>
     <div class="menubox mt-5">
-        <div class="textbox mt-5">
-            <button class="btn_text">ALL</button>
-            <button class="btn_text">Featured Menu</button>
-            <button class="btn_text">Most Popular Menu</button>
+        <div class="textbox mt-5 item-menu">
+            <button class="btn_text" data-filter="*">ALL</button>
+            <button class="btn_text" data-filter=".featured">Featured Menu</button>
+            <button class="btn_text" data-filter=".most">Most Popular Menu</button>
         </div>
 
         <div class="boxmenu">
-            <div class="maincard">
-                <div class="card">
+            <div class="maincard item-details">
+                <div class="card item most">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -140,7 +140,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card item featured">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -156,7 +156,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card item">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -172,7 +172,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card item most">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -189,8 +189,8 @@
                 </div>
             </div>
 
-            <div class="maincard">
-                <div class="card ">
+            <div class="maincard item-details">
+                <div class="card item">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -206,7 +206,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card item">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -222,7 +222,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card item most">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -238,7 +238,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card item">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -505,7 +505,18 @@
     <!----filter js----->
     <script src="./lib/isotope.pkgd.min.js"></script>
 
-
+    <script>
+        var $grid = $('.item-details').isotope({
+            // options
+        });
+        // filter items on button click
+        $('.item-menu').on('click', 'button', function() {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({
+                filter: filterValue
+            });
+        });
+    </script>
 
 
 
