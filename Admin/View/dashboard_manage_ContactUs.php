@@ -3,7 +3,7 @@
 <?php
             include "./resources/shared/dashboard.php";
         ?>
-           <link rel="stylesheet" href="./resources/css/dashboard_manageList.css">
+           <link rel="stylesheet" href="./resources/css/dashboard_manage.css">
            <link rel="stylesheet" href="./resources/css/dashboard_manage_ContactUs.css">
 
 </head>
@@ -21,13 +21,11 @@
        <table class="table"> 
             <tr >
                 <th scope="col">ID</th>
-                <th scope="col">ShopName</th>
-                <th scope="col">Address</th>
+                <th scope="col">Name</th>
+                <th scope="col">PhoneNumber</th>
                 <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Package</th>
-                <th scope="col">created_date</th>
-                <th scope="col">expired_date</th>
+                <th scope="col">Message</th> 
+                <th scope="col">Date</th> 
                 <th scope="col">Action</th>
                 
             </tr> 
