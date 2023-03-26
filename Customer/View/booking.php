@@ -1,3 +1,11 @@
+<?php
+ini_set("display_errors", "1");
+ 
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,28 +51,35 @@
     <?php
     include "./resources/shared/shopnav.php";
     ?>
-
+    <form action="../Controller/bookingController.php" method="post">  
     <div class="mt-3 main">
-
         <div class="mb-5">
             <div class="bookdate mb-5">
-                <input type="date" name="" id="" class="date ps-3">
+                <input type="date" name="bookdate" id="" class="date ps-3">
             </div>
-            <div class="place">
-                <div class="indoor pt-3" id="in"><input type="radio" name="place" id="" checked>Indoor</div>
-                <div class="outdoor pt-3 ps-2" id="out"><input type="radio" name="place" id="">Outdoor</div>
+            <div >
+                <!-- <div class="indoor pt-3" id="in"><input type="radio"  value="1" id="" checked>Indoor</div>
+                <div class="outdoor pt-3 ps-2" id="out"><input type="radio"  value="2" id="">Outdoor</div> -->
+                <select class="place"  name="bookplace" aria-label=".form-select-lg example">
+                <option class="indoor pt-3" id="in" value="1"> Indoor</option>
+                <option class="outdoor pt-3 ps-2" id="out" value="2" > Outdoor</option>
             </div>
         </div>
 
         <div class="mb-5">
             <div class="timer mb-5">
-                <input type="time" name="" id="" class="time ps-2">
+                <input type="time" name="booktime" id="" class="time ps-2">
             </div>
             <div class="gp1">
-                <select class="people" aria-label=".form-select-lg example">
+                <select class="people" name="totalpax" aria-label=".form-select-lg example">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="3">6</option>
+                    <option value="4">7</option>
+                    <option value="5">8</option>
                 </select>
                 <iconify-icon icon="mdi:user" class="icon1"></iconify-icon>
             </div>
@@ -73,36 +88,33 @@
     </div>
     <div class="lines"></div>
 
-
-
     <div class="mt-3 main2">
         <div class="input">
-            <input type="text" name="" id="name" class="bar" placeholder="Name">
+            <input type="text" name="bookname" id="name" class="bar" placeholder="Name">
         </div>
 
         <div class="input mt-3 text-center">
-            <input type="text" name="" id="email" class="bar" placeholder="Email">
+            <input type="text" name="bookemail" id="email" class="bar" placeholder="Email">
         </div>
 
         <div class="input mt-3 text-center">
-            <input type="text" name="" id="phone" class="bar" placeholder="Phone Number">
+            <input type="text" name="bookphone" id="phone" class="bar" placeholder="Phone Number">
         </div>
 
         <div class="input4 mt-4 text-center gp2">
-            <textarea name="" id="" cols="30" rows="5" class="notes" placeholder="Note to order"></textarea>
+            <textarea name="booknote" id="" cols="30" rows="5" class="notes" placeholder="Note to order"></textarea>
             <iconify-icon icon="mdi:message-reply-text" class="icon2"></iconify-icon>
         </div>
 
-
         <div class="sendBtn">
-            <button class="p-2">Booking</button>
+            <button class="p-2" name="booking">Booking</button>
         </div>
-
+        </form>
     </div>
 
     <!---------- cart popup--------->
 
-    <div class="modal fade modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- <div class="modal fade modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -142,7 +154,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-----------------------   Footer   ---------------------------->
     <?php

@@ -1,27 +1,13 @@
-<?php
-ini_set("display_errors", "1");
 
-// session_start();
-// if (isset($_SESSION["allshop"])) {
-//     $checkresult = $_SESSION["allshop"];
-// }
-
-include "../Controller/manage_shopListController.php";
-$checkresult = $result;
-?>
 
 <?php
             include "./resources/shared/dashboard.php";
         ?>
            <link rel="stylesheet" href="./resources/css/dashboard_manageList.css">
-           <link rel="stylesheet" href="./resources/css/dashboard_manageList_ShopList.css">
+           <link rel="stylesheet" href="./resources/css/dashboard_manage_ContactUs.css">
 
 </head>
 <body>
-
-<?php
-    include "./resources/shared/dashboard_manageList.php";
-    ?>
 
     <div class="m-4">   
         <tbody class="tableBody"> 

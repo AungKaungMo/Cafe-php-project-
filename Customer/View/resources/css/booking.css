@@ -26,6 +26,7 @@ body {
   margin-left: 4em;
 }
 
+
 .date {
   width: 11em;
   height: 2.8em;
@@ -37,13 +38,14 @@ body {
   padding-left: 0.3em;
 }
 
-.place {
+.place { 
   width: 11em;
   height: 2.8em;
-  display: flex;
+  display: flex; 
   border-radius: 0.2em;
   border: 2px solid var(--mainColor);
   background-color: var(--mainColor);
+  color: var(--backgroundSecondary);
 }
 
 .time {
@@ -75,7 +77,6 @@ body {
   border-radius: 0em 0.1em 0.1em 0em;
   cursor: pointer;
 }
-
 
 
 .main {
