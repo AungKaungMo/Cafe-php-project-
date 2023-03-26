@@ -25,3 +25,4 @@ class DBConnection
         return $pdo;
     }
 }
+?>

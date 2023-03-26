@@ -138,6 +138,121 @@ today menu
 .box1 {
   background-color: var(--secondMainColor);
 }
+.discountCardContainer{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 6em;
+  margin-bottom: 5em;
+}
+
+
+.disCard {
+  position: relative;
+  width: 250px !important;
+  height: 210px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255),
+    rgba(217, 217, 217, 0.17)
+  );
+  border: solid var(--textColorPrimary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 1px 1px 2px;
+  margin-bottom: 6.5em;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.disticket {
+  /* padding: 0 0 10px 10px; */
+  /* font-size: 1; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textColorPrimary);
+  width: 75px;
+  height: 36px;
+  top: 40px;
+  left: -24px;
+  border-radius: 5px;
+  background-color: var(--mainColor);
+  position: absolute;
+  z-index: -1;
+}
+
+.distickettri {
+  position: absolute;
+  border: 18px solid transparent;
+  border-left-color: var(--mainColor);
+  top: 40px;
+  left: 48px;
+  z-index: -1;
+}
+.disphoto{
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -75px;
+  margin: auto;
+  transition: all 0.5s;
+}
+.disphoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.carditems p {
+  font-size: var(--subTitleFontSize);
+  color: var(--mainColor);
+  margin-top: 80px;
+  margin-left: 20px;
+}
+
+.carditems .disbtn {
+  margin-left: 22%;
+  margin-bottom: 5px;
+}
+
+.carditems .disbtn button {
+  width: 34px;
+  height: 34px;
+  background-color: var(--mainColor);
+  border: none;
+  border-radius: 10px;
+  padding: 4px;
+  margin-left: 20px;
+  transition: all 0.5s;
+}
+.disbtn iconify-icon{
+  color: var(--secondMainColor);
+}
+.disbtn button:hover{
+  transform: scale(1.1);
+}
+.disprice {
+  width: 120px;
+  height: 40px;
+  padding: 0.5em;
+  border-radius: 30px;
+  /* padding: 5px 0px 0px 10px; */
+  background-color: var(--mainColor);
+  text-align:center;
+  color: var(--textColorPrimary);
+  font-family: var(--titleFont);
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 
 .maincard {
   display: flex;
@@ -152,16 +267,13 @@ today menu
 .card {
   width: 12.4em;
   height: 11em;
-  background: linear-gradient(
-    120.9deg,
-    #ffffff 0%,
-    rgba(217, 217, 217, 0.34) 97.57%
-  );
+  background: linear-gradient(120.9deg, #FFFFFF 0%, rgba(217, 217, 217, 0.34) 97.57%);
   border-radius: 0.8em;
+  cursor: pointer;
   transition: all 0.5s;
 }
 
-.card:hover {
+.card:hover, .disCard:hover {
   transform: scale(1.2);
 }
 
@@ -172,7 +284,7 @@ today menu
   transition: all 1s;
 }
 
-.card:hover .img {
+.card:hover .img, .disCard:hover .disphoto img {
   transform: rotate(360deg);
 }
 
@@ -181,9 +293,10 @@ today menu
   color: var(--mainColor);
 }
 
+
 .minibox {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .pbtn {
@@ -201,9 +314,10 @@ today menu
   transition: all 0.5s;
 }
 
-.pbtn button:hover {
+.pbtn button:hover, .disbtn button:hover {
   transform: scale(1.2);
 }
+
 
 .price {
   width: 6em;
@@ -217,6 +331,17 @@ today menu
   top: 8em;
   left: 2em;
   color: var(--secondMainColor);
+}
+
+
+
+
+.swiper-pagination-bullets .swiper-pagination-bullet{
+  border: 1px solid var(--mainColor) !important; 
+}
+.minibox {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .menubox {
@@ -468,10 +593,6 @@ ContactUs
 
   .seeall {
     bottom: 0em;
-  }
-
-  .maincard {
-    margin: 2em;
   }
 
   .stockbtn {

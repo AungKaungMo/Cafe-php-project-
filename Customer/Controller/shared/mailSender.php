@@ -27,7 +27,7 @@ class SendMail
             $mail->Port       = 465;
 
             //Recipients
-            $mail->setFrom('grouptwo4321@gmail.com','moea74759@gmail.com', "Cafe House"); // change
+            $mail->setFrom('grouptwo4321@gmail.com', "Cafe House"); // change
             $mail->addAddress($toMail);
 
             //Content
@@ -40,4 +40,3 @@ class SendMail
         }
     }
 }
-?>

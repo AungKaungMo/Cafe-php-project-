@@ -30,6 +30,7 @@
 }
 .userText{
     color: var(--textColorPrimary);
+    width: 100px;
 }
 .userbox{
     background-color: var(--mainColor);
