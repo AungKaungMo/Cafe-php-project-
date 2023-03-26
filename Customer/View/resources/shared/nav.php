@@ -27,12 +27,10 @@ session_start();
           <div class="d-flex  align-items-center">
             <p class="mt-3 userText ">
               <?php
-              $user = $_SESSION["userid"];
-              $name = $_SESSION["username"];
-              if (isset($user)) {
-                echo $name;
+              if (!empty($_SESSION["userid"])) {
+                echo $_SESSION["username"];
               } else {
-                echo "New User";
+               echo "New User";
               }
               ?>
 
@@ -45,10 +43,46 @@ session_start();
             <!-----------------   Before Login  ------------------------>
 
             <?php
-            if (isset($user)) {
+            if (!empty($_SESSION["username"])) { ?>
 
-              include "./resources/shared/afterLogin.php";
-            } else { ?>
+<div class="d-flex justify-content-between mt-2 afterLogin">
+                            <div>
+                                <span class="cartText">Cart </span>
+                                <span>(14)</span>
+                            </div>
+                            <div>
+                                <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
+                            </div>
+
+                        </div>
+                        <div class="line"></div>
+
+                        <div class="d-flex justify-content-between mt-2 afterLogin">
+                            <div>
+                                <span class="cartText">Fav</span>
+                                <span>(14)</span>
+                            </div>
+                            <div>
+                                <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
+                            </div>
+
+                        </div>
+                        <div class="line"></div>
+
+                        <div class="d-flex justify-content-between mt-2 afterLogin">
+                            <div>
+                                <span class="cartText">Profile </span>
+
+                            </div>
+                            <div>
+                                <a href="./dashboard_userprofile.php">
+                                    <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 cartIcon"></iconify-icon></a>
+                            </div>
+
+                        </div>
+                        <div class="line"></div>
+
+          <?php  } else { ?>
               <div class="d-flex justify-content-between mt-2">
                 <p class="fw-bold signColor">Sign In</p>
                 <a href="./login.php">
@@ -101,7 +135,7 @@ session_start();
           <a class="nav-link navtitle me-5" href="./promotion.php">PROMOTIONS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navtitle" href="./buyShop.php">BUY SHOP</a>
+          <a class="nav-link navtitle" href="./buyShop.php">BUYSHOP</a>
         </li>
       </ul>
       <div class="d-flex align-items-center position-relative">
@@ -115,12 +149,12 @@ session_start();
           <div class="d-flex  align-items-center">
             <p class="mt-3 userText">
               <?php
-              $user = $_SESSION["userid"];
-              $name = $_SESSION["username"];
-              if (isset($user)) {
-                echo $name;
+              // $user = $_SESSION["userid"];
+              // $name = $_SESSION["username"];
+              if (!empty($_SESSION["userid"])) {
+                echo $_SESSION["username"];
               } else {
-                echo "New User";
+               echo "New User";
               }
               ?>
             </p>
@@ -130,10 +164,46 @@ session_start();
 
 
             <?php
-            if (isset($user)) {
+            if (!empty($_SESSION["username"])) { ?>
 
-              include "./resources/shared/afterLogin.php";
-            } else { ?>
+<div class="d-flex justify-content-between mt-2 afterLogin">
+                            <div>
+                                <span class="cartText">Cart </span>
+                                <span>(14)</span>
+                            </div>
+                            <div>
+                                <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
+                            </div>
+
+                        </div>
+                        <div class="line"></div>
+
+                        <div class="d-flex justify-content-between mt-2 afterLogin">
+                            <div>
+                                <span class="cartText">Fav</span>
+                                <span>(14)</span>
+                            </div>
+                            <div>
+                                <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
+                            </div>
+
+                        </div>
+                        <div class="line"></div>
+
+                        <div class="d-flex justify-content-between mt-2 afterLogin">
+                            <div>
+                                <span class="cartText">Profile </span>
+
+                            </div>
+                            <div>
+                                <a href="./dashboard_userprofile.php">
+                                    <iconify-icon icon="material-symbols:arrow-circle-right" class="fs-3 cartIcon"></iconify-icon></a>
+                            </div>
+
+                        </div>
+                        <div class="line"></div>
+
+          <?php  } else { ?>
               <div class="d-flex justify-content-between mt-2">
                 <p class="fw-bold signColor">Sign In</p>
                 <a href="./login.php">
