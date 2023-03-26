@@ -57,6 +57,7 @@
 
 .userText {
   color: var(--textColorPrimary);
+  width: 100px;
 }
 
 .userbox {
