@@ -11,7 +11,7 @@ include "./resources/shared/dashboard.php";
     <?php
     include "./resources/shared/dashboard_profile.php";
     ?>
-    <form>
+    <form action="../Controller/contactusController.php" method="post">
         <div class="mt-5 mx-3 d-flex flex-column justify-content-center align-items-center">
             <div class=" position-relative">
                 <div class="uploadImage">
@@ -72,7 +72,7 @@ include "./resources/shared/dashboard.php";
             </div>
         </div>
         <div class="saveBtn ">
-            <button>Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
+            <button type="submit" name="save">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>
         <form>
 

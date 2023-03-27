@@ -25,14 +25,6 @@ if (isset($_POST["login"])) {
     $hash_pwd = $result[0]["cus_password"];
     $hash = password_verify($userpassword, $hash_pwd);
 
-    echo   $hash_pwd;
-    echo "<br>";
-    echo   $userpassword;
-    // echo   (int) $hash;
-    echo "<br>";
-
-
-
 
     if (count($result) == 0) {
         //fail login
@@ -44,9 +36,9 @@ if (isset($_POST["login"])) {
             $_SESSION["username"] = $result[0]["cus_name"];
             header("Location: ../View/h.php");
         } else {
-            echo "wrong";
+            $_SESSION["error"] = "UserEmail OR Password not match!!";
+            header("Location: ../View/login.php");
         }
-        // if(password_verify($))
     }
 }
 // $dbpasssword = $result[0]["cus_password"];
