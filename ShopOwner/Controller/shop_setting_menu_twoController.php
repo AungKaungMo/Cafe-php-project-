@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
     if(isset($_POST["add"])){
         
         $productName = $_POST["pname"];
@@ -8,6 +8,7 @@ session_start();
         $productCoin = $_POST["pcoinprice"];
         $productDis = $_POST["pdis"];
         $shopId = $_SESSION["shopId"];
+        $productType = $_POST["ptype"];
         $file = $_FILES["pphoto"]["name"];
 
         include "../Model/dbConnection.php";
@@ -28,7 +29,8 @@ session_start();
                 product_discount,
                 product_photo,
                 shop_id,
-                coin_price
+                coin_price,
+                product_type
             )
             VALUES
             (
@@ -38,7 +40,8 @@ session_start();
                 :productDiscount,
                 :productPhoto,
                 :shopid,
-                :coinPrice
+                :coinPrice,
+                :productType
             )
         "
             );
@@ -50,6 +53,7 @@ session_start();
             $sql->bindValue(":productPhoto", "products/". $file);
             $sql->bindValue(":shopid", $shopId);
             $sql->bindValue(":coinPrice", $productCoin);
+            $sql->bindValue(":productType", $productType);
 
               $sql->execute();
               header("location: ../View/dashboard_setting_menu_two.php");
