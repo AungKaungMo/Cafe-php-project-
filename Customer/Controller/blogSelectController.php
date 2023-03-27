@@ -6,8 +6,8 @@
     $sql = $pdo->prepare(
 
         "
-        SELECT comment FROM m_blogcomment 
-        WHERE del_flg = 0 ORDER BY id DESC LIMIT 3;
+        SELECT * FROM m_blogcomment 
+        WHERE del_flg = 0
         "
     );
     $sql->execute();

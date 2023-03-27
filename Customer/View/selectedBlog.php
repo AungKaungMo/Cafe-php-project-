@@ -1,10 +1,10 @@
 <?php
+ini_set("display_errors", "1");
 
 include "../Controller/blogSelectController.php";
+$result1 = $result;
 
 ?>
-
-
 
 
 
@@ -141,7 +141,7 @@ include "../Controller/blogSelectController.php";
                         <div class="commentText mt-4">
                             <p class="p-3">
                                 <?php
-                                echo $result[0]["message"];     
+                                echo $result1[0]["comment"];     
                                 ?>
                               
                                 <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
@@ -166,7 +166,7 @@ include "../Controller/blogSelectController.php";
                         <div class="commentText mt-4">
                             <p class="p-3">
                             <?php
-                                echo $result[1]["message"];     
+                                echo $result1[1]["comment"];     
                                 ?>
                                 <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
                             </p>
@@ -190,7 +190,7 @@ include "../Controller/blogSelectController.php";
                         <div class="commentText mt-4">
                             <p class="p-3">
                             <?php
-                                echo $result[1]["message"];     
+                                echo $result1[2]["comment"];     
                                 ?>
                                 <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
                             </p>
