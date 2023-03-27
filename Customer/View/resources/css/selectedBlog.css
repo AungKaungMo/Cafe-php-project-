@@ -36,7 +36,7 @@
     font-size: var(--minisubtitleFontSize);
 }
 .likeIcon, .unLikeIcon{
-    color: var(--mainColor);
+    color: red;
 }
 .commentText{
     background-color: var(--mainColor);

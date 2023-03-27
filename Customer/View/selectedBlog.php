@@ -1,3 +1,13 @@
+<?php
+
+include "../Controller/blogSelectController.php";
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +15,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fill Informations</title>
+    <title>Blog Page</title>
 
     <!-------------------------    GOOGLE FONTS   ------------------------------>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -83,7 +93,7 @@
                         Real food is fruits, vegetables, meats, dairy, seafood,
                         nuts, seeds, whole grains and beans. Natural
                         sweeteners, coffee, chocolate and wine count,
-                        too — just in moderation. Avoid food that is
+                        too — just in moderation. 
 
                     </p>
                 </div>
@@ -129,7 +139,13 @@
                             </div>
                         </div>
                         <div class="commentText mt-4">
-                            <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione!</p>
+                            <p class="p-3">
+                                <?php
+                                echo $result[0]["message"];     
+                                ?>
+                              
+                                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
+                            </p>
                         </div>
                     </div>
 
@@ -148,7 +164,12 @@
                             </div>
                         </div>
                         <div class="commentText mt-4">
-                            <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione!</p>
+                            <p class="p-3">
+                            <?php
+                                echo $result[1]["message"];     
+                                ?>
+                                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
+                            </p>
                         </div>
                     </div>
 
@@ -167,7 +188,12 @@
                             </div>
                         </div>
                         <div class="commentText mt-4">
-                            <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione!</p>
+                            <p class="p-3">
+                            <?php
+                                echo $result[1]["message"];     
+                                ?>
+                                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
+                            </p>
                         </div>
                     </div>
 
@@ -175,16 +201,17 @@
                 </div>
             </div>
             <div class="line mt-4"></div>
-
+            <form action="../Controller/blogController.php" method="post">
             <div class="commentBox">
                 <div class="fw-bold fs-4 my-4">Leave Comments.</div>
                 <div class="typeBox">
-                    <textarea placeholder="Message"></textarea>
+                    <textarea name="message" placeholder="Message"></textarea>
                 </div>
                 <div class="text-center submitBtn mt-3 mb-5">
-                    <button class="fw-bold px-2 py-3">Submit</button>
+                    <button name="submit" class="fw-bold px-2 py-3">Submit</button>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 
