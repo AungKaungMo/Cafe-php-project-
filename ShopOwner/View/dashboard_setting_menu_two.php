@@ -1,4 +1,5 @@
 <?php
+// session_start();
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_setting.css">
@@ -32,11 +33,8 @@ include "./resources/shared/dashboard.php";
                 <div class="box">
                     <div class="uploadImage">
                         <img src="./resources/img/default.png" id="acceptImage">
+                        <input type="file" id="pi1" accept="image/png" name="pphoto" required hidden>
                     </div>
-                </div>
-                <div class="box">
-                    <label for="pi1">Product Image</label>
-                    <input type="file" id="pi1" accept="image/png" name="pphoto" required>
                 </div>
                 <div class="box">
                     <label for="pn1">Product Name</label>
@@ -47,16 +45,25 @@ include "./resources/shared/dashboard.php";
                     <input type="number" name="pdis" id="pdis">
                 </div>
                 <div class="box">
-                    <label for="price">Price</label>
-                    <input type="number" name="pprice" id="price" required>
+                    <label for="pinstock">Instock</label>
+                    <input type="number" name="pinstock" id="pinstock">
                 </div>
                 <div class="box">
-                    <label for="instock">Instock</label>
-                    <input type="number" name="pinstock" id="instock" required>
+                    <label for="ptype">Coin Price</label>
+                    <select id="ptype" name="ptype" required>
+                        <option value="1">Coffee</option>
+                        <option value="2">Dessert</option>
+                        <option value="3">Juice</option>
+                    </select>
                 </div>
                 <div class="box">
-                    <label for="coinPrice">Coin Price</label>
-                    <input type="number" name="pcoinprice" id="coinPrice" required>
+                    <label for="pprice">Price</label>
+                    <input type="number" name="pprice" id="pprice" required>
+                </div>
+
+                <div class="box">
+                    <label for="pcoinprice">Coin Price</label>
+                    <input type="number" name="pcoinprice" id="pcoinprice" required>
                 </div>
             </div>
             <div class="saveBtn ">
@@ -68,173 +75,60 @@ include "./resources/shared/dashboard.php";
 
     <!-----------------  Updated Menu  ----------------->
 
+    <?php
+    include "../Controller/menu_showController.php";
+    ?>
+    <div>
+        <div class="fs-4 ms-4 mb-4">Updated Menu</div>
+        <div class="mx-4">
+            <table class="table">
 
-    <form action="../Controller/updatemenu.php" method="post" enctype="multipart/form-data">
-    <h1 class="fs-4 ms-4 my-5">Updated Menu</h1>
-        <div class=" d-flex flex-wrap mb-5">
-    
+                <tbody class="tableBody">
 
-<div class="menubox m-4">
-    <div class="updateImage">
-        <img src="./resources/img/cake.jpg">
-    </div>
-    <div class=" mt-3">
-        <div>
-            <input type="text" value="Espresso" class="updateName">
-        </div>
-        <div class="p_stock  mt-3">
-            <div>
-            <span>Instock - </span>
-            <input type="number" value="40" class="updateInstock">
-            </div>
-            <div>
-            <span>Sold - <span class="fw-bold"> 30 </span></span>
-            </div>
-        </div>
-        <div class="remain mt-3">
-        <span>Remain - </span><span>10</span>
-        </div>
-        <div class="ammount mt-3">
-            <div class="price">
-                <span>Price - </span>
-                <input type="number">
-            </div>
-            <div class="coin">
-                <span>Coin - </span>
-                <input type="number">
-            </div>
-        </div>
-        <div class="mt-3 del">
-            <p>
-            Do you want to delete this item from menu?
-            </p>
-            <iconify-icon icon="ion:trash-sharp" class="fs-3"></iconify-icon>
-        </div>
-    </div>
-</div>
+                    <?php
+                    for ($i = 0; $i < count($result); $i++) { ?>
+                        <tr>
+                            <td data-label="productImg">
+                                <div class="productImg">
+                                    <img src="../../Storages/<?php echo $result[$i]["product_photo"] ?>">
+                                </div>
+                            </td>
+                            <td data-label="ProductName">
+                                <?php echo $result[$i]["product_name"] ?>
+                            </td>
+                            <td data-label="Instock">
+                                <?php echo $result[$i]["product_instock"] ?>
+                            </td>
+                            <td data-label="Sold">
+                                <?php echo $result[$i]["sold_quantity"] ?>
+                            </td>
+                            <td data-label="Remain">
+                                <?php echo $result[$i]["remain_stock"] ?>
+                            </td>
+                            <td data-label="Price">
+                                <?php echo $result[$i]["product_price"] ?>
+                            </td>
+                            <td data-label="Coin Price">
+                                <?php echo $result[$i]["coin_price"] ?> Coins
+                            </td>
+                            <td data-label="Discount">
+                                <?php echo $result[$i]["product_discount"] ?> %
+                            </td>
+                            <td data-label="Type">
+                                <?php echo $result[$i]["product_discount"] ?>
+                            </td>
+                            <td colspan="2" class="action">
+                                <a href="./dashboard_update_menu.php?id=<?php echo $result[$i]['product_id'] ?>" class="me-2">Edit</a>
+                                <a href="../Controller/delete_menuController.php?id=<?php echo $result[$i]['product_id'] ?>">Delete</a>
+                            </td>
+                        </tr>
+                    <?php } ?>
 
-<div class="menubox m-4">
-    <div class="updateImage">
-        <img src="./resources/img/cake.jpg">
-    </div>
-    <div class=" mt-3">
-        <div>
-            <input type="text" value="Espresso" class="updateName">
-        </div>
-        <div class="p_stock  mt-3">
-            <div>
-            <span>Instock - </span>
-            <input type="number" value="40" class="updateInstock">
-            </div>
-            <div>
-            <span>Sold - <span class="fw-bold"> 30 </span></span>
-            </div>
-        </div>
-        <div class="remain mt-3">
-        <span>Remain - </span><span>10</span>
-        </div>
-        <div class="ammount mt-3">
-            <div class="price">
-                <span>Price - </span>
-                <input type="number">
-            </div>
-            <div class="coin">
-                <span>Coin - </span>
-                <input type="number">
-            </div>
-        </div>
-        <div class="mt-3 del">
-            <p>
-            Do you want to delete this item from menu?
-            </p>
-            <iconify-icon icon="ion:trash-sharp" class="fs-3"></iconify-icon>
+                </tbody>
+            </table>
         </div>
     </div>
-</div>
 
-<div class="menubox m-4">
-    <div class="updateImage">
-        <img src="./resources/img/cake.jpg">
-    </div>
-    <div class=" mt-3">
-        <div>
-            <input type="text" value="Espresso" class="updateName">
-        </div>
-        <div class="p_stock  mt-3">
-            <div>
-            <span>Instock - </span>
-            <input type="number" value="40" class="updateInstock">
-            </div>
-            <div>
-            <span>Sold - <span class="fw-bold"> 30 </span></span>
-            </div>
-        </div>
-        <div class="remain mt-3">
-        <span>Remain - </span><span>10</span>
-        </div>
-        <div class="ammount mt-3">
-            <div class="price">
-                <span>Price - </span>
-                <input type="number">
-            </div>
-            <div class="coin">
-                <span>Coin - </span>
-                <input type="number">
-            </div>
-        </div>
-        <div class="mt-3 del">
-            <p>
-            Do you want to delete this item from menu?
-            </p>
-            <iconify-icon icon="ion:trash-sharp" class="fs-3"></iconify-icon>
-        </div>
-    </div>
-</div>
-
-<div class="menubox m-4">
-    <div class="updateImage">
-        <img src="./resources/img/cake.jpg">
-    </div>
-    <div class=" mt-3">
-        <div>
-            <input type="text" value="Espresso" class="updateName">
-        </div>
-        <div class="p_stock  mt-3">
-            <div>
-            <span>Instock - </span>
-            <input type="number" value="40" class="updateInstock">
-            </div>
-            <div>
-            <span>Sold - <span class="fw-bold"> 30 </span></span>
-            </div>
-        </div>
-        <div class="remain mt-3">
-        <span>Remain - </span><span>10</span>
-        </div>
-        <div class="ammount mt-3">
-            <div class="price">
-                <span>Price - </span>
-                <input type="number">
-            </div>
-            <div class="coin">
-                <span>Coin - </span>
-                <input type="number">
-            </div>
-        </div>
-        <div class="mt-3 del">
-            <p>
-            Do you want to delete this item from menu?
-            </p>
-            <iconify-icon icon="ion:trash-sharp" class="fs-3"></iconify-icon>
-        </div>
-    </div>
-</div>
-
-        </div> 
-        <div class="saveBtn ">
-            <button class="savechange">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
-        </div>
-    </form>
 
     <!----------  Ending Tab ------>
     </div>
@@ -243,11 +137,14 @@ include "./resources/shared/dashboard.php";
     <script src="./resources/js/dashboard_setting.js"></script>
     <script src="./resources/js/dashboard_setting_menu.js"></script>
     <script>
-        $("#pi1").change(function() {
-          document.getElementById("acceptImage").src = window.URL.createObjectURL(event.target.files[0]); 
+        $("#acceptImage").click(() => {
+            $("#pi1").click();
+            $("#pi1").change(() => {
+                document.getElementById("acceptImage").src = window.URL.createObjectURL(event.target.files[0]);
+            })
         })
-      
     </script>
 
 </body>
+
 </html>

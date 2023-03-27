@@ -71,11 +71,13 @@
   margin: auto;
   width: 200px;
   height: 200px;
+  cursor: pointer;
 }
 .uploadImage img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 .menubox{
   padding: 1.5em;
@@ -95,35 +97,77 @@
   object-fit: cover;
   border-radius: 10px;
 }
-.updateName{
-  width: 150px ;
-  margin-left: unset;
+
+.productImg{
+  height: 90px;
 }
-.p_stock{
-  display: flex;
-  justify-content: space-between;
+.productImg img{
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
 }
-.updateInstock{
-  width: 50px;
+.action a:nth-child(1){
+  color: green;
 }
-.ammount{
-  display: flex;
-  justify-content: space-between;
+.action a:nth-child(2){
+  color: red;
 }
-.ammount input{
-  width: 60px;
-}
-.del {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.del p{
-  font-size: 0.9em;
-}
-.del iconify-icon{
-  transition: all 0.4s;
-}
-.del iconify-icon:hover{
-  color: var(--mainColor);
-}
+ .table thead {
+    display: none;
+  }
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+  .lineTable {
+    display: none !important;
+  }
+
+  .table tr {
+    margin-bottom: 1.5em;
+  }
+  .table tbody tr td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  .table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: left;
+  }
+  tr {
+    background-color: var(--backgroundTertiary);
+    padding: 0.9em;
+    box-shadow: var(--cardShadow);
+    border-radius: 10px;
+  }
+  @media screen and (max-width: 790px) {
+    .table tbody tr td {
+      padding-left: unset;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    td {
+      font-size: 0.8em;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    tr {
+      padding: 0.7em;
+    }
+    td {
+      font-size: 0.7em;
+    }
+    .productImg img{
+      width: 45%;
+    }
+  }
+  

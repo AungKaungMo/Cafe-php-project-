@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,7 +100,7 @@
                 <!-- userImg -->
                 <div class="fs-4 fw-bold">Shop Owner</div>
                 <div class="owner">
-                    <img src="./resources/img/shopOwner.jpg">
+                    <img src="../../Storages/<?= $_SESSION["ownerImage"] ?> ?>">
                 </div>
             </div>
             <hr>
