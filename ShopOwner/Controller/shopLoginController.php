@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 if (isset($_POST["logIn"])) {
     $shopEmail = $_POST["email"];
     $pass = $_POST["password"];
