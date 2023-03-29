@@ -126,6 +126,9 @@ ini_set("display_errors", "1");
   </div>
 
   <!-------------------  Our Services  ------------------------->
+  <?php
+  include "../Controller/selectserviceController.php";
+  ?>
 
   <div class="serviceSection position-relative mt-3 mx-sm-5 mx-2 pt-5">
     <div>
@@ -136,36 +139,36 @@ ini_set("display_errors", "1");
 
       <div>
         <div class="serviceBox">
-          <iconify-icon icon="mdi:truck-delivery"></iconify-icon>
-          <span>The Best Delivery System</span>
+          <iconify-icon icon="<?= $serviceR[0]["icon1"] ?>"></iconify-icon>
+          <span><?= $serviceR[0]["text_box1"] ?></span>
         </div>
 
         <div class="serviceBox">
-          <iconify-icon icon="mdi:truck-delivery"></iconify-icon>
-          <span>The Best Delivery System</span>
+          <iconify-icon icon="<?= $serviceR[0]["icon2"] ?>"></iconify-icon>
+          <span><?= $serviceR[0]["text_box2"] ?></span>
         </div>
 
         <div class="serviceBox">
-          <iconify-icon icon="mdi:truck-delivery"></iconify-icon>
-          <span>The Best Delivery System</span>
+          <iconify-icon icon="<?= $serviceR[0]["icon3"] ?>"></iconify-icon>
+          <span><?= $serviceR[0]["text_box3"] ?></span>
         </div>
 
       </div>
 
       <div>
         <div class="serviceBox">
-          <iconify-icon icon="mdi:truck-delivery"></iconify-icon>
-          <span>The Best Delivery System</span>
+          <iconify-icon icon="<?= $serviceR[0]["icon4"] ?>"></iconify-icon>
+          <span><?= $serviceR[0]["text_box4"] ?></span>
         </div>
 
         <div class="serviceBox">
-          <iconify-icon icon="mdi:truck-delivery"></iconify-icon>
-          <span>The Best Delivery System</span>
+          <iconify-icon icon="<?= $serviceR[0]["icon5"] ?>"></iconify-icon>
+          <span><?= $serviceR[0]["text_box5"] ?></span>
         </div>
 
         <div class="serviceBox">
-          <iconify-icon icon="mdi:truck-delivery"></iconify-icon>
-          <span>The Best Delivery System</span>
+          <iconify-icon icon="<?= $serviceR[0]["icon6"] ?>"></iconify-icon>
+          <span><?= $serviceR[0]["text_box6"] ?></span>
         </div>
 
       </div>
@@ -304,7 +307,6 @@ ini_set("display_errors", "1");
 
   <?php
   include "../Controller/contactusController.php";
-
   ?>
 
   <div class="mt-3 mx-sm-5 mx-2 pt-5 contactSection">

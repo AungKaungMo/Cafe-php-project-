@@ -28,6 +28,8 @@
     <!---------------------- JS   ---------------------------------------->
     <script src="./resources/js/dashboard.js" defer></script>
 
+
+
     <div class="admindsh_container">
         <div class="navigation active">
             <ul>
