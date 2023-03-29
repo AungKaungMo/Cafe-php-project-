@@ -1,5 +1,5 @@
 <?php
-
+ini_set("display_errors", "1");
 include "../Model/dbConnection.php";
 
 $code = $_GET["code"];

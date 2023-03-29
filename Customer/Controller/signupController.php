@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", "1");
 include "../Model/dbConnection.php";
 include "./shared/generatedCode.php";
 include "./shared/mailSender.php";
@@ -81,3 +82,4 @@ if (isset($_POST["send"])) {
         $_SESSION["signuperror"] = "User email is taken .Use another email";
     }
 }
+
