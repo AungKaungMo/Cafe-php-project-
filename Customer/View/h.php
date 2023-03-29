@@ -307,8 +307,6 @@ ini_set("display_errors", "1");
 
   ?>
 
-
-
   <div class="mt-3 mx-sm-5 mx-2 pt-5 contactSection">
     <div class="text-center">
 
@@ -321,7 +319,7 @@ ini_set("display_errors", "1");
       <div class="col-md-6 text-center mt-3  ">
 
         <div class=" p-3 rounded-circle contactImage m-auto">
-          <img src="./resources/img/contactImage.png">
+          <img src="../../Storages/<?php echo $contactR[0]["picture"] ?>">
         </div>
 
         <div class="ms-5">
@@ -354,29 +352,32 @@ ini_set("display_errors", "1");
       </div>
 
       <div class="col-md-6 ps-md-0 ps-5">
-        <div class=" position-relative">
-          <iconify-icon icon="mdi:user" class="contactInputIcon"></iconify-icon>
-          <input type="text" class="contactInput" placeholder="Name">
-        </div>
+        <form action="../Controller/sendContact.php" method="post">
+          <div class=" position-relative">
+            <iconify-icon icon="mdi:user" class="contactInputIcon"></iconify-icon>
+            <input type="text" class="contactInput" placeholder="Name" name="username">
+          </div>
 
-        <div class=" position-relative">
-          <iconify-icon icon="material-symbols:phone-in-talk" class="contactInputIcon"></iconify-icon>
-          <input type="text" class="contactInput" placeholder="Phone Number">
-        </div>
+          <div class=" position-relative">
+            <iconify-icon icon="material-symbols:phone-in-talk" class="contactInputIcon"></iconify-icon>
+            <input type="text" class="contactInput" placeholder="Phone Number" name="phone">
+          </div>
 
-        <div class=" position-relative">
-          <iconify-icon icon="ic:baseline-email" class="contactInputIcon"></iconify-icon>
-          <input type="text" class="contactInput" placeholder="Email">
-        </div>
+          <div class=" position-relative">
+            <iconify-icon icon="ic:baseline-email" class="contactInputIcon"></iconify-icon>
+            <input type="text" class="contactInput" placeholder="Email" name="email">
+          </div>
 
-        <div class=" position-relative">
-          <iconify-icon icon="ic:baseline-message" class="contactInputIcon"></iconify-icon>
-          <input type="textarea" class="contactInput" placeholder="Message">
-        </div>
+          <div class=" position-relative">
+            <iconify-icon icon="ic:baseline-message" class="contactInputIcon"></iconify-icon>
+            <input type="textarea" class="contactInput" placeholder="Message" name="message">
+          </div>
 
-        <div class="sendBtn">
-          <button class="p-2">Send</button>
-        </div>
+          <div class="sendBtn">
+            <button class="p-2" name="send">Send</button>
+          </div>
+        </form>
+
 
       </div>
     </div>

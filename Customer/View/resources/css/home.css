@@ -1,24 +1,31 @@
 #responsiveSideBar ul li:nth-child(1) a::before {
   width: 50px;
 }
+
 #responsiveSideBar ul li:nth-child(1) a::after {
   width: 30px;
 }
+
 .hometitle::before {
   width: 50px;
 }
+
 .hometitle::after {
   width: 30px;
 }
+
 .backgroundCafeImage1 {
   background: url(../img/cafeshopOne.jpg);
 }
+
 .backgroundCafeImage2 {
   background: url(../img/cafeshopTwo.jpg);
 }
+
 .backgroundCafeImage3 {
   background: url(../img/cafeshopThree.jpg);
 }
+
 .backImage {
   width: 100%;
   height: 87vh;
@@ -26,33 +33,41 @@
   background-repeat: no-repeat !important;
   background-position: center !important;
 }
+
 .backImage h1 {
   color: var(--mainColor);
 }
+
 .backImage p {
   color: var(--textColorPrimary);
 }
+
 .seemoreBtn {
   width: 200px;
   background-color: var(--mainColor);
   color: var(--textColorPrimary);
   transition: all 0.5s;
 }
+
 .seemoreBtn:hover {
   background-color: var(--secondMainColor);
   color: var(--mainColor);
 }
+
 .swiper-pagination-bullet {
   opacity: 1;
   background-color: var(--backgroundTertiary);
 }
+
 .swiper-pagination-bullet-active {
   background-color: var(--paginationColor);
 }
+
 @media screen and (max-width: 470px) {
   .backImage p {
     font-size: 0.8em;
   }
+
   .seemoreBtn {
     width: 150px;
     font-size: 0.8em;
@@ -69,6 +84,7 @@
   bottom: 5px;
   transition: all 0.5s;
 }
+
 .title::after {
   content: "";
   width: 80px;
@@ -79,6 +95,7 @@
   left: 0;
   transition: all 0.5s;
 }
+
 .aboutImage {
   object-fit: contain;
 }
@@ -103,6 +120,7 @@ Service
   right: 0;
   margin: auto;
 }
+
 .serviceBox {
   margin-top: 1.5em;
   width: 270px;
@@ -114,13 +132,16 @@ Service
   align-items: center;
   z-index: 99;
 }
+
 .serviceBox iconify-icon {
   font-size: 2em;
   color: var(--textColorPrimary);
 }
+
 .serviceBox span {
   color: var(--textColorPrimary);
 }
+
 @media screen and (max-width: 768px) {
   .serviceImage {
     margin-top: 6em;
@@ -135,14 +156,17 @@ Customers Reviews
 .customerSection h6 {
   color: var(--mainColor);
 }
+
 .reviewBox {
   margin: 9.5em 0 6.5em 0;
   color: var(--textColorPrimary);
 }
+
 .reviewRightSide {
   height: 50vh;
   background-color: var(--mainColor);
 }
+
 .testiRight h1::after {
   content: "";
   position: absolute;
@@ -152,10 +176,12 @@ Customers Reviews
   height: 3px;
   background-color: var(--textColorPrimary);
 }
+
 .reviewImage {
   top: -110px;
   right: -150px;
 }
+
 .customersBox {
   max-width: 450px;
   padding: 0.4em;
@@ -167,60 +193,80 @@ Customers Reviews
   top: -90px;
   left: -130px;
 }
+
 .customersBox h6 {
   color: var(--textColorPrimary);
   opacity: 0.7;
   margin-top: 0.4em;
 }
+
 .customersProfile {
   width: 80px;
   height: 80px;
   border: 1px solid var(--secondMainColor);
   border-radius: 50%;
 }
+
 .customersProfile img {
   object-fit: cover;
 }
+
 .customersText {
   font-size: 0.9em;
   line-height: 23px;
   opacity: 0.8;
 }
+
 .mySwiper1 {
   position: unset !important;
 }
+
 .testimonialBullet {
   bottom: -40px !important;
 }
+
 @media screen and (max-width: 992px) {
   .reviewRightSide {
     height: 40vh;
     width: 100% !important;
   }
+
   .customersBox {
     left: 0;
     right: 0;
     margin: auto;
   }
+
   .reviewBox {
     margin-bottom: 4em;
   }
 }
+
 @media screen and (max-width: 576px) {
   .reviewRightSide {
     background-color: transparent;
   }
 }
+
 /**
 ContactUs
 **/
 .subTitle {
   color: var(--mainColor);
 }
+
 .contactImage {
   width: 180px;
+  height: 180px;
   background-color: var(--secondMainColor);
 }
+
+.contactImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .contactBox {
   padding-top: 1.3em;
   padding-bottom: 1.3em;
@@ -229,13 +275,16 @@ ContactUs
   margin-bottom: 9em;
   color: var(--textColorPrimary);
 }
+
 .contactIcons {
   background-color: transparent;
   border: 2px solid var(--secondMainColor);
 }
+
 .contactIcons iconify-icon {
   color: var(--textColorPrimary);
 }
+
 .contactInput {
   border: none;
   outline: none;
@@ -246,17 +295,21 @@ ContactUs
   border-bottom: 1px solid var(--secondMainColor);
   color: var(--textColorPrimary);
 }
+
 .contactInput::placeholder {
   color: var(--textColorPrimary);
 }
+
 .contactInputIcon {
   position: absolute;
   font-size: 2em;
   bottom: 0;
 }
+
 .sendBtn {
   margin-top: 3.2em;
 }
+
 .sendBtn button {
   width: 150px;
   background-color: var(--secondMainColor);
@@ -266,14 +319,17 @@ ContactUs
   font-weight: bold;
   transition: all 0.5s;
 }
+
 .sendBtn button:hover {
   background-color: transparent;
   color: var(--secondMainColor);
 }
+
 @media screen and (max-width: 992px) {
   .contactBox {
     width: 100% !important;
   }
+
   .subTitle {
     width: 50% !important;
   }

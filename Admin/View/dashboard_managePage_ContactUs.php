@@ -10,8 +10,10 @@ include "./resources/shared/dashboard.php";
 
     <?php
     include "./resources/shared/dashboard_managePage.php";
+    include "../Controller/selectcontactusController.php";
+
     ?>
-    <form action="../Controller/contactusController.php" method="post" enctype="multipart/form-data">
+    <form action="../Controller/contactusUpdateController.php" method="post" enctype="multipart/form-data">
 
         <div class="d-flex flex-column justify-content-center align-items-center">
 
@@ -19,28 +21,28 @@ include "./resources/shared/dashboard.php";
 
                 <div class="box">
                     <label for="paragraph">Paragraph</label>
-                    <textarea id="paragraph" name="paragraph"></textarea>
+                    <textarea id="paragraph" name="paragraph"><?php echo $contactresult[0]["paragraph"] ?></textarea>
                 </div>
                 <div class="box">
                     <label for="address">Address</label>
-                    <input type="text" id="address" name="address">
+                    <input type="text" id="address" name="address" value="<?php echo $contactresult[0]["address"] ?>">
                 </div>
                 <div class="box">
                     <label for="phone">Ph.No</label>
-                    <input type="text" id="phone" name="phone">
+                    <input type="text" id="phone" name="phone" value="<?php echo $contactresult[0]["phone"] ?>">
                 </div>
                 <div class="box">
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email">
+                    <input type="text" id="email" name="email" value="<?php echo $contactresult[0]["email"] ?>">
                 </div>
 
-                <div class="text-center  mb-3">
-                    <img src="./resources/img/contactImage.png" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg" />
+                <div class="text-center mb-3">
+                    <img src="../../Storages/<?php echo $contactresult[0]["picture"] ?>" width="200px">
                 </div>
 
                 <div class="box">
                     <label for="picture">Picture</label>
-                    <input type="file" id="picture" accept="image/png, image/jpeg" name="picture">
+                    <input type="file" id="picture" accept="image/png, image/jpeg" name="profile">
                 </div>
 
             </div>

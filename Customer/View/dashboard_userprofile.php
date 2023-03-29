@@ -1,18 +1,15 @@
 <?php
 include "./resources/shared/dashboard.php";
 session_start();
-$result = $_SESSION["mypf"];
+$userid = $_SESSION["userid"];
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_profile.css">
 <link rel="stylesheet" href="./resources/css/dashboard_userprofile.css">
-
 </head>
 
 <body>
 
-    <!-- <?php
-            include "./resources/shared/dashboard_profile.php";
-            ?> -->
+
     <form>
         <div class="mt-5 mx-3 d-flex flex-column justify-content-center align-items-center">
             <div class=" position-relative">
@@ -27,20 +24,21 @@ $result = $_SESSION["mypf"];
 
                 <div class="informtaionBox">
                     <label for="username">UserName</label>
-                    <input type="text" id="username" value="<?= $result[0]["cus_name"] ?>">
+                    <input type="text" id="username" value="1">
                 </div>
 
                 <div class="informtaionBox">
                     <label for="phone">Phone</label>
-                    <input type="phone" id="phone" value="<?= $result[0]["cus_phone"] ?>">
+                    <input type="phone" id="phone" value="2">
                 </div>
 
-                <div class="informtaionBox">
+                <div class=" informtaionBox">
                     <label for="email">Email</label>
-                    <input type="email" id="email" value="<?= $result[0]["cus_email"] ?>">
+                    <input type="email" id="email" value="3">
                 </div>
 
-                <div class="autentication">Authentiation</div>
+                <div class=" autentication">Authentiation
+                </div>
                 <div class="autentication">cafe1234@gmail.com</div>
 
             </div>

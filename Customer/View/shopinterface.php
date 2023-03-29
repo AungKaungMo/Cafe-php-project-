@@ -468,26 +468,30 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-6 ps-md-0 ps-5">
-                <div class=" position-relative">
-                    <iconify-icon icon="mdi:user" class="contactInputIcon"></iconify-icon>
-                    <input type="text" class="contactInput" placeholder="Name">
-                </div>
-                <div class=" position-relative">
-                    <iconify-icon icon="material-symbols:phone-in-talk" class="contactInputIcon"></iconify-icon>
-                    <input type="text" class="contactInput" placeholder="Phone Number">
-                </div>
-                <div class=" position-relative">
-                    <iconify-icon icon="ic:baseline-email" class="contactInputIcon"></iconify-icon>
-                    <input type="text" class="contactInput" placeholder="Email">
-                </div>
-                <div class=" position-relative">
-                    <iconify-icon icon="ic:baseline-message" class="contactInputIcon"></iconify-icon>
-                    <input type="textarea" class="contactInput" placeholder="Message">
-                </div>
-                <div class="sendBtn">
-                    <button class="p-2">Send</button>
-                </div>
+                <form action="../Controller/shopSendCuController.php" method="post">
+                    <div class=" position-relative">
+                        <iconify-icon icon="mdi:user" class="contactInputIcon"></iconify-icon>
+                        <input type="text" class="contactInput" placeholder="Name" name="name">
+                    </div>
+                    <div class=" position-relative">
+                        <iconify-icon icon="material-symbols:phone-in-talk" class="contactInputIcon"></iconify-icon>
+                        <input type="text" class="contactInput" placeholder="Phone Number" name="phone">
+                    </div>
+                    <div class=" position-relative">
+                        <iconify-icon icon="ic:baseline-email" class="contactInputIcon"></iconify-icon>
+                        <input type="text" class="contactInput" placeholder="Email" name="email">
+                    </div>
+                    <div class=" position-relative">
+                        <iconify-icon icon="ic:baseline-message" class="contactInputIcon"></iconify-icon>
+                        <input type="textarea" class="contactInput" placeholder="Message" name="message">
+                    </div>
+                    <div class="sendBtn">
+                        <button class="p-2" type="submit" name="send">Send</button>
+                    </div>
+                </form>
+
             </div>
         </div>
 

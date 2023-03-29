@@ -20,7 +20,7 @@ include "./resources/shared/dashboard.php";
                     <img src="../../Storages/<?= $result[0]["shop_logo"] ?>" id="acceptImage">
                     <input type="file" id="chooseFile" name="shopLogo" accept="image/png, image/jpeg" hidden>
                 </div>
-              
+
                 <iconify-icon icon="mdi:camera-plus" class="position-absolute bottom-0 fs-3" id="chooseImgFile"></iconify-icon>
             </div>
 
@@ -68,18 +68,18 @@ include "./resources/shared/dashboard.php";
         </div>
     </form>
 
-            </div>
-            </div>
+    </div>
+    </div>
 
-            <script src="./resources/js/dashboard_profile.js"></script>
-            <script>
-                $("#chooseImgFile").click(() => {
-                    $("#chooseFile").click();
-                    $("#chooseFile").change(() => {
-                        document.getElementById("acceptImage").src = window.URL.createObjectURL(event.target.files[0]);
-                    })
-                })
-            </script>
+    <script src="./resources/js/dashboard_profile.js"></script>
+    <script>
+        $("#chooseImgFile").click(() => {
+            $("#chooseFile").click();
+            $("#chooseFile").change(() => {
+                document.getElementById("acceptImage").src = window.URL.createObjectURL(event.target.files[0]);
+            })
+        })
+    </script>
 </body>
 
 </html>
