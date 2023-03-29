@@ -10,6 +10,7 @@ include "./resources/shared/dashboard.php";
 
     <?php
     include "./resources/shared/dashboard_setting.php";
+    include  "../Controller/galleryDfController.php";
     ?>
 
     <form action="../Controller/galleryController.php" method="post" enctype="multipart/form-data">
@@ -20,39 +21,63 @@ include "./resources/shared/dashboard.php";
                 <h1 class="fs-4">Slider</h1>
                 <div>
                     <div class="text-center  mb-3">
-                        <img src="./resources/img/cake.jpg" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg" />
+                        <?php
+                        if ($mode == 1) {  ?>
+                            <img src="./resources/img/default.png" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg" />
+                        <?php  } else {  ?>
+                            <img src="../../Storages/<?= $imglist[0]["shopgallery_1"]  ?>" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg" />
+                        <?php }
+                        ?>
                     </div>
                     <div class="box">
-                        <label for="s1img1">Image1</label>
-                        <input type="file" id="s1img1" accept="image/png, image/jpeg" name="img1" required>
+                        <label for="s1img1"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
+                        <input type="file" id="s1img1" accept="image/png, image/jpeg" name="img1" required hidden>
                     </div>
                     <div class="text-center  mb-3">
-                        <img src="./resources/img/cake.jpg" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg1" />
+                        <?php
+                        if ($mode == 1) {  ?>
+                            <img src="./resources/img/default.png" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg1" />
+                        <?php  } else {  ?>
+                            <img src="../../Storages/<?= $imglist[0]["shopgallery_2"]  ?>" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg1" />
+                        <?php }
+                        ?>
                     </div>
                     <div class="box">
-                        <label for="s1img2">Image2</label>
-                        <input type="file" id="s1img2" accept="image/png, image/jpeg" name="img2" required>
+                        <label for="s1img2"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
+                        <input type="file" id="s1img2" accept="image/png, image/jpeg" name="img2" required hidden>
                     </div>
                     <div class="text-center  mb-3">
-                        <img src="./resources/img/cake.jpg" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg2" />
+                        <?php
+                        if ($mode == 1) {  ?>
+                            <img src="./resources/img/default.png" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg2" />
+                        <?php  } else {  ?>
+                            <img src="../../Storages/<?= $imglist[0]["shopgallery_3"]  ?>" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg2" />
+                        <?php }
+                        ?>
                     </div>
                     <div class="box">
-                        <label for="s1img3">Image3</label>
-                        <input type="file" id="s1img3" accept="image/png, image/jpeg" name="img3" required>
+                        <label for="s1img3"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
+                        <input type="file" id="s1img3" accept="image/png, image/jpeg" name="img3" required hidden>
                     </div>
                     <div class="text-center  mb-3">
-                        <img src="./resources/img/cake.jpg" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg3" />
+                        <?php
+                        if ($mode == 1) {  ?>
+                            <img src="./resources/img/default.png" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg3" />
+                        <?php  } else {  ?>
+                            <img src="../../Storages/<?= $imglist[0]["shopgallery_4"]  ?>" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="profileimg3" />
+                        <?php }
+                        ?>
                     </div>
                     <div class="box">
-                        <label for="s1img3">Image4</label>
-                        <input type="file" id="s1img4" accept="image/png, image/jpeg" name="img4" required>
+                        <label for="s1img4"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
+                        <input type="file" id="s1img4" accept="image/png, image/jpeg" name="img4" required hidden>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="saveBtn ">
+        <div class="saveBtn">
+            <input type="hidden" name="select" id="" value="<?= $mode ?>">
             <button name="save">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
-
         </div>
     </form>
 

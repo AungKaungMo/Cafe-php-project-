@@ -10,21 +10,10 @@ include "./resources/shared/dashboard.php";
 
     <?php
     include "./resources/shared/dashboard_managePage.php";
-
-    include "../Model/dbConnection.php";
-
-    $db = new DBConnection();
-    $pdo = $db->connect();
-    $sql = $pdo->prepare(
-        "
-    SELECT * FROM m_contactus WHERE id = 1
-    "
-    );
-    $sql->execute();
-    $contactresult = $sql->fetchAll(PDO::FETCH_ASSOC);
+    include "../Controller/selectcontactusController.php";
 
     ?>
-    <form action="../Controller/contactusController.php" method="post" enctype="multipart/form-data">
+    <form action="../Controller/contactusUpdateController.php" method="post" enctype="multipart/form-data">
 
         <div class="d-flex flex-column justify-content-center align-items-center">
 

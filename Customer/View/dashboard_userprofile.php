@@ -1,5 +1,7 @@
 <?php
 include "./resources/shared/dashboard.php";
+session_start();
+$userid = $_SESSION["userid"];
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_profile.css">
 <link rel="stylesheet" href="./resources/css/dashboard_userprofile.css">
@@ -7,9 +9,7 @@ include "./resources/shared/dashboard.php";
 
 <body>
 
-    <!-- <?php
-            include "./resources/shared/dashboard_profile.php";
-            ?> -->
+
     <form>
         <div class="mt-5 mx-3 d-flex flex-column justify-content-center align-items-center">
             <div class=" position-relative">

@@ -17,8 +17,7 @@ include "./resources/shared/dashboard.php";
                     <iconify-icon icon="material-symbols:star-rounded" class="rateStar"></iconify-icon>
                     <iconify-icon icon="material-symbols:star-rate-half-rounded" class="rateStar"></iconify-icon>
                     <iconify-icon icon="material-symbols:star-rate-outline-rounded" class="rateStar"></iconify-icon>
-                    <div class="starBox p-2">
-                    </div>
+                    <div class="starBox p-2"></div>
                 </div>
             </div>
         </div>
