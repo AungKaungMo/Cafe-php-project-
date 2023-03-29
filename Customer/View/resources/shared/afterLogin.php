@@ -242,21 +242,25 @@
       <div class="modal-body">
         <div class="row mb-3">
           <div class="col-6 text-center mt-5">
-            <img src="./resources/img/cake.jpg" alt="" class="image">
+            <img src="./resources/img/cake.jpg" alt="" class="image orderImage">
           </div>
           <div class="col-6 text-center">
             <h5 class="cake">Cake</h5>
             <div class="cartbox">
               <div class="cartbox1">
-                <iconify-icon icon="bi:dash-circle-fill" id="mine" class=" me-3"></iconify-icon>
-                <h6 id="changeNum" class="fw-bold me-3">1</h6>
+                <iconify-icon icon="bi:dash-circle-fill" id="mine" class=" me-3 minus" ></iconify-icon>
+                <h6 id="changeNum" class="fw-bold me-3 countItem">1</h6>
                 <iconify-icon icon="mdi:plus-circle" id="plus"></iconify-icon>
               </div>
               <div class="line"></div>
             </div>
             <div class="cartbox">
               <div class="cartbox1">
-                <h6 class="fw-bold changeNum">15000MMk</h6>
+                <h6 class="fw-bold changeNum mmk">15000MMk</h6>
+              </div>
+              <div class="babyline"></div>
+              <div class="cartbox1">
+                <h6 class="fw-bold changeNum coin">15000Coins</h6>
               </div>
               <div class="babyline"></div>
             </div>
@@ -266,7 +270,7 @@
           </div>
         </div>
         <div class="addtocart modal-footer">
-          <button class="p-2" data-bs-dismiss="modal">Add to Cart</button>
+          <button class="p-2 addCart" data-bs-dismiss="modal">Add to Cart</button>
         </div>
       </div>
     </div>

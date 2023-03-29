@@ -15,102 +15,77 @@ include "./resources/shared/dashboard.php";
 
         <div class="d-flex flex-column justify-content-center align-items-center">
 
-            <div class="my-3"> 
-            <div class="sliderTitle">Page 1</div>
-                <div class="box">
-                    <label for="promoTitle">Title</label>
-                    <input type="text" id="promoTitle">
+            <div class="my-3">
+                <div class="m-auto defaultImg d-flex align-items-center">
+                    <img src="./resources/img/default.png" id="imgone">
+                    <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon upload" id="one" width="30" height="30"></iconify-icon>
+                    <input type="file" name="image1" id="inpone" hidden>
                 </div>
                 <div class="box">
-                    <label for="promoTextbox1">Text Box 1</label>
+                    <label for="tit1">Title 1</label>
+                    <input type="text" id="tit1">
+                </div>
+                <div class="box">
+                    <label for="cafe1">Cafe Name 1</label>
+                    <input type="text" id="cafe1">
+                </div>
+                <div class="box">
+                    <label for="address1">Address 1</label>
+                    <input type="text" id="address1">
+                </div>
+                <div class="box">
+                    <label for="promoTextbox1">Product Name 1</label>
                     <input type="text" id="promoTextbox1">
                 </div>
-                <div class="box">
-                    <label for="promoIcon1">Icon 1</label>
-                    <input type="text" id="promoIcon1">
+                <div class="m-auto defaultImg d-flex align-items-center">
+                    <img src="./resources/img/default.png" id="imgtwo">
+                    <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon upload" id="two" width="30" height="30"></iconify-icon>
+                    <input type="file" name="image2" id="inptwo" hidden>
                 </div>
                 <div class="box">
-                    <label for="promoTextbox2">Text Box 2</label>
+                    <label for="tit2">Title 2</label>
+                    <input type="text" id="tit2">
+                </div>
+                <div class="box">
+                    <label for="cafe2">Cafe Name 2</label>
+                    <input type="text" id="cafe2">
+                </div>
+                <div class="box">
+                    <label for="address2">Address 2</label>
+                    <input type="text" id="address2">
+                </div>
+                <div class="box">
+                    <label for="promoTextbox2">Product Name 2</label>
                     <input type="text" id="promoTextbox2">
                 </div>
-                <div class="box">
-                    <label for="promoIcon2">Icon 2</label>
-                    <input type="text" id="promoIcon2">
+                <div class="m-auto defaultImg d-flex align-items-center">
+                    <img src="./resources/img/default.png" id="imgthree">
+                    <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon upload" id="three" width="30" height="30"></iconify-icon>
+                    <input type="file" name="image3" id="inpthree" hidden>
                 </div>
                 <div class="box">
-                    <label for="promoTextbox3">Text Box 3</label>
+                    <label for="tit3">Title 3</label>
+                    <input type="text" id="tit3">
+                </div>
+                <div class="box">
+                    <label for="cafe3">Cafe Name 3</label>
+                    <input type="text" id="cafe3">
+                </div>
+                <div class="box">
+                    <label for="address3">Address 3</label>
+                    <input type="text" id="address3">
+                </div>
+                <div class="box">
+                    <label for="promoTextbox3">Product Name 3</label>
                     <input type="text" id="promoTextbox3">
                 </div>
-                <div class="box">
-                    <label for="promoIcon3">Icon 3</label>
-                    <input type="text" id="promoIcon3">
-                </div>
-                <div class="box">
-                    <label for="LinkSm1">Social Media Link 1</label>
-                    <input type="text" id="LinkSm1">
-                </div>
-                <div class="box">
-                    <label for="LinkSm2">Social Media Link 1</label>
-                    <input type="text" id="LinkSm2">
-                </div>
-                <div class="box">
-                    <label for="LinkSm3">Social Media Link 3</label>
-                    <input type="text" id="LinkSm3">
-                </div>
-                <div class="box">
-                    <label for="picture">Picture</label>
-                    <input type="file" id="picture" accept="image/png, image/jpeg">
-                </div>             
             </div>
 
-            <div class="my-3">
-                <div class="sliderTitle">Slider 1 </div>
-                <div class="box">
-                    <label for="pictureSlide1">Picture 1</label>
-                    <input type="file" id="pictureSlide1" accept="image/png, image/jpeg">
-                </div>
-                <div class="box">
-                    <label for="pictureSlide2">Picture 2</label>
-                    <input type="file" id="pictureSlide2" accept="image/png, image/jpeg">
-                </div>  
-                <div class="box">
-                    <label for="pictureSlide3">Picture 3</label>
-                    <input type="file" id="pictureSlide3" accept="image/png, image/jpeg">
-                </div>    
-                <div class="box">
-                    <label for="pictureSlide4">Picture 4</label>
-                    <input type="file" id="pictureSlide4" accept="image/png, image/jpeg">
-                </div> 
-            </div>
 
             <div class="my-3">
-                <div class="sliderTitle">Section</div>
+                <div class="sliderTitle">Discount Products</div>
                 <div class="box">
-                    <label for="titleSection1">Title 1</label>
-                    <input type="text" id="titleSection1">
-                </div>
-                <div class="box">
-                    <label for="paragraphSection1">Paragraph 1</label>
-                    <textarea id="paragraphSection1"></textarea>
-                </div>
-                <div class="box">
-                    <label for="titleSection2">Title 2</label>
-                    <input type="text" id="titleSection2">
-                </div>
-                <div class="box">
-                    <label for="paragraphSection2">Paragraph 2</label>
-                    <textarea id="paragraphSection2"></textarea>
-                </div>
-                <div class="box">
-                    <label for="pictureSection1">Picture</label>
-                    <input type="file" id="pictureSection1" accept="image/png, image/jpeg">
-                </div>               
-            </div>
-
-            <div class="my-3">
-                <div class="sliderTitle">Discount Shops</div>
-                <div class="box">
-                    <label for="titleDis1">Title 1</label>
+                    <label for="titleDis1">Dis 1</label>
                     <input type="text" id="titleDis1">
                 </div>
                 <div class="box">
@@ -118,7 +93,7 @@ include "./resources/shared/dashboard.php";
                     <input type="file" id="pictureDis1" accept="image/png, image/jpeg">
                 </div>
                 <div class="box">
-                    <label for="titleDis2">Title 2</label>
+                    <label for="titleDis2">Dis 2</label>
                     <input type="text" id="titleDis2">
                 </div>
                 <div class="box">
@@ -126,15 +101,15 @@ include "./resources/shared/dashboard.php";
                     <input type="file" id="pictureDis2" accept="image/png, image/jpeg">
                 </div>
                 <div class="box">
-                    <label for="titleDis3">Title 3</label>
+                    <label for="titleDis3">Dis 3</label>
                     <input type="text" id="titleDis3">
                 </div>
                 <div class="box">
-                    <label for="pictureDis3">Picture 3</label>
+                    <label for="pictureDis3">picture 3</label>
                     <input type="file" id="pictureDis3" accept="image/png, image/jpeg">
                 </div>
                 <div class="box">
-                    <label for="titleDis4">Title 4</label>
+                    <label for="titleDis4">Dis 4</label>
                     <input type="text" id="titleDis4">
                 </div>
                 <div class="box">
@@ -142,9 +117,47 @@ include "./resources/shared/dashboard.php";
                     <input type="file" id="pictureDis4" accept="image/png, image/jpeg">
                 </div>
             </div>
+
+            <div class="my-3">
+                <div class="sliderTitle">Discount Shops</div>
+                <div class="box">
+                    <label for="titleDis11">Dis 1</label>
+                    <input type="text" id="titleDis11">
+                </div>
+                <div class="box">
+                    <label for="pictureDis11">Picture 1</label>
+                    <input type="file" id="pictureDis11" accept="image/png, image/jpeg">
+                </div>
+                <div class="box">
+                    <label for="titleDis22">Dis 2</label>
+                    <input type="text" id="titleDis22">
+                </div>
+                <div class="box">
+                    <label for="pictureDis22">Picture 2</label>
+                    <input type="file" id="pictureDis22" accept="image/png, image/jpeg">
+                </div>
+                <div class="box">
+                    <label for="titleDis33">Dis 3</label>
+                    <input type="text" id="titleDis33">
+                </div>
+                <div class="box">
+                    <label for="pictureDis33">picture 3</label>
+                    <input type="file" id="pictureDis33" accept="image/png, image/jpeg">
+                </div>
+                <div class="box">
+                    <label for="titleDis44">Dis 4</label>
+                    <input type="text" id="titleDis4">
+                </div>
+                <div class="box">
+                    <label for="pictureDis4">Picture 4</label>
+                    <input type="file" id="pictureDis44" accept="image/png, image/jpeg">
+                </div>
+            </div>
+
+
         </div>
         <div class="saveBtn mb-5 ">
-            <button>Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
+            <button name="savechange">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>
 
     </form>
@@ -153,6 +166,8 @@ include "./resources/shared/dashboard.php";
     </div>
     <script src="./resources/js/dashboard.js"></script>
     <script src="./resources/js/dashboard_managePage.js"></script>
+    <script src="./resources/js/dashboard_manage_dis&pro.js"></script>
+
 </body>
 
 </html>

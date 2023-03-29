@@ -58,10 +58,6 @@ include "./resources/shared/dashboard.php";
                     <label for="pprice">Price</label>
                     <input type="number" value="<?php echo $result[0]["product_price"] ?>" name="uprice" id="pprice" required>
                 </div>
-                <div class="box">
-                    <label for="pcoinprice">Coin Price</label>
-                    <input type="number" value="<?php echo $result[0]["coin_price"] ?>" name="ucoinprice" id="pcoinprice" required>
-                </div>
             </div>
             <div class="saveBtn ">
                 <button type="submit" name="update">Update</button>

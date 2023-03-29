@@ -66,13 +66,13 @@
             for ($i = 0; $i < count($result); $i++) { ?>
                 <div class="card">
                     <img src="../../Storages/<?php echo $result[$i]["product_photo"] ?>" alt="" width="60%" class="img">
-                    <div class="text ms-3 fw-bold"><?php echo $result[$i]["product_name"] ?></div>
+                    <div class="text ms-3 fw-bold pname"><?php echo $result[$i]["product_name"] ?></div>
                     <div class="pbtn ms-4">
                         <button>
-                            <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                            <iconify-icon icon="mdi:shopping-cart-arrow-down"  data-id="<?= $result[$i]["product_id"] ?>" index="<?= $i ?>" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> data-bs-toggle="modal" data-bs-target="#staticBackdrop" <?php } ?> width="25" height="25" class="buy"></iconify-icon>
                         </button>
                         <button>
-                            <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                            <iconify-icon icon="mdi:cards-heart-outline" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } ?> width="25" height="25"></iconify-icon>
                         </button>
                     </div>
                     <div class="price text-center">
@@ -102,6 +102,8 @@
             });
         });
     </script>
+
+    <script src="./resources/js/cartControl.js"></script>
 
 </body>
 

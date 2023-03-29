@@ -88,7 +88,7 @@
           </div>
         </div>
         <div class="buyNowBtn mt-2 text-center">
-          <a href="../Controller/buyShopController.php"> <button class="p-2">Buy Now</button></a>
+          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/buyShopController.php" <?php } ?>> <button class="p-2">Buy Now</button></a>
         </div>
       </div>
 
@@ -120,7 +120,7 @@
         </div>
 
         <div class="buyNowBtn2 mt-2 text-center">
-          <a href="../Controller/buyShopController.php"> <button class="p-2">Buy Now</button></a>
+          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/buyShopController.php" <?php } ?>> <button class="p-2">Buy Now</button></a>
         </div>
 
       </div>
@@ -152,7 +152,7 @@
           </div>
         </div>
         <div class="buyNowBtn mt-2 text-center">
-          <a href="../Controller/buyShopController.php"><button class="p-2">Buy Now</button></a>
+          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/buyShopController.php" <?php } ?>><button class="p-2">Buy Now</button></a>
         </div>
       </div>
 

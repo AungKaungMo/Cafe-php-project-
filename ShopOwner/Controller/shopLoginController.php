@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 if (isset($_POST["logIn"])) {
     $shopEmail = $_POST["email"];
     $pass = $_POST["password"];
@@ -25,6 +25,7 @@ if (isset($_POST["logIn"])) {
         if (password_verify($pass, $dbPass)) {
             $_SESSION["shopPassword"] = "";
             $_SESSION["shopId"] = $result[0]["shop_id"];
+            $_SESSION["ownerImage"] = $result[0]["shop_logo"];
             header("location: ../View/dashboard_profile_informtaions.php");
         } else {
             $_SESSION["shopPassword"] = "Password is incorrect";

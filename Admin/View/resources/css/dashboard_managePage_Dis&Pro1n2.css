@@ -19,3 +19,15 @@
     margin-bottom: 1em;
   }
 
+.defaultImg{
+  width: 200px;
+  height: 200px;
+}
+.defaultImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.upload{
+  color: var(--mainColor);
+}
