@@ -4,6 +4,7 @@ include "../Model/dbConnection.php";
 include "./shared/generatedCode.php";
 include "./shared/mailSender.php";
 session_start();
+
 if (isset($_POST["send"])) {
     $name = $_POST["name"];
     $gender = $_POST["gender"];
@@ -67,8 +68,18 @@ if (isset($_POST["send"])) {
         $sql->execute();
 
         $emailResult = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        echo "<pre>";
+        print_r($emailResult);
+
         $_SESSION["userid"] = $emailResult[0]["cus_id"];
         $_SESSION["username"] = $emailResult[0]["cus_name"];
+
+        echo $_SESSION["userid"];
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+
         $mail = new SendMail();
         $mail->sendMail(
             $email,
@@ -82,4 +93,3 @@ if (isset($_POST["send"])) {
         $_SESSION["signuperror"] = "User email is taken .Use another email";
     }
 }
-

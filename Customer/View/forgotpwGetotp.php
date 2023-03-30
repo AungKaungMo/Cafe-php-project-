@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,16 +34,28 @@
                                 <p class="mb-4 forgot">Forgot password</p>
                                 <form action="../Controller/FgOtpController.php" method="post">
                                     <div class="form-outline divbox form-white mb-4">
-                                        <input type="email" id="typeEmailX" class="box fw-bold " placeholder="Enter your email" name="email" />
+                                        <input type="email" id="typeEmailX" class="box fw-bold " name="email" placeholder="Enter email" value="<?php if (!empty($_SESSION["email"])) {
+                                                                                                                                                    echo $_SESSION["email"];
+                                                                                                                                                } else {
+                                                                                                                                                    echo "enter email";
+                                                                                                                                                } ?>" />
+                                        <p class=" text-danger">
+                                            <?php
+                                            if (isset($_SESSION["fg_error"])) {
+                                                echo  $_SESSION["fg_error"];
+                                            }
+                                            ?></p>
                                         <button class="getotp fw-bold" name="getC">Get Code</button>
                                     </div>
+                                </form>
+                                <form action="../Controller/forgotpasswordController.php" method="post">
                                     <div class=" form-outline divbox form-white mb-4">
-                                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="Enter Code- - - - - -" name="code" />
+                                        <input type="password" id="typePasswordX" class="box fw-bold" placeholder="Enter Code- - - - - -" name="code" />
                                     </div>
                                     <button class="button mb-5 fw-bold" type="submit" name="send">Continue</button>
-                                    <br>
+                                </form>
+                                <br>
                             </div>
-                            </form>
                         </div>
                     </div>
                 </div>
