@@ -1,7 +1,7 @@
 <?php
 ini_set("display_errors", "1");
 
-session_start();
+// session_start();
 
 ?>
 
@@ -53,9 +53,10 @@ session_start();
     ?>
     <form action="../Controller/bookingController.php" method="post">
         <div class="mt-3 main">
-            <div class="mb-5">
-                <div class="bookdate mb-5">
-                    <input type="date" name="bookdate" id="" class="date ps-3">
+
+            <div class=" one mb-5">
+                <div class="bookdate  mb-5">
+                    <input type="date" name="bookdate" id="" class=" date ps-3">
                 </div>
                 <div>
                     <!-- <div class="indoor pt-3" id="in"><input type="radio"  value="1" id="" checked>Indoor</div>
@@ -66,7 +67,7 @@ session_start();
                 </div>
             </div>
 
-            <div class="mb-5">
+            <div class=" two mb-5">
                 <div class="timer mb-5">
                     <input type="time" name="booktime" id="" class="time ps-2">
                 </div>
@@ -83,7 +84,6 @@ session_start();
                     </select>
                     <iconify-icon icon="mdi:user" class="icon1"></iconify-icon>
                 </div>
-
             </div>
         </div>
         <div class="lines"></div>

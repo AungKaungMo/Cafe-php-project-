@@ -26,6 +26,17 @@ body {
   margin-left: 4em;
 }
 
+.one{
+  display: flex;  
+  justify-content: space-around;
+  
+}
+
+.two{
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 .date {
   width: 11em;
@@ -41,7 +52,6 @@ body {
 .place { 
   width: 11em;
   height: 2.8em;
-  display: flex; 
   border-radius: 0.2em;
   border: 2px solid var(--mainColor);
   background-color: var(--mainColor);
@@ -79,9 +89,8 @@ body {
 }
 
 
-.main {
-  display: flex;
-  justify-content: space-around;
+.main {  
+ 
   font-size: var(--navigationFontSize);
   text-align: center;
 }

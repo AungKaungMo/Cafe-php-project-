@@ -1,4 +1,6 @@
 <?php
+ini_set("display_errors", "1");
+
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_setting.css">
