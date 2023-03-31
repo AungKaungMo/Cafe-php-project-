@@ -1,11 +1,10 @@
 <?php
-// session_start();
+session_start();
     if(isset($_POST["add"])){
         
         $productName = $_POST["pname"];
         $productPrice = $_POST["pprice"];
         $productInstock = $_POST["pinstock"];
-        $productCoin = $_POST["pcoinprice"];
         $productDis = $_POST["pdis"];
         $shopId = $_SESSION["shopId"];
         $productType = $_POST["ptype"];
@@ -40,7 +39,7 @@
                 :productDiscount,
                 :productPhoto,
                 :shopid,
-                :coinPrice,
+                :coinprice,
                 :productType
             )
         "
@@ -52,7 +51,7 @@
             $sql->bindValue(":productDiscount", $productDis);
             $sql->bindValue(":productPhoto", "products/". $file);
             $sql->bindValue(":shopid", $shopId);
-            $sql->bindValue(":coinPrice", $productCoin);
+            $sql->bindValue(":coinprice", $productPrice);
             $sql->bindValue(":productType", $productType);
 
               $sql->execute();

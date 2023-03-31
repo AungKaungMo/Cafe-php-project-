@@ -433,3 +433,11 @@ Footer
     margin-top: 1.5em;
   }
 }
+.newUser a{
+  color: var(--textColorSecondary);
+  font-weight: bold;
+  text-decoration: underline;
+}
+.newUser a:hover{
+  color: var(--mainColor);
+}

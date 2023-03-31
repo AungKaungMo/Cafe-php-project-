@@ -80,6 +80,10 @@
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+            <p class=" ruleText">can update 4 promotion menus.</p>
+          </div>
+          <div class="d-flex">
+            <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
             <p class=" ruleText">can update 2 blogs.</p>
           </div>
           <div class="d-flex">
@@ -88,7 +92,7 @@
           </div>
         </div>
         <div class="buyNowBtn mt-2 text-center">
-          <a href="../Controller/buyShopController.php"> <button class="p-2">Buy Now</button></a>
+          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/buyShopController.php" <?php } ?>> <button class="p-2">Buy Now</button></a>
         </div>
       </div>
 
@@ -111,6 +115,10 @@
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+            <p class=" ruleText">can update 10 promotion menus.</p>
+          </div>
+          <div class="d-flex">
+            <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
             <p class=" ruleText">can update 6 blog..</p>
           </div>
           <div class="d-flex">
@@ -120,7 +128,7 @@
         </div>
 
         <div class="buyNowBtn2 mt-2 text-center">
-          <a href="../Controller/buyShopController.php"> <button class="p-2">Buy Now</button></a>
+          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/buyShopController.php" <?php } ?>> <button class="p-2">Buy Now</button></a>
         </div>
 
       </div>
@@ -144,6 +152,10 @@
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+            <p class=" ruleText">can update 6 promotion menus.</p>
+          </div>
+          <div class="d-flex">
+            <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
             <p class=" ruleText">can update 3 blogs.</p>
           </div>
           <div class="d-flex">
@@ -152,7 +164,7 @@
           </div>
         </div>
         <div class="buyNowBtn mt-2 text-center">
-          <a href="../Controller/buyShopController.php"><button class="p-2">Buy Now</button></a>
+          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/buyShopController.php" <?php } ?>><button class="p-2">Buy Now</button></a>
         </div>
       </div>
 

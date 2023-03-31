@@ -49,10 +49,10 @@ include "./resources/shared/dashboard.php";
                     <input type="number" name="pinstock" id="pinstock">
                 </div>
                 <div class="box">
-                    <label for="ptype">Coin Price</label>
+                    <label for="ptype">Product Type</label>
                     <select id="ptype" name="ptype" required>
-                        <option value="1">Coffee</option>
-                        <option value="2">Dessert</option>
+                        <option value="1" >Coffee</option>
+                        <option value="2" selected>Dessert</option>
                         <option value="3">Juice</option>
                     </select>
                 </div>
@@ -61,10 +61,6 @@ include "./resources/shared/dashboard.php";
                     <input type="number" name="pprice" id="pprice" required>
                 </div>
 
-                <div class="box">
-                    <label for="pcoinprice">Coin Price</label>
-                    <input type="number" name="pcoinprice" id="pcoinprice" required>
-                </div>
             </div>
             <div class="saveBtn ">
                 <button name="add">Add</button>
@@ -107,9 +103,6 @@ include "./resources/shared/dashboard.php";
                             </td>
                             <td data-label="Price">
                                 <?php echo $result[$i]["product_price"] ?>
-                            </td>
-                            <td data-label="Coin Price">
-                                <?php echo $result[$i]["coin_price"] ?> Coins
                             </td>
                             <td data-label="Discount">
                                 <?php echo $result[$i]["product_discount"] ?> %

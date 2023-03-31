@@ -6,80 +6,35 @@ include "./resources/shared/dashboard.php";
 
 </head>
 
-
-<?php
-    define("DB_HOST","localhost");
-    define("DB_USER","root");
-    define("DB_PASS","");
-    define("DB_NAME","cafe_project_db");
-
-    function connect(){
-        $db=mysqli_connect(DB_HOST, DB_USER,DB_PASS,DB_NAME);
-        if(mysqli_connect_errno()){
-            echo "Database Connection Fail!";
-
-        }else{
-            return $db;
-        }
-    }
-
-    if(isset($_POST["submit"])){
-        $info=$_POST["text"];
-        $file=$_FILES["file"];
-
-    }
-
-    function insert($info,$file){
-        $db=connect();
-        $time=getTimeNow();
-        $qry="INSERT INTO homeabt(paragraph,photo,create_date) VALUES ('$info','$file','$time')";
-
-        $result=mysqli_query($db,$qry);
-
-        if($result==1){
-            echo '<div class="alert alert-warning" role="alert">
-            Complete!
-          </div>';
-        } else{
-            echo '<div class="alert alert-warning" role="alert">
-            Fail!
-          </div>';
-        }
-
-    }
-
-    insert($info,$file);
-
-    function getTimeNow(){
-        return date("Y-m-d",time());
-    }
-
-
-?>
-
 <body>
 
     <?php
     include "./resources/shared/dashboard_managePage.php";
+    include "../Controller/aboutUs_showController.php";
     ?>
-    <form method="post" enctype="multipart/form-data">
+    <form method="post" action="../Controller/aboutUsController.php" enctype="multipart/form-data">
 
         <div class="d-flex flex-column justify-content-center align-items-center">
 
             <div class="my-3">
+                <div class="box">
+                    <div class="m-auto aboutImg">
+                        <img src="<?php if($result[0]["about_image"] == "") { ?>./resources/img/default.png<?php }else { ?>../../Storages/<?= $result[0]["about_image"]; ?><?php } ?> " id="acceptImage">
+                        <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload"></iconify-icon>
 
+                    </div>
+                    <input type="file" hidden id="picture" accept="image/png, image/jpeg" name="aboutImage">
+                </div>
                 <div class="box mt-5">
                     <label for="paragraph">Paragraph</label>
-                    <textarea id="paragraph" name="text" type="text"></textarea>
+                    <textarea id="paragraph" class="text-start" name="aboutText" type="text"><?= $result[0]["about_text"]; ?>
+                    </textarea>
                 </div>
-                <div class="box">
-                    <label for="picture">Picture</label>
-                    <input type="file" id="picture" accept="image/png, image/jpeg" name="file">
-                </div>
+
             </div>
         </div>
         <div class="saveBtn ">
-            <button name="submit" type="submit">Save Change 
+            <button name="submit" type="submit">Save Change
                 <iconify-icon icon="material-symbols:save"></iconify-icon>
             </button>
         </div>
@@ -89,6 +44,14 @@ include "./resources/shared/dashboard.php";
     </div>
     <script src="./resources/js/dashboard.js"></script>
     <script src="./resources/js/dashboard_managePage.js"></script>
+    <script>
+        $("#upload").click(() => {
+            $("#picture").click();
+            $("#picture").change(() => {
+                document.getElementById("acceptImage").src = window.URL.createObjectURL(event.target.files[0]);
+            })
+        })
+    </script>
 </body>
 
 </html>

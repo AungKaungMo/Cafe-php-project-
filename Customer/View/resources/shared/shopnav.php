@@ -46,10 +46,15 @@ session_start();
                             <div class="d-flex justify-content-between mt-2 afterLogin">
                                 <div>
                                     <span class="cartText">Cart </span>
-                                    <span>(14)</span>
+                                    <span class="cartCount">(14)</span>
                                 </div>
                                 <div>
-                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
+                                    <form method="post" action="">
+                                        <input type="hidden" value="" class="cartsValue">
+                                        <!-- <a href=""> -->
+                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
+                                    <!-- </a>     -->
+                                </form>
                                 </div>
 
                             </div>
@@ -164,10 +169,10 @@ session_start();
                             <div class="d-flex justify-content-between mt-2 afterLogin">
                                 <div>
                                     <span class="cartText">Cart </span>
-                                    <span>(14)</span>
+                                    <span class="cartCount">(14)</span>
                                 </div>
                                 <div>
-                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
+                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
                                 </div>
 
                             </div>
@@ -224,6 +229,30 @@ session_start();
 <?php
 include "./resources/shared/afterLogin.php";
 ?>
+
+                            <!---------------  CHECK LOGIN MODAL  ---------------------->
+
+                    <!-- Modal -->
+<div class="modal fade" id="staticBackdropCheckLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body newUser">
+                <div>
+                    <div class="fs-4 text-center ">New User?</div>
+                    <div class="mt-3">
+                        <div class="text-center">Dont have an account? <a href="./signup.php">Sign Up</a></div>
+                    </div>
+                    <div class="mt-3 mb-4">
+                        <div class="text-center">Already have an account? <a href="./login.php">Log In</a></div>
+                    </div>
+                </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-----------------------------   RES side bar   --------------------------->
 <div class="position-absolute top-0 p-5  sideBar d-flex flex-column justify-content-center align-items-center ">

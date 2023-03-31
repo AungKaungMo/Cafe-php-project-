@@ -85,7 +85,7 @@ Payment card
 .paymentCard:nth-child(2) {
   margin-top: 5em;
   background-color: var(--mainColor);
-  height: 470px;
+  height: 520px;
 }
 .paymentCard:nth-child(2) .ruleIcon {
   color: var(--secondMainColor);
