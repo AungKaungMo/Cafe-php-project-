@@ -42,18 +42,15 @@
   border: 2px solid var(--secondMainColor);
   font-size: var(--paragraphFontSize);
   transition: all 0.5s;
-}
-.button:hover {
-  background-color: transparent;
-}
-
-.button a {
-    text-decoration: none;
   color: var(--mainColor);
 }
-.button:hover a {
+
+.button:hover {
+  background-color: transparent;
   color: var(--secondMainColor);
 }
+
+
 .getotp {
   width: 6em;
   height: 2.4em;

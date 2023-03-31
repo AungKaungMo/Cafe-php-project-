@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,18 +32,30 @@
                             <div class="mb-md-2 mt-md-5 pb-3">
                                 <img src="./resources/img/footerlogo.png" alt="" class="mb-4" width="30%">
                                 <p class="mb-4 forgot">Forgot password</p>
-                                <form action="" method="post">
+                                <form action="../Controller/FgOtpController.php" method="post">
                                     <div class="form-outline divbox form-white mb-4">
-                                        <input type="emal" id="typeEmailX" class="box fw-bold " placeholder="Enter your email" name="email" />
-                                        <button class="getotp fw-bold">Get Code</button>
+                                        <input type="email" id="typeEmailX" class="box fw-bold " name="email" placeholder="Enter email" value="<?php if (!empty($_SESSION["email"])) {
+                                                                                                                                                    echo $_SESSION["email"];
+                                                                                                                                                } else {
+                                                                                                                                                    echo "enter email";
+                                                                                                                                                } ?>" />
+                                        <p class=" text-danger">
+                                            <?php
+                                            if (isset($_SESSION["fg_error"])) {
+                                                echo  $_SESSION["fg_error"];
+                                            }
+                                            ?></p>
+                                        <button class="getotp fw-bold" name="getC">Get Code</button>
                                     </div>
+                                </form>
+                                <form action="../Controller/forgotpasswordController.php" method="post">
                                     <div class=" form-outline divbox form-white mb-4">
-                                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="Enter Code- - - - - -" name="code" />
+                                        <input type="password" id="typePasswordX" class="box fw-bold" placeholder="Enter Code- - - - - -" name="code" />
                                     </div>
-                                    <button class="button mb-5 fw-bold" type="submit" name="send"> <a href="./changepw.php">Continue</a> </button>
-                                    <br>
+                                    <button class="button mb-5 fw-bold" type="submit" name="send">Continue</button>
+                                </form>
+                                <br>
                             </div>
-                            </form>
                         </div>
                     </div>
                 </div>

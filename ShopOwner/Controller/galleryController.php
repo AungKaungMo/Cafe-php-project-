@@ -56,16 +56,9 @@ if (isset($_POST["save"])) {
             $sql->bindValue(":img3", "shopslider/" . $file3['name']);
             $sql->bindValue(":img4", "shopslider/" . $file4['name']);
             $sql->execute();
+            header("Location: ../View/dashboard_setting_gallery.php");
         }
     }
-
-
-
-
-
-
-
-
 
     //echo $shopid;
 }

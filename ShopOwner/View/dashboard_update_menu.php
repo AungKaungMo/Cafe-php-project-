@@ -10,7 +10,7 @@ include "./resources/shared/dashboard.php";
 <body>
 
     <?php
-        include "../Controller/update_menu_showController.php";
+    include "../Controller/update_menu_showController.php";
     ?>
 
     <form action="../Controller/update_menuController.php" method="post" enctype="multipart/form-data">
@@ -49,9 +49,21 @@ include "./resources/shared/dashboard.php";
                 <div class="box">
                     <label for="ptype">Type</label>
                     <select id="ptype" name="ptype" required>
-                        <option value="1">Coffee</option>
-                        <option value="2">Dessert</option>
-                        <option value="3">Juice</option>
+                        <option value="1" <?php
+                                            if ($result[0]["product_type"] == 1) {
+                                                echo "selected";
+                                            }
+                                            ?>>Coffee</option>
+                        <option value="2" <?php
+                                            if ($result[0]["product_type"] == 2) {
+                                                echo "selected";
+                                            }
+                                            ?>>Dessert</option>
+                        <option value="3" <?php
+                                            if ($result[0]["product_type"] == 3) {
+                                                echo "selected";
+                                            }
+                                            ?>>Juice</option>
                     </select>
                 </div>
                 <div class="box">
@@ -72,13 +84,12 @@ include "./resources/shared/dashboard.php";
 
     <script src="./resources/js/dashboard_setting.js"></script>
     <script>
-        $("#acceptImage").click(()=>{
+        $("#acceptImage").click(() => {
             $("#pi1").click();
-            $("#pi1").change(()=>{
-            document.getElementById("acceptImage").src = window.URL.createObjectURL(event.target.files[0]);
+            $("#pi1").change(() => {
+                document.getElementById("acceptImage").src = window.URL.createObjectURL(event.target.files[0]);
+            })
         })
-        })
-       
     </script>
 </body>
 

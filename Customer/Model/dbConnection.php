@@ -1,8 +1,7 @@
 <?php
 
 
-class DBConnection
-{
+class DBConnection{
     // Setting
     private $hostname = "localhost";
     private $port = 3306;
@@ -25,4 +24,3 @@ class DBConnection
         return $pdo;
     }
 }
-?>

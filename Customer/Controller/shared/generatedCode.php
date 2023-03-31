@@ -7,9 +7,9 @@ class Generate
 
     public function genCode($limit)
     {
+        $randomString = "";
         for ($i = 0; $i < $limit; $i++) {
             $index = rand(0, strlen($this->char) - 1);
-            $randomString = "";
             $randomString .= $this->char[$index];
         }
         return $randomString;
