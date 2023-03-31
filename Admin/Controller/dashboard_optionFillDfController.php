@@ -5,7 +5,7 @@
 
     $sql = $pdo->prepare(
         "
-            SELECT * FROM m_aboutUs WHERE 1
+            SELECT * FROM m_option_fill WHERE 1
         "
     );
     $sql->execute();

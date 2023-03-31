@@ -1,10 +1,3 @@
-<?php
-include "../Controller/selectfooterController.php";
-
-
-?>
-
-
 <div class="footerImg mt-5"></div>
 <div class="footer">
     <div class="footerContainer d-flex mx-sm-5 mx-2 pt-5 mb-4 justify-content-between flex-wrap">

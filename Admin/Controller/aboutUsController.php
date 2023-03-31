@@ -9,7 +9,7 @@ if (isset($_POST["submit"])) {
 
     $sql = $pdo->prepare(
         "
-        SELECT * FROM m_aboutUs WHERE del_flg = 0
+        SELECT * FROM m_aboutUs WHERE 1
         "
     );
 

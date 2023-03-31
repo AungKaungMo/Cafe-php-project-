@@ -16,3 +16,11 @@
     width: 200px;
     padding: 0.4em;
 }
+#acceptImage{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+#upload{
+  color: var(--mainColor);
+}

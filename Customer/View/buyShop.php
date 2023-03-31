@@ -80,6 +80,10 @@
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+            <p class=" ruleText">can update 4 promotion menus.</p>
+          </div>
+          <div class="d-flex">
+            <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
             <p class=" ruleText">can update 2 blogs.</p>
           </div>
           <div class="d-flex">
@@ -108,6 +112,10 @@
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
             <p class=" ruleText">can update unlimited menu everyday.</p>
+          </div>
+          <div class="d-flex">
+            <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+            <p class=" ruleText">can update 10 promotion menus.</p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
@@ -141,6 +149,10 @@
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
             <p class=" ruleText">can update 20times menu each day.</p>
+          </div>
+          <div class="d-flex">
+            <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
+            <p class=" ruleText">can update 6 promotion menus.</p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
