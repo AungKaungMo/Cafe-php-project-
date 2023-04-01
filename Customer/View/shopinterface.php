@@ -156,23 +156,7 @@
                     </div>
                 </div>
 
-                <div class="card item">
-                    <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                    <div class="text ms-3">Black Coffee</div>
-                    <div class="pbtn ms-4">
-                        <button>
-                            <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                        </button>
-                        <button>
-                            <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                        </button>
-                    </div>
-                    <div class="price text-center">
-                        1500MMK
-                    </div>
-                </div>
-
-                <div class="card item most">
+                <div class="card item featured">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -190,23 +174,7 @@
             </div>
 
             <div class="maincard item-details">
-                <div class="card item">
-                    <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                    <div class="text ms-3">Black Coffee</div>
-                    <div class="pbtn ms-4">
-                        <button>
-                            <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                        </button>
-                        <button>
-                            <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                        </button>
-                    </div>
-                    <div class="price text-center">
-                        1500MMK
-                    </div>
-                </div>
-
-                <div class="card item">
+                <div class="card item featured">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -238,7 +206,7 @@
                     </div>
                 </div>
 
-                <div class="card item">
+                <div class="card item most">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -253,6 +221,8 @@
                         1500MMK
                     </div>
                 </div>
+
+
             </div>
         </div>
 

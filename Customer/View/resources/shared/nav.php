@@ -18,7 +18,14 @@ session_start();
         </div>
         <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
           <!-- <img src="./resources/img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
-          <iconify-icon icon="mdi:user-circle" class="userIcon m-1"></iconify-icon>
+          <?php
+          if ((empty($_SESSION["userpf"]))) { ?>
+            <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon>
+          <?php    } else { ?>
+            <img src="../../Storages/<?php echo $_SESSION["userpf"] ?>" alt="Los Angeles Skyscrapers" width="50px" height="50px" class="rounded-5 userimage">
+          <?php    }
+          ?>
+          <!-- <iconify-icon icon="mdi:user-circle" class="userIcon m-1"></iconify-icon> -->
 
           <div class="d-flex  align-items-center">
             <p class="mt-3 userText ">
@@ -148,7 +155,14 @@ session_start();
         </div>
         <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
           <!-- <img src="./resources/img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
-          <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon>
+          <?php
+          if (empty($_SESSION["userpf"])) { ?>
+            <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon>
+          <?php    } else { ?>
+            <img src="../../Storages/<?php echo $_SESSION["userpf"] ?>" alt="Los Angeles Skyscrapers" width="50px" height="50px" class="rounded-5 userimage">
+          <?php    }
+          ?>
+          <!-- <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon> -->
 
           <div class="d-flex  align-items-center">
             <p class="mt-3 userText">

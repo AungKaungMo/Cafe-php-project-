@@ -2,15 +2,19 @@ body {
   background-color: var(--backgroundTertiary);
   font-family: var(--paragraphFont);
 }
+
 #responsiveSideBar ul li:nth-child(1) a::before {
   width: 50px;
 }
+
 #responsiveSideBar ul li:nth-child(1) a::after {
   width: 30px;
 }
+
 .hometitle::before {
   width: 50px;
 }
+
 .hometitle::after {
   width: 30px;
 }
@@ -138,7 +142,8 @@ today menu
 .box1 {
   background-color: var(--secondMainColor);
 }
-.discountCardContainer{
+
+.discountCardContainer {
   display: flex;
   position: relative;
   align-items: center;
@@ -152,11 +157,9 @@ today menu
   position: relative;
   width: 250px !important;
   height: 210px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255),
-    rgba(217, 217, 217, 0.17)
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255),
+      rgba(217, 217, 217, 0.17));
   border: solid var(--textColorPrimary);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -191,7 +194,8 @@ today menu
   left: 48px;
   z-index: -1;
 }
-.disphoto{
+
+.disphoto {
   width: 130px;
   height: 130px;
   position: absolute;
@@ -201,6 +205,7 @@ today menu
   margin: auto;
   transition: all 0.5s;
 }
+
 .disphoto img {
   width: 100%;
   height: 100%;
@@ -230,12 +235,15 @@ today menu
   margin-left: 20px;
   transition: all 0.5s;
 }
-.disbtn iconify-icon{
+
+.disbtn iconify-icon {
   color: var(--secondMainColor);
 }
-.disbtn button:hover{
+
+.disbtn button:hover {
   transform: scale(1.1);
 }
+
 .disprice {
   width: 120px;
   height: 40px;
@@ -243,7 +251,7 @@ today menu
   border-radius: 30px;
   /* padding: 5px 0px 0px 10px; */
   background-color: var(--mainColor);
-  text-align:center;
+  text-align: center;
   color: var(--textColorPrimary);
   font-family: var(--titleFont);
   position: absolute;
@@ -255,16 +263,13 @@ today menu
 
 
 .maincard {
-  display: flex;
+  /* display: flex; */
   position: relative;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-top: 6em;
-  margin-bottom: 5em;
+  /* flex-wrap: wrap; */
 }
 
 .card {
+  margin: 5em 6em 4em 9em;
   width: 12.4em;
   height: 11em;
   background: linear-gradient(120.9deg, #FFFFFF 0%, rgba(217, 217, 217, 0.34) 97.57%);
@@ -273,7 +278,8 @@ today menu
   transition: all 0.5s;
 }
 
-.card:hover, .disCard:hover {
+.card:hover,
+.disCard:hover {
   transform: scale(1.2);
 }
 
@@ -284,7 +290,8 @@ today menu
   transition: all 1s;
 }
 
-.card:hover .img, .disCard:hover .disphoto img {
+.card:hover .img,
+.disCard:hover .disphoto img {
   transform: rotate(360deg);
 }
 
@@ -314,7 +321,8 @@ today menu
   transition: all 0.5s;
 }
 
-.pbtn button:hover, .disbtn button:hover {
+.pbtn button:hover,
+.disbtn button:hover {
   transform: scale(1.2);
 }
 
@@ -336,12 +344,13 @@ today menu
 
 
 
-.swiper-pagination-bullets .swiper-pagination-bullet{
-  border: 1px solid var(--mainColor) !important; 
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  border: 1px solid var(--mainColor) !important;
 }
+
 .minibox {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .menubox {
@@ -370,19 +379,19 @@ today menu
 }
 
 .box {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 2em;
-    margin-bottom: 2.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  margin-bottom: 2.5em;
 }
 
 .blogcard {
-    width: 24em;
-    height: auto;
-    background-color: transparent;
-    border-radius: 0.5em;
-    transition: all 1s;
+  width: 24em;
+  height: auto;
+  background-color: transparent;
+  border-radius: 0.5em;
+  transition: all 1s;
 }
 
 .blogcard:hover {
@@ -588,7 +597,7 @@ ContactUs
 
 @media screen and (max-width: 720px) {
   .card {
-    margin-top: 5em;
+    margin: 5em 3em 3em 6em;
   }
 
   .seeall {
@@ -600,23 +609,23 @@ ContactUs
     height: 1.8em;
   }
 
-    .minibox {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .minibox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .blogcard {
-        width: 20em;
-        height: auto;
-        background-color: transparent;
-        border-radius: 0.5em;
-        transition: all 1s;
-        margin-left: 2em;
-        margin-bottom: 2em;
-    }
+  .blogcard {
+    width: 20em;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0.5em;
+    transition: all 1s;
+    margin-left: 2em;
+    margin-bottom: 2em;
+  }
 
-    .box1 {
-        margin-bottom: 2em;
-    }
+  .box1 {
+    margin-bottom: 2em;
+  }
 }

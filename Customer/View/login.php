@@ -3,10 +3,7 @@
 session_start();
 $_SESSION["userid"] = null;
 $_SESSION["username"] = null;
-
-
-
-
+$_SESSION["userpf"] = null;
 
 ?>
 
