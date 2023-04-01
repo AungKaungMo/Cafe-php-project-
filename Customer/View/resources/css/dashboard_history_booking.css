@@ -1,7 +1,7 @@
-.navigation ul li:nth-child(3) {
+.navigation ul li:nth-child(4) {
     background: var(--backgroundPrimary);
   }
-  .navigation ul li:nth-child(3) a {
+  .navigation ul li:nth-child(4) a {
     color: var(--mainColor);
   }
   .historyBox {

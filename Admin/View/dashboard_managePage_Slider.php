@@ -13,8 +13,7 @@ include "./resources/shared/dashboard.php";
     include "./resources/shared/dashboard_managePage.php";
     include "../Controller/sliderSelectController.php";
     ?>
-    <form action="../Controller/sliderUpController.php" method="POST" enctype="multiple/form-data">
-
+    <form action="../Controller/sliderUpController.php" method="post" enctype="multiple/form-data">
         <div class="d-flex flex-column justify-content-center align-items-center">
 
             <div class="my-3">
@@ -87,7 +86,16 @@ include "./resources/shared/dashboard.php";
                 </div>
 
             </div>
+            <<<<<<< HEAD </div>
+                =======
+                <<<<<<< HEAD </div>
+                    =======
+                    <<<<<<< HEAD </div>
+                        =======
         </div>
+        >>>>>>> origin/main
+        >>>>>>> 7559f4a33aea1e4be9b9f4f0eff3d19ecd26fb4f
+        >>>>>>> origin/main
         <div class="saveBtn ">
             <button name="saveChange" type="submit">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>

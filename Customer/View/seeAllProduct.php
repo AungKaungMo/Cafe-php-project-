@@ -23,6 +23,7 @@
 
   <!------------------------   JS   -------------------------------->
   <script src="./resources/js/navigation.js"></script>
+  <script src="./resources/js/cartControl.js"></script>
 
   <!------------------------   CSS   ----------------------------->
   <link rel="stylesheet" href="./resources/css/root.css">
@@ -75,26 +76,26 @@
 
     <?php for ($i = 0; $i < count($result); $i++) { ?>
                     <div class="card mt-5">
+                     
                         <div class="carditems">
                             <div class="disphoto">
-                                <img src="../../Storages/<?= $result[$i]["product_photo"] ?>" alt="">
+                                <img src="../../Storages/<?= $result[$i]["product_photo"] ?>" alt="" class="img">
                             </div>
                             <p class="pname"><?= $result[$i]["product_name"] ?></p>
                             <div class="disbtn">
                                 <button>
-                                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-id="<?= $result[$i]["product_id"] ?>" index="<?= $i ?>" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> data-bs-toggle="modal" data-bs-target="#staticBackdrop" <?php } ?> width="25" height="25" class="buy"></iconify-icon>
                                 </button>
 
                                 <button>
-                                    <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                                    <iconify-icon icon="mdi:cards-heart-outline" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } ?> width="25" height="25"></iconify-icon>
                                 </button>
                             </div>
-                            <div class="disprice">
-                                <?= $result[$i]["product_price"] ?>
+                            <div class="disprice price">
+                                <?= $result[$i]["product_price"] ?> MMK
                             </div>
                         </div>
                     </div>
-
 
                 <?php } ?>
 
@@ -115,127 +116,16 @@
             1500MMK
           </div>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="carditems">
-          <img src="./resources/img/blackcoffee.png" alt="">
-          <p class="pname">Black coffee</p>
-          <div class="pbtn">
-            <button>
-              <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
-            </button>
-
-            <button>
-              <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
-            </button>
-          </div>
-          <div class="price">
-            1500MMK
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="carditems">
-          <img src="./resources/img/blackcoffee.png" alt="">
-          <p class="pname">Black coffee</p>
-          <div class="pbtn">
-            <button>
-              <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
-            </button>
-
-            <button>
-              <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
-            </button>
-          </div>
-          <div class="price">
-            1500MMK
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="carditems">
-          <img src="./resources/img/blackcoffee.png" alt="">
-          <p class="pname">Black coffee</p>
-          <div class="pbtn">
-            <button>
-              <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
-            </button>
-
-            <button>
-              <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
-            </button>
-          </div>
-          <div class="price">
-            1500MMK
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="carditems">
-          <img src="./resources/img/blackcoffee.png" alt="">
-          <p class="pname">Black coffee</p>
-          <div class="pbtn">
-            <button>
-              <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
-            </button>
-
-            <button>
-              <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
-            </button>
-          </div>
-          <div class="price">
-            1500MMK
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="carditems">
-          <img src="./resources/img/blackcoffee.png" alt="">
-          <p class="pname">Black coffee</p>
-          <div class="pbtn">
-            <button>
-              <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
-            </button>
-
-            <button>
-              <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
-            </button>
-          </div>
-          <div class="price">
-            1500MMK
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="carditems">
-          <img src="./resources/img/blackcoffee.png" alt="">
-          <p class="pname">Black coffee</p>
-          <div class="pbtn">
-            <button>
-              <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
-            </button>
-
-            <button>
-              <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
-            </button>
-          </div>
-          <div class="price">
-            1500MMK
-          </div>
-        </div>
       </div> -->
+
 
     </div>
   </div>
 
 
   <div class="line"></div>
+
+
 </body>
 
 </html>
