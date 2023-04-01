@@ -24,23 +24,21 @@ include "./resources/shared/dashboard.php";
 
                 <div class="box">
                     <label for="title1">Title 1</label>
-                    <input type="text" id="title1" name="title1" value="<?= $resultslider[0]["titleOne"]?>">
+                    <input type="text" id="title1" name="title1" value="<?= $resultslider[0]["titleOne"] ?>">
                 </div>
 
                 <div class="box">
-                    <label for="paragraph1">Paragraph 1</label>                    
-                    <textarea id="paragraph1" name="para1"><?= $resultslider[0]["paraOne"]?></textarea>
+                    <label for="paragraph1">Paragraph 1</label>
+                    <textarea id="paragraph1" name="para1"><?= $resultslider[0]["paraOne"] ?></textarea>
                 </div>
 
-                <div class="text-center  mb-3">  
-                <img src="../../Storages/<?= $resultslider[0]["imgOne"]?>" 
-                class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" 
-                width="200px" id="simage1" />    
+                <div class="text-center  mb-3">
+                    <img src="../../Storages/<?= $resultslider[0]["imgOne"] ?>" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="simage1" />
                 </div>
 
                 <div class="box">
                     <label for="image1"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
-                    <input type="file" id="image1" accept="image/png, image/jpeg" name="image1"  hidden>
+                    <input type="file" id="image1" accept="image/png, image/jpeg" name="image1" hidden>
                 </div>
             </div>
 
@@ -49,18 +47,16 @@ include "./resources/shared/dashboard.php";
 
                 <div class="box">
                     <label for="title2">Title 2</label>
-                    <input type="text" id="title2" name="title2" value="<?= $resultslider[0]["titleTwo"]?>">
+                    <input type="text" id="title2" name="title2" value="<?= $resultslider[0]["titleTwo"] ?>">
                 </div>
 
                 <div class="box">
                     <label for="paragraph2">Paragraph 2</label>
-                    <textarea id="paragraph2" name="para2"><?= $resultslider[0]["paraTwo"]?></textarea>
+                    <textarea id="paragraph2" name="para2"><?= $resultslider[0]["paraTwo"] ?></textarea>
                 </div>
 
-                <div class="text-center  mb-3">  
-                <img src="../../Storages/<?= $resultslider[0]["imgTwo"]?>" 
-                class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" 
-                width="200px" id="simage2" <?= $resultslider[0]["imgTwo"]?> />    
+                <div class="text-center  mb-3">
+                    <img src="../../Storages/<?= $resultslider[0]["imgTwo"] ?>" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="simage2" <?= $resultslider[0]["imgTwo"] ?> />
                 </div>
 
                 <div class="box">
@@ -75,18 +71,16 @@ include "./resources/shared/dashboard.php";
 
                 <div class="box">
                     <label for="title3">Title 3</label>
-                    <input type="text" id="title3" name="title3" value="<?= $resultslider[0]["titleThree"]?>">
+                    <input type="text" id="title3" name="title3" value="<?= $resultslider[0]["titleThree"] ?>">
                 </div>
 
                 <div class="box">
                     <label for="paragraph3">Paragraph 3</label>
-                    <textarea id="paragraph3" name="para3"><?=$resultslider[0]["paraThree"]?></textarea>
+                    <textarea id="paragraph3" name="para3"><?= $resultslider[0]["paraThree"] ?></textarea>
                 </div>
 
-                <div class="text-center  mb-3">  
-                <img src="../../Storages/<?= $resultslider[0]["imgThree"]?>" 
-                class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" 
-                width="200px" id="simage3" value="<?= $resultslider[0]["imgThree"]?>"/>    
+                <div class="text-center  mb-3">
+                    <img src="../../Storages/<?= $resultslider[0]["imgThree"] ?>" class="img-fluid hover-shadow" alt="Los Angeles Skyscrapers" width="200px" id="simage3" value="<?= $resultslider[0]["imgThree"] ?>" />
                 </div>
 
                 <div class="box">
@@ -95,7 +89,7 @@ include "./resources/shared/dashboard.php";
                 </div>
 
             </div>
-        </div> 
+        </div>
         <div class="saveBtn ">
             <button name="saveChange" type="submit">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>

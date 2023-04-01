@@ -46,6 +46,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="./dashboard_coins.php">
+                        <span class="icon"><iconify-icon icon="game-icons:two-coins"></iconify-icon></span>
+                        <span class="title">Coins</span>
+                    </a>
+                </li>
+                <li>
                     <a href="./dashboard_history_order.php">
                         <span class="icon"><iconify-icon icon="ic:baseline-history"></iconify-icon></span>
                         <span class="title">History</span>

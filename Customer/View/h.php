@@ -104,15 +104,21 @@ ini_set("display_errors", "1");
 
 
   <!------------------------   About US  -------------------------------->
-
+  <?php
+  include "../Controller/aboutusSelectController.php"
+  ?>
   <div class="mx-sm-5 mx-2 pt-5 row aboutSection ">
     <div class="col-lg-6 ">
       <h1 class="title my-5 fw-bold position-relative pb-2">About Us</h1>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
+        <?php
+        echo $resultA[0]["about_text"];
+        ?>
+        <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
         ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
-        ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
-        <span class="collapse" id="collapseExample4">Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
+        ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus. -->
+        <span class="collapse" id="collapseExample4">Some placeholder content for the collapse component.
+          This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
       </p>
       <div class="mt-5">
         <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">See More</button>
@@ -120,7 +126,10 @@ ini_set("display_errors", "1");
     </div>
     <div class="col-lg-6 ">
       <div class="h-75 ">
-        <img class="aboutImage" src="./resources/img/about.png" height="100%" width="100%">
+        <img  <?php
+        echo $resultA[0]["about_image"];
+        ?>
+        class="aboutImage" src="./resources/img/about.png" height="100%" width="100%">
       </div>
     </div>
   </div>

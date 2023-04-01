@@ -1,7 +1,7 @@
-.navigation ul li:nth-child(4) {
+.navigation ul li:nth-child(5) {
   background: var(--backgroundPrimary);
 }
-.navigation ul li:nth-child(4) a {
+.navigation ul li:nth-child(5) a {
   color: var(--mainColor);
 }
 .commentBox label {
