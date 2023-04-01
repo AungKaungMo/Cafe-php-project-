@@ -29,15 +29,15 @@
                             <div class="mb-md-2 mt-md-5 pb-3">
                                 <img src="./resources/img/footerlogo.png" alt="" class="mb-4" width="30%">
                                 <p class="mb-4 new">Create new password</p>
-                                <form action="" method="post">
-                                    <div class="form-outline form-white mb-4">
-                                        <input type="passsword" id="typeEmailX" class="box fw-bold " placeholder="Create new password" name="" />
+                                <form action="../Controller/createnewController.php" method="post">
+                                    <div class=" form-outline form-white mb-4">
+                                        <input type="password" class="box fw-bold " placeholder="Comfirm your password" name="newpw1" />
                                     </div>
                                     <div class=" form-outline form-white mb-4">
-                                        <input type="password" id="typePasswordX" class="box fw-bold " placeholder="Comfirm your password" name="" />
+                                        <input type="password" class="box fw-bold " placeholder="Comfirm your password" name="newpw2" />
                                     </div>
 
-                                    <button class="button mb-5 fw-bold" type="submit" name="send"> <a href="./h.php">Change</a></button>
+                                    <button class="button mb-5 fw-bold" type="submit" name="send">Change</button>
                                     <br>
                             </div>
                             </form>

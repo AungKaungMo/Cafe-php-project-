@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<div class="footerImg mt-5"></div>
-=======
 <?php
 include "../Controller/selectfooterController.php";
 ?>
 
 
 <!-- <div class="footerImg mt-5"></div>
->>>>>>> 276a3da1f3a715d9cf7af324354e13ccf31abac3
 <div class="footer">
     <div class="footerContainer d-flex mx-sm-5 mx-2 pt-5 mb-4 justify-content-between flex-wrap">
         <div class="footerLogo">
