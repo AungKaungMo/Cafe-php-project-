@@ -73,101 +73,100 @@
   height: 200px;
   cursor: pointer;
 }
-.uploadImage img{
+.uploadImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   cursor: pointer;
 }
-.menubox{
+.menubox {
   padding: 1.5em;
   background-color: var(--backgroundTertiary);
   box-shadow: var(--cardShadow);
   border-radius: 10px;
 }
-.updateImage{
+.updateImage {
   width: 150px;
   height: 150px;
   border-radius: 10px;
   margin: auto;
 }
-.updateImage img{
+.updateImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.productImg{
+.productImg {
   height: 90px;
 }
-.productImg img{
+.productImg img {
   width: 30%;
   height: 100%;
   object-fit: cover;
 }
-.action a:nth-child(1){
+.action a:nth-child(1) {
   color: green;
 }
-.action a:nth-child(2){
+.action a:nth-child(2) {
   color: red;
 }
- .table thead {
-    display: none;
-  }
-  .table,
-  .table tbody,
-  .table tr,
-  .table td {
-    display: block;
-    width: 100%;
-  }
-  .lineTable {
-    display: none !important;
-  }
+.table thead {
+  display: none;
+}
+.table,
+.table tbody,
+.table tr,
+.table td {
+  display: block;
+  width: 100%;
+}
+.lineTable {
+  display: none !important;
+}
 
-  .table tr {
-    margin-bottom: 1.5em;
-  }
+.table tr {
+  margin-bottom: 1.5em;
+}
+.table tbody tr td {
+  text-align: right;
+  padding-left: 50%;
+  position: relative;
+}
+.table td:before {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  width: 50%;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: left;
+}
+tr {
+  background-color: var(--backgroundTertiary);
+  padding: 0.9em;
+  box-shadow: var(--cardShadow);
+  border-radius: 10px;
+}
+@media screen and (max-width: 790px) {
   .table tbody tr td {
-    text-align: right;
-    padding-left: 50%;
-    position: relative;
+    padding-left: unset;
   }
-  .table td:before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 50%;
-    font-weight: bold;
-    font-size: 1.1em;
-    text-align: left;
+}
+@media screen and (max-width: 480px) {
+  td {
+    font-size: 0.8em;
   }
+}
+@media screen and (max-width: 400px) {
   tr {
-    background-color: var(--backgroundTertiary);
-    padding: 0.9em;
-    box-shadow: var(--cardShadow);
-    border-radius: 10px;
+    padding: 0.7em;
   }
-  @media screen and (max-width: 790px) {
-    .table tbody tr td {
-      padding-left: unset;
-    }
+  td {
+    font-size: 0.7em;
   }
-  @media screen and (max-width: 480px) {
-    td {
-      font-size: 0.8em;
-    }
+  .productImg img {
+    width: 45%;
   }
-  @media screen and (max-width: 400px) {
-    tr {
-      padding: 0.7em;
-    }
-    td {
-      font-size: 0.7em;
-    }
-    .productImg img{
-      width: 45%;
-    }
-  }
-  
+}

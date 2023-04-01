@@ -62,7 +62,7 @@ if (isset($_POST["submit"])) {
         if ($file != "") {
             $location = $_FILES["aboutImage"]["tmp_name"];
             $extension = pathinfo($file)["extension"];
-            if (move_uploaded_file($location, "../../Storages/aboutUs/" . "aboutImage." . $extension)) {
+            if (move_uploaded_file($location, "../../Storages/aboutUs/aboutImage." . $extension)) {
                 $sql = $pdo->prepare(
                     "
                             UPDATE m_aboutUs 

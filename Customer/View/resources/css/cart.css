@@ -1,13 +1,104 @@
-body{
-    background-color: green;
-    background-color: var(--backgroundPrimary);
-    color: var(--textColorSecondary);
+body {
+  background-color: green;
+  background-color: var(--backgroundPrimary);
+  color: var(--textColorSecondary);
 }
-.navLine, .line{
-    width: 100%;
-    height: 1px;
-    background-color: var(--mainColor);
+.navLine,
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--mainColor);
 }
-.backIcon a{
-    color: var(--mainColor)
+.backIcon a {
+  color: var(--mainColor);
+}
+
+.productImg {
+  height: 90px;
+}
+.productImg img {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+}
+.table thead {
+  display: none;
+}
+.table,
+.table tbody,
+.table tr,
+.table td {
+  display: block;
+  width: 100%;
+}
+.lineTable {
+  display: none !important;
+}
+
+.table tr {
+  margin-bottom: 1.5em;
+}
+.table tbody tr td {
+  text-align: right;
+  padding-left: 50%;
+  position: relative;
+}
+.table td:before {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  width: 50%;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: left;
+}
+tr {
+  background-color: var(--backgroundTertiary);
+  padding: 0.9em;
+  box-shadow: var(--cardShadow);
+  border-radius: 10px;
+}
+@media screen and (max-width: 790px) {
+  .table tbody tr td {
+    padding-left: unset;
+  }
+}
+@media screen and (max-width: 480px) {
+  td {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 400px) {
+  tr {
+    padding: 0.7em;
+  }
+  td {
+    font-size: 0.7em;
+  }
+  .productImg img {
+    width: 45%;
+  }
+}
+.quantityControl iconify-icon{
+    color: var(--mainColor);
+}
+td[data-label="Shop Name"] a{
+    color: var(--textColorSecondary) !important;
+    text-decoration: underline;
+}
+.btline{
+  width: 300px;
+  height: 1px;
+  background-color: var(--textColorSecondary);
+}
+.checkOutBtn{
+  border: 2px solid var(--mainColor);
+  background-color: var(--mainColor);
+  color: var(--textColorPrimary);
+  font-weight: bold;
+  transition: all 0.5;
+}
+.checkOutBtn:hover{
+  background-color: transparent;
+  color: var(--mainColor);
 }
