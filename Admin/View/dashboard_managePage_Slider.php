@@ -13,7 +13,12 @@ include "./resources/shared/dashboard.php";
     include "./resources/shared/dashboard_managePage.php";
     include "../Controller/sliderSelectController.php";
     ?>
+<<<<<<< HEAD
     <form action="../Controller/sliderUpController.php" method="post" enctype="multiple/form-data">
+=======
+    <form action="../Controller/sliderUpController.php" method="POST" enctype="multiple/form-data">
+
+>>>>>>> origin/main
         <div class="d-flex flex-column justify-content-center align-items-center">
 
             <div class="my-3">
@@ -35,7 +40,7 @@ include "./resources/shared/dashboard.php";
 
                 <div class="box">
                     <label for="image1"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
-                    <input type="file" id="image1" accept="image/png, image/jpeg" name="image1" required hidden>
+                    <input type="file" id="image1" accept="image/png, image/jpeg" name="image1"  hidden>
                 </div>
             </div>
 
@@ -58,7 +63,7 @@ include "./resources/shared/dashboard.php";
 
                 <div class="box">
                     <label for="image2"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
-                    <input type="file" id="image2" accept="image/png, image/jpeg" name="image2" required hidden>
+                    <input type="file" id="image2" accept="image/png, image/jpeg" name="image2" hidden>
                 </div>
 
             </div>
@@ -82,12 +87,16 @@ include "./resources/shared/dashboard.php";
 
                 <div class="box">
                     <label for="image3"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
-                    <input type="file" id="image3" accept="image/png, image/jpeg" name="image3" required hidden>
+                    <input type="file" id="image3" accept="image/png, image/jpeg" name="image3" hidden>
                 </div>
 
             </div>
+<<<<<<< HEAD
 
         </div>
+=======
+        </div> 
+>>>>>>> origin/main
         <div class="saveBtn ">
             <button name="saveChange" type="submit">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>

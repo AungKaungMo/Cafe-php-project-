@@ -37,6 +37,7 @@
 
   <?php
   include "./resources/shared/nav.php";
+  include "../Controller/seeMoreMenuController.php";
   ?>
 
   <!-- =====================================little Nav===================================== -->
@@ -67,13 +68,37 @@
   </div>
 
   <!-- ====================================== Product==================================================== -->
-  <h1>Discount Product</h1>
+  <h1>Products</h1>
   <div class="container">
 
     <div class="cardContainer">
 
+    <?php for ($i = 0; $i < count($result); $i++) { ?>
+                    <div class="card mt-5">
+                        <div class="carditems">
+                            <div class="disphoto">
+                                <img src="../../Storages/<?= $result[$i]["product_photo"] ?>" alt="">
+                            </div>
+                            <p class="pname"><?= $result[$i]["product_name"] ?></p>
+                            <div class="disbtn">
+                                <button>
+                                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                                </button>
 
-      <div class="card">
+                                <button>
+                                    <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                                </button>
+                            </div>
+                            <div class="disprice">
+                                <?= $result[$i]["product_price"] ?>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <?php } ?>
+
+      <!-- <div class="card">
         <div class="carditems">
           <img src="./resources/img/blackcoffee.png" alt="">
           <p class="pname">Black coffee</p>
@@ -204,26 +229,7 @@
             1500MMK
           </div>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="carditems">
-          <img src="./resources/img/blackcoffee.png" alt="">
-          <p class="pname">Black coffee</p>
-          <div class="pbtn">
-            <button>
-              <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
-            </button>
-
-            <button>
-              <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
-            </button>
-          </div>
-          <div class="price">
-            1500MMK
-          </div>
-        </div>
-      </div>
+      </div> -->
 
     </div>
   </div>

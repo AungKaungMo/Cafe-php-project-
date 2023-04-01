@@ -56,11 +56,9 @@ session_start();
                                     <span class="cartCount">(14)</span>
                                 </div>
                                 <div>
-                                    <form method="post" action="">
-                                        <input type="hidden" value="" class="cartsValue">
-                                        <!-- <a href=""> -->
-                                        <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
-                                        <!-- </a>     -->
+
+                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
+
                                     </form>
                                 </div>
 

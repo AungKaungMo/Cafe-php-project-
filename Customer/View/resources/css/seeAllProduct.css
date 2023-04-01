@@ -75,7 +75,7 @@ h1 {
 .card {
   position: relative;
   width: 250px;
-  height: 200px;
+  height: 210px;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255),
@@ -87,11 +87,21 @@ h1 {
   box-shadow: 1px 1px 2px;
   margin-bottom: 6.5em;
 }
-
-.carditems img {
+.disphoto{
+  width: 130px;
+  height: 130px;
   position: absolute;
-  left: 48px;
+  left: 0;
+  right: 0;
   top: -75px;
+  margin: auto;
+  transition: all 0.5s;
+}
+.disphoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
 }
 
 .carditems p {
@@ -101,12 +111,12 @@ h1 {
   margin-left: 20px;
 }
 
-.carditems .pbtn {
+.carditems .disbtn {
   margin-left: 22%;
   margin-bottom: 5px;
 }
 
-.carditems .pbtn button {
+.carditems .disbtn button {
   width: 34px;
   height: 34px;
   background-color: var(--mainColor);
@@ -116,25 +126,29 @@ h1 {
   margin-left: 20px;
   transition: all 0.5s;
 }
-.pbtn iconify-icon{
+.disbtn iconify-icon{
   color: var(--secondMainColor);
- 
 }
-.pbtn button:hover{
+.disbtn button:hover{
   transform: scale(1.1);
 }
-.price {
-  width: 110px;
+.disprice {
+  width: 120px;
   height: 40px;
+  padding: 0.5em;
   border-radius: 30px;
-  padding: 5px 0px 0px 10px;
+  /* padding: 5px 0px 0px 10px; */
   background-color: var(--mainColor);
-  font-size: var(--navigationFontSize);
+  text-align:center;
   color: var(--textColorPrimary);
   font-family: var(--titleFont);
   position: absolute;
-  left: 66px;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
+
 
 .line {
   width: 90%;

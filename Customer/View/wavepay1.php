@@ -75,7 +75,7 @@
 
 
             <div class=" text-center mt-4">
-                <input type="text" name="" id="" placeholder="Wave account phone number" class="phone">
+                <input type="text" name="" id="" placeholder="email address" class="phone">
             </div>
 
             <div class="fouth mt-3">
