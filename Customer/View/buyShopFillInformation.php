@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -80,13 +80,13 @@
           <div class="fw-bold fs-4 mt-md-0 mt-5">Billing Info</div>
           <div>
             <input type="text" placeholder="Shop's Name" class="inputFill" name="shopName" required>
-            <p class="text-danger"><?php 
-            if(empty($_SESSION["alreadyHave"])){
-              echo "";
-            }else {
-              echo $_SESSION["alreadyHave"];
-            }
-            ?>
+            <p class="text-danger"><?php
+                                    if (empty($_SESSION["alreadyHave"])) {
+                                      echo "";
+                                    } else {
+                                      echo $_SESSION["alreadyHave"];
+                                    }
+                                    ?>
             </p>
           </div>
 

@@ -8,8 +8,10 @@ if (isset($_SESSION["userid"])) {
     $pdo = $db->connect();
     $sql = $pdo->prepare(
         "
-        SELECT * FROM cus_customer WHERE cus_id = :id AND del_flg=0;
+        SELECT * FROM m_customer WHERE cus_id = :id AND del_flg=0;
         "
     );
-    $sql->bindValue(":id",$);
+    $sql->bindValue(":id", $userid);
+    $sql->execute();
+    $pf = $sql->fetchAll(PDO::FETCH_ASSOC);
 }

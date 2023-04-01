@@ -14,8 +14,6 @@ if (isset($_POST["savechange"])) {
     $pdo = $db->connect();
     if ($file != "") {
 
-
-
         $location = $_FILES["shopLogo"]["tmp_name"];
         if (move_uploaded_file($location, "../../Storages/profile/" . $file)) {
             $sql = $pdo->prepare(

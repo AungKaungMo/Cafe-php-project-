@@ -1,3 +1,9 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +46,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./dashboard_profile.php">
+                    <a href="./dashboard_userprofile.php">
                         <span class="icon"><iconify-icon icon="gg:profile"></iconify-icon></span>
                         <span class="title">Profile</span>
                     </a>
@@ -92,7 +98,13 @@
                 <!-- userImg -->
                 <div class="fs-4 fw-bold">User</div>
                 <div class="owner">
-                    <img src="./resources/img/profile.jpg">
+                    <?php
+                    if ($_SESSION["userpf"] == null) { ?>
+                        <img src="./resources/img/profile.png">
+                    <?php    } else { ?>
+                        <img src="../../Storages/<?php echo $_SESSION["userpf"] ?>" alt="Los Angeles Skyscrapers">
+                    <?php    }
+                    ?>
                 </div>
             </div>
             <hr>

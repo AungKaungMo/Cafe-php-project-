@@ -20,7 +20,14 @@ session_start();
                 </div>
                 <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
                     <!-- <img src="./resources/img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
-                    <iconify-icon icon="mdi:user-circle" class="userIcon m-1"></iconify-icon>
+                    <?php
+                    if ($_SESSION["userpf"] == null) { ?>
+                        <img src="./resources/img/profile.png" width="50px" height="50px" class="rounded-5 userimage">
+                    <?php    } else { ?>
+                        <img src="../../Storages/<?php echo $_SESSION["userpf"] ?>" alt="Los Angeles Skyscrapers" width="50px" height="50px" class="rounded-5 userimage">
+                    <?php    }
+                    ?>
+                    <!-- <iconify-icon icon="mdi:user-circle" class="userIcon m-1"></iconify-icon> -->
 
                     <div class="d-flex  align-items-center">
                         <p class="mt-3 userText ">
@@ -49,12 +56,10 @@ session_start();
                                     <span class="cartCount">(14)</span>
                                 </div>
                                 <div>
-                                    <form method="post" action="">
-                                        <input type="hidden" value="" class="cartsValue">
-                                        <!-- <a href=""> -->
+
                                     <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
-                                    <!-- </a>     -->
-                                </form>
+
+                                    </form>
                                 </div>
 
                             </div>
@@ -144,7 +149,14 @@ session_start();
                 </div>
                 <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
                     <!-- <img src="./resources/img/user.png" width="50px" height="50px" class="rounded-5 userimage"> -->
-                    <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon>
+                    <?php
+                    if ($_SESSION["userpf"] == null) { ?>
+                        <img src="./resources/img/profile.png" width="50px" height="50px" class="rounded-5 userimage">
+                    <?php    } else { ?>
+                        <img src="../../Storages/<?php echo $_SESSION["userpf"] ?>" alt="Los Angeles Skyscrapers" width="50px" height="50px" class="rounded-5 userimage">
+                    <?php    }
+                    ?>
+                    <!-- <iconify-icon icon="mdi:user-circle" class="userIcon m-1" width="50" height="50"></iconify-icon> -->
 
                     <div class="d-flex  align-items-center">
                         <p class="mt-3 userText">
@@ -230,16 +242,16 @@ session_start();
 include "./resources/shared/afterLogin.php";
 ?>
 
-                            <!---------------  CHECK LOGIN MODAL  ---------------------->
+<!---------------  CHECK LOGIN MODAL  ---------------------->
 
-                    <!-- Modal -->
+<!-- Modal -->
 <div class="modal fade" id="staticBackdropCheckLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body newUser">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body newUser">
                 <div>
                     <div class="fs-4 text-center ">New User?</div>
                     <div class="mt-3">
@@ -249,9 +261,9 @@ include "./resources/shared/afterLogin.php";
                         <div class="text-center">Already have an account? <a href="./login.php">Log In</a></div>
                     </div>
                 </div>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!-----------------------------   RES side bar   --------------------------->
