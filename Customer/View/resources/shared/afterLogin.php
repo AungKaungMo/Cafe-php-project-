@@ -114,7 +114,7 @@
 
 
 <!--------------cart----------------->
-
+<!-- 
 <div class="offcanvas offcanvas-end cartBox" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <div class="d-flex ">
@@ -227,7 +227,7 @@
   </div>
 
 
-</div>
+</div> -->
 
 <!---------- cart popup--------->
 
@@ -250,7 +250,7 @@
               <div class="cartbox1">
                 <iconify-icon icon="bi:dash-circle-fill" id="mine" class=" me-3 minus" ></iconify-icon>
                 <h6 id="changeNum" class="fw-bold me-3 countItem">1</h6>
-                <iconify-icon icon="mdi:plus-circle" class=""></iconify-icon>
+                <iconify-icon icon="mdi:plus-circle" id="plus" class="plus"></iconify-icon>
               </div>
               <div class="line"></div>
             </div>
@@ -270,11 +270,7 @@
           </div>
         </div>
         <div class="addtocart modal-footer">
-          <form method="post" action="../Controller/cartController.php" onsubmit="addCart()">
-          <input type="hidden" value="shopinterfacemenu.php" name="shopinterface">
-          <input type="hidden" name="cartItem" id="cartList">
           <button class="p-2 addCart" data-bs-dismiss="modal" name="addtocart">Add to Cart</button>
-          </form>
         </div>
       </div>
     </div>

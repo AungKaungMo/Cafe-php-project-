@@ -1,16 +1,25 @@
 <?php
-session_start();
-    if(isset($_POST["addtocart"])){
-        $location = $_POST["shopinterface"];
-        $cartLists = json_decode($_POST["cartItem"], true);
-      
+
+    if(isset($_POST["cartClick"])){
+        $cartLists = json_decode($_POST["cartItems"], true);
+        // $shopName = $_POST["shopName"];
+        $total = 0;
+        
         include "../Model/dbConnection.php";
         $db = new DBConnection();
         $pdo = $db->connect();
 
         $sql = $pdo->prepare(
             "
-                SELECT * FROM m_product WHERE del_flg = 0 AND FIND_IN_SET(product_id,:id)
+                SELECT 
+                *
+                FROM
+                m_product AS mp
+                INNER JOIN m_shop AS ms
+                ON
+                mp.shop_id = ms.shop_id
+                WHERE ms.del_flg = 0 AND 
+                FIND_IN_SET(mp.product_id,:id)
             "
         );
 
@@ -22,9 +31,4 @@ session_start();
         $sql->bindValue(":id", implode(",", $ids));
         $sql->execute();
         $cartItemsLists = $sql->fetchAll(PDO::FETCH_ASSOC);
-        $_SESSION["cardItemsList"] = $cartItemsLists;
-        $_SESSION["cartLists"] = $cartLists;
-
-        header("Location: ../View/$location");
     }
-?>
