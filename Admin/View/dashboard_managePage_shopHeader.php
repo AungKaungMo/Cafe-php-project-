@@ -1,9 +1,10 @@
 <?php
+ini_set("display_errors", "1");
 session_start();
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_managePage.css">
-<link rel="stylesheet" href="./resources/css/dashboard_managePage_Dis&Pro1n2.css">
+<link rel="stylesheet" href="./resources/css/dashboard_managePage_shopHeader.css">
 
 </head>
 

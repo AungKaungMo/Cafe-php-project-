@@ -5,7 +5,7 @@
         <h1><a href="./dashboard_managePage_AboutUs.php">About Us</a></h1>
         <h1><a href="./dashboard_managePage_Services.php">Services</a></h1>
         <h1><a href="./dashboard_managePage_ContactUs.php">Contact Us</a></h1>
-        <h1><a href="./dashboard_managePage_Dis&Pro1.php">Discount & Promotions</a></h1>
+        <h1><a href="./dashboard_managePage_shopHeader.php">Shop Header</a></h1>
         <h1><a href="./dashboard_managePage_Footer.php">Footer</a></h1>
     </div>
     <hr class="line">
