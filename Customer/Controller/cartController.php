@@ -1,8 +1,8 @@
 <?php
 
     if(isset($_POST["cartClick"])){
-        $cartLists = json_decode($_POST["cartItems"], true);
-        // $shopName = $_POST["shopName"];
+        $cartLists = json_decode($_POST["cartList"], true);
+        // $_SESSION["cartLists"] = $cartLists;
         $total = 0;
         
         include "../Model/dbConnection.php";
@@ -12,7 +12,9 @@
         $sql = $pdo->prepare(
             "
                 SELECT 
-                *
+                mp.*,
+                ms.shop_name,
+                ms.township
                 FROM
                 m_product AS mp
                 INNER JOIN m_shop AS ms

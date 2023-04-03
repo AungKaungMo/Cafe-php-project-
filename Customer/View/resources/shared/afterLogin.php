@@ -265,7 +265,7 @@
               <div class="babyline"></div>
             </div>
             <div class="input4 mt-4 text-center">
-              <textarea name="" id="" class="note" placeholder="Note to order"></textarea>
+              <textarea name="" id="noteToOrder" class="note" placeholder="Note to order"></textarea>
             </div>
           </div>
         </div>
