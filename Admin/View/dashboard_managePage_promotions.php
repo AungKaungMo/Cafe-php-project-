@@ -11,7 +11,8 @@ include "./resources/shared/dashboard.php";
 <body>
 
     <?php
-    include "./resources/shared/dashboard_managePage.php"; 
+    include "./resources/shared/dashboard_managePage.php";
+    include "../Controller/dashboard_dis&promotion_showController.php";
     ?>
 
 

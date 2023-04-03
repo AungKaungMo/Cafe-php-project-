@@ -78,28 +78,30 @@ ini_set("display_errors", "1");
                 <div class="line"></div>
             </div>
 
-
+            <form action="../Controller/waveOTPcontroller.php" method="post">
             <div class=" text-center mt-4">
-                <input type="text" name="" id="" placeholder="email address" class="phone">
+                <input type="text" name="useremail" id="" placeholder="email address" 
+                class="phone">
             </div>
 
             <div class="fouth mt-3">
-                <input type="password" name="" id="" placeholder="One time password" class="pas ms-4">
+                <input type="password" name="password" id="" placeholder="One time password" class="pas ms-4">
                 <div class="otpBtn">
-                    <button class="p-2 me-4">Get OTP</button>
+                    <button class="p-2 me-4" name="submit">Get OTP</button>
                 </div>
             </div>
+            </form>
 
             <div class="text mt-3 ps-4">
                 <p>OTP SMS will be sent to your WavePay registered <br>
                     Phone Number.</p>
             </div>
-
+     <form action="../Controller/wave1confirmController.php"  method="post">
             <div class="comBtn text-center mt-3">
                 <a href="./wavepay2.php">
-                    <button class="p-2">Comfirm</button></a>
+                    <button name="confirm" class="p-2">Comfirm</button></a>
             </div>
-
+            </form>
         </div>
     </div>
 </body>
