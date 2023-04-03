@@ -48,17 +48,21 @@ $(document).ready(() => {
 
   $(".addCart").click(function addCart() {
     let found = false;
+    let noteValue = $("#noteToOrder").val();
     carts.forEach(item => {
       if (Number(item.id) == Number(itemId)) {
         item.quantity += count;
         found = true;
+        item.orderNote += " / " + noteValue;
       }
+      $("#noteToOrder").val("");
     });
 
     if (!found) {
         carts.push({
         id: itemId,
         quantity: count,
+        orderNote: noteValue,
       });
     }
 

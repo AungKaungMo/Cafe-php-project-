@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,6 +98,14 @@
 
         </div>
     </div>
+
+    <script>
+        let order = "<?= $_SESSION["order"] ?>";
+        console.log(order)
+        if(order == 1){
+            localStorage.removeItem("cart");
+        }
+    </script>
 </body>
 
 </html>

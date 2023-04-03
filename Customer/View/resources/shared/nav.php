@@ -54,10 +54,10 @@ session_start();
                   <span class="cartCount">(14)</span>
                 </div>
                 <div>
-                  <form method="post" action="./cart.php" enctype="multipart/form-data">
-                    <input type="hidden" class="cartList" name="cartItems">
+                  <form method="post" action="./cart.php" enctype="multipart/form-data" >
+                    <input type="hidden" class="cartList" name="cartList">
                     <button type="btn" class="bg-transparent border-0" name="cartClick">
-                      <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
+                      <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon"></iconify-icon>
                     </button>
                   </form>
                 </div>
@@ -191,9 +191,9 @@ session_start();
                 </div>
                 <div>
                   <form method="post" action="./cart.php" enctype="multipart/form-data">
-                    <input type="hidden" clas="cartList" name="cartList">
+                    <input type="hidden" class="cartList" name="cartList">
                     <button type="btn" class="bg-transparent border-0" name="cartClick">
-                      <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
+                      <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon"></iconify-icon>
                     </button>
                   </form>
                 </div>
@@ -254,6 +254,30 @@ session_start();
 include "./resources/shared/afterLogin.php";
 ?>
 
+
+<!---------------  CHECK LOGIN MODAL  ---------------------->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdropCheckLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body newUser">
+                <div>
+                    <div class="fs-4 text-center ">New User?</div>
+                    <div class="mt-3">
+                        <div class="text-center">Dont have an account? <a href="./signup.php">Sign Up</a></div>
+                    </div>
+                    <div class="mt-3 mb-4">
+                        <div class="text-center">Already have an account? <a href="./login.php">Log In</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-----------------------------   RES side bar   --------------------------->
 <div class="position-absolute top-0 p-5  sideBar d-flex flex-column justify-content-center align-items-center ">

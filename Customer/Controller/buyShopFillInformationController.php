@@ -15,6 +15,7 @@ if (isset($_POST["submit"])) {
     $packageType = $_POST["packageType"];
     $township = $_POST["township"];
     $payment = $_POST["payment"];
+    $_SESSION["order"] = 0;
 
 
     if ($password != $confirmPassword) {

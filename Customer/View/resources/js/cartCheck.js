@@ -7,8 +7,8 @@ $(document).ready(() => {
   let totalCoinPrice = document.getElementsByClassName("totalCoinPrice");
   let subtotal = document.getElementsByClassName("subTotal")[0];
   let taxFee = document.getElementsByClassName("taxFee")[0];
-  let orgp1;
-   let orgp2;
+  $("#totalPriceCheck").val(document.getElementsByClassName("grandTotal")[0].innerText);
+  $(".cartList").val(JSON.stringify(carts));
 
   for (let i = 0; i < orgCount.length; i++) {
     document.getElementsByClassName("plus")[i].addEventListener("click", () => {
@@ -27,7 +27,10 @@ $(document).ready(() => {
       localStorage.setItem("cart",JSON.stringify(carts));
       subtotal.innerText = Number(subtotal.innerText.substring(0,subtotal.innerText.length - 11)) + mmk + " MMK(Coins)";
       taxFee.innerText =(Number(subtotal.innerText.substring(0,subtotal.innerText.length - 11)) + mmk) * 5/100 + " MMK(Coins)"; 
-      document.getElementsByClassName("grandTotal")[0].innerText = Number(subtotal.innerText.substring(0,subtotal.innerText.length - 11)) + Number(taxFee.innerText.substring(0,taxFee.innerText.length - 11)) + " MMK(Coins)";;
+      document.getElementsByClassName("grandTotal")[0].innerText = Number(subtotal.innerText.substring(0,subtotal.innerText.length - 11)) + Number(taxFee.innerText.substring(0,taxFee.innerText.length - 11)) + " MMK(Coins)";
+      $("#totalPriceCheck").val(document.getElementsByClassName("grandTotal")[0].innerText);
+      carts[i].quantity += 1;
+      $(".cartList").val(JSON.stringify(carts));
     });
 
     document
@@ -51,11 +54,11 @@ $(document).ready(() => {
         subtotal.innerText = Number(subtotal.innerText.substring(0,subtotal.innerText.length - 11)) - mmk + " MMK(Coins)";
         taxFee.innerText =(Number(subtotal.innerText.substring(0,subtotal.innerText.length - 11)) + mmk) * 5/100 + " MMK(Coins)"; 
         document.getElementsByClassName("grandTotal")[0].innerText = Number(subtotal.innerText.substring(0,subtotal.innerText.length - 11)) + Number(taxFee.innerText.substring(0,taxFee.innerText.length - 11)) + " MMK(Coins)";
+        $("#totalPriceCheck").val(document.getElementsByClassName("grandTotal")[0].innerText);
+        carts[i].quantity -= 1;
+        $(".cartList").val(JSON.stringify(carts));
       });
 
-    
-
   }
-
-
+console.log($(".cartList").val())
 });

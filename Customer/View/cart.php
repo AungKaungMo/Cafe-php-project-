@@ -1,7 +1,10 @@
 <?php
+session_start();
     include "../Controller/cartController.php";
     // echo "<pre>";
     // print_r($cartItemsLists);
+    $_SESSION["cartItemsLists"] = $cartItemsLists;
+    // $cartItemsLists = $_SESSION["cartItemsLists"] 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +40,8 @@
     </div>
     <div class="navLine"></div>
 
+    <?php if(count($cartItemsLists) != 0){ ?>
+                
     <div class="mx-4 mt-5">
         <table class="table">
 
@@ -63,7 +68,7 @@
                     <iconify-icon icon="mdi:plus-circle" class="ms-2 plus" width="25" height="25"></iconify-icon>
                     </td>
                     <td data-label="Notes order">
-                        Please add a little sugar.
+                    <?= $cartLists[$i]["orderNote"] ?>
                     </td>
                     <td data-label="Discount">
                     <?= $cartItemsLists[$i]["product_discount"] ?> %
@@ -93,7 +98,6 @@
 
 
                 <div class="d-flex flex-column align-items-end mb-5 mt-4">
-                    <form>
                         
                     <div class="d-flex">
                     <div>Sub Total</div>
@@ -108,10 +112,13 @@
                     <div class="d-flex">
                     <div>Grand Total</div>
                     <div class="fw-bold ms-5 grandTotal"><?= $tax + $total ?> MMK(Coins)</div>
+                  
                     </div>
+                    <form method="post" action="./orderconfirm.php">
                     <div class="mt-4 d-flex justify-content-center">
-                        
-                    <button class="p-2 rounded-1 checkOutBtn">
+                    <input type="hidden" name="totalPrice" id="totalPriceCheck"> 
+                    <input type="hidden" name="cartLists" class="cartList">
+                    <button class="p-2 rounded-1 checkOutBtn" type="submit" name="checkout">
                         Check Out
                     </button>
                     </div>
@@ -119,7 +126,7 @@
                 </div>
 
     </div>
-
+<?php } ?>
 
 </body>
 
