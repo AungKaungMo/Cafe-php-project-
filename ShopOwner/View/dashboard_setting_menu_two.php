@@ -14,9 +14,9 @@ include "./resources/shared/dashboard.php";
     ?>
 
     <div class="d-flex justify-content-center mt-4 subnav">
-        <a href="./dashboard_setting_menu.php">
+        <!-- <a href="./dashboard_setting_menu.php">
             <h1 class="fs-4 me-5">Home Menu</h1>
-        </a>
+        </a> -->
         <a href="./dashboard_setting_menu_two.php">
             <h1 class="fs-4 activeSubNav">Add&Change Menu</h1>
         </a>
@@ -51,7 +51,7 @@ include "./resources/shared/dashboard.php";
                 <div class="box">
                     <label for="ptype">Product Type</label>
                     <select id="ptype" name="ptype" required>
-                        <option value="1" >Coffee</option>
+                        <option value="1">Coffee</option>
                         <option value="2" selected>Dessert</option>
                         <option value="3">Juice</option>
                     </select>

@@ -45,7 +45,7 @@ $data = $result;
                     <td><?= $key["email"] ?></td>
                     <td><?= $key["message"] ?></td>
                     <td><?= $key["create_date"] ?></td>
-                    <td class="danger"><a href="">Remove</a></td>
+                    <td class="danger"><a href="../Controller/delectCuController.php?id=<?= $key["id"] ?>">Remove</a></td>
                 </tr>
 
             <?php  }  ?>
