@@ -1,17 +1,14 @@
+
 <?php
 include "./resources/shared/dashboard.php";
-include "../Controller/contactController.php";
-$data = $result;
 ?>
-<link rel="stylesheet" href="./resources/css/dashboard_manage.css">
-<link rel="stylesheet" href="./resources/css/dashboard_manage_ContactUs.css">
+<link rel="stylesheet" href="./resources/css/dashboard_coins.css"> 
 
 </head>
 
 <body>
 
     <div class="m-4">
-        <div class="fw-bold fs-3 mb-4">Contact Us</div>
         <tbody class="tableBody">
             <tr class="lineTable">
                 <td colspan="7">
@@ -25,34 +22,27 @@ $data = $result;
         <table class="table">
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">PhoneNumber</th>
-                <th scope="col">Email</th>
-                <th scope="col">Message</th>
-                <th scope="col">Date</th>
-                <th scope="col">Action</th>
+                <th scope="col">Earn</th>
+                <th scope="col">Spend</th>
+                <th scope="col">Total</th>
+                <th scope="col">Cus ID</th>
+                <th scope="col">Shop ID</th>
+                <th scope="col">Order ID</th>
+                <th scope="col">Date</th> 
 
             </tr>
-
-            <?php
-
-            foreach ($data as $key) { ?>
-
+            <?php foreach ($checkresult as $shop) {   ?>
                 <tr>
-                    <td><?= $key["id"] ?></td>
-                    <td><?= $key["name"] ?></td>
-                    <td><?= $key["phone"] ?></td>
-                    <td><?= $key["email"] ?></td>
-                    <td><?= $key["message"] ?></td>
-                    <td><?= $key["create_date"] ?></td>
-                    <td class="danger"><a href="../Controller/delectCuController.php?id=<?= $key["id"] ?>">Remove</a></td>
+                    <td><?= $shop["coin_id"]  ?></td>
+                    <td><?= $shop["earn_coins"]  ?></td>
+                    <td><?= $shop["spend_coins"]  ?></td>
+                    <td><?= $shop["total_coins"]  ?></td>
+                    <td><?= $shop["cus_id"]  ?></td>
+                    <td><?= $shop["shop_id"]  ?></td>
+                    <td><?= $shop["order_id"]  ?></td>
+                    <td><?= $shop["created_date"]  ?></td>
                 </tr>
-
-            <?php  }  ?>
-
-
-
-
+            <?php } ?>
 
         </table>
 

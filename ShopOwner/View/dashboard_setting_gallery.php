@@ -33,7 +33,7 @@ include "./resources/shared/dashboard.php";
                     </div>
                     <div class="box">
                         <label for="s1img1"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
-                        <input type="file" id="s1img1" accept="image/png, image/jpeg" name="img1" required hidden>
+                        <input type="file" id="s1img1" accept="image/png, image/jpeg" name="img1" hidden>
                     </div>
                     <div class="text-center  mb-3">
                         <?php
@@ -46,7 +46,7 @@ include "./resources/shared/dashboard.php";
                     </div>
                     <div class="box">
                         <label for="s1img2"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
-                        <input type="file" id="s1img2" accept="image/png, image/jpeg" name="img2" required hidden>
+                        <input type="file" id="s1img2" accept="image/png, image/jpeg" name="img2" hidden>
                     </div>
                     <div class="text-center  mb-3">
                         <?php
@@ -59,7 +59,7 @@ include "./resources/shared/dashboard.php";
                     </div>
                     <div class="box">
                         <label for="s1img3"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
-                        <input type="file" id="s1img3" accept="image/png, image/jpeg" name="img3" required hidden>
+                        <input type="file" id="s1img3" accept="image/png, image/jpeg" name="img3" hidden>
                     </div>
                     <div class="text-center  mb-3">
                         <?php
@@ -72,7 +72,7 @@ include "./resources/shared/dashboard.php";
                     </div>
                     <div class="box">
                         <label for="s1img4"><iconify-icon icon="material-symbols:cloud-upload" class="fs-2 uicon"></iconify-icon></label>
-                        <input type="file" id="s1img4" accept="image/png, image/jpeg" name="img4" required hidden>
+                        <input type="file" id="s1img4" accept="image/png, image/jpeg" name="img4" hidden>
                     </div>
                 </div>
             </div>

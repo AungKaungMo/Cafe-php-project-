@@ -50,20 +50,33 @@ ini_set("display_errors", "1");
   ?>
 
   <!-----------------------------   Header SLider    --------------------->
-
+  <?php
+  include "../Controller/sliderSelectController.php"
+  ?>
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="backImage backgroundCafeImage1 swiper-slide">
 
         <div class="mx-sm-5 mx-2 pt-5">
-          <h1 class=" fw-bold pt-5">Cofree Cofee</h1>
-          <p class="mt-5 col-lg-6 col-md-9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
+          <h1 class=" fw-bold pt-5">
+            <!-- Cofree Cofee  -->
+            <?php
+            echo $resultS[0]["titleOne"];
+            ?>
+          </h1>
+          <p class="mt-5 col-lg-6 col-md-9">
+            <?php
+            echo $resultS[0]["paraOne"];
+            ?>
+            <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
-            ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
+            ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad -->
           </p>
           <div class="mt-5">
-            <a href="./shopinterface.php"><button class="btn px-2 py-3 fw-bold seemoreBtn">Go Now</button></a>
+            <a href="./shopinterface.php"><button class="btn px-2 py-3 fw-bold seemoreBtn">
+                Go Now
+              </button></a>
           </div>
 
         </div>
@@ -72,11 +85,20 @@ ini_set("display_errors", "1");
       <div class="backImage backgroundCafeImage2 swiper-slide">
 
         <div class="mx-sm-5 mx-2 pt-5">
-          <h1 class=" fw-bold pt-5">Name Less</h1>
-          <p class="mt-5 col-lg-6 col-md-9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
+          <h1 class=" fw-bold pt-5">
+            <!-- Name Less -->
+            <?php
+            echo $resultS[0]["titleTwo"];
+            ?>
+          </h1>
+          <p class="mt-5 col-lg-6 col-md-9">
+            <?php
+            echo $resultS[0]["paraTwo"];
+            ?>
+            <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
-            ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
+            ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad -->
           </p>
           <div class="mt-5">
             <a href="./shopinterface.php"><button class="btn px-2 py-3 fw-bold seemoreBtn">Go Now</button></a>
@@ -87,11 +109,20 @@ ini_set("display_errors", "1");
       <div class="backImage backgroundCafeImage3 swiper-slide">
 
         <div class="mx-sm-5 mx-2 pt-5">
-          <h1 class=" fw-bold pt-5">The Hide Out</h1>
-          <p class="mt-5 col-lg-6 col-md-9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
+          <h1 class=" fw-bold pt-5">
+            <?php
+            echo $resultS[0]["titleThree"];
+            ?>
+            <!-- The Hide Out -->
+          </h1>
+          <p class="mt-5 col-lg-6 col-md-9">
+            <?php
+            echo $resultS[0]["paraThree"];
+            ?>
+            <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
-            ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
+            ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad -->
           </p>
           <div class="mt-5">
             <a href="./shopinterface.php"><button class="btn px-2 py-3 fw-bold seemoreBtn">Go Now</button></a>
@@ -105,15 +136,21 @@ ini_set("display_errors", "1");
 
 
   <!------------------------   About US  -------------------------------->
-
+  <?php
+  include "../Controller/aboutusSelectController.php"
+  ?>
   <div class="mx-sm-5 mx-2 pt-5 row aboutSection ">
     <div class="col-lg-6 ">
       <h1 class="title my-5 fw-bold position-relative pb-2">About Us</h1>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
+        <?php
+        echo $resultA[0]["about_text"];
+        ?>
+        <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
         ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
-        ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
-        <span class="collapse" id="collapseExample4">Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
+        ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus. -->
+        <span class="collapse" id="collapseExample4">Some placeholder content for the collapse component.
+          This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
       </p>
       <div class="mt-5">
         <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">See More</button>
@@ -121,7 +158,9 @@ ini_set("display_errors", "1");
     </div>
     <div class="col-lg-6 ">
       <div class="h-75 ">
-        <img class="aboutImage" src="./resources/img/about.png" height="100%" width="100%">
+        <img <?php
+              echo $resultA[0]["about_image"];
+              ?> class="aboutImage" src="./resources/img/about.png" height="100%" width="100%">
       </div>
     </div>
   </div>

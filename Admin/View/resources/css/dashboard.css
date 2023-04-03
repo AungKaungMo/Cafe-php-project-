@@ -2,14 +2,17 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
 .navBar h1:hover,
 .navBar a:hover {
   color: var(--mainColor);
 }
+
 ol,
 ul {
   padding-left: 0 !important;
 }
+
 .admindsh_container {
   position: relative;
   width: 100%;
@@ -54,7 +57,8 @@ ul {
   pointer-events: none;
 }
 
-.navigation ul li a {
+.navigation ul li a,
+.navigation ul li p {
   position: relative;
   display: block;
   width: 100%;
@@ -64,11 +68,14 @@ ul {
 }
 
 .navigation ul li:hover a,
-.navigation ul li.hovered a {
+.navigation ul li:hover p,
+.navigation ul li.hovered a,
+.navigation ul li.hovered p {
   color: var(--mainColor);
 }
 
-.navigation ul li a .icon {
+.navigation ul li a .icon,
+.navigation ul li p .icon {
   position: relative;
   display: block;
   min-width: 60px;
@@ -77,11 +84,13 @@ ul {
   text-align: center;
 }
 
-.navigation ul li a .icon iconify-icon {
+.navigation ul li a .icon iconify-icon,
+.navigation ul li p .icon iconify-icon {
   font-size: 1.8em;
 }
 
-.navigation ul li a .title {
+.navigation ul li a .title,
+.navigation ul li p .title {
   position: relative;
   display: block;
   padding: 0 10px;
@@ -94,7 +103,9 @@ ul {
 /* curves outside */
 
 .navigation ul li:hover a::before,
-.navigation ul li.hovered a::before {
+.navigation ul li:hover p::before,
+.navigation ul li.hovered a::before,
+.navigation ul li.hovered p::before {
   content: "";
   position: absolute;
   right: 0;
@@ -108,7 +119,9 @@ ul {
 }
 
 .navigation ul li:hover a::after,
-.navigation ul li.hovered a::after {
+.navigation ul li:hover p::after,
+.navigation ul li.hovered a::after,
+.navigation ul li.hovered p::after {
   content: "";
   position: absolute;
   right: 0;
@@ -194,6 +207,7 @@ ul {
   float: right;
   margin-right: 1.5em;
 }
+
 .saveBtn button {
   color: var(--textColorPrimary);
   border-radius: 10px;
@@ -207,14 +221,17 @@ ul {
 
   transition: all 0.5s;
 }
+
 .saveBtn button iconify-icon {
   font-size: 1.3em;
   margin-left: 1em;
 }
+
 .saveBtn button:hover {
   background-color: transparent;
   color: var(--mainColor);
 }
+
 @media screen and (max-width: 430px) {
   .saveBtn button {
     font-size: 0.8em;
