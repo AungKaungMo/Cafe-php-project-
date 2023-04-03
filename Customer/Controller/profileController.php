@@ -14,4 +14,5 @@ if (isset($_SESSION["userid"])) {
     $sql->bindValue(":id", $userid);
     $sql->execute();
     $pf = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $_SESSION["userpf"] = $pf[0]["cus_profile"];
 }

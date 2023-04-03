@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +27,7 @@
     <!------------------------   CSS   ----------------------------->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/dashboard.css">
+    <link rel="stylesheet" href="./resources/css/confirmpopup.css">
 
     <!---------------------- JS   ---------------------------------------->
     <script src="./resources/js/dashboard.js" defer></script>
@@ -84,13 +85,39 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./ShopOwner/View/shoplogin.php">
+                    <p data-bs-toggle="modal" data-bs-target="#staticBackdropConfirm">
                         <span class="icon"><iconify-icon icon="basil:logout-solid"></iconify-icon></span>
                         <span class="title">Logout</span>
-                    </a>
+                    </p>
                 </li>
             </ul>
         </div>
+
+        <!-- Confirm Modal -->
+        <div class="modal fade " id="staticBackdropConfirm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered  ">
+                <div>
+                    <div class="modal-content text-center subPop">
+                        <div class=" text-end">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div>
+                            <div><iconify-icon class="circleClick" icon="mdi:question-mark-circle-outline"></iconify-icon></div>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div class="mainPop mb-4">
+                                <div class="h2 mb-3 fw-bold log">Lou Out</div>
+                                <div class="mb-5 thankPurchase">Are You Sure...</div>
+                                <button type="button" class="btn text-white Back2Home me-5" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                <button type="button" class="btn text-white Back2Home ms-5"> <a href="./shoplogin.php">Confirm</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- main -->
         <div class="main active">
             <div class="topbar">

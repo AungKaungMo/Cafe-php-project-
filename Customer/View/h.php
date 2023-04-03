@@ -109,16 +109,16 @@ ini_set("display_errors", "1");
 
         <div class="mx-sm-5 mx-2 pt-5">
           <h1 class=" fw-bold pt-5">
-          <?php
+            <?php
             echo $resultS[0]["titleThree"];
             ?>
             <!-- The Hide Out -->
           </h1>
           <p class="mt-5 col-lg-6 col-md-9">
-          <?php
+            <?php
             echo $resultS[0]["paraThree"];
             ?>
-          <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
+            <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad -->

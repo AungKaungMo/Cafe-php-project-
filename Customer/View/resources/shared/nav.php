@@ -72,8 +72,8 @@ session_start();
                 </div>
                 <div>
                   <!-- <form method="post" action="./cart.php"> -->
-                    <!-- <input type="hidden" name="storeItems" id="cartList"> -->
-                    <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
+                  <!-- <input type="hidden" name="storeItems" id="cartList"> -->
+                  <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
                   <!-- </form> -->
                 </div>
 
