@@ -1,7 +1,7 @@
 <?php
 ini_set("display_errors", "1");
 
-include "../Model/dbConnection.php";
+//include "../Model/dbConnection.php";
 
 $db = new DBConnection();
 $pdo = $db->connect();

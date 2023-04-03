@@ -99,7 +99,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <div class="fs-4 fw-bold">User</div>
                 <div class="owner">
                     <?php
-                    if ($_SESSION["userpf"] == null) { ?>
+                    if (empty($_SESSION["userpf"])) { ?>
                         <img src="./resources/img/profile.png">
                     <?php    } else { ?>
                         <img src="../../Storages/<?php echo $_SESSION["userpf"] ?>" alt="Los Angeles Skyscrapers">
