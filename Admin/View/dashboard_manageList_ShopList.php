@@ -26,11 +26,7 @@ include "./resources/shared/dashboard.php";
 
     <div class="m-4">
         <tbody class="tableBody">
-            <tr class="lineTable">
-                <td colspan="7">
-                    <hr class="line">
-                </td>
-            </tr>
+            
 
         </tbody>
         </table>
@@ -47,6 +43,11 @@ include "./resources/shared/dashboard.php";
                 <th scope="col">expired_date</th>
                 <th scope="col">Action</th>
 
+            </tr>
+            <tr class="lineTable">
+                <td colspan="9">
+                    <hr class="line">
+                </td>
             </tr>
             <?php foreach ($checkresult as $shop) {   ?>
                 <tr>

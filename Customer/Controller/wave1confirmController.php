@@ -8,8 +8,7 @@ if (isset($_POST["confirm"])) {
     $pdo = $db->connect();
     $email = $_SESSION["email"];
     $otpcode = $_SESSION["waveotp"];
-    $enterotp = $_SESSION["otp_pwd"];
-
+    $enterotp = $_POST["pwd"];
     $sql = $pdo->prepare(
         "
             SELECT waveotp FROM  m_customer WHERE cus_email=:email AND del_flg=0;
@@ -22,11 +21,11 @@ if (isset($_POST["confirm"])) {
 
     if ($result[0]["waveotp"] == $enterotp) {
         $_SESSION["otperror"] = "";
-        echo "hell";
+        // echo "hell";
         // header("Location: ../View/wavepay2.php");
     } else {
         $_SESSION["otperror"] = "Wrong Otp Code! Try Again..";
-        echo "blur";
+        echo "error";
         // header("Location: ../View/wavepay1.php");
     }
 

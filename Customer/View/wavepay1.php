@@ -85,7 +85,7 @@ ini_set("display_errors", "1");
             </div>
 
             <div class="fouth mt-3">
-                <input type="password" name="password" id="" placeholder="One time password" class="pas ms-4">
+                <!-- <input type="password" name="pwd" id="" placeholder="One time password" class="pas ms-4"> -->
                 <div class="otpBtn">
                     <button class="p-2 me-4" name="submit">Get OTP</button>
                 </div>
@@ -97,6 +97,10 @@ ini_set("display_errors", "1");
                     Phone Number.</p>
             </div>
      <form action="../Controller/wave1confirmController.php"  method="post">
+     <div class="fouth mt-3">
+                <input type="password" name="pwd" id="" placeholder="One time password" class="pas ms-4">
+                 
+            </div>
             <div class="comBtn text-center mt-3">
                 <a href="./wavepay2.php">
                     <button name="confirm" class="p-2">Comfirm</button></a>
