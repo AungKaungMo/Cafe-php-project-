@@ -1,6 +1,7 @@
 .navigation ul li:nth-child(5) {
   background: var(--backgroundPrimary);
 }
+
 .navigation ul li:nth-child(5) a {
   color: var(--mainColor);
 }
@@ -24,9 +25,7 @@
   user-select: none;
 }
 
-.changestar {
-  color: var(--mainColor);
-}
+
 
 .starBox {
   width: 200px;
