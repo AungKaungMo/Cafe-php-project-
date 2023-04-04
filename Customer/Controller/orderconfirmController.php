@@ -17,6 +17,7 @@ $cusName = $_SESSION["cusName"];
 $payment = $_SESSION["cusPayment"];
 $deliFee = $_SESSION["cusDeliFee"];
 $totalPrice = $_SESSION["cusTotalPrice"];
+$itemsPrice = $_SESSION["itemsPrice"];
 
 include "../Model/dbConnection.php";
 $db = new DBConnection();
@@ -89,6 +90,7 @@ for ($i = 0; $i < count($cartItemsLists); $i++) {
                total_quantity,
                bought_product_name,
                bought_product_id,
+               product_price,
                product_note,
                shop_id
             )
@@ -98,6 +100,7 @@ for ($i = 0; $i < count($cartItemsLists); $i++) {
                :totalQuantity,
                :boughtPName,
                :boughtPId,
+               :pprice,
                :productNote,
                :shopId
             )
@@ -107,6 +110,7 @@ for ($i = 0; $i < count($cartItemsLists); $i++) {
    $sql->bindValue(":totalQuantity", $cartLists[$i]["quantity"]);
    $sql->bindValue(":boughtPName", $cartItemsLists[$i]["product_name"]);
    $sql->bindValue(":boughtPId", $cartItemsLists[$i]["product_id"]);
+   $sql->bindValue(":pprice", $itemsPrice[$i]);
    $sql->bindValue(":productNote", $cartLists[$i]["orderNote"]);
    $sql->bindValue(":shopId", $cartItemsLists[$i]["shop_id"]);
    $sql->execute();
@@ -135,6 +139,7 @@ for ($i = 0; $i < count($cartItemsLists); $i++) {
    $_SESSION["cusName"] = "";
    $_SESSION["cusDeliFee"] = "";
    $_SESSION["cusTotalPrice"] = ""; 
+   $_SESSION["itemsPrice"] = "";
 if($payment == 2){
    $_SESSION["payment"] = ""; 
    header("Location: ../View/wavepay4.php");

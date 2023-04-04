@@ -6,9 +6,9 @@ if (isset($_POST["order"])) {
     $_SESSION["cusNote"] = $_POST["note"];
     $_SESSION["cusPhone"] = $_POST["phone"];
     $_SESSION["cusName"] = $_POST["name"];
-    $_SESSION["cusPayment"] = number_format($_POST["payment"]);
-    $_SESSION["cusDeliFee"] = number_format($_POST["deliveryFee"]);
-    $_SESSION["cusTotalPrice"] = number_format($_POST["totalPrice"]);
+    $_SESSION["cusPayment"] = $_POST["payment"];
+    $_SESSION["cusDeliFee"] = $_POST["deliveryFee"];
+    $_SESSION["cusTotalPrice"] = $_POST["totalPrice"];
     $_SESSION["order"] = 1;
 
     if ($_SESSION["cusPayment"] == 1) {

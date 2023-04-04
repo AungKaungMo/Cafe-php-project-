@@ -40,7 +40,7 @@ session_start();
     </div>
     <div class="navLine"></div>
 
-    <?php if(count($cartItemsLists) != 0){ ?>
+    <?php if(count($_SESSION["cartItemsLists"]) != 0){ ?>
                 
     <div class="mx-4 mt-5">
         <table class="table">
@@ -48,50 +48,60 @@ session_start();
             <tbody class="tableBody">
 
 
-            <?php for($i=0; $i < count($cartItemsLists); $i++ ) { $total +=  ($cartItemsLists[$i]["product_price"] - ($cartItemsLists[$i]["product_price"] * ($cartItemsLists[$i]["product_discount"]/100))) * $cartLists[$i]["quantity"];
+            <?php $itemsPrice = []; for($i=0; $i < count($_SESSION["cartItemsLists"]); $i++ ) { $total +=  ($_SESSION["cartItemsLists"][$i]["product_price"] - ($_SESSION["cartItemsLists"][$i]["product_price"] * ($_SESSION["cartItemsLists"][$i]["product_discount"]/100))) * $cartLists[$i]["quantity"];
                 ?>
-                <tr>
+                <tr class="table_row">
                     <td data-label="productImg">
                         <div class="productImg">
-                            <img src="../../Storages/<?= $cartItemsLists[$i]["product_photo"] ?>">
+                            <img src="../../Storages/<?= $_SESSION["cartItemsLists"][$i]["product_photo"] ?>">
                         </div>
                     </td>
                     <td data-label="ProductName">
-                        <?= $cartItemsLists[$i]["product_name"] ?>
+                        <?= $_SESSION["cartItemsLists"][$i]["product_name"] ?>
                     </td>
                     <td data-label="Shop Name">
-                        <a href="#"><?= $cartItemsLists[$i]["shop_name"] ?></a>
+                        <a href="#"><?= $_SESSION["cartItemsLists"][$i]["shop_name"] ?></a>
                     </td>
                     <td data-label="Quantity" class="d-flex align-items-center justify-content-end user-select-none quantityControl">
                     <iconify-icon icon="bi:dash-circle-fill" class="me-2 minus" width="23" height="23"></iconify-icon>
-                    <span class="countItem"><?= $cartLists[$i]["quantity"] ?></span>
+                    <span class="countItem"><?php for($j =0; $j < count($cartLists); $j++){
+                        if($cartLists[$j]["id"] == $_SESSION["cartItemsLists"][$i]["product_id"]){
+                            echo $cartLists[$j]["quantity"];
+                        }
+                    }  ?></span>
                     <iconify-icon icon="mdi:plus-circle" class="ms-2 plus" width="25" height="25"></iconify-icon>
                     </td>
                     <td data-label="Notes order">
-                    <?= $cartLists[$i]["orderNote"] ?>
+                    <?php for($j =0; $j < count($cartLists); $j++){
+                        if($cartLists[$j]["id"] == $_SESSION["cartItemsLists"][$i]["product_id"]){
+                            echo $cartLists[$j]["orderNote"];
+                        }
+                    }  ?>
                     </td>
                     <td data-label="Discount">
-                    <?= $cartItemsLists[$i]["product_discount"] ?> %
+                    <?= $_SESSION["cartItemsLists"][$i]["product_discount"] ?> %
                     </td>
                     <td data-label="Price" class="price">
-                    <?= $cartItemsLists[$i]["product_price"] ?> MMK
+                    <?= $_SESSION["cartItemsLists"][$i]["product_price"] ?> MMK
                     </td>
                     <td data-label="Coin Price">
-                    <?= $cartItemsLists[$i]["product_price"] ?> Coins
+                    <?= $_SESSION["cartItemsLists"][$i]["product_price"] ?> Coins
                     </td>
                     <td data-label="Total Price" class="totalPrice">
                         <?=
-                           ($cartItemsLists[$i]["product_price"] - ($cartItemsLists[$i]["product_price"] * ($cartItemsLists[$i]["product_discount"]/100))) * $cartLists[$i]["quantity"] . " MMK";
+                           ($_SESSION["cartItemsLists"][$i]["product_price"] - ($_SESSION["cartItemsLists"][$i]["product_price"] * ($_SESSION["cartItemsLists"][$i]["product_discount"]/100))) * $cartLists[$i]["quantity"] . " MMK";
                         ?>
                     </td>
                     <td data-label="Total Coin Price" class="totalCoinPrice">
                         <?=
-                           ($cartItemsLists[$i]["product_price"] - ($cartItemsLists[$i]["product_price"] * ($cartItemsLists[$i]["product_discount"]/100))) * $cartLists[$i]["quantity"] . " Coins";
+                           ($_SESSION["cartItemsLists"][$i]["product_price"] - ($_SESSION["cartItemsLists"][$i]["product_price"] * ($_SESSION["cartItemsLists"][$i]["product_discount"]/100))) * $cartLists[$i]["quantity"] . " Coins";
                         ?>
                     </td>
                 </tr>
 
-<?php } ?>
+<?php
+    array_push($itemsPrice,$_SESSION["cartItemsLists"][$i]["product_price"]);
+} ?>
 
             </tbody>
         </table>
@@ -118,6 +128,7 @@ session_start();
                     <div class="mt-4 d-flex justify-content-center">
                     <input type="hidden" name="totalPrice" id="totalPriceCheck"> 
                     <input type="hidden" name="cartLists" class="cartList">
+                    <input type="hidden" name="itemsPrice" value="<?=  json_encode($itemsPrice) ?>">
                     <button class="p-2 rounded-1 checkOutBtn" type="submit" name="checkout">
                         Check Out
                     </button>
@@ -127,6 +138,7 @@ session_start();
 
     </div>
 <?php } ?>
+
 
 </body>
 
