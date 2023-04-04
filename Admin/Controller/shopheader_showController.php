@@ -5,9 +5,11 @@
 
     $sql = $pdo->prepare(
         "
-            SELECT * FROM m_shopHeader WHERE del_flg = 0
+            SELECT * FROM m_shopHeader WHERE id=1
         "
     );
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $img = $result[0]["header_image"];
+    echo $img;
 ?>
