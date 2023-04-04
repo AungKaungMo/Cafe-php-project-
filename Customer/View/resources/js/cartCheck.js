@@ -37,9 +37,6 @@ $(document).ready(() => {
       .getElementsByClassName("minus")
       [i].addEventListener("click", () => {
         count = Number(orgCount[i].innerText);
-        if (count <= 1) {
-          return;
-        }
         count--;
         orgCount[i].innerText = count;
        let mmk = Number(
@@ -55,6 +52,16 @@ $(document).ready(() => {
         taxFee.innerText =(Number(subtotal.innerText.substring(0,subtotal.innerText.length - 11)) + mmk) * 5/100 + " MMK(Coins)"; 
         document.getElementsByClassName("grandTotal")[0].innerText = Number(subtotal.innerText.substring(0,subtotal.innerText.length - 11)) + Number(taxFee.innerText.substring(0,taxFee.innerText.length - 11)) + " MMK(Coins)";
         $("#totalPriceCheck").val(document.getElementsByClassName("grandTotal")[0].innerText);
+       
+
+        if(count == 0){
+          document.getElementsByClassName('table_row')[i].remove();
+          var newCart = carts.filter((obj) => {
+            return obj.quantity != 0;
+          })
+          localStorage.setItem("cart",JSON.stringify(newCart));
+        }
+
         carts[i].quantity -= 1;
         $(".cartList").val(JSON.stringify(carts));
       });

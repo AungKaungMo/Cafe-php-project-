@@ -1,5 +1,6 @@
 <?php
 include "../Controller/checkoutController.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
