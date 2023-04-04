@@ -3,16 +3,14 @@ include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_setting.css">
 <link rel="stylesheet" href="./resources/css/dashboard_setting_blog.css">
-
 </head>
 
 <body>
-
     <?php
     include "./resources/shared/dashboard_setting.php";
     ?>
 
-    <form>
+    <form action="../Controller/shop_setting_blogUpdateController.php" method="post"  enctype="multiple/form-data">
         <div class="d-flex flex-column justify-content-center align-items-center mt-5">
             <div>
 
@@ -53,10 +51,9 @@ include "./resources/shared/dashboard.php";
                     <input type="file" id="blogpicture" accept="image/png, image/jpeg">
                 </div> -->
                 <div class="box">
-                    <div class="m-auto aboutImg"> Blog Image
-                        <img src=""  id="acceptImage">
+                    <div class="m-auto aboutImg picture"> Blog Image
+                        <img src=""  id="acceptImage" name="bImage">
                         <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload"></iconify-icon>
-
                     </div>
                     <input type="file" hidden id="picture" accept="image/png, image/jpeg" name="blogImage">
                 </div>
@@ -66,10 +63,9 @@ include "./resources/shared/dashboard.php";
                     <input type="text" id="authorname" name="auName">
                 </div>
                 <div class="box">
-                    <div class="m-auto aboutImg"> Blog Image
-                        <img src=""  id="acceptImage">
+                    <div class="m-auto aboutImg picture"> Author Image
+                        <img src=""  id="acceptImage" name="aImage">
                         <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload"></iconify-icon>
-
                     </div>
                     <input type="file" hidden id="picture" accept="image/png, image/jpeg" name="blogImage">
                 </div>

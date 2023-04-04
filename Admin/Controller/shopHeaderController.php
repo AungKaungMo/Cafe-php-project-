@@ -31,7 +31,7 @@ if (move_uploaded_file($location, "../../Storages/shopheader/" . $file )) {
             $sql->bindValue(":headerImage", "../../Storages/" . $file );
         }
     } else {
-        //echo 'There was some error moving the file to upload directory.';
+//echo 'There was some error moving the file to upload directory.';
         $sql = $pdo->prepare(
             "
             UPDATE m_shopHeader SET 
