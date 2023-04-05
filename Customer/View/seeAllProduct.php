@@ -24,6 +24,7 @@
   <!------------------------   JS   -------------------------------->
   <script src="./resources/js/navigation.js"></script>
   <script src="./resources/js/cartControl.js"></script>
+  <script src="./resources/js/favList.js"></script>
 
   <!------------------------   CSS   ----------------------------->
   <link rel="stylesheet" href="./resources/css/root.css">
@@ -88,7 +89,8 @@
                                 </button>
 
                                 <button>
-                                    <iconify-icon icon="mdi:cards-heart-outline" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } ?> width="25" height="25"></iconify-icon>
+                                    <iconify-icon icon="mdi:cards-heart-outline" class="blank_heart" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } ?> width="25" height="25"></iconify-icon>
+                                    <iconify-icon icon="mdi:cards-heart" class="full_heart d-none" width="25" height="25"></iconify-icon>
                                 </button>
                             </div>
                             <div class="disprice price">
