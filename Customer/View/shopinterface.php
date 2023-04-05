@@ -124,7 +124,7 @@
 
         <div class="boxmenu">
             <div class="maincard item-details">
-                <div class="card item most">
+                <div class="card item featured">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -174,7 +174,7 @@
             </div>
 
             <div class="maincard item-details">
-                <div class="card item featured">
+                <div class="card item most">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">

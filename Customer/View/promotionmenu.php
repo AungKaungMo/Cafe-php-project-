@@ -42,9 +42,9 @@
   <!-- =====================================little Nav===================================== -->
 
   <a href="./promotion.php">
-    <iconify-icon icon="material-symbols:arrow-back" class="backArrow" width="109" height="93"></iconify-icon>
+    <iconify-icon icon="material-symbols:arrow-back" class="backArrow fs-1"></iconify-icon>
   </a>
-  <div class="btn">
+  <!-- <div class="btn">
     <button class="choose activechoose">
       <a href=""><img src="./resources/img/coffee.png" alt="">Coffee</a>
     </button>
@@ -63,16 +63,45 @@
         Specials
       </a>
     </button>
-  </div>
+  </div> -->
 
   <!-- ====================================== Product==================================================== -->
+  <?php include "../Controller/promotionmenuController.php"   ?>
   <h1>Discount Product</h1>
   <div class="container">
 
     <div class="cardContainer">
+      <?php foreach ($poresult as $data) {  ?>
+        <div class="swiper-slide disCard mt-5">
+          <div class="disticket">
+            <?= $data["product_discount"] ?>%
+          </div>
+          <div class="distickettri"></div>
+          <div class="carditems">
+            <div class="disphoto">
+              <img src="../../Storages/<?= $data["product_photo"] ?>" alt="">
+            </div>
+            <p class="pname"><?= $data["product_name"] ?></p>
+            <div class="disbtn">
+              <button>
+                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+              </button>
+
+              <button>
+                <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+              </button>
+            </div>
+            <div class="disprice">
+              <?php
+              $percentPrice = $data["product_price"] - (($data["product_price"] * $data["product_discount"]) / 100);
+              echo $percentPrice ?> MMK
+            </div>
+          </div>
+        </div>
+      <?php  } ?>
 
 
-      <div class="card">
+      <!-- <div class="card">
         <div class="disticket">
           10 %
         </div>
@@ -231,30 +260,7 @@
             1500MMK
           </div>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="disticket">
-          10 %
-        </div>
-        <div class="distickettri"></div>
-        <div class="carditems">
-          <img src="./resources/img/blackcoffee.png" alt="">
-          <p class="pname">Black coffee</p>
-          <div class="pbtn">
-            <button>
-              <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
-            </button>
-
-            <button>
-              <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
-            </button>
-          </div>
-          <div class="price">
-            1500MMK
-          </div>
-        </div>
-      </div>
+      </div> -->
 
     </div>
   </div>

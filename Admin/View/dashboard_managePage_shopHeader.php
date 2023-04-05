@@ -21,7 +21,7 @@ include "./resources/shared/dashboard.php";
     <div class="my-3">
         <div class="box">
             <div class="m-auto aboutImg">
-                <img src="<?php if($result[0]["header_image"] == "") { echo "./resources/img/default.png"; }else { echo "../../Storages/".$result[0]["header_image"]; } ?> " id="acceptImage">
+                <img src="../../Storages/<?= $img?>" alt="" id="acceptImage">
                 <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload"></iconify-icon>
 
             </div>
@@ -33,7 +33,7 @@ include "./resources/shared/dashboard.php";
                 </div>
         <div class="box mt-5">
             <label for="paragraph">Paragraph</label>
-            <textarea id="paragraph" class="text-start" name="headerText" type="text" <?= $result[0]["header_text"]; ?>> 
+            <textarea id="paragraph" class="text-start" name="headerText" type="text" ><?= $result[0]["header_text"]; ?>
             </textarea>
         </div>
 

@@ -38,10 +38,8 @@ include "./resources/shared/dashboard.php";
                     <input type="file" id="image1" accept="image/png, image/jpeg" name="image1" hidden>
                 </div>
             </div>
-
             <div class="my-3">
                 <div class="sliderTitle">Slider 2</div>
-
                 <div class="box">
                     <label for="title2">Title 2</label>
                     <input type="text" id="title2" name="title2" value="<?= $resultslider[0]["titleTwo"] ?>">
@@ -87,7 +85,7 @@ include "./resources/shared/dashboard.php";
 
             </div>
         </div>
-         
+
         <div class="saveBtn ">
             <button name="saveChange" type="submit">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>
