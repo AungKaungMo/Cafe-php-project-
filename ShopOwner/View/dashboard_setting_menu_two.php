@@ -98,9 +98,6 @@ include "./resources/shared/dashboard.php";
                             <td data-label="Sold">
                                 <?php echo $result[$i]["sold_quantity"] ?>
                             </td>
-                            <td data-label="Remain">
-                                <?php echo $result[$i]["remain_stock"] ?>
-                            </td>
                             <td data-label="Price">
                                 <?php echo $result[$i]["product_price"] ?>
                             </td>
@@ -108,7 +105,7 @@ include "./resources/shared/dashboard.php";
                                 <?php echo $result[$i]["product_discount"] ?> %
                             </td>
                             <td data-label="Type">
-                                <?php echo $result[$i]["product_discount"] ?>
+                                <?php echo $result[$i]["product_type"] ?>
                             </td>
                             <td colspan="2" class="action">
                                 <a href="./dashboard_update_menu.php?id=<?php echo $result[$i]['product_id'] ?>" class="me-2">Edit</a>
