@@ -4,10 +4,10 @@ $(document).ready(function () {
     var barChart = new Chart(ctx, {
         type: "bar",
         data: {
-            labels: ["Mon","Tues","Wed","Thurs","Fri","Sat","Sun"],
+            labels: ["Jan","Feb","March","April","May","June","July"],
             datasets:[
                 {
-                    data:[430000,300000,50000,700000,690000,80000,120000],
+                    data: sever_data,
                     backgroundColor: ['#9D89BD','#3500F2']
                 }
             ]
@@ -24,7 +24,7 @@ $(document).ready(function () {
             labels: ["coffee","desserts","juice"],
             datasets:[
                 {
-                    data:[50,89,45],
+                    data: product_type_data,
                     backgroundColor: ['#9D89BD','#3500F2','#200094']
                 }
             ]
@@ -34,43 +34,5 @@ $(document).ready(function () {
         },
     });
 
-    // Top selling products
 
-    let sellingTable = [
-        {
-            'ProductName' : 'Espresso',
-            'Sold' : 54,
-            'Instock' : 60,
-            'Remain' : 6
-        },
-        {
-            'ProductName' : 'Ice Americano',
-            'Sold' : 54,
-            'Instock' : 60,
-            'Remain' : 6
-        },
-        {
-            'ProductName' : 'Green Tea',
-            'Sold' : 54,
-            'Instock' : 60,
-            'Remain' : 6
-        },
-        {
-            'ProductName' : 'Choco Lava',
-            'Sold' : 54,
-            'Instock' : 60,
-            'Remain' : 6
-        },
-    ]
-    for (let i = 0; i < sellingTable.length; i++) {
-          $(".tableBody").append(
-            ` <tr >
-                <td data-label="No.">${i + 1}</td>
-                <td data-label="ProductName">${sellingTable[i].ProductName}</td>
-                <td data-label="Sold">${sellingTable[i].Sold}</td>
-                <td data-label="Instock">${sellingTable[i].Instock}</td>
-                <td data-label="Remain">${sellingTable[i].Remain}</td>
-            </tr>`
-          );
-      }
 })
