@@ -21,11 +21,11 @@ $(document).ready(function () {
     var pieChart = new Chart(ctx, {
         type: "pie",
         data: {
-            labels: ["coffee","juice","cake","dishes","others"],
+            labels: ["coffee","desserts","juice"],
             datasets:[
                 {
-                    data:[50,89,45,32,79],
-                    backgroundColor: ['#9D89BD','#3500F2','#200094','#A798DF','#5232C7']
+                    data:[50,89,45],
+                    backgroundColor: ['#9D89BD','#3500F2','#200094']
                 }
             ]
         },
