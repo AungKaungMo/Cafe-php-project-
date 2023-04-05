@@ -13,7 +13,7 @@ include "./resources/shared/dashboard.php";
     include "./resources/shared/dashboard_managePage.php";
     include "../Controller/sliderSelectController.php";
     ?>
-    <form action="../Controller/sliderUpController.php" method="post" enctype="multiple/form-data">
+    <form action="../Controller/sliderUpController.php" method="post" enctype="multipart/form-data">
         <div class="d-flex flex-column justify-content-center align-items-center">
 
             <div class="my-3">
