@@ -15,6 +15,6 @@ session_start();
     $sql->bindValue(":shopid", $_SESSION["shopId"]);
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-    echo "<pre>";
-    print_r($result);
+    // echo "<pre>";
+    // print_r($result);
 ?>
