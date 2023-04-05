@@ -45,7 +45,7 @@ include "./resources/shared/dashboard.php";
                     <textarea id="thirdparagraph" name="tPara"></textarea>
                 </div>
                 <!-- <div class="box">
-                    <label for="date">Second Title</label>
+                    <label for="date">Date</label>
                     <input type="date" id="date" name="date">
                 </div> -->
                 <!-- <div class="box">
@@ -57,7 +57,7 @@ include "./resources/shared/dashboard.php";
                         <img src=""  id="acceptImage" name="bImage" width="200px">
                         <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload"></iconify-icon>
                     </div>
-                    <input type="file" hidden id="picture" class="pic" accept="image/png, image/jpeg" name="blogImage">
+                    <input type="file" hidden id="picture" class="pic" accept="image/png, image/jpeg" name="bImage">
                 </div>
 
                 <div class="box">
@@ -69,7 +69,7 @@ include "./resources/shared/dashboard.php";
                         <img src=""  id="acceptImage1" name="aImage" width="200px">
                         <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload1"></iconify-icon>
                     </div>
-                    <input type="file" hidden id="picture1" accept="image/png, image/jpeg" name="blogImage">
+                    <input type="file" hidden id="picture1" accept="image/png, image/jpeg" name="aImage">
                 </div>
                 <div class="box">
                     <label for="fblink">FB Link</label>

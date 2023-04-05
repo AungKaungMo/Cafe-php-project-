@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", "1");
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_order.css">
@@ -32,10 +33,26 @@ include "./resources/shared/dashboard.php";
                         <hr class="line">
                     </td>
                 </tr>
+                <?php foreach ($checkresult as $shop) {   ?>
+                <tr>
+                    <td><?= $shop["shop_id"]  ?></td>
+                    <td><?= $shop["shop_name"]  ?></td>
+                    <td><?= $shop["shop_address"]  ?></td>
+                    <td><?= $shop["shop_email"]  ?></td>
+                    <td><?= $shop["shop_phone"]  ?></td>
+                    <td><?= $shop["package_type"]  ?></td>
+                    <td><?= $shop["package_createdate"]  ?></td>
+                    <td><?= $shop["package_expiredate"]  ?></td>
+                    <td class="danger"><a href="../Controller/delete_shopListController.php?id= <?= $shop["shop_id"] ?>">Remove</a></td>
+                </tr>
+            <?php } ?>
 
 
             </tbody>
         </table>
+
+
+        <!--Pagination-->
 
         <div class="d-flex justify-content-center w-100 mt-5 align-items-center user-select-none">
             <div class="mt-1">
