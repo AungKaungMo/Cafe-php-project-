@@ -33,7 +33,9 @@
    <link rel="stylesheet" href="./resources/css/cartpopup.css">
    <link rel="stylesheet" href="./resources/css/promotion.css" />
    <style>
-     <?php foreach ($result as $persent) { ?>.box_ribbon::after {
+     <?php
+      $style = 1;
+      foreach ($result as $persent) { ?>.promotion<?= $style++ ?>::after {
        content: "<?= $persent["product_discount"] ?> % Off";
        position: absolute;
        width: 100%;
@@ -45,12 +47,10 @@
        display: flex;
        justify-content: center;
        align-items: center;
-
        text-transform: uppercase;
        color: var(--textColorPrimary);
        font-weight: 600;
        letter-spacing: 0.1em;
-
        box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.2);
      }
 
@@ -237,9 +237,10 @@
      <div class="d-flex justify-content-around w-100 flex-wrap disBox">
 
        <?php
+        $count = 1;
         foreach ($result as $data) { ?>
          <div class="box">
-           <span class="box_ribbon"></span>
+           <span class="box_ribbon  promotion<?= $count++ ?>"></span>
            <img src="../../Storages/<?= $data["product_photo"] ?>" alt="">
          </div>
        <?php  } ?>

@@ -37,19 +37,43 @@
 
     <?php
     include "./resources/shared/nav.php";
+    include "../Controller/shopallController.php"
     ?>
 
     <!-- ===========================================arrow========================================== -->
 
     <a href="./shop.php">
-        <iconify-icon icon="material-symbols:arrow-back" style="color: #765341;" width="109" height="93"></iconify-icon>
+        <iconify-icon icon="material-symbols:arrow-back" style="color: #765341;" class="fs-2"></iconify-icon>
     </a>
     <!-- ===============================================shop============================================= -->
 
-    <h1>Discount Shop</h1>
+    <h1>Shop</h1>
     <div class="container">
         <div class="shopContainer">
-            <div class="card">
+
+            <?php foreach ($idresult as $result) {  ?>
+                <div class="card">
+                    <img src="./resources/img/pshop.png" alt="">
+                    <div class="script">
+                        <div class="icon">
+                            <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>
+                            <span class="sinfor"><?= $result["shop_name"] ?></span>
+                        </div>
+
+                        <div class="icon">
+                            <iconify-icon icon="material-symbols:location-on-rounded" width="30" height="30"></iconify-icon>
+                            <span class="sinfor"><?= $result["shop_address"] ?></span>
+                        </div>
+                    </div>
+                    <a href="./shopinterface.php?id=<?= $result["shop_id"] ?>">
+                        <button>See more</button>
+                    </a>
+
+                </div>
+            <?php     }         ?>
+
+
+            <!-- <div class="card">
                 <img src="./resources/img/pshop.png" alt="">
                 <div class="script">
                     <div class="icon">
@@ -180,26 +204,7 @@
                     <button>See more</button>
                 </a>
 
-            </div>
-
-            <div class="card">
-                <img src="./resources/img/pshop.png" alt="">
-                <div class="script">
-                    <div class="icon">
-                        <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>
-                        <span class="sinfor">CJ Cafe</span>
-                    </div>
-
-                    <div class="icon">
-                        <iconify-icon icon="material-symbols:location-on-rounded" width="30" height="30"></iconify-icon>
-                        <span class="sinfor">Mingalar Taung Nyunt</span>
-                    </div>
-                </div>
-                <a href="./shopinterface.php">
-                    <button>See more</button>
-                </a>
-
-            </div>
+            </div> -->
 
 
         </div>

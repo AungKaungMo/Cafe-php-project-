@@ -19,7 +19,7 @@ body {
   width: 30px;
 }
 
-.backgroundCafeImage1 {
+/* .backgroundCafeImage1 {
   background: url(../img/jjcafe.jpg);
 }
 
@@ -29,7 +29,7 @@ body {
 
 .backgroundCafeImage3 {
   background: url(../img/menu.jpg);
-}
+} */
 
 .backImage {
   width: 100%;
@@ -296,7 +296,7 @@ today menu
 }
 
 .text {
-  margin-top: 4.5em;
+  margin-top: 2em;
   color: var(--mainColor);
 }
 

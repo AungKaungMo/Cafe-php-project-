@@ -223,6 +223,7 @@ ini_set("display_errors", "1");
   </div>
 
   <!-------------------------   Customers Reviews  ----------------------->
+  <?php include "../Controller/userReviewController.php" ?>
   <div class="mt-md-3 mt-5 pt-md-0 pt-5 mx-sm-5 mx-2 customerSection">
     <h6 class="mb-0 text-center">Happy Customers</h6>
     <h1 class="title text-center position-relative fw-bold pb-2">Customers Reviews</h1>
@@ -236,7 +237,38 @@ ini_set("display_errors", "1");
 
               <div class="swiper mySwiper1">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                  <?php foreach ($result as $rvdata) {      ?>
+                    <div class="swiper-slide">
+
+                      <div class="mx-3 my-3">
+                        <div class="d-flex justify-content-between align-items-center ">
+                          <div class="d-flex align-items-center">
+                            <div class="customersProfile">
+                              <!-- <img class=" rounded-circle " src="./resources/img/cust1.jpg" width="100%" height="100%"> -->
+                              <img class=" rounded-circle " src="../../Storages/<?= $rvdata["cus_profile"] ?>" width="100%" height="100%">
+                            </div>
+                            <div class="ms-3">
+                              <div class=""><?= $rvdata["user_name"] ?></div>
+                              <h6 class=""><?= $rvdata["address"] ?></h6>
+                            </div>
+                          </div>
+                          <div>
+                            <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                            <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                            <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                            <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                          </div>
+                        </div>
+
+                        <div class="mt-4 customersText">
+                          <?= $rvdata["comment"]  ?>
+                        </div>
+
+                      </div>
+                    </div>
+                  <?php  }     ?>
+
+                  <!-- <div class="swiper-slide">
 
                     <div class="mx-3 my-3">
                       <div class="d-flex justify-content-between align-items-center ">
@@ -318,7 +350,7 @@ ini_set("display_errors", "1");
                       </div>
 
                     </div>
-                  </div>
+                  </div> -->
 
                 </div>
 
