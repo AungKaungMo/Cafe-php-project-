@@ -9,4 +9,4 @@ $sql = $pdo->prepare(
     "
 );
 $sql->execute();
-$resultslider = $sql->fetchAll(PDO::FETCH_ASSOC);
+$resultF = $sql->fetchAll(PDO::FETCH_ASSOC);

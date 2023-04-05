@@ -1,6 +1,9 @@
 <?php
 ini_set("display_errors", "1");
-session_start();
+// session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+ }
 include "../Model/dbconnection.php";
 
 if (isset($_POST["submit"])) {
@@ -20,7 +23,7 @@ if (isset($_POST["submit"])) {
     $twtLink = $_POST["twtLink"];
     $file = [$file1, $file2];
 
-    echo $shopid;
+    print_r ($file);
     $db = new DBConnection();
     $pdo = $db->connect();
 

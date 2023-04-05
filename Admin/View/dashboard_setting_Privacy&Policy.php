@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", "1");
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_setting.css">
@@ -17,7 +18,7 @@ include "./resources/shared/dashboard.php";
             <div class="my-3">
                 <div class="sliderTitle">Rule</div>
                 <div class="box">
-                    <textarea id="paragraph" name="paragraph"></textarea>
+                    <textarea id="paragraph" name="paragraph"><?= $resultP[0]["paragraph"] ?></textarea>
                 </div>
             </div>
         </div>

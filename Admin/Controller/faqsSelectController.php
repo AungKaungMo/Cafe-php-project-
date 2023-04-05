@@ -5,8 +5,8 @@ $db = new DBConnection();
 $pdo = $db->connect();
 $sql = $pdo->prepare(
     "
-    SELECT * FROM m_privacy WHERE privacy_id=1;
+    SELECT * FROM m_faqs WHERE id=2;
     "
 );
 $sql->execute();
-$resultP = $sql->fetchAll(PDO::FETCH_ASSOC);
+$resultF = $sql->fetchAll(PDO::FETCH_ASSOC);
