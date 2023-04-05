@@ -3,7 +3,6 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 include "../Model/dbConnection.php";
-$name = $_SESSION["username"];
 $id = $_SESSION["userid"];
 
 $db = new DBConnection();
