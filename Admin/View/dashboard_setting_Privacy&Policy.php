@@ -10,6 +10,7 @@ include "./resources/shared/dashboard.php";
 
     <?php
     include "./resources/shared/dashboard_setting.php";
+    include "../Controller/privacySelectController.php"
     ?>
     <form action="../Controller/privacyController.php" method="post">
         <div class="d-flex flex-column justify-content-center align-items-center">

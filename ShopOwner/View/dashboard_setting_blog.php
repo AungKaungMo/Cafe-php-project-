@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", "1");
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_setting.css">
@@ -8,9 +9,10 @@ include "./resources/shared/dashboard.php";
 <body>
     <?php
     include "./resources/shared/dashboard_setting.php";
+    include "../Controller/shop_setting_blogInsertController.php";
     ?>
 
-    <form action="../Controller/shop_setting_blogUpdateController.php" method="post"  enctype="multiple/form-data">
+    <form action="../Controller/shop_setting_blogInsertController.php" method="post"  enctype="multipart/form-data">
         <div class="d-flex flex-column justify-content-center align-items-center mt-5">
             <div>
 
@@ -52,10 +54,10 @@ include "./resources/shared/dashboard.php";
                 </div> -->
                 <div class="box">
                     <div class="m-auto aboutImg picture"> Blog Image
-                        <img src=""  id="acceptImage" name="bImage">
+                        <img src=""  id="acceptImage" name="bImage" width="200px">
                         <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload"></iconify-icon>
                     </div>
-                    <input type="file" hidden id="picture" accept="image/png, image/jpeg" name="blogImage">
+                    <input type="file" hidden id="picture" class="pic" accept="image/png, image/jpeg" name="blogImage">
                 </div>
 
                 <div class="box">
@@ -64,10 +66,10 @@ include "./resources/shared/dashboard.php";
                 </div>
                 <div class="box">
                     <div class="m-auto aboutImg picture"> Author Image
-                        <img src=""  id="acceptImage" name="aImage">
-                        <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload"></iconify-icon>
+                        <img src=""  id="acceptImage1" name="aImage" width="200px">
+                        <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload1"></iconify-icon>
                     </div>
-                    <input type="file" hidden id="picture" accept="image/png, image/jpeg" name="blogImage">
+                    <input type="file" hidden id="picture1" accept="image/png, image/jpeg" name="blogImage">
                 </div>
                 <div class="box">
                     <label for="fblink">FB Link</label>
@@ -99,6 +101,13 @@ include "./resources/shared/dashboard.php";
             $("#picture").click();
             $("#picture").change(() => {
                 document.getElementById("acceptImage").src = window.URL.createObjectURL(event.target.files[0]);
+            })
+        })
+
+        $("#upload1").click(() => {
+            $("#picture1").click();
+            $("#picture1").change(() => {
+                document.getElementById("acceptImage1").src = window.URL.createObjectURL(event.target.files[0]);
             })
         })
     </script>

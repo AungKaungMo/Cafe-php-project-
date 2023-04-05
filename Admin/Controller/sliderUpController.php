@@ -17,24 +17,24 @@ if (isset($_POST["saveChange"])) {
     $paraThree = $_POST["para3"];
     $file3 = $_FILES['image3'];
     $file = [$file1, $file2, $file3];
-    print_r($file);
 
     $db = new DBConnection();
     $pdo = $db->connect();
 
     if ($file != []) {
-        echo "1";
+
         $query = "UPDATE m_slideradmin SET";
-        $query1 = "imgOne = :img1";
-        $query2 = "imgTwo = :img2";
-        $query3 = "imgThree = :img3";
+        $query1 = " imgOne = :img1 ";
+        $query2 = " imgTwo = :img2 ";
+        $query3 = " imgThree = :img3 ";
         $location1 = $file[0]['tmp_name'];
         $location2 = $file[1]['tmp_name'];
         $location3 = $file[2]['tmp_name'];
         $queryend = "WHERE id = 1";
         if (move_uploaded_file($location1, "../../Storages/adminslider/" . $file[0]['name'])) {
-            echo "2";
+
             $finalquery = $query . $query1 . $queryend;
+
             $sql = $pdo->prepare(
                 $finalquery
             );
@@ -43,7 +43,7 @@ if (isset($_POST["saveChange"])) {
             $sql->execute();
         }
         if (move_uploaded_file($location2, "../../Storages/adminslider/" . $file[1]['name'])) {
-            echo "3";
+
             $finalquery = $query . $query2 . $queryend;
             $sql = $pdo->prepare(
                 $finalquery
@@ -53,7 +53,7 @@ if (isset($_POST["saveChange"])) {
             $sql->execute();
         }
         if (move_uploaded_file($location3, "../../Storages/adminslider/" . $file[2]['name'])) {
-            echo "4";
+
             $finalquery = $query . $query3 . $queryend;
             $sql = $pdo->prepare(
                 $finalquery
@@ -61,6 +61,7 @@ if (isset($_POST["saveChange"])) {
 
             $sql->bindValue(":img3", "adminslider/" . $file2['name']);
             $sql->execute();
+            header("Location: ../View/dashboard_setting_.php");
         }
     }
 }

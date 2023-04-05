@@ -28,7 +28,7 @@ if (move_uploaded_file($location, "../../Storages/shopheader/" . $file )) {
             WHERE id = 1
             "
             );
-            $sql->bindValue(":headerImage", "../../Storages/" . $file );
+            $sql->bindValue(":headerImage", "../../Storages/shopheader/" . $file );
         }
     } else {
 //echo 'There was some error moving the file to upload directory.';
