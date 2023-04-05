@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", "1");
     include "../Model/dbConnection.php";
     $db = new DBConnection();
     $pdo = $db->connect();
@@ -11,5 +12,4 @@
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
     $img = $result[0]["header_image"];
-    echo $img;
 ?>

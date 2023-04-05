@@ -5,7 +5,7 @@ $db = new DBConnection();
 $pdo = $db->connect();
 $sql = $pdo->prepare(
     "
-    SELECT * FROM m_slideradmin WHERE id=1;
+    SELECT * FROM m_faqs WHERE id=2;
     "
 );
 $sql->execute();

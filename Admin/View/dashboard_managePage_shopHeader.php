@@ -21,7 +21,7 @@ include "./resources/shared/dashboard.php";
     <div class="my-3">
         <div class="box">
             <div class="m-auto aboutImg">
-                <img src="../../Storages/<?= $img?>" alt="" id="acceptImage">
+                <img src="<?= $img?>" alt="" id="acceptImage">
                 <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload"></iconify-icon>
 
             </div>

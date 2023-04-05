@@ -5,8 +5,8 @@ $db = new DBConnection();
 $pdo = $db->connect();
 $sql = $pdo->prepare(
     "
-    SELECT * FROM m_slideradmin WHERE id=1;
+    SELECT * FROM m_privacy WHERE privacy_id=1;
     "
 );
 $sql->execute();
-$resultF = $sql->fetchAll(PDO::FETCH_ASSOC);
+$resultP = $sql->fetchAll(PDO::FETCH_ASSOC);
