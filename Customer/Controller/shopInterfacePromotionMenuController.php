@@ -1,5 +1,5 @@
 <?php
-    include "../Model/dbConnection.php";
+   // include "../Model/dbConnection.php";
     $db = new DBConnection();
     $pdo = $db->connect();
 
@@ -10,5 +10,3 @@
     );
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-  
-?>

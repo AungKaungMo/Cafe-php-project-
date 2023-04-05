@@ -245,7 +245,7 @@ ini_set("display_errors", "1");
                           <div class="d-flex align-items-center">
                             <div class="customersProfile">
                               <!-- <img class=" rounded-circle " src="./resources/img/cust1.jpg" width="100%" height="100%"> -->
-                              <img class=" rounded-circle " src="../../Storages/<?= $rvdata["user_pf"] ?>" width="100%" height="100%">
+                              <img class=" rounded-circle " src="../../Storages/<?= $rvdata["cus_profile"] ?>" width="100%" height="100%">
                             </div>
                             <div class="ms-3">
                               <div class=""><?= $rvdata["user_name"] ?></div>

@@ -1,3 +1,5 @@
+<?php include "../Controller/shopinterfaceController.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +36,19 @@
     <link rel="stylesheet" href="./resources/css/navigationAndFooter.css">
     <link rel="stylesheet" href="./resources/css/cartpopup.css">
     <link rel="stylesheet" href="./resources/css/shopinterface.css">
+    <style>
+        .backgroundCafeImage1 {
+            background: url(../../Storages/<?= $gimg2 ?>);
+        }
+
+        .backgroundCafeImage2 {
+            background: url(../../Storages/<?= $gimg3 ?>);
+        }
+
+        .backgroundCafeImage3 {
+            background: url(../../Storages/<?= $gimg1 ?>);
+        }
+    </style>
 
 </head>
 
@@ -41,7 +56,7 @@
 
     <?php
     include "./resources/shared/shopnav.php";
-    include "../Controller/shopInterfacePromotionMenuController.php";
+    // include "../Controller/shopInterfacePromotionMenuController.php";
     ?>
 
     <!-----------------------------   Header SLider    --------------------->
@@ -69,17 +84,17 @@
             <div class="swiper-wrapper discountCardContainer">
 
 
-                <?php for ($i = 0; $i < count($result); $i++) { ?>
+                <?php for ($i = 0; $i < count($Pmresult); $i++) { ?>
                     <div class="swiper-slide disCard mt-5">
                         <div class="disticket">
-                            <?php echo $result[$i]["product_discount"] . " %" ?>
+                            <?php echo $Pmresult[$i]["product_discount"] . " %" ?>
                         </div>
                         <div class="distickettri"></div>
                         <div class="carditems">
                             <div class="disphoto">
-                                <img src="../../Storages/<?php echo $result[$i]["product_photo"] ?>" alt="">
+                                <img src="../../Storages/<?php echo $Pmresult[$i]["product_photo"] ?>" alt="">
                             </div>
-                            <p class="pname"><?php echo $result[$i]["product_name"] ?></p>
+                            <p class="pname"><?php echo $Pmresult[$i]["product_name"] ?></p>
                             <div class="disbtn">
                                 <button>
                                     <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
@@ -91,7 +106,7 @@
                             </div>
                             <div class="disprice">
                                 <?php
-                                $percentPrice = $result[$i]["product_price"] - (($result[$i]["product_price"] * $result[$i]["product_discount"]) / 100);
+                                $percentPrice = $Pmresult[$i]["product_price"] - (($Pmresult[$i]["product_price"] * $Pmresult[$i]["product_discount"]) / 100);
                                 echo $percentPrice ?>MMK
                             </div>
                         </div>
@@ -124,23 +139,25 @@
 
         <div class="boxmenu">
             <div class="maincard item-details">
-                <div class="card item featured">
-                    <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                    <div class="text ms-3">Black Coffee</div>
-                    <div class="pbtn ms-4">
-                        <button>
-                            <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                        </button>
-                        <button>
-                            <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                        </button>
-                    </div>
-                    <div class="price text-center">
-                        1500MMK
-                    </div>
-                </div>
 
-                <div class="card item featured">
+                <?php foreach ($FPmresult as $menu1) { ?>
+                    <div class="card item featured">
+                        <img src="../../Storages/<?= $menu1["product_photo"] ?>" alt="" width="60%" class="img">
+                        <div class="text fs-3 ms-3"><?= $menu1["product_name"] ?></div>
+                        <div class="pbtn ms-4">
+                            <button>
+                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                            </button>
+                            <button>
+                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                            </button>
+                        </div>
+                        <div class="price text-center">
+                            <?= $menu1["product_price"] ?>MMK
+                        </div>
+                    </div>
+                <?php      }               ?>
+                <!-- <div class="card item featured">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -155,26 +172,45 @@
                         1500MMK
                     </div>
                 </div>
+                <div class="card item featured">
+                    <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
+                    <div class="text ms-3">Black Coffee</div>
+                    <div class="pbtn ms-4">
+                        <button>
+                            <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                        </button>
+                        <button>
+                            <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                        </button>
+                    </div>
+                    <div class="price text-center">
+                        1500MMK
+                    </div>
+                </div> -->
 
-                <div class="card item featured">
-                    <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                    <div class="text ms-3">Black Coffee</div>
-                    <div class="pbtn ms-4">
-                        <button>
-                            <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                        </button>
-                        <button>
-                            <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                        </button>
-                    </div>
-                    <div class="price text-center">
-                        1500MMK
-                    </div>
-                </div>
             </div>
 
             <div class="maincard item-details">
-                <div class="card item most">
+                <?php foreach ($MPmresult as $most) { ?>
+                    <div class="card item most">
+                        <img src="../../Storages/<?= $most["product_photo"] ?>" alt="" width="60%" class="img">
+                        <div class="text fs-3 ms-3"><?= $most["product_name"] ?></div>
+                        <div class="pbtn ms-4">
+                            <button>
+                                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                            </button>
+                            <button>
+                                <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
+                            </button>
+                        </div>
+                        <div class="price text-center">
+                            <?= $most["product_price"] ?>MMK
+                        </div>
+                    </div>
+                <?php    }       ?>
+
+
+                <!-- <div class="card item most">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -188,9 +224,9 @@
                     <div class="price text-center">
                         1500MMK
                     </div>
-                </div>
+                </div> -->
 
-                <div class="card item most">
+                <!-- <div class="card item most">
                     <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
                     <div class="text ms-3">Black Coffee</div>
                     <div class="pbtn ms-4">
@@ -204,25 +240,7 @@
                     <div class="price text-center">
                         1500MMK
                     </div>
-                </div>
-
-                <div class="card item most">
-                    <img src="./resources/img/black_coffee-removebg-preview (1) 1.png" alt="" width="60%" class="img">
-                    <div class="text ms-3">Black Coffee</div>
-                    <div class="pbtn ms-4">
-                        <button>
-                            <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                        </button>
-                        <button>
-                            <iconify-icon icon="mdi:cards-heart-outline" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
-                        </button>
-                    </div>
-                    <div class="price text-center">
-                        1500MMK
-                    </div>
-                </div>
-
-
+                </div> -->
             </div>
         </div>
 
@@ -414,27 +432,30 @@
         <div class="row mt-5 w-75 m-auto contactBox ">
             <div class="col-md-6 text-center mt-3  ">
                 <div class=" p-3 rounded-circle contactImage m-auto">
-                    <img src="./resources/img/contactImage.png">
+                    <!-- <img src="./resources/img/contactImage.png"> -->
+                    <img src="../../Storages/<?= $shoplogo ?>" width="100%">
                 </div>
                 <div class="ms-5">
                     <div class="d-flex mt-3 align-items-center">
                         <div class="me-3 p-2 rounded-circle d-flex justify-content-center align-items-center contactIcons">
                             <iconify-icon icon="material-symbols:location-on-rounded" class="fs-3"></iconify-icon>
                         </div>
-                        <p class="mt-3 text-start">No.135, Min ma haw lane, Yangon,
-                            Myanmar</p>
+                        <!-- <p class="mt-3 text-start">No.135, Min ma haw lane, Yangon,
+                            Myanmar</p> -->
+                        <p class="mt-3 text-start"><?= $address ?></p>
                     </div>
                     <div class="d-flex mt-3 align-items-center">
                         <div class="me-3 p-2 rounded-circle d-flex justify-content-center align-items-center contactIcons">
                             <iconify-icon icon="material-symbols:phone-in-talk" class="fs-3"></iconify-icon>
                         </div>
-                        <p class="mt-3 text-start">+959 123 456 789</p>
+                        <!-- <p class="mt-3 text-start">+959 123 456 789</p> -->
+                        <p class="mt-3 text-start"><?= $shopph ?></p>
                     </div>
                     <div class="d-flex mt-3 align-items-center">
                         <div class="me-3 p-2 rounded-circle d-flex justify-content-center align-items-center contactIcons">
                             <iconify-icon icon="ic:baseline-email" class="fs-3"></iconify-icon>
                         </div>
-                        <p class="mt-3 text-start">GroupTwo@gmail.com</p>
+                        <p class="mt-3 text-start"><?= $shopemail ?></p>
                     </div>
                 </div>
             </div>

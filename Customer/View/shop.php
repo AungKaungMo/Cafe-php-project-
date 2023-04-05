@@ -184,7 +184,7 @@
            <img src="./resources/img/popular_p3.png" alt="">
          </div>
          <div class="mt-5">
-           <a href="../Controller/shopinterfaceController.php?id=<?= $shop1 ?>">
+           <a href="./shopinterface.php?id=<?= $shop1 ?>">
              <button class="rightseemore">See More</button></a>
          </div>
        </div>
@@ -206,7 +206,7 @@
            <img src="./resources/img/popular_p2.png" alt="">
            <img src="./resources/img/popular_p3.png" alt="">
          </div>
-         <a href="../Controller/shopinterfaceController.php?id=<?= $shop2 ?>">
+         <a href="./shopinterface.php?id=<?= $shop2 ?>">
            <button class="leftseemore">See More</button></a>
        </div>
        <div class="col-lg-6 ">
@@ -239,7 +239,7 @@
            <img src="./resources/img/popular_p3.png" alt="">
          </div>
          <div class="mt-5">
-           <a href="../Controller/shopinterfaceController.php?id=<?= $shop3 ?>">
+           <a href="./shopinterface.php?id=<?= $shop3 ?>">
              <button class="rightseemore mb-5">See More</button></a>
          </div>
        </div>
