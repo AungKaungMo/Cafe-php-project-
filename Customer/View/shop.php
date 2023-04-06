@@ -170,7 +170,7 @@
      <div class="mx-sm-5 mx-2 pt-5 row">
        <div class="col-lg-6 ">
          <div class="h-75 ">
-           <img class="aboutImage" src="./resources/img/trendshop.png" height="100%" width="100%">
+           <img class="aboutImage" src="../../Storages/<?= $g1 ?>" height="100%" width="100%">
          </div>
        </div>
 
@@ -216,7 +216,7 @@
        </div>
        <div class="col-lg-6 ">
          <div class="h-75 ">
-           <img class="aboutImage" src="./resources/img/trendshop1.png" height="100%" width="100%">
+           <img class="aboutImage" src="../../Storages/<?= $g2 ?>" height="100%" width="100%">
          </div>
        </div>
      </div>
@@ -225,7 +225,7 @@
 
        <div class="col-lg-6 ">
          <div class="h-75 ">
-           <img class="aboutImage" src="./resources/img/trendshop2.png" height="100%" width="100%">
+           <img class="aboutImage" src="../../Storages/<?= $g3 ?>" height="100%" width="100%">
          </div>
        </div>
 

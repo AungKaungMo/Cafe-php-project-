@@ -275,7 +275,7 @@ $_SESSION["shopid"] = $Sid;
                     <div class="minibox">
                         <div class="blogcard">
                             <div class="part1">
-                                <img src="../../Storages/<?= $blogbox["blog_image"] ?>" alt="" width="100%">
+                                <img src="../../Storages/<?= $blogbox["blog_image"] ?>" alt="">
                             </div>
                             <div class="part2">
                                 <h5 class="text1 pt-2 fw-bold"><?= $blogbox["main_title"] ?></h5>
@@ -551,7 +551,7 @@ $_SESSION["shopid"] = $Sid;
     <script>
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,
-            slidesPerView: 1,
+            slidesPerView: 2,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,

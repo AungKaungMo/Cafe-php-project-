@@ -592,6 +592,17 @@ ContactUs
   transform: scale(1.2);
 }
 
+.part1 {
+  width: 24em;
+  height: 24em;
+}
+
+.part1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 992px) {
   .contactBox {
     width: 100% !important;
