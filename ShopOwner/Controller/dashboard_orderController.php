@@ -20,7 +20,6 @@ $db = new DBConnection();
 $pdo = $db->connect();
 
 //all data count
-
 $sql = $pdo->prepare(
     "
     SELECT
@@ -69,17 +68,6 @@ $sql->execute();
 $orderList = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 $pageList = count($totalRecord)/ $rowLimit;
-
-
-
-
- 
-
-
-
-
-
-
 
 
 

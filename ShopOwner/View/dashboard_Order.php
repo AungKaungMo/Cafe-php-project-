@@ -8,12 +8,7 @@ include "./resources/shared/dashboard.php";
 </head>
 
 <body>
-
-
-
     <div class="bookingContainer m-4">
-
-
         <table class="table">
             <thead>
                 <tr>
@@ -24,7 +19,6 @@ include "./resources/shared/dashboard.php";
                     <th>Price</th>
                     <th>Phone</th>
                     <th>Address</th>
-
                 </tr>
             </thead>
             <tbody class="tableBody">
@@ -33,7 +27,6 @@ include "./resources/shared/dashboard.php";
                         <hr class="line">
                     </td>
                 </tr>
-
                 <?php
                 $count = (($page-1) * $rowLimit) +1 ;
                 for ($i = 0; $i < count($orderList); $i++) { ?>
@@ -46,11 +39,9 @@ include "./resources/shared/dashboard.php";
                         <td><?= $orderList[$i]["cus_phone"]  ?></td>
                         <td><?= $orderList[$i]["cus_address"]  ?></td>
                     </tr>
-                <?php }
-                ?>
+                <?php } ?>
             </tbody>
         </table>
-
         <!--Pagination-->
         <nav aria-label="Page navigation example ">
             <ul class="pagination justify-content-center">
@@ -62,10 +53,9 @@ include "./resources/shared/dashboard.php";
     ?>">
                     <a class="page-link text-black" href="?page=<?= $page - 1 ?>">Previous</a>
                 </li>
-
                 <?php
                 for ($i = 1; $i <= $pageList; $i++) { ?>
-                    <li class="page-item   
+                    <li class="page-item part 
                     <?php
                     if ($page == $i){
                         echo "active";
@@ -113,7 +103,7 @@ include "./resources/shared/dashboard.php";
 
         <!--------------  Ending Tab for dashboard  ----------------->
     </div>
-    </div>
+     
 
     <!--------------------------   JS   ------------------------------->
     <!-- <script src="./resources/js/dashboard_order.js"></script> -->

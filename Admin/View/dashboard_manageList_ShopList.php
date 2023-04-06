@@ -65,7 +65,51 @@ include "./resources/shared/dashboard.php";
             </tbody>
         </table>
         <!-- Pagination -->
-        <nav aria-label="Page navigation example">
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination justify-content-center">
+                <li class="page-item
+    <?php
+    if ($page <= 1) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page - 1 ?>">Previous</a>
+                </li>
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <li class="page-item part 
+                    <?php
+                    if ($page == $i){
+                        echo "active";
+                    }
+                    ?>
+                    ">
+                        <a class="page-link text-black" href="?page=<?= $i ?>"><?= $i ?></a>
+                    </li>
+                <?php }
+                ?>
+                <li class="page-item
+    <?php
+    if ($page >= $pageList) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page + 1 ?>">Next</a>
+                </li>
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
                 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                 <?php
@@ -74,19 +118,8 @@ include "./resources/shared/dashboard.php";
                 <?php } ?>
                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
-        </nav>
-
-        <!-- <div class="d-flex justify-content-center w-100 mt-5 align-items-center user-select-none">
-            <div class="mt-1">
-                <iconify-icon icon="material-symbols:keyboard-double-arrow-left" class="fs-1 prev"></iconify-icon>
-            </div>
-            <div class="mx-3">
-                <span class="currentPage">1</span><span> / </span><span class="allPage">2</span>
-            </div>
-            <div class="mt-1">
-                <iconify-icon icon="material-symbols:keyboard-double-arrow-right" class="fs-1 next"></iconify-icon>
-            </div>
-        </div> -->
+        </nav> -->
+    
     </div>
 
     <!-- <script src="./resources/js/dashboard.js"></script>
