@@ -136,6 +136,7 @@
       <!--------------  Search Details  ------------------------>
 
       <div id="searchProductsContainerBox">
+<<<<<<< HEAD
         <!-- <div class="m-auto searchProductContainer">
                   <div class="detailsBox ms-3 pt-3 d-flex justify-content-between">
                     <div class="productImage">
@@ -195,6 +196,13 @@
                   </div>
                 </div> -->
 
+=======
+
+      </div>
+
+
+
+>>>>>>> origin/main
     </div>
   </div>
 

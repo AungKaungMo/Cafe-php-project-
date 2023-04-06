@@ -79,7 +79,7 @@ include "../Controller/checkoutController.php";
                 </div>
 
                 <div class="col-md-6 col-12">
-    
+
 
                     <div>
                         <label for="township" class="township">
@@ -158,14 +158,14 @@ include "../Controller/checkoutController.php";
                             <div class="fw-bold ms-5 grandTotal"><?php echo (int)substr($totalPrice, 0, -11) + $deliveryFee . " MMK(Coins)";  ?> </div>
                             <input type="hidden" value="<?= $deliveryFee ?>" name="deliveryFee" id="deli">
                             <input type="hidden" value="<?= (int)substr($totalPrice, 0, -11) + $deliveryFee ?>" name="totalPrice" id="inputTotal">
-                           
+
                         </div>
 
                     </div>
                 </div>
                 <div class="text-center submitBtn my-5">
                     <!-- <a href="./wavepay1.php" target="_blank"> -->
-                        <button class="fw-bold px-2 py-3" name="order" id="">Order</button>
+                    <button class="fw-bold px-2 py-3" name="order" id="">Order</button>
                     <!-- </a> -->
                 </div>
 
@@ -202,29 +202,29 @@ include "../Controller/checkoutController.php";
 
     <script>
         let tv = document.getElementsByClassName("townshipVal");
-        const userTownship = "<?= $userTownship ?>";
-        const grandTotalPrice = "<?= substr($totalPrice,0, -11) ?>";
+
+        const grandTotalPrice = "<?= substr($totalPrice, 0, -11) ?>";
         let tvalue;
         let deliTotal = 0;
-        $("#township").val(userTownship);
+
 
         $('#township').on("change", function() {
             deliTotal = 0;
             var chooseTownship = $("option:selected", this).val();
             for (let i = 0; i < tv.length; i++) {
                 tvalue = Number(tv[i].getAttribute("data-township"));
-                if(chooseTownship == tvalue){
+                if (chooseTownship == tvalue) {
                     tv[i].innerText = "0 MMK(Coins)";
-                }else {
+                } else {
                     tv[i].innerText = Math.abs(Number(chooseTownship) - tvalue) * 300 + " MMK(Coins)";
                     deliTotal += Math.abs(Number(chooseTownship) - tvalue) * 300;
-                    
+
                 }
             }
-           
-          $(".grandTotal").text((deliTotal + Number(grandTotalPrice)) + " MMK(Coins)");
-          $("#deli").val(deliTotal);
-          $("#inputTotal").val(deliTotal + Number(grandTotalPrice));
+
+            $(".grandTotal").text((deliTotal + Number(grandTotalPrice)) + " MMK(Coins)");
+            $("#deli").val(deliTotal);
+            $("#inputTotal").val(deliTotal + Number(grandTotalPrice));
         });
     </script>
 </body>
