@@ -123,17 +123,88 @@ session_start();
 
     <!-- Modal -->
     <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modalDialog mt-4 mb-0">
         <div class="modal-content searchDropdown">
           <div class="modal-header d-flex justify-content-between border-0">
 
-            <input type="text" placeholder="Search" class="ps-2 searchBox">
-            <iconify-icon icon="material-symbols:search" class="fs-3 inputSearchIcon"></iconify-icon>
+            <input type="text" placeholder="Search" class="ps-2 searchBox" id="searchItems">
+            <iconify-icon icon="material-symbols:search" class="fs-3 inputSearchIcon" id="searchIcon"></iconify-icon>
           </div>
 
+          <form action="../Controller/searchController.php" method="POST">
+            <input type="hidden" name="inputSearchItems">
+            <input type="submit" hidden>
+          </form>
         </div>
       </div>
+
+       <!--------------  Search Details  ------------------------>
+
+       <div id="searchProductsContainerBox">
+                <!-- <div class="m-auto searchProductContainer">
+                  <div class="detailsBox ms-3 pt-3 d-flex justify-content-between">
+                    <div class="productImage">
+                      <img src="./resources/img/cafeshopone.jpg">
+                    </div>
+                    <div class="me-4 mb-3">
+                      <div class="d-flex justify-content-between">
+                      <p class="productName">Coffee</p>
+                      <p class="productAmount">1500MMK</p>
+                      </div>
+                      <p class="cafeName">Shop Name - (<span> <a href="#">Htet Naung Cafe</a></span>)</p>
+                      <div class="d-flex justify-content-between">
+                      <button class="goShopBtn">Go Shop</button>
+                      <iconify-icon icon="ph:shopping-cart-simple-fill" class="buyCart"></iconify-icon>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+
+
+                <!-- <div class="m-auto searchProductContainer">
+                  <div class="detailsBox ms-3 pt-3 d-flex justify-content-between">
+                    <div class="productImage">
+                      <img src="./resources/img/cafeshopone.jpg">
+                    </div>
+                    <div class="me-4 mb-3">
+                      <div class="d-flex justify-content-between">
+                      <p class="productName">Coffee</p>
+                      <p class="productAmount">1500MMK</p>
+                      </div>
+                      <p class="cafeName">Shop Name - (<span> <a href="#">Htet Naung Cafe</a></span>)</p>
+                      <div class="d-flex justify-content-between">
+                      <button class="goShopBtn">Go Shop</button>
+                      <iconify-icon icon="ph:shopping-cart-simple-fill" class="buyCart"></iconify-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="m-auto searchProductContainer">
+                  <div class="detailsBox ms-3 pt-3 d-flex justify-content-between">
+                    <div class="productImage">
+                      <img src="./resources/img/cafeshopone.jpg">
+                    </div>
+                    <div class="me-4 mb-3">
+                      <div class="d-flex justify-content-between">
+                      <p class="productName">Coffee</p>
+                      <p class="productAmount">1500MMK</p>
+                      </div>
+                      <p class="cafeName">Shop Name - (<span> <a href="#">Htet Naung Cafe</a></span>)</p>
+                      <div class="d-flex justify-content-between">
+                      <button class="goShopBtn">Go Shop</button>
+                      <iconify-icon icon="ph:shopping-cart-simple-fill" class="buyCart"></iconify-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+              </div>
     </div>
+             
+
+
     <div class="collapse navbar-collapse" id="responsiveSideBar">
       <ul class="navbar-nav m-auto ">
         <li class="nav-item">
