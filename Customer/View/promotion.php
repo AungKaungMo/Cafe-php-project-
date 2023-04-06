@@ -1,4 +1,4 @@
- <?php include  "../Controller/mainpromotionController.php"  ?>
+ <?php include  "../Controller/mainpromotionController.php";                ?>
  <!DOCTYPE html>
  <html lang="en">
 
@@ -62,10 +62,7 @@
  <body>
 
    <?php
-
     include "./resources/shared/nav.php";
-    // include "../Model/dbConnection.php";
-
     ?>
    <!-- ===========================================Hero section================================ -->
 

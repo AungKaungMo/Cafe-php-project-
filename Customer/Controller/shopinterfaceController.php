@@ -59,10 +59,21 @@ if (isset($_GET["id"])) {
     //no promotion Popular menu
     $sql = $pdo->prepare(
         "
-            SELECT * FROM m_product WHERE del_flg = 0 AND product_instock != 0 AND product_discount = 0 AND shop_id=:id ORDER BY del_flg = 0 DESC LIMIT 3
+            SELECT * FROM m_product WHERE del_flg = 0 AND product_instock != 0 AND product_discount = 0 AND shop_id=:id ORDER BY product_id DESC LIMIT 3
         "
     );
     $sql->bindValue(":id", $shopid);
     $sql->execute();
     $MPmresult = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+
+    //select blog 
+    $sql = $pdo->prepare(
+        "
+        SELECT * FROM m_blog WHERE del_flg = 0 AND shop_id = :id
+        "
+    );
+    $sql->bindValue(":id", $shopid);
+    $sql->execute();
+    $blog = $sql->fetchAll(PDO::FETCH_ASSOC);
 }

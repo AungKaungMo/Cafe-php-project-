@@ -46,9 +46,9 @@
 
   <a href="./promotion.html">
     <a href="./shop.php">
-      <iconify-icon icon="material-symbols:arrow-back" class="backArrow" width="90" height="90"></iconify-icon></a>
+      <iconify-icon icon="material-symbols:arrow-back" class="backArrow fs-2"></iconify-icon></a>
   </a>
-  <div class="btn">
+  <!-- <div class="btn">
     <button class="choose activechoose">
       <a href=""><img src="./resources/img/coffee.png" alt="">Coffee</a>
     </button>
@@ -66,7 +66,7 @@
         <img src="./resources/img/Specials.png" alt="">
         Specials
       </a>
-    </button>
+    </button> -->
   </div>
 
   <!-- ====================================== Product==================================================== -->
