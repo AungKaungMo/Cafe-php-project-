@@ -48,7 +48,7 @@ include "../Controller/blogSelectController.php";
 
 
     <div class="mt-4 mx-sm-5 mx-2 fs-1 backIcon">
-        <a href="./shopinterface.php"><iconify-icon icon="material-symbols:arrow-back-rounded" class="backIcon"></iconify-icon></a>
+        <a href="./shopinterface.php?id=<?= $resultB[0]["shop_id"] ?>"><iconify-icon icon="material-symbols:arrow-back-rounded" class="backIcon"></iconify-icon></a>
     </div>
     <div class="navLine"></div>
     </div>
@@ -173,7 +173,6 @@ include "../Controller/blogSelectController.php";
                                 <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
                                 <div class="ms-4">
                                     <p class="personName fw-bold mb-0 fs-5">
-
                                         Calara
                                     </p>
                                     <p class="commentDate">
@@ -206,10 +205,7 @@ include "../Controller/blogSelectController.php";
                                 <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
                                 <div class="ms-4">
                                     <p class="personName fw-bold mb-0 fs-5" name="name">
-                                        <?php
-                                        echo $result1[1]["cus_name"];
-                                        ?>
-                                        <!-- Calara -->
+                                        Calara
                                     </p>
                                     <p class="commentDate" name="date">
                                         <?php
@@ -240,10 +236,7 @@ include "../Controller/blogSelectController.php";
                                 <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
                                 <div class="ms-4">
                                     <p class="personName fw-bold mb-0 fs-5">
-                                        <?php
-                                        echo $result1[2]["cus_name"];
-                                        ?>
-                                        <!-- Calara -->
+                                        Calara
                                     </p>
                                     <p class="commentDate">
                                         <?php

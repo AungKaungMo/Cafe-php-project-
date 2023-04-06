@@ -136,6 +136,9 @@
 
 .searchDropdown {
   background-color: var(--mainColor);
+  border-radius: 10px 10px 0px 0px;
+  outline: 0;
+  border-bottom: 1px solid var(--mainColor);
 }
 
 .searchBox {
@@ -154,6 +157,76 @@
 
 .inputSearchIcon {
   color: var(--secondMainColor);
+}
+
+/****************  Search Details  **********************/
+
+.searchProductContainer {
+  background-color: var(--mainColor);
+  max-width: 420px;
+  user-select: none;
+  color: var(--textColorPrimary);
+}
+
+.modalDialog {
+  max-width: 420px;
+}
+
+.productImage {
+  width: 110px;
+  height: 110px;
+  border-radius: 5px;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.detailsBox {
+  display: flex;
+  border-bottom: 1px solid var(--textColorSecondary);
+}
+
+.buyCart {
+  padding: 0.4em !important;
+  background-color: var(--secondMainColor) !important;
+  color: var(--mainColor) !important;
+  border-radius: 50% !important;
+  font-size: 1.1em !important;
+  transition: all 0.5s !important;
+}
+
+.buyCart:hover {
+  transform: rotate(360deg);
+}
+
+.goShopBtn {
+  padding: 0.3em;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+  transition: all 0.5s;
+  background-color: var(--secondMainColor);
+  border: 2px solid var(--secondMainColor);
+  color: var(--mainColor);
+}
+
+.goShopBtn:hover {
+  background-color: transparent;
+  color: var(--secondMainColor);
+}
+
+.goShopBtn a {
+  cursor: pointer;
+  color: var(--mainColor);
+}
+
+.goShopBtn a:hover {
+  color: var(--textColorPrimary);
+  /* opacity: 0.8; */
 }
 
 .signColor {
@@ -244,8 +317,8 @@
   border: 2px solid var(--mainColor);
   font-size: 0.8em;
 }
-.gowebsite button:hover a{
-    color: var(--mainColor);
+.gowebsite button:hover a {
+  color: var(--mainColor);
 }
 .gowebsite button:hover {
   background-color: transparent;
@@ -265,7 +338,7 @@
   transform: rotate(45deg);
 }
 
-    /************************************* Cart *********************************** */
+/************************************* Cart *********************************** */
 
 .CHcart {
   font-family: var(--titleFont);
@@ -327,7 +400,6 @@
   font-size: var(--minisubtitleFontSize);
 }
 
-
 .lineH {
   width: 45%;
   height: 1px;
@@ -338,7 +410,6 @@
 .tax {
   opacity: 0.7;
 }
-
 
 .CheckO {
   margin-left: 14em;
@@ -360,7 +431,6 @@
   background-color: transparent;
   color: var(--mainColor);
 }
-
 
 /**
 Footer
@@ -433,11 +503,11 @@ Footer
     margin-top: 1.5em;
   }
 }
-.newUser a{
+.newUser a {
   color: var(--textColorSecondary);
   font-weight: bold;
   text-decoration: underline;
 }
-.newUser a:hover{
+.newUser a:hover {
   color: var(--mainColor);
 }

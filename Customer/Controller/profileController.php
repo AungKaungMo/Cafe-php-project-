@@ -1,6 +1,8 @@
 <?php
 include "../Model/dbConnection.php";
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 if (isset($_SESSION["userid"])) {
     $userid = $_SESSION["userid"];
 
@@ -14,5 +16,6 @@ if (isset($_SESSION["userid"])) {
     $sql->bindValue(":id", $userid);
     $sql->execute();
     $pf = $sql->fetchAll(PDO::FETCH_ASSOC);
-    $_SESSION["userpf"] = $pf[0]["cus_profile"];
+    $userpf = $pf[0]["cus_profile"];
+    $_SESSION["userpf"] = $userpf;
 }

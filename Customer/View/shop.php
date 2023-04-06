@@ -29,6 +29,8 @@
 
    <!------------------------   JS   -------------------------------->
    <script src="./resources/js/navigation.js"></script>
+   <script src="./resources/js/search.js"></script>
+   <script src="./resources/js/cartControl.js"></script>
 
    <!------------------------   CSS   ----------------------------->
    <link rel="stylesheet" href="./resources/css/root.css">
@@ -65,40 +67,30 @@
    </section>
 
    <!-- =================================================================== trending food and cake ======================================================================== -->
+   <?php include "../Controller/tendingfoodController.php"  ?>
    <section id="tending">
      <h1 class="title fw-bold position-relative pb-2">Tending Food & Cake</h1>
 
      <div class="container">
 
+
        <div class="shopContainer">
-         <div class="card">
-           <img src="./resources/img/pshop2.png" alt="">
-           <div class="script">
 
-             <span class="infor">CJ Cafe</span>
+         <?php foreach ($Tfood as $key) { ?>
+           <div class="card">
+             <img src="../../Storages/<?= $key["product_photo"] ?>" alt="">
+             <div class="script">
 
-             <div class="icon">
-               <span class="price fw-bold">2000MMK</span>
+               <span class="infor"><?= $key["product_name"] ?></span>
 
-               <iconify-icon icon="icon-park-solid:shopping-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="30" height="30"></iconify-icon>
+               <div class="icon">
+                 <span class="price fw-bold"><?= $key["product_price"] ?>MMK</span>
+                 <iconify-icon icon="icon-park-solid:shopping-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="30" height="30"></iconify-icon>
+               </div>
              </div>
            </div>
-         </div>
-
-         <div class="card">
-           <img src="./resources/img/pshop2.png" alt="">
-           <div class="script">
-
-             <span class="infor">CJ Cafe</span>
-
-             <div class="icon">
-               <span class="price fw-bold">2000MMK</span>
-               <iconify-icon icon="icon-park-solid:shopping-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="30" height="30"></iconify-icon>
-             </div>
-           </div>
-         </div>
-
-         <div class="card">
+         <?php  }                                ?>
+         <!-- <div class="card">
            <img src="./resources/img/pshop2.png" alt="">
            <div class="script">
 
@@ -149,6 +141,20 @@
              </div>
            </div>
          </div>
+
+         <div class="card">
+           <img src="./resources/img/pshop2.png" alt="">
+           <div class="script">
+
+             <span class="infor">CJ Cafe</span>
+
+             <div class="icon">
+               <span class="price fw-bold">2000MMK</span>
+               <iconify-icon icon="icon-park-solid:shopping-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="30" height="30"></iconify-icon>
+             </div>
+           </div>
+         </div> -->
+
        </div>
 
      </div>
@@ -165,7 +171,7 @@
      <div class="mx-sm-5 mx-2 pt-5 row">
        <div class="col-lg-6 ">
          <div class="h-75 ">
-           <img class="aboutImage" src="./resources/img/trendshop.png" height="100%" width="100%">
+           <img class="aboutImage" src="../../Storages/<?= $g1 ?>" height="100%" width="100%">
          </div>
        </div>
 
@@ -211,7 +217,7 @@
        </div>
        <div class="col-lg-6 ">
          <div class="h-75 ">
-           <img class="aboutImage" src="./resources/img/trendshop1.png" height="100%" width="100%">
+           <img class="aboutImage" src="../../Storages/<?= $g2 ?>" height="100%" width="100%">
          </div>
        </div>
      </div>
@@ -220,7 +226,7 @@
 
        <div class="col-lg-6 ">
          <div class="h-75 ">
-           <img class="aboutImage" src="./resources/img/trendshop2.png" height="100%" width="100%">
+           <img class="aboutImage" src="../../Storages/<?= $g3 ?>" height="100%" width="100%">
          </div>
        </div>
 

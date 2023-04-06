@@ -1,4 +1,4 @@
- <?php include  "../Controller/mainpromotionController.php"  ?>
+ <?php include  "../Controller/mainpromotionController.php";                ?>
  <!DOCTYPE html>
  <html lang="en">
 
@@ -25,6 +25,7 @@
    <!------------------------   JS   -------------------------------->
    <!-- <script src="./promotion.js" defer></script> -->
    <script src="./resources/js/navigation.js"></script>
+   <script src="./resources/js/cartControl.js"></script>
 
 
    <!------------------------   CSS   ----------------------------->
@@ -61,10 +62,7 @@
  <body>
 
    <?php
-
     include "./resources/shared/nav.php";
-    // include "../Model/dbConnection.php";
-
     ?>
    <!-- ===========================================Hero section================================ -->
 

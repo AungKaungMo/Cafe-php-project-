@@ -2,6 +2,8 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
+$id = $_SESSION["shopid"];
 ?>
 
 <!---------- nav --------->
@@ -139,10 +141,10 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="collapse navbar-collapse" id="responsiveSideBar">
             <ul class="navbar-nav ms-auto ">
                 <li class="nav-item">
-                    <a class="nav-link navtitle navtitleActive" href="./shopinterface.php">HOME</a>
+                    <a class="nav-link navtitle navtitleActive" href="./shopinterface.php?id=<?= $id ?>">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navtitle mx-5" href="./shopinterfacemenu.php">Menu</a>
+                    <a class="nav-link navtitle mx-5" href="./shopinterfacemenu.php?id=<?= $id ?>">Menu</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link navtitle  me-5" href="./booking.php">Booking</a>
@@ -280,10 +282,10 @@ include "./resources/shared/afterLogin.php";
 
     <ul class="">
         <li class="nav-item">
-            <a class="nav-link navtitle hometitle pb-2" href="./shopinterface.php">HOME</a>
+            <a class="nav-link navtitle hometitle pb-2" href="./shopinterface.php?id=<?= $id ?>">HOME</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link navtitle menutitle my-5 pb-2" href="./shopinterfacemenu.php">Menu</a>
+            <a class="nav-link navtitle menutitle my-5 pb-2" href="./shopinterfacemenu.php?id=<?= $id ?>">Menu</a>
         </li>
         <li class="nav-item ">
             <a class="nav-link navtitle bookingtitle pb-2" href="./booking.php">Booking</a>

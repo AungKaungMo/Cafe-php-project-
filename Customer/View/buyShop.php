@@ -24,6 +24,7 @@
 
   <!------------------------   JS   -------------------------------->
   <script src="./resources/js/navigation.js"></script>
+  <script src="./resources/js/cartControl.js"></script>
 
   <!------------------------   CSS   ----------------------------->
   <link rel="stylesheet" href="./resources/css/root.css">
@@ -173,7 +174,9 @@
   </div>
 
   <!-----------------------   Footer   ---------------------------->
+
   <?php
+  include "../Model/dbConnection.php";
   include "./resources/shared/footer.php"
   ?>
 

@@ -6,7 +6,7 @@ $(document).ready(() => {
   let count = 1;
   let itemId;
   let mmk;
-  let originalPrice ;
+  let originalPrice;
   $(".buy").click((event) => {
     count = 1;
     $(".countItem").text(count);
@@ -15,7 +15,12 @@ $(document).ready(() => {
 
     $(".cake").text($(".pname")[index].innerText);
     $(".mmk").text($(".price")[index].innerText);
-    mmk = Number($(".price")[index].innerText.substring(0, $(".price")[index].innerText.length - 4));
+    mmk = Number(
+      $(".price")[index].innerText.substring(
+        0,
+        $(".price")[index].innerText.length - 4
+      )
+    );
     originalPrice = mmk;
 
     $(".coin").text(
@@ -23,9 +28,12 @@ $(document).ready(() => {
         0,
         $(".price")[index].innerText.length - 3
       ) + " Coins"
-    );    
+    );
 
-    $(".orderImage").attr("src", document.getElementsByClassName("img")[index].src);
+    $(".orderImage").attr(
+      "src",
+      document.getElementsByClassName("img")[index].src
+    );
   });
 
   $(".plus").click(() => {
@@ -49,7 +57,7 @@ $(document).ready(() => {
   $(".addCart").click(function addCart() {
     let found = false;
     let noteValue = $("#noteToOrder").val();
-    carts.forEach(item => {
+    carts.forEach((item) => {
       if (Number(item.id) == Number(itemId)) {
         item.quantity += count;
         found = true;
@@ -59,7 +67,7 @@ $(document).ready(() => {
     });
 
     if (!found) {
-        carts.push({
+      carts.push({
         id: itemId,
         quantity: count,
         orderNote: noteValue,
@@ -73,5 +81,5 @@ $(document).ready(() => {
     localStorage.setItem("cart", JSON.stringify(carts));
     $(".cartList").val(JSON.stringify(carts));
   });
-  console.log($(".cartList").val())
+  console.log($(".cartList").val());
 });

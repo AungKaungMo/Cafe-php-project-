@@ -1,4 +1,11 @@
-<?php include "../Controller/shopinterfaceController.php" ?>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+include "../Controller/shopinterfaceController.php";
+$Sid = $_GET["id"];
+$_SESSION["shopid"] = $Sid;
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +37,7 @@
 
     <!------------------------   JS   -------------------------------->
     <script src="./resources/js/navigation.js"></script>
+    <script src="./resources/js/cartControl.js"></script>
 
     <!------------------------   CSS   ----------------------------->
     <link rel="stylesheet" href="./resources/css/root.css">
@@ -47,6 +55,10 @@
 
         .backgroundCafeImage3 {
             background: url(../../Storages/<?= $gimg1 ?>);
+        }
+
+        .backgroundCafeImage4 {
+            background: url(../../Storages/<?= $gimg4 ?>);
         }
     </style>
 
@@ -66,6 +78,7 @@
             <div class="backImage backgroundCafeImage1 swiper-slide"></div>
             <div class="backImage backgroundCafeImage2 swiper-slide"></div>
             <div class="backImage backgroundCafeImage3 swiper-slide"></div>
+            <div class="backImage backgroundCafeImage4 swiper-slide"></div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -97,11 +110,12 @@
                             <p class="pname"><?php echo $Pmresult[$i]["product_name"] ?></p>
                             <div class="disbtn">
                                 <button>
-                                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-id="<?= $result[$i]["product_id"] ?>" index="<?= $i ?>" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> data-bs-toggle="modal" data-bs-target="#staticBackdrop" <?php } ?> width="25" height="25" class="buy"></iconify-icon>
                                 </button>
 
                                 <button>
-                                    <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
+                                    <iconify-icon icon="mdi:cards-heart-outline" class="blank_heart" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } ?> width="25" height="25"></iconify-icon>
+                                    <!-- <iconify-icon icon="mdi:cards-heart" class="full_heart d-none" width="25" height="25"></iconify-icon> -->
                                 </button>
                             </div>
                             <div class="disprice">
@@ -244,7 +258,7 @@
             </div>
         </div>
 
-        <div><a href="./shopinterfacemenu.php" class="seeall fw-bold">See All...</a></div>
+        <div><a href="./shopinterfacemenu.php?id=<?= $Sid ?>" class="seeall fw-bold">See All...</a></div>
     </div>
 
 
@@ -257,7 +271,80 @@
     </div>
     <div class="swiper mySwiper mt-5 body">
         <div class="swiper-wrapper">
-            <div class="swiper-slide box">
+
+            <?php foreach ($blog as $blogbox) { ?>
+                <div class="swiper-slide box">
+                    <div class="minibox">
+                        <div class="blogcard">
+                            <div class="part1">
+                                <img src="../../Storages/<?= $blogbox["blog_image"] ?>" alt="">
+                            </div>
+                            <div class="part2">
+                                <h5 class="text1 pt-2 fw-bold"><?= $blogbox["main_title"] ?></h5>
+                                <p class="text2"><?= $blogbox["first_para"] ?></p>
+                                <div class="day ">
+                                    <iconify-icon icon="material-symbols:calendar-month-outline-sharp" class="icon pe-2"></iconify-icon>
+                                    <h6 class="date pe-2"><?= $blogbox["created_date"] ?></h6>
+                                    <iconify-icon icon="mdi:message-reply-text" class="icon pe-2"></iconify-icon>
+                                    <h6 class="like">4.3k</h6>
+                                </div>
+                                <div class="readBtn">
+                                    <a href="./selectedBlog.php?bid=<?= $blogbox["id"] ?>">
+                                        <button class="p-2">Read More</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="blogcard">
+                            <div class="part1">
+                                <img src="../../Storages/<?= $blogbox["blog_image"] ?>" alt="" width="100%">
+                            </div>
+                            <div class="part2">
+                                <h5 class="text1 pt-2 fw-bold"><?= $blogbox["main_title"] ?></h5>
+                                <p class="text2"><?= $blogbox["first_para"] ?></p>
+                                <div class="day ">
+                                    <iconify-icon icon="material-symbols:calendar-month-outline-sharp" class="icon pe-2"></iconify-icon>
+                                    <h6 class="date pe-2"><?= $blogbox["created_date"] ?></h6>
+                                    <iconify-icon icon="mdi:message-reply-text" class="icon pe-2"></iconify-icon>
+                                    <h6 class="like">4.3k</h6>
+                                </div>
+                                <div class="readBtn">
+                                    <a href="./selectedBlog.php">
+                                        <button class="p-2">Read More</button></a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="blogcard">
+                            <div class="part1">
+                                <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
+                            </div>
+                            <div class="part2">
+                                <h5 class="text1 pt-2 fw-bold">Essential Guide to Healthy
+                                    Eating </h5>
+                                <p class="text2">We mean real food as opposed to processed
+                                    food. Real food is fruits, vegetables, meats,
+                                    dairy, seafood, nuts, seeds, whole grains and
+                                    beans. Natural sweeteners, coffee,
+                                    chocolate and wine count, </p>
+                                <div class="day ">
+                                    <iconify-icon icon="material-symbols:calendar-month-outline-sharp" class="icon pe-2"></iconify-icon>
+                                    <h6 class="date pe-2">01/10/2023</h6>
+                                    <iconify-icon icon="mdi:message-reply-text" class="icon pe-2"></iconify-icon>
+                                    <h6 class="like">4.3k</h6>
+                                </div>
+                                <div class="readBtn">
+                                    <a href="./selectedBlog.php">
+                                        <button class="p-2">Read More</button></a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            <?php } ?>
+
+
+
+            <!-- <div class="swiper-slide box">
                 <div class="minibox">
                     <div class="blogcard">
                         <div class="part1">
@@ -310,7 +397,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="swiper-slide box">
                 <div class="minibox">
                     <div class="blogcard">
@@ -363,60 +449,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide box">
-                <div class="minibox">
-                    <div class="blogcard">
-                        <div class="part1">
-                            <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
-                        </div>
-                        <div class="part2">
-                            <h5 class="text1 pt-2 fw-bold">Essential Guide to Healthy
-                                Eating </h5>
-                            <p class="text2">We mean real food as opposed to processed
-                                food. Real food is fruits, vegetables, meats,
-                                dairy, seafood, nuts, seeds, whole grains and
-                                beans. Natural sweeteners, coffee,
-                                chocolate and wine count, </p>
-                            <div class="day ">
-                                <iconify-icon icon="material-symbols:calendar-month-outline-sharp" class="icon pe-2"></iconify-icon>
-                                <h6 class="date pe-2">01/10/2023</h6>
-                                <iconify-icon icon="mdi:message-reply-text" class="icon pe-2"></iconify-icon>
-                                <h6 class="like">4.3k</h6>
-                            </div>
-                            <div class="readBtn">
-                                <a href="./selectedBlog.php">
-                                    <button class="p-2">Read More</button></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="blogcard">
-                        <div class="part1">
-                            <img src="./resources/img/Rectangle 362.png" alt="" width="100%">
-                        </div>
-                        <div class="part2">
-                            <h5 class="text1 pt-2 fw-bold">Essential Guide to Healthy
-                                Eating </h5>
-                            <p class="text2">We mean real food as opposed to processed
-                                food. Real food is fruits, vegetables, meats,
-                                dairy, seafood, nuts, seeds, whole grains and
-                                beans. Natural sweeteners, coffee,
-                                chocolate and wine count, </p>
-                            <div class="day ">
-                                <iconify-icon icon="material-symbols:calendar-month-outline-sharp" class="icon pe-2"></iconify-icon>
-                                <h6 class="date pe-2">01/10/2023</h6>
-                                <iconify-icon icon="mdi:message-reply-text" class="icon pe-2"></iconify-icon>
-                                <h6 class="like">4.3k</h6>
-                            </div>
-                            <div class="readBtn">
-                                <a href="./selectedBlog.php">
-                                    <button class="p-2">Read More</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div> -->
 
         </div>
         <div class="swiper-pagination"></div>
@@ -479,6 +512,7 @@
                         <input type="textarea" class="contactInput" placeholder="Message" name="message">
                     </div>
                     <div class="sendBtn">
+                        <input type="text" name="id" id="" value="<?= $Sid  ?>" hidden>
                         <button class="p-2" type="submit" name="send">Send</button>
                     </div>
                 </form>
@@ -519,7 +553,7 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,
-            slidesPerView: 1,
+            slidesPerView: 2,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
