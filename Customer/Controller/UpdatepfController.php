@@ -45,5 +45,6 @@ if (isset($_POST["upbtn"])) {
         $sql->bindValue(":id", $userid);
         $sql->execute();
         header("Location: ../View/dashboard_userprofile.php");
+        $_SESSION["username"] = $name;
     }
 }

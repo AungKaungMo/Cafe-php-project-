@@ -27,10 +27,10 @@ if (isset($_POST["submit"])) {
     $db = new DBConnection();
     $pdo = $db->connect();
 
-    $newquery = "INSERT INTO m_blog ( shop_id,";
-    $newquery1 = "blog_image,main_title,first_title,sec_title,third_title,first_para,sec_para,third_para,author_name,author_image,fb_link,ig_link,twt_link";
-    $queryvalue1 = "VALUES";
-    $queryvalue2 =":id,:img1,:text1,:text2,:text3,:text4,:text5,:text6,:text7,:text8,:name,:img2,:link1,:link2,:link3";
+    $newquery = "INSERT INTO m_blog (shop_id,";
+    $newquery1 = "blog_image,main_title,first_title,sec_title,third_title,first_para,sec_para,third_para,author_name,author_image,fb_link,ig_link,twt_link ";
+    $queryvalue1 =" VALUES ";
+    $queryvalue2 =":id,:img1,:text1,:text2,:text3,:text4,:text5,:text6,:text7,:text8,:img2,:link1,:link2,:link3 ";
     for ($i = 0; $i < count($file); $i++) {
         $location = $file[$i]['tmp_name'];
         if (move_uploaded_file($location, "../../Storages/blog/" . $file[$i]['name'])) {
@@ -42,6 +42,7 @@ if (isset($_POST["submit"])) {
             $sql = $pdo->prepare(
             $finalquery
         );
+        echo $finalquery;
         $sql->bindValue(":img1", "blog/" . $file1['name']);
         $sql->bindValue(":img2", "blog/" . $file2['name']);
         $sql->bindValue(":text1", $mainTitle );

@@ -1,15 +1,19 @@
 #responsiveSideBar ul li:nth-child(2) a::before {
   width: 50px;
 }
+
 #responsiveSideBar ul li:nth-child(2) a::after {
   width: 30px;
 }
+
 .shoptitle::before {
   width: 50px;
 }
+
 .shoptitle::after {
   width: 30px;
 }
+
 /* ======================hero css========================= */
 
 .text-label,
@@ -53,6 +57,7 @@
   right: 0;
   margin: auto;
 }
+
 .title::after {
   content: "";
   width: 280px;
@@ -120,9 +125,11 @@
   color: var(--mainColor);
   transition: all 0.5s;
 }
-.icon iconify-icon:hover{
+
+.icon iconify-icon:hover {
   transform: scale(1.1);
 }
+
 .rightseemore {
   width: 150px;
   height: 40px;
@@ -135,7 +142,9 @@
   color: var(--textColorPrimary);
   border-style: none;
   padding: 4px;
+  border: 1.5px solid var(--mainColor);
 }
+
 /* ===========================================trending shop====================================================  */
 #tshop {
   clear: both;
@@ -187,6 +196,7 @@
   color: var(--textColorPrimary);
   border-style: none;
   padding: 8px 0 0 40px;
+  border: 1.5px solid var(--mainColor);
 }
 
 #tshop .leftseemore {
@@ -202,21 +212,26 @@
   color: var(--textColorPrimary);
   border-style: none;
   padding: 4px;
+  border: 1.5px solid var(--mainColor);
 }
+
 .container {
   max-width: unset !important;
 }
+
 #tshop .leftseemore:hover,
 .tseemore:hover,
 .rightseemore:hover {
-  background-color: var(--backgroundSecondary);
+  background-color: transparent;
   color: var(--mainColor);
+  border: 1.5px solid var(--mainColor);
 }
 
 @media screen and (max-width: 440px) {
   .card img {
     width: 300px;
   }
+
   .card {
     width: 300px;
     margin-left: 0;
@@ -228,6 +243,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media screen and (max-width: 630px) {
   .shopContainer {
     grid-template-columns: 1fr;
@@ -236,10 +252,12 @@
 }
 
 @media screen and (max-width: 760px) {
+
   .text-label,
   .text-hero-regular {
     margin-left: 30px;
   }
+
   .text-label {
     margin-top: 15%;
   }

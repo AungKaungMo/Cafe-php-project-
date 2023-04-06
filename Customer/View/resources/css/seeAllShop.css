@@ -1,12 +1,15 @@
 #responsiveSideBar ul li:nth-child(2) a::before {
   width: 50px;
 }
+
 #responsiveSideBar ul li:nth-child(2) a::after {
   width: 30px;
 }
+
 .shoptitle::before {
   width: 50px;
 }
+
 .shoptitle::after {
   width: 30px;
 }
@@ -24,6 +27,7 @@
     right: unset !important;
   }
 }
+
 /* ========================Shop========================== */
 
 h1 {
@@ -37,13 +41,16 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   gap: 10;
 }
+
 .card {
   width: 250px;
   height: 350px;
-  border-radius: 30px;
+  border-radius: 1.2em;
   background-color: var(--mainColor);
   margin-bottom: 100px;
+  transition: all 1s ease;
 }
+
 .card img {
   height: 200px;
   width: 250px;
@@ -54,13 +61,16 @@ h1 {
 .card .script {
   margin-bottom: 50px;
 }
+
 .icon .sinfor {
-  font-size: var(--navigationFontSize);
+  font-size: var(--paragraphFontsize);
   color: var(--secondMainColor);
 }
-.icon iconify-icon{
+
+.icon iconify-icon {
   color: var(--secondMainColor);
 }
+
 .card button {
   position: absolute;
   left: 45px;
@@ -72,11 +82,17 @@ h1 {
   font-size: var(--navigationFontSize);
   color: var(--mainColor);
   background-color: var(--backgroundSecondary);
+  border: 1px solid var(--backgroundSecondary);
 }
 
 .card button:hover {
-  background-color: var(--mainColor);
+  background-color: transparent;
   color: var(--backgroundSecondary);
+  border: 1px solid var(--backgroundSecondary);
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 
 .line {
@@ -108,16 +124,19 @@ h1 {
     margin-bottom: 0px;
   }
 }
+
 @media screen and (max-width: 1100px) {
   .shopContainer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media screen and (max-width: 1000px) {
   .shopContainer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media screen and (max-width: 560px) {
   .shopContainer {
     grid-template-columns: 1fr;

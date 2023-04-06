@@ -1,8 +1,9 @@
 <?php
 ini_set("display_errors", "1");
 
+include "../Model/dbconnection.php";
 include "../Controller/blogSelectController.php";
-$result1 = $result;
+
 
 ?>
 
@@ -55,26 +56,48 @@ $result1 = $result;
     <div class="row mx-sm-5 mx-2">
         <div class="col-md-6 col-12">
             <div class="w-75 my-5 bg-info rounded-4">
-                <img src="./resources/img/blog.png" width="100%" class="rounded-4">
+                <img src="../../Storages/<?= $resultB[0]["blog_image"]; ?> " width="100%" class="rounded-4">
             </div>
-            <h1 class="fs-2 fw-bold title">Essential Guide to Healthy Eating</h1>
+            <h1 class="fs-2 fw-bold title"> <?= $resultB[0]["main_title"]; ?>
+                <!-- Essential Guide to Healthy Eating -->
+
+            </h1>
             <div>
                 <div class="mt-4">
-                    <h1 class="fs-3 fw-bold subtitle">Essential</h1>
-                    <p>We mean real food as opposed to processed food.
+                    <h1 class="fs-3 fw-bold subtitle">
+                        <?php
+                        echo $resultB[0]["first_title"];
+                        ?>
+                        <!-- Essential -->
+                    </h1>
+                    <p>
+                        <?php
+                        echo $resultB[0]["first_para"];
+                        ?>
+                        <!-- We mean real food as opposed to processed food.
                         Real food is fruits, vegetables, meats, dairy, seafood,
                         nuts, seeds, whole grains and beans. Natural
                         sweeteners, coffee, chocolate and wine count,
                         too — just in moderation. Avoid food that is
                         mass-produced, emulsified (where water and oil don’t
-                        separate) or shelf-stable.
+                        separate) or shelf-stable. -->
 
                     </p>
                 </div>
 
                 <div class="mt-4 ">
-                    <h1 class="fw-bold fs-4 subtitle">Guide</h1>
-                    <p>Eating real food leads to eating more nutrient-rich
+                    <h1 class="fw-bold fs-4 subtitle">
+                        <?php
+                        echo $resultB[0]["sec_title"];
+                        ?>
+                        <!-- Guide -->
+
+                    </h1>
+                    <p>
+                        <?php
+                        echo $resultB[0]["sec_para"];
+                        ?>
+                        <!-- Eating real food leads to eating more nutrient-rich
                         food without much effort.When it comes to carbs,
                         the more natural and whole, the better. Go for
                         complex carbs like 100% whole-grain breads
@@ -82,43 +105,63 @@ $result1 = $result;
                         nuts, seeds, low-fat dairy and plenty of fruits and
                         vegetables. Limit simple sugars from refined
                         grains, processed snack foods, sweets and
-                        sugar-sweetened beverages.
+                        sugar-sweetened beverages. -->
 
                     </p>
                 </div>
 
                 <div class="mt-4">
-                    <h1 class="fw-bold fs-4 subtitle">Healthy</h1>
-                    <p>We mean real food as opposed to processed food.
+                    <h1 class="fw-bold fs-4 subtitle"><?php
+                                                        echo $resultB[0]["third_title"];
+                                                        ?>
+                        <!-- Healthy -->
+                    </h1>
+                    <p>
+                        <?php
+                        echo $resultB[0]["third_para"];
+                        ?>
+                        <!-- We mean real food as opposed to processed food.
                         Real food is fruits, vegetables, meats, dairy, seafood,
                         nuts, seeds, whole grains and beans. Natural
                         sweeteners, coffee, chocolate and wine count,
-                        too — just in moderation. 
-
+                        too — just in moderation.  -->
                     </p>
                 </div>
-
-
             </div>
         </div>
         <div class="col-md-6 col-12 mt-5">
             <div class="d-flex">
                 <div class="me-4 aurthorImg">
-                    <img src="./resources/img/aurthor.jpg">
+                    <img src="../../Storages/<?= $resultB[0]["author_image"]; ?> ">
                 </div>
                 <div>
-                    <div class="fs-5 aurthorName">Aurthor - <span>John Selena Zane</span></div>
-                    <div class="fs-5 blogTitle">Title - <span>Essential Guide to
-                            Healthy Eating</span></div>
+                    <div class="fs-5 aurthorName">Author - <span> <?php
+                                                                    echo $resultB[0]["author_name"];
+                                                                    ?>
+                            <!-- John Selena Zane -->
+                        </span></div>
+                    <div class="fs-5 blogTitle">Title - <span>
+                            <?php
+                            echo $resultB[0]["main_title"];
+                            ?>
+                            <!-- Essential Guide to Healthy Eating -->
+                        </span></div>
                     <div class="socialGp d-flex mt-4">
-                        <iconify-icon icon="ic:baseline-facebook"></iconify-icon>
-                        <iconify-icon icon="ph:instagram-logo-fill" class="mx-4"></iconify-icon>
-                        <iconify-icon icon="ph:twitter-logo-fill"></iconify-icon>
+                        <a href="<?= $resultB[0]["fb_link"]; ?>"><iconify-icon icon="ic:baseline-facebook">
+                            </iconify-icon></a>
+                        <a href="<?= $resultB[0]["ig_link"]; ?>"><iconify-icon icon="ph:instagram-logo-fill" class="mx-4">
+                            </iconify-icon></a>
+                        <a href="<?= $resultB[0]["twt_link"]; ?>"><iconify-icon icon="ph:twitter-logo-fill">
+                            </iconify-icon></a>
                     </div>
                 </div>
             </div>
-            <div class="line mt-4"></div>
 
+            <?php
+            include "../Controller/blogcommentSelectController.php";
+            $result1 = $result;
+            ?>
+            <div class="line mt-4"></div>
             <div>
                 <div class="fw-bold fs-4 mt-4">User Comments</div>
 
@@ -129,8 +172,16 @@ $result1 = $result;
                             <div class="d-flex">
                                 <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
                                 <div class="ms-4">
-                                    <p class="personName fw-bold mb-0 fs-5">Calara</p>
-                                    <p class="commentDate">12/03/2023</p>
+                                    <p class="personName fw-bold mb-0 fs-5">
+                                         
+                                        Calara
+                                    </p>
+                                    <p class="commentDate">
+                                        <?php
+                                        echo $result1[0]["created_date"];
+                                        ?>
+                                        <!-- 12/03/2023 -->
+                                    </p>
                                 </div>
                             </div>
                             <div>
@@ -141,9 +192,9 @@ $result1 = $result;
                         <div class="commentText mt-4">
                             <p class="p-3">
                                 <?php
-                                echo $result1[0]["comment"];     
+                                echo $result1[0]["comment"];
                                 ?>
-                              
+
                                 <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
                             </p>
                         </div>
@@ -154,8 +205,18 @@ $result1 = $result;
                             <div class="d-flex">
                                 <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
                                 <div class="ms-4">
-                                    <p class="personName fw-bold mb-0 fs-5">Calara</p>
-                                    <p class="commentDate">12/03/2023</p>
+                                    <p class="personName fw-bold mb-0 fs-5" name="name">
+                                        <?php
+                                        echo $result1[1]["cus_name"];
+                                        ?>
+                                        <!-- Calara -->
+                                    </p>
+                                    <p class="commentDate" name="date">
+                                        <?php
+                                        echo $result1[1]["created_date"];
+                                        ?>
+                                        <!-- 12/03/2023 -->
+                                    </p>
                                 </div>
                             </div>
                             <div>
@@ -165,8 +226,8 @@ $result1 = $result;
                         </div>
                         <div class="commentText mt-4">
                             <p class="p-3">
-                            <?php
-                                echo $result1[1]["comment"];     
+                                <?php
+                                echo $result1[1]["comment"];
                                 ?>
                                 <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
                             </p>
@@ -178,8 +239,18 @@ $result1 = $result;
                             <div class="d-flex">
                                 <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
                                 <div class="ms-4">
-                                    <p class="personName fw-bold mb-0 fs-5">Calara</p>
-                                    <p class="commentDate">12/03/2023</p>
+                                    <p class="personName fw-bold mb-0 fs-5">
+                                        <?php
+                                        echo $result1[2]["cus_name"];
+                                        ?>
+                                        <!-- Calara -->
+                                    </p>
+                                    <p class="commentDate">
+                                        <?php
+                                        echo $result1[2]["created_date"];
+                                        ?>
+                                        <!-- 12/03/2023 -->
+                                    </p>
                                 </div>
                             </div>
                             <div>
@@ -189,8 +260,8 @@ $result1 = $result;
                         </div>
                         <div class="commentText mt-4">
                             <p class="p-3">
-                            <?php
-                                echo $result1[2]["comment"];     
+                                <?php
+                                echo $result1[2]["comment"];
                                 ?>
                                 <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
                             </p>
@@ -201,16 +272,16 @@ $result1 = $result;
                 </div>
             </div>
             <div class="line mt-4"></div>
-            <form action="../Controller/blogController.php" method="post">
-            <div class="commentBox">
-                <div class="fw-bold fs-4 my-4">Leave Comments.</div>
-                <div class="typeBox">
-                    <textarea name="message" placeholder="Message"></textarea>
+            <form action="../Controller/blogcommentInsertController.php" method="post">
+                <div class="commentBox">
+                    <div class="fw-bold fs-4 my-4">Leave Comments.</div>
+                    <div class="typeBox">
+                        <textarea name="message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="text-center submitBtn mt-3 mb-5">
+                        <button name="submit" class="fw-bold px-2 py-3">Submit</button>
+                    </div>
                 </div>
-                <div class="text-center submitBtn mt-3 mb-5">
-                    <button name="submit" class="fw-bold px-2 py-3">Submit</button>
-                </div>
-            </div>
             </form>
         </div>
     </div>
