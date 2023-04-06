@@ -165,32 +165,32 @@
   background-color: var(--mainColor);
   max-width: 420px;
   user-select: none;
-  border-bottom: 1px solid var(--textColorSecondary);
   color: var(--textColorPrimary);
 }
 
-.modalDialog{
+.modalDialog {
   max-width: 420px;
 }
 
-.productImage{
+.productImage {
   width: 110px;
   height: 110px;
   border-radius: 5px;
 }
 
-.productImage img{
+.productImage img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
   object-fit: cover;
 }
 
-.detailsBox{
+.detailsBox {
   display: flex;
+  border-bottom: 1px solid var(--textColorSecondary);
 }
 
-.buyCart{
+.buyCart {
   padding: 0.4em !important;
   background-color: var(--secondMainColor) !important;
   color: var(--mainColor) !important;
@@ -199,11 +199,11 @@
   transition: all 0.5s !important;
 }
 
-.buyCart:hover{
+.buyCart:hover {
   transform: rotate(360deg);
 }
 
-.goShopBtn{
+.goShopBtn {
   padding: 0.3em;
   border-radius: 5px;
   font-size: 0.9em;
@@ -214,17 +214,17 @@
   color: var(--mainColor);
 }
 
-.goShopBtn:hover{
+.goShopBtn:hover {
   background-color: transparent;
   color: var(--secondMainColor);
 }
 
-.goShopBtn a{
+.goShopBtn a {
   cursor: pointer;
   color: var(--mainColor);
 }
 
-.goShopBtn a:hover{
+.goShopBtn a:hover {
   color: var(--textColorPrimary);
   /* opacity: 0.8; */
 }

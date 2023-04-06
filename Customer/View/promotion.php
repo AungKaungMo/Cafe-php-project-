@@ -25,6 +25,7 @@
    <!------------------------   JS   -------------------------------->
    <!-- <script src="./promotion.js" defer></script> -->
    <script src="./resources/js/navigation.js"></script>
+   <script src="./resources/js/cartControl.js"></script>
 
 
    <!------------------------   CSS   ----------------------------->

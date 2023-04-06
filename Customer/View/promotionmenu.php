@@ -23,6 +23,7 @@
 
   <!------------------------   JS   -------------------------------->
   <script src="./resources/js/navigation.js"></script>
+  <script src="./resources/js/cartControl.js"></script>
 
   <!------------------------   CSS   ----------------------------->
   <link rel="stylesheet" href="./resources/css/root.css">
@@ -71,29 +72,29 @@
   <div class="container">
 
     <div class="cardContainer">
-      <?php foreach ($poresult as $data) {  ?>
+      <?php for ($i = 0; $i < count($poresult); $i++) { ?>
         <div class="swiper-slide disCard mt-5">
           <div class="disticket">
-            <?= $data["product_discount"] ?>%
+            <?= $poresult[$i]["product_discount"] ?>%
           </div>
           <div class="distickettri"></div>
           <div class="carditems">
             <div class="disphoto">
-              <img src="../../Storages/<?= $data["product_photo"] ?>" alt="">
+              <img src="../../Storages/<?= $poresult[$i]["product_photo"] ?>" alt="" class="img">
             </div>
-            <p class="pname"><?= $data["product_name"] ?></p>
+            <p class="pname"><?= $poresult[$i]["product_name"] ?></p>
             <div class="disbtn">
               <button>
-                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="25" height="25"></iconify-icon>
+                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-id="<?= $poresult[$i]["product_id"] ?>" index="<?= $i ?>" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> data-bs-toggle="modal" data-bs-target="#staticBackdrop" <?php } ?> width="30" height="30" class="buy"></iconify-icon>
               </button>
 
               <button>
                 <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
               </button>
             </div>
-            <div class="disprice">
+            <div class="disprice price">
               <?php
-              $percentPrice = $data["product_price"] - (($data["product_price"] * $data["product_discount"]) / 100);
+              $percentPrice = $poresult[$i]["product_price"] - (($poresult[$i]["product_price"] * $poresult[$i]["product_discount"]) / 100);
               echo $percentPrice ?> MMK
             </div>
           </div>

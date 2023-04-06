@@ -34,6 +34,7 @@ ini_set("display_errors", "1");
 
   <!------------------------   JS   -------------------------------->
   <script src="./resources/js/navigation.js"></script>
+  <script src="./resources/js/cartControl.js"></script>
 
   <!------------------------   CSS   ----------------------------->
   <link rel="stylesheet" href="./resources/css/root.css">
