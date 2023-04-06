@@ -61,8 +61,8 @@
          </div>
        </div>
 
-       <div class="col-md-6">
-         <img src="<?= $SHresult[0]["header_image"] ?>" alt="">
+       <div class="col-md-6 mt-5 mb-5">
+         <img src="<?= $SHresult[0]["header_image"] ?>" width="450px" height="auto" alt="">
        </div>
      </div>
    </section>
@@ -166,7 +166,7 @@
    <!-- ==============================================trending shop ============================================ -->
    <?php include "../Controller/selectShopController.php"   ?>
    <section id="tshop">
-     <h1 class="title fw-bold position-relative pb-2">Tending Shop</h1>
+     <h1 class="title fw-bold position-relative pb-2">Trending Shop</h1>
 
 
      <div class="mx-sm-5 mx-2 pt-5 row">
