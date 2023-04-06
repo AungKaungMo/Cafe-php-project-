@@ -1,5 +1,6 @@
 <?php
 ini_set("display_errors", "1");
+include "../Controller/dashboard_orderController.php";
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_order.css">
@@ -18,62 +19,104 @@ include "./resources/shared/dashboard.php";
                 <tr>
                     <th>No.</th>
                     <th>Name</th>
-                    <th>Product</th>
+                    <th>Product Name</th>
                     <th>Payment</th>
                     <th>Price</th>
                     <th>Phone</th>
                     <th>Address</th>
+
                 </tr>
-
             </thead>
-
             <tbody class="tableBody">
                 <tr class="lineTable">
-                    <td colspan="7">
+                    <td colspan="8">
                         <hr class="line">
                     </td>
                 </tr>
-                <?php foreach ($checkresult as $shop) {   ?>
-                <tr>
-                    <td><?= $shop["shop_id"]  ?></td>
-                    <td><?= $shop["shop_name"]  ?></td>
-                    <td><?= $shop["shop_address"]  ?></td>
-                    <td><?= $shop["shop_email"]  ?></td>
-                    <td><?= $shop["shop_phone"]  ?></td>
-                    <td><?= $shop["package_type"]  ?></td>
-                    <td><?= $shop["package_createdate"]  ?></td>
-                    <td><?= $shop["package_expiredate"]  ?></td>
-                    <td class="danger"><a href="../Controller/delete_shopListController.php?id= <?= $shop["shop_id"] ?>">Remove</a></td>
-                </tr>
-            <?php } ?>
 
-
+                <?php
+                $count = (($page-1) * $rowLimit) +1 ;
+                for ($i = 0; $i < count($orderList); $i++) { ?>
+                    <tr>
+                        <td scope="row"><?= $count++ ?></td>
+                        <td><?= $orderList[$i]["cus_name"]  ?></td>
+                        <td><?= $orderList[$i]["bought_product_name"]  ?></td>
+                        <td><?= $orderList[$i]["payment_id"]  ?></td>
+                        <td><?= number_format($orderList[$i]["product_price"])  ?></td>
+                        <td><?= $orderList[$i]["cus_phone"]  ?></td>
+                        <td><?= $orderList[$i]["cus_address"]  ?></td>
+                    </tr>
+                <?php }
+                ?>
             </tbody>
         </table>
 
+        <!--Pagination-->
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination justify-content-center">
+                <li class="page-item
+    <?php
+    if ($page <= 1) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page - 1 ?>">Previous</a>
+                </li>
+
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <li class="page-item   
+                    <?php
+                    if ($page == $i){
+                        echo "active";
+                    }
+                    ?>
+                    ">
+                        <a class="page-link text-black" href="?page=<?= $i ?>"><?= $i ?></a>
+                    </li>
+                <?php }
+                ?>
+                <li class="page-item
+    <?php
+    if ($page >= $pageList) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page + 1 ?>">Next</a>
+                </li>
+            </ul>
+        </nav>
 
         <!--Pagination-->
 
-        <div class="d-flex justify-content-center w-100 mt-5 align-items-center user-select-none">
-            <div class="mt-1">
-                <iconify-icon icon="material-symbols:keyboard-double-arrow-left" class="fs-1 prev"></iconify-icon>
-            </div>
+        <!-- <div class="d-flex justify-content-center w-100 mt-5 align-items-center user-select-none">
+            <a class="mt-1" href="?page=<?= $page - 1 ?>">
+                <iconify-icon icon="material-symbols:keyboard-double-arrow-left" class="fs-1 prev">
+                </iconify-icon>
+            </a>
+
             <div class="mx-3">
-                <span class="currentPage">1</span><span> / </span><span class="allPage">2</span>
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <a class="  currentPage" href="?page=<?= $i ?>"><?= ++$i ?></a>
+                    <span> / </span>
+                    <a class="allPage" href="?page=<?= $i ?>"><?= $i++ ?></a>
+                <?php }
+                ?>
             </div>
-            <div class="mt-1">
+
+            <a class="mt-1" href="?page=<?= $page + 1 ?>">
                 <iconify-icon icon="material-symbols:keyboard-double-arrow-right" class="fs-1 next"></iconify-icon>
-            </div>
+            </a>
         </div>
+    </div> -->
 
-    </div>
-
-    <!--------------  Ending Tab for dashboard  ----------------->
+        <!--------------  Ending Tab for dashboard  ----------------->
     </div>
     </div>
 
     <!--------------------------   JS   ------------------------------->
-    <script src="./resources/js/dashboard_order.js"></script>
+    <!-- <script src="./resources/js/dashboard_order.js"></script> -->
 </body>
 
 </html>

@@ -20,6 +20,10 @@ tr {
   border-style: unset;
 }
 
+.active{
+  color: red !important;
+}  
+
 @media screen and (max-width: 890px) {
   .table thead {
     display: none;

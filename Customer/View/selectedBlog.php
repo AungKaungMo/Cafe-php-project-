@@ -173,7 +173,7 @@ include "../Controller/blogSelectController.php";
                                 <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
                                 <div class="ms-4">
                                     <p class="personName fw-bold mb-0 fs-5">
-                                         
+
                                         Calara
                                     </p>
                                     <p class="commentDate">
