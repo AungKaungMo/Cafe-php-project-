@@ -75,10 +75,10 @@ $_SESSION["shopid"] = $Sid;
 
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="backImage backgroundCafeImage1 swiper-slide"></div>
-            <div class="backImage backgroundCafeImage2 swiper-slide"></div>
-            <div class="backImage backgroundCafeImage3 swiper-slide"></div>
-            <div class="backImage backgroundCafeImage4 swiper-slide"></div>
+            <div class="backgroundCafeImage1 swiper-slide backImage"></div>
+            <div class="backgroundCafeImage2 swiper-slide backImage"></div>
+            <div class="backgroundCafeImage3 swiper-slide backImage"></div>
+            <div class="backgroundCafeImage4 swiper-slide backImage"></div>
         </div>
         <div class="swiper-pagination"></div>
     </div>

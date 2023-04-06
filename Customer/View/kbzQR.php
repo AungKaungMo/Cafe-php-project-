@@ -19,15 +19,19 @@
 </head>
 
 <body class="">
-<div class="box">
-        <div class="card">
-        <iconify-icon class="qrCode" icon="clarity:qr-code-line"></iconify-icon>
-             
-        </div>
+  <div class="box">
+    <div class="card">
+      <iconify-icon class="qrCode" icon="clarity:qr-code-line"></iconify-icon>
+      <!-- <?php
+            include "../Controller/qrController.php";
+            QRcode::png($emailAdmin[0]["admin_email"], "../View/kbzQR_" . $emailAdmin[0]["admin_id"] . ".png");
+            ?> -->
     </div>
     <div class="comBtn text-center">
-                <button class="p-2">Comfirm</button>
-            </div>
+      <button class="p-2">Comfirm</button>
+    </div>
+
+  </div>
 
 </body>
 

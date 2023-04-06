@@ -45,6 +45,7 @@
 
    <?php
     include "./resources/shared/nav.php";
+    include "../Controller/shopheaderController.php";
     ?>
 
    <section id="hero">
@@ -52,16 +53,16 @@
      <div class="row">
        <div class="col-md-6 ">
          <div class="text-label">
-           Coffee the best for You.........
+           <?= $SHresult[0]["header_title"] ?>
          </div>
 
          <div class="text-hero-regular">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nemo laboriosam, modi delectus temporibus exercitationem nulla quas sapiente facilis nostrum, excepturi quo neque, veritatis dignissimos odio! Dolor voluptas delectus nesciunt!
+           <?= $SHresult[0]["header_text"] ?>
          </div>
        </div>
 
        <div class="col-md-6">
-         <img src="./resources/img/shoplisthero.png" alt="">
+         <img src="<?= $SHresult[0]["header_image"] ?>" alt="">
        </div>
      </div>
    </section>

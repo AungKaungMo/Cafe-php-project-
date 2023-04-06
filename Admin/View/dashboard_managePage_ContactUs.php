@@ -37,7 +37,7 @@ include "./resources/shared/dashboard.php";
                 </div>
 
                 <div class="text-center mb-3">
-                    <img src="../../Storages/<?php echo $contactresult[0]["picture"] ?>" width="200px">
+                    <img src="../../Storages/<?php echo $contactresult[0]["picture"] ?>" width="200px" id="profileimg">
                 </div>
 
                 <div class="box">
