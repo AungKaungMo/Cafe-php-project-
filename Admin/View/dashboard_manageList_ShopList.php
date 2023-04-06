@@ -1,18 +1,17 @@
 <?php
 ini_set("display_errors", "1");
-
+include "../Controller/manage_shopListController.php";
 // session_start();
 // if (isset($_SESSION["allshop"])) {
 //     $checkresult = $_SESSION["allshop"];
 // }
-
-include "../Controller/manage_shopListController.php";
-$checkresult = $result;
 ?>
 
 <?php
 include "./resources/shared/dashboard.php";
+
 ?>
+
 <link rel="stylesheet" href="./resources/css/dashboard_manageList.css">
 <link rel="stylesheet" href="./resources/css/dashboard_manageList_ShopList.css">
 
@@ -26,9 +25,6 @@ include "./resources/shared/dashboard.php";
 
     <div class="m-4">
         <tbody class="tableBody">
-            
-
-        </tbody>
         </table>
 
         <table class="table">
@@ -49,36 +45,81 @@ include "./resources/shared/dashboard.php";
                     <hr class="line">
                 </td>
             </tr>
-            <?php foreach ($checkresult as $shop) {   ?>
+            <?php 
+            $count = 1;
+            for ($i = 0; $i < count ($shop); $i++) {   ?>
                 <tr>
-                    <td><?= $shop["shop_id"]  ?></td>
-                    <td><?= $shop["shop_name"]  ?></td>
-                    <td><?= $shop["shop_address"]  ?></td>
-                    <td><?= $shop["shop_email"]  ?></td>
-                    <td><?= $shop["shop_phone"]  ?></td>
-                    <td><?= $shop["package_type"]  ?></td>
-                    <td><?= $shop["package_createdate"]  ?></td>
-                    <td><?= $shop["package_expiredate"]  ?></td>
-                    <td class="danger"><a href="../Controller/delete_shopListController.php?id= <?= $shop["shop_id"] ?>">Remove</a></td>
+                    <td scope="row"><?= $count++ ?></td>
+                    <td><?= $shop[$i]["shop_id"]  ?></td>
+                    <td><?= $shop[$i]["shop_name"]  ?></td>
+                    <td><?= $shop[$i]["shop_address"]  ?></td>
+                    <td><?= $shop[$i]["shop_email"]  ?></td>
+                    <td><?= $shop[$i]["shop_phone"]  ?></td>
+                    <td><?= $shop[$i]["package_type"]  ?></td>
+                    <td><?= $shop[$i]["package_createdate"]  ?></td>
+                    <td><?= $shop[$i]["package_expiredate"]  ?></td>
+                    <td class="danger"><a href="../Controller/delete_shopListController.php?id= <?= $shop[$i]["shop_id"] ?>">Remove</a></td>
                 </tr>
-            <?php } ?>
-
+            <?php } 
+            ?>
+            </tbody>
         </table>
-
-
         <!-- Pagination -->
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination justify-content-center">
+                <li class="page-item
+    <?php
+    if ($page <= 1) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page - 1 ?>">Previous</a>
+                </li>
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <li class="page-item part 
+                    <?php
+                    if ($page == $i){
+                        echo "active";
+                    }
+                    ?>
+                    ">
+                        <a class="page-link text-black" href="?page=<?= $i ?>"><?= $i ?></a>
+                    </li>
+                <?php }
+                ?>
+                <li class="page-item
+    <?php
+    if ($page >= $pageList) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page + 1 ?>">Next</a>
+                </li>
+            </ul>
+        </nav>
 
-        <div class="d-flex justify-content-center w-100 mt-5 align-items-center user-select-none">
-            <div class="mt-1">
-                <iconify-icon icon="material-symbols:keyboard-double-arrow-left" class="fs-1 prev"></iconify-icon>
-            </div>
-            <div class="mx-3">
-                <span class="currentPage">1</span><span> / </span><span class="allPage">2</span>
-            </div>
-            <div class="mt-1">
-                <iconify-icon icon="material-symbols:keyboard-double-arrow-right" class="fs-1 next"></iconify-icon>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <li class="page-item"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                <?php } ?>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav> -->
+    
     </div>
 
     <!-- <script src="./resources/js/dashboard.js"></script>

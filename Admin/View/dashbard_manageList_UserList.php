@@ -1,84 +1,92 @@
 <?php
 ini_set("display_errors", "1");
-
-// session_start();
-// if (isset($_SESSION["allshop"])) {
-//     $checkresult = $_SESSION["allshop"];
-// }
-
 include "../Controller/manage_userListController.php";
-$checkresult = $result;
+include "./resources/shared/dashboard.php";
 ?>
 
-<?php
-            include "./resources/shared/dashboard.php";
-        ?>
-           <link rel="stylesheet" href="./resources/css/dashboard_manageList.css">
-           <link rel="stylesheet" href="./resources/css/dashboard_manageList_UserList.css">
+<link rel="stylesheet" href="./resources/css/dashboard_manageList.css">
+<link rel="stylesheet" href="./resources/css/dashboard_manageList_UserList.css">
 
 </head>
-<body>
 
-<?php
+<body>
+    <?php
     include "./resources/shared/dashboard_manageList.php";
     ?>
 
     <div class="m-4">
-    <tbody class="tableBody">
-            
-
-        </tbody>
-        </table>
-
         <table class="table">
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">UserName</th>
-                <th scope="col">Address</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Date</th>  
-                <th scope="col">Coins</th>  
-                <th scope="col">Action</th>
-
-            </tr>
-            <tr class="lineTable">
-                <td colspan="8">
-                    <hr class="line">
-                </td>
-            </tr>
-            <?php foreach ($checkresult as $user) {   ?>
+            <thead>
                 <tr>
-                    <td><?= $user["cus_id"]  ?></td>
-                    <td><?= $user["cus_name"]  ?></td>
-                    <td><?= $user["cus_address"]  ?></td>
-                    <td><?= $user["cus_email"]  ?></td>
-                    <td><?= $user["cus_phone"]  ?></td>
-                    <td><?= $user["created_date"]  ?></td>
-                    <td class="primary"><a href="">Coins</a></td>
-                    <td class="danger"><a href="../Controller/delete_userListController.php?id= <?= $user["cus_id"] ?>">Remove</a></td>
+                    <th scope="col">No</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">UserName</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Coins</th>
+                    <th scope="col">Action</th>
                 </tr>
-            <?php } ?>
-
+            </thead>
+            <tbody class="tableBody">
+                <tr class="lineTable">
+                    <td colspan="9">
+                        <hr class="line">
+                    </td>
+                </tr>
+                <?php
+                $count = (($page - 1) * $rowLimit) + 1;
+                for ($i = 0; $i < count($resultU); $i++) { ?>
+                    <tr>
+                        <td scope="row"><?= $count++ ?></td>
+                        <td><?= $resultU[$i]["cus_id"]  ?></td>
+                        <td><?= $resultU[$i]["cus_name"]  ?></td>
+                        <td><?= $resultU[$i]["cus_address"]  ?></td>
+                        <td><?= $resultU[$i]["cus_email"]  ?></td>
+                        <td><?= $resultU[$i]["cus_phone"]  ?></td>
+                        <td><?= $resultU[$i]["created_date"]  ?></td>
+                        <td class="primary"><a href="">Coins</a></td>
+                        <td class="danger"><a href="../Controller/delete_userListController.php?id= <?= $resultU[$i]["cus_id"] ?>">Remove</a></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
         </table>
-        
-        
-
-       <!-- Pagination -->
-       <div class="d-flex justify-content-center w-100 mt-5 align-items-center user-select-none">
-        <div class="mt-1">
-        <iconify-icon icon="material-symbols:keyboard-double-arrow-left" class="fs-1 prev"></iconify-icon>
-        </div>
-        <div class="mx-3">
-            <span class="currentPage">1</span><span> / </span><span class="allPage">2</span>
-        </div>
-        <div class="mt-1">
-        <iconify-icon icon="material-symbols:keyboard-double-arrow-right" class="fs-1 next"></iconify-icon>
-        </div>
-       </div>
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination justify-content-center">
+                <li class="page-item
+    <?php
+    if ($page <= 1) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page - 1 ?>">Previous</a>
+                </li>
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <li class="page-item part 
+                    <?php
+                    if ($page == $i){
+                        echo "active";
+                    }
+                    ?>
+                    ">
+                        <a class="page-link text-black" href="?page=<?= $i ?>"><?= $i ?></a>
+                    </li>
+                <?php }
+                ?>
+                <li class="page-item
+    <?php
+    if ($page >= $pageList) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page + 1 ?>">Next</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-
-    <!-- <script src="./resources/js/dashboard.js"></script>
-    <script src="./resources/js/dashboard_ManageList.js"></script> -->
 </body>
+
 </html>

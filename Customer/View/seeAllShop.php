@@ -53,7 +53,7 @@
 
             <?php foreach ($idresult as $result) {  ?>
                 <div class="card">
-                    <img src="./resources/img/pshop.png" alt="">
+                    <img src="../../Storages/<?= $result["shopgallery_1"] ?>" alt="">
                     <div class="script">
                         <div class="icon">
                             <iconify-icon icon="mdi:shop" width="30" height="30"></iconify-icon>

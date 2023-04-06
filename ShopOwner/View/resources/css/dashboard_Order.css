@@ -18,7 +18,7 @@ th,
 thead,
 tr {
   border-style: unset;
-}
+}  
 
 @media screen and (max-width: 890px) {
   .table thead {

@@ -14,7 +14,7 @@
   width: 30px;
 }
 
-.backgroundCafeImage1 {
+/* .backgroundCafeImage1 {
   background: url(../img/cafeshopOne.jpg);
 }
 
@@ -24,7 +24,7 @@
 
 .backgroundCafeImage3 {
   background: url(../img/cafeshopThree.jpg);
-}
+} */
 
 .backImage {
   width: 100%;
@@ -227,7 +227,7 @@ Customers Reviews
 
 @media screen and (max-width: 992px) {
   .reviewRightSide {
-    height: 40vh;
+    height: 20vh;
     width: 100% !important;
   }
 
