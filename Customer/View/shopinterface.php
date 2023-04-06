@@ -93,42 +93,38 @@ $_SESSION["shopid"] = $Sid;
 
     <div class=" box1 position-relative">
 
-        <div class="swiper mySwiper1 mt-5">
+        <div class="swiper mySwiper1 mt-5 ms-4">
             <div class="swiper-wrapper discountCardContainer">
-
-
                 <?php for ($i = 0; $i < count($Pmresult); $i++) { ?>
-                    <div class="swiper-slide disCard mt-5">
-                        <div class="disticket">
-                            <?php echo $Pmresult[$i]["product_discount"] . " %" ?>
-                        </div>
-                        <div class="distickettri"></div>
-                        <div class="carditems">
-                            <div class="disphoto">
-                                <img src="../../Storages/<?php echo $Pmresult[$i]["product_photo"] ?>" alt="">
+                    <div class="swiper-slide ">
+                        <div class="disCard mt-5">
+                            <div class="disticket">
+                                <?php echo $Pmresult[$i]["product_discount"] . " %" ?>
                             </div>
-                            <p class="pname"><?php echo $Pmresult[$i]["product_name"] ?></p>
-                            <div class="disbtn">
-                                <button>
-                                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-id="<?= $result[$i]["product_id"] ?>" index="<?= $i ?>" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> data-bs-toggle="modal" data-bs-target="#staticBackdrop" <?php } ?> width="25" height="25" class="buy"></iconify-icon>
-                                </button>
-
-                                <button>
-                                    <iconify-icon icon="mdi:cards-heart-outline" class="blank_heart" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } ?> width="25" height="25"></iconify-icon>
-                                    <!-- <iconify-icon icon="mdi:cards-heart" class="full_heart d-none" width="25" height="25"></iconify-icon> -->
-                                </button>
-                            </div>
-                            <div class="disprice">
-                                <?php
-                                $percentPrice = $Pmresult[$i]["product_price"] - (($Pmresult[$i]["product_price"] * $Pmresult[$i]["product_discount"]) / 100);
-                                echo $percentPrice ?>MMK
+                            <div class="distickettri"></div>
+                            <div class="carditems">
+                                <div class="disphoto">
+                                    <img src="../../Storages/<?php echo $Pmresult[$i]["product_photo"] ?>" alt="">
+                                </div>
+                                <p class="pname"><?php echo $Pmresult[$i]["product_name"] ?></p>
+                                <div class="disbtn">
+                                    <button>
+                                        <iconify-icon icon="mdi:shopping-cart-arrow-down" data-id="<?= $result[$i]["product_id"] ?>" index="<?= $i ?>" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> data-bs-toggle="modal" data-bs-target="#staticBackdrop" <?php } ?> width="25" height="25" class="buy"></iconify-icon>
+                                    </button>
+                                    <button>
+                                        <iconify-icon icon="mdi:cards-heart-outline" class="blank_heart" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } ?> width="25" height="25"></iconify-icon>
+                                        <!-- <iconify-icon icon="mdi:cards-heart" class="full_heart d-none" width="25" height="25"></iconify-icon> -->
+                                    </button>
+                                </div>
+                                <div class="disprice">
+                                    <?php
+                                    $percentPrice = $Pmresult[$i]["product_price"] - (($Pmresult[$i]["product_price"] * $Pmresult[$i]["product_discount"]) / 100);
+                                    echo $percentPrice ?>MMK
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
                 <?php } ?>
-
 
             </div>
             <div class="swiper-pagination card-swiper"></div>
@@ -154,10 +150,10 @@ $_SESSION["shopid"] = $Sid;
         <div class="boxmenu">
             <div class="maincard item-details">
 
-                <?php foreach ($FPmresult as $menu1) { ?>
+                <?php for ($i = 0; $i < count($Pmresult); $i++) { ?>
                     <div class="card item featured">
-                        <img src="../../Storages/<?= $menu1["product_photo"] ?>" alt="" width="60%" class="img">
-                        <div class="text fs-3 ms-3"><?= $menu1["product_name"] ?></div>
+                        <img src="../../Storages/<?= $Pmresult[$i]["product_photo"] ?>" alt="" width="60%" class="img">
+                        <div class="text fs-3 ms-3"><?= $Pmresult[$i]["product_name"] ?></div>
                         <div class="pbtn ms-4">
                             <button>
                                 <iconify-icon icon="mdi:shopping-cart-arrow-down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #FFEBCD;" width="25" height="25"></iconify-icon>
@@ -167,7 +163,7 @@ $_SESSION["shopid"] = $Sid;
                             </button>
                         </div>
                         <div class="price text-center">
-                            <?= $menu1["product_price"] ?>MMK
+                            <?= $Pmresult[$i]["product_price"] ?>MMK
                         </div>
                     </div>
                 <?php      }               ?>
@@ -562,14 +558,27 @@ $_SESSION["shopid"] = $Sid;
     </script>
 
     <script>
-        var swiper = new Swiper(".mySwiper1", {
+        var swiper1 = new Swiper(".mySwiper1", {
             slidesPerView: 4,
-            //   centeredSlides: true,
             spaceBetween: 30,
-            //   grabCursor: true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
+            },
+            breakpoints: {
+                300: {
+                    slidesPerView: 1,
+                },
+                530: {
+                    slidesPerView: 2,
+                },
+                700: {
+                    slidesPerView: 2.5,
+                },
+                900: {
+                    slidesPerView: 3,
+                },
+
             },
         });
     </script>

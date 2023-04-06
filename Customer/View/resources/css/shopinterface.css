@@ -144,22 +144,20 @@ today menu
 }
 
 .discountCardContainer {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: space-evenly;
+  /* width: 90%; */
+  margin: auto;
   margin-top: 6em;
-  margin-bottom: 5em;
 }
-
 
 .disCard {
   position: relative;
   width: 250px !important;
   height: 210px;
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255),
-      rgba(217, 217, 217, 0.17));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255),
+    rgba(217, 217, 217, 0.17)
+  );
   border: solid var(--textColorPrimary);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -261,7 +259,6 @@ today menu
   margin: auto;
 }
 
-
 .maincard {
   /* display: flex; */
   position: relative;
@@ -272,7 +269,11 @@ today menu
   margin: 5em 6em 4em 9em;
   width: 12.4em;
   height: 11em;
-  background: linear-gradient(120.9deg, #FFFFFF 0%, rgba(217, 217, 217, 0.34) 97.57%);
+  background: linear-gradient(
+    120.9deg,
+    #ffffff 0%,
+    rgba(217, 217, 217, 0.34) 97.57%
+  );
   border-radius: 0.8em;
   cursor: pointer;
   transition: all 0.5s;
@@ -300,7 +301,6 @@ today menu
   color: var(--mainColor);
 }
 
-
 .minibox {
   display: flex;
   justify-content: space-evenly;
@@ -326,7 +326,6 @@ today menu
   transform: scale(1.2);
 }
 
-
 .price {
   width: 6em;
   height: 1.6em;
@@ -340,9 +339,6 @@ today menu
   left: 2em;
   color: var(--secondMainColor);
 }
-
-
-
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
   border: 1px solid var(--mainColor) !important;
