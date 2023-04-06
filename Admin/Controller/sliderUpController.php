@@ -59,72 +59,33 @@ if (isset($_POST["saveChange"])) {
                 $finalquery
             );
 
-            $sql->bindValue(":img3", "adminslider/" . $file2['name']);
+            $sql->bindValue(":img3", "adminslider/" . $file3['name']);
             $sql->execute();
-            header("Location: ../View/dashboard_setting_.php");
+            header("Location: ../View/dashboard_managePage_Slider.php");
         }
+        $sql = $pdo->prepare(
+            "
+            UPDATE m_slideradmin SET
+            titleOne=:title1,
+            paraOne=:para1,
+            titleTwo=:title2,
+            paraTwo=:para2,
+            titleThree=:title3,
+            paraThree=:para3
+            WHERE id=1
+        "
+        );
+
+        $sql->bindValue(":title1", $titleOne);
+        $sql->bindValue(":para1", $paraOne);
+        $sql->bindValue(":title2", $titleTwo);
+        $sql->bindValue(":para2", $paraTwo);
+        $sql->bindValue(":title3", $titleThree);
+        $sql->bindValue(":para3", $paraThree);
+        $sql->execute();
+        header("Location: ../View/dashboard_managePage_Slider.php");
     }
-}
-
-
- 
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//     $sql = $pdo->prepare(
-//         "
-//             UPDATE m_slideradmin SET
-//             titleOne=:title1,
-//             paraOne=:para1,
-//             imgOne=:image1,
-//             titleTwo=:title2,
-//             paraTwo=:para2,
-//             imgTwo=:image2,
-//             titleThree=:title3,
-//             paraThree=:para3,
-//             imgThree=:image3
-//             WHERE id=1
-//         "
-//     );
-
-//     $sql->bindValue(":para1", $paraOne);
-//     $sql->bindValue(":image1", "adminslider/" . $file1['name']);
-//     $sql->bindValue(":title2", $titleTwo);
-//     $sql->bindValue(":para2", $paraTwo);
-//     $sql->bindValue(":image2", "adminslider/" . $file2['name']);
-//     $sql->bindValue(":title3", $titleThree);
-//     $sql->bindValue(":para3", $paraThree);
-//     $sql->bindValue(":image3", "adminslider/" . $file3['name']);
-//     $sql->execute();
+};
 //     echo $file1;
 //     header("Location: ../View/dashboard_managePage_Slider.php");
 // }

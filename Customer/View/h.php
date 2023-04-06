@@ -5,7 +5,9 @@ if (session_status() == PHP_SESSION_NONE) {
   session_start();
 }
 ?>
-
+<?php
+include "../Controller/sliderSelectController.php"
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +46,19 @@ if (session_status() == PHP_SESSION_NONE) {
   <link rel="stylesheet" href="./resources/css/navigationAndFooter.css">
   <link rel="stylesheet" href="./resources/css/cartpopup.css">
   <link rel="stylesheet" href="./resources/css/home.css">
+  <style>
+    .backgroundCafeImage1 {
+      background: url(../../Storages/<?= $resultS[0]["imgOne"] ?>);
+    }
+
+    .backgroundCafeImage2 {
+      background: url(../../Storages/<?= $resultS[0]["imgTwo"] ?>);
+    }
+
+    .backgroundCafeImage3 {
+      background: url(../../Storages/<?= $resultS[0]["imgThree"] ?>);
+    }
+  </style>
 </head>
 
 <body>
@@ -54,9 +69,7 @@ if (session_status() == PHP_SESSION_NONE) {
   ?>
 
   <!-----------------------------   Header SLider    --------------------->
-  <?php
-  include "../Controller/sliderSelectController.php"
-  ?>
+
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="backImage backgroundCafeImage1 swiper-slide">

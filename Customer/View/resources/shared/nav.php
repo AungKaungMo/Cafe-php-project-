@@ -136,73 +136,9 @@
       <!--------------  Search Details  ------------------------>
 
       <div id="searchProductsContainerBox">
-<<<<<<< HEAD
-        <!-- <div class="m-auto searchProductContainer">
-                  <div class="detailsBox ms-3 pt-3 d-flex justify-content-between">
-                    <div class="productImage">
-                      <img src="./resources/img/cafeshopone.jpg">
-                    </div>
-                    <div class="me-4 mb-3">
-                      <div class="d-flex justify-content-between">
-                      <p class="productName">Coffee</p>
-                      <p class="productAmount">1500MMK</p>
-                      </div>
-                      <p class="cafeName">Shop Name - (<span> <a href="#">Htet Naung Cafe</a></span>)</p>
-                      <div class="d-flex justify-content-between">
-                      <button class="goShopBtn">Go Shop</button>
-                      <iconify-icon icon="ph:shopping-cart-simple-fill" class="buyCart"></iconify-icon>
-                      </div>
-                    </div>
-                  </div> -->
-      </div>
-
-
-      <!-- <div class="m-auto searchProductContainer">
-                  <div class="detailsBox ms-3 pt-3 d-flex justify-content-between">
-                    <div class="productImage">
-                      <img src="./resources/img/cafeshopone.jpg">
-                    </div>
-                    <div class="me-4 mb-3">
-                      <div class="d-flex justify-content-between">
-                      <p class="productName">Coffee</p>
-                      <p class="productAmount">1500MMK</p>
-                      </div>
-                      <p class="cafeName">Shop Name - (<span> <a href="#">Htet Naung Cafe</a></span>)</p>
-                      <div class="d-flex justify-content-between">
-                      <button class="goShopBtn">Go Shop</button>
-                      <iconify-icon icon="ph:shopping-cart-simple-fill" class="buyCart"></iconify-icon>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="m-auto searchProductContainer">
-                  <div class="detailsBox ms-3 pt-3 d-flex justify-content-between">
-                    <div class="productImage">
-                      <img src="./resources/img/cafeshopone.jpg">
-                    </div>
-                    <div class="me-4 mb-3">
-                      <div class="d-flex justify-content-between">
-                      <p class="productName">Coffee</p>
-                      <p class="productAmount">1500MMK</p>
-                      </div>
-                      <p class="cafeName">Shop Name - (<span> <a href="#">Htet Naung Cafe</a></span>)</p>
-                      <div class="d-flex justify-content-between">
-                      <button class="goShopBtn">Go Shop</button>
-                      <iconify-icon icon="ph:shopping-cart-simple-fill" class="buyCart"></iconify-icon>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-
-=======
 
       </div>
 
-
-
->>>>>>> origin/main
     </div>
   </div>
 

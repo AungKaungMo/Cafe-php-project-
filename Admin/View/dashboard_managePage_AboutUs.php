@@ -20,7 +20,11 @@ include "./resources/shared/dashboard.php";
             <div class="my-3">
                 <div class="box">
                     <div class="m-auto aboutImg">
-                        <img src="<?php if($result[0]["about_image"] == "") { echo "./resources/img/default.png"; }else { echo "../../Storages/".$result[0]["about_image"]; } ?> " id="acceptImage">
+                        <img src="<?php if ($result[0]["about_image"] == "") {
+                                        echo "./resources/img/default.png";
+                                    } else {
+                                        echo "../../Storages/" . $result[0]["about_image"];
+                                    } ?> " id="acceptImage">
                         <iconify-icon icon="material-symbols:cloud-upload" class="aboutIcon" width="30" height="30" id="upload"></iconify-icon>
 
                     </div>
