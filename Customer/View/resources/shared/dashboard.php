@@ -125,10 +125,10 @@ if (session_status() == PHP_SESSION_NONE) {
                 <div class="fs-4 fw-bold">User</div>
                 <div class="owner">
                     <?php
-                    if (empty($_SESSION["userpf"])) { ?>
+                    if (empty($userpf)) { ?>
                         <img src="./resources/img/profile.png">
                     <?php    } else { ?>
-                        <img src="../../Storages/<?php echo $_SESSION["userpf"] ?>" alt="Los Angeles Skyscrapers">
+                        <img src="../../Storages/<?php echo $userpf ?>" alt="Los Angeles Skyscrapers">
                     <?php    }
                     ?>
                 </div>

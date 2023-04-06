@@ -173,7 +173,9 @@
   </div>
 
   <!-----------------------   Footer   ---------------------------->
+
   <?php
+  include "../Model/dbConnection.php";
   include "./resources/shared/footer.php"
   ?>
 

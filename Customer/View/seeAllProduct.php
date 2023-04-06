@@ -46,9 +46,9 @@
 
   <a href="./promotion.html">
     <a href="./shop.php">
-      <iconify-icon icon="material-symbols:arrow-back" class="backArrow" width="90" height="90"></iconify-icon></a>
+      <iconify-icon icon="material-symbols:arrow-back" class="backArrow fs-2"></iconify-icon></a>
   </a>
-  <div class="btn">
+  <!-- <div class="btn">
     <button class="choose activechoose">
       <a href=""><img src="./resources/img/coffee.png" alt="">Coffee</a>
     </button>
@@ -66,7 +66,7 @@
         <img src="./resources/img/Specials.png" alt="">
         Specials
       </a>
-    </button>
+    </button> -->
   </div>
 
   <!-- ====================================== Product==================================================== -->
@@ -75,31 +75,31 @@
 
     <div class="cardContainer">
 
-    <?php for ($i = 0; $i < count($result); $i++) { ?>
-                    <div class="card mt-5">
-                     
-                        <div class="carditems">
-                            <div class="disphoto">
-                                <img src="../../Storages/<?= $result[$i]["product_photo"] ?>" alt="" class="img">
-                            </div>
-                            <p class="pname"><?= $result[$i]["product_name"] ?></p>
-                            <div class="disbtn">
-                                <button>
-                                    <iconify-icon icon="mdi:shopping-cart-arrow-down" data-id="<?= $result[$i]["product_id"] ?>" index="<?= $i ?>" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> data-bs-toggle="modal" data-bs-target="#staticBackdrop" <?php } ?> width="25" height="25" class="buy"></iconify-icon>
-                                </button>
+      <?php for ($i = 0; $i < count($result); $i++) { ?>
+        <div class="card mt-5">
 
-                                <button>
-                                    <iconify-icon icon="mdi:cards-heart-outline" class="blank_heart" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } ?> width="25" height="25"></iconify-icon>
-                                    <iconify-icon icon="mdi:cards-heart" class="full_heart d-none" width="25" height="25"></iconify-icon>
-                                </button>
-                            </div>
-                            <div class="disprice price">
-                                <?= $result[$i]["product_price"] ?> MMK
-                            </div>
-                        </div>
-                    </div>
+          <div class="carditems">
+            <div class="disphoto">
+              <img src="../../Storages/<?= $result[$i]["product_photo"] ?>" alt="" class="img">
+            </div>
+            <p class="pname"><?= $result[$i]["product_name"] ?></p>
+            <div class="disbtn">
+              <button>
+                <iconify-icon icon="mdi:shopping-cart-arrow-down" data-id="<?= $result[$i]["product_id"] ?>" index="<?= $i ?>" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> data-bs-toggle="modal" data-bs-target="#staticBackdrop" <?php } ?> width="25" height="25" class="buy"></iconify-icon>
+              </button>
 
-                <?php } ?>
+              <button>
+                <iconify-icon icon="mdi:cards-heart-outline" class="blank_heart" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } ?> width="25" height="25"></iconify-icon>
+                <iconify-icon icon="mdi:cards-heart" class="full_heart d-none" width="25" height="25"></iconify-icon>
+              </button>
+            </div>
+            <div class="disprice price">
+              <?= $result[$i]["product_price"] ?> MMK
+            </div>
+          </div>
+        </div>
+
+      <?php } ?>
 
       <!-- <div class="card">
         <div class="carditems">

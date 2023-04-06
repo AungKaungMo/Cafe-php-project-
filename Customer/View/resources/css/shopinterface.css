@@ -524,6 +524,10 @@ ContactUs
   transition: all 0.5s;
 }
 
+.sendBtn button a {
+  color: var(--mainColor);
+}
+
 .stockbtn {
   width: 5.4em;
   height: 2.3em;
@@ -559,6 +563,9 @@ ContactUs
   color: var(--secondMainColor);
 }
 
+.sendBtn button a:hover {
+  color: var(--secondMainColor);
+}
 
 .nextline {
   width: 80%;
