@@ -85,7 +85,7 @@
                <span class="infor"><?= $key["product_name"] ?></span>
 
                <div class="icon">
-                 <span class="price fw-bold"><?= $key["product_price"] ?>MMK</span>
+                 <span class="price priceChange fw-bold"><?= $key["product_price"] ?>MMK</span>
                  <iconify-icon icon="icon-park-solid:shopping-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="30" height="30"></iconify-icon>
                </div>
              </div>

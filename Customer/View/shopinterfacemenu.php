@@ -75,7 +75,7 @@
                             <iconify-icon icon="mdi:cards-heart-outline" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } ?> width="25" height="25"></iconify-icon>
                         </button>
                     </div>
-                    <div class="price text-center">
+                    <div class="price priceChange text-center">
                         <?php echo $result[$i]["product_price"] ?> MMK
                     </div>
                 </div>

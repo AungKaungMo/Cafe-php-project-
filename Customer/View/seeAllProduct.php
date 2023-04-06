@@ -93,7 +93,7 @@
                 <iconify-icon icon="mdi:cards-heart" class="full_heart d-none" width="25" height="25"></iconify-icon>
               </button>
             </div>
-            <div class="disprice price">
+            <div class="disprice price priceChange">
               <?= $result[$i]["product_price"] ?> MMK
             </div>
           </div>

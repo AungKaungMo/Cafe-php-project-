@@ -14,19 +14,19 @@ $(document).ready(() => {
     let index = event.target.attributes[2].value;
 
     $(".cake").text($(".pname")[index].innerText);
-    $(".mmk").text($(".price")[index].innerText);
+    $(".mmk").text($(".priceChange")[index].innerText);
     mmk = Number(
-      $(".price")[index].innerText.substring(
+      $(".priceChange")[index].innerText.substring(
         0,
-        $(".price")[index].innerText.length - 4
+        $(".priceChange")[index].innerText.length - 4
       )
     );
     originalPrice = mmk;
 
     $(".coin").text(
-      $(".price")[index].innerText.substring(
+      $(".priceChange")[index].innerText.substring(
         0,
-        $(".price")[index].innerText.length - 3
+        $(".priceChange")[index].innerText.length - 3
       ) + " Coins"
     );
 

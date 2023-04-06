@@ -2,33 +2,33 @@
 session_start();
 include "../Model/dbConnection.php";
 if (isset($_POST["searchText"])) {
-    $searchItems = $_POST["searchText"];
-    $db = new DBConnection();
-    $pdo = $db->connect();
+  $searchItems = $_POST["searchText"];
+  $db = new DBConnection();
+  $pdo = $db->connect();
 
-    $sql = $pdo->prepare(
-        "
+  $sql = $pdo->prepare(
+    "
             SELECT * FROM m_product WHERE product_name LIKE :search
         "
-    );
+  );
 
 
-    $sql->bindValue(":search", "%" . $searchItems . "%");
-    $sql->execute();
-    $productSearchLists = $sql->fetchAll(PDO::FETCH_ASSOC);
-    // echo json_encode($productSearchLists);
-    // echo "<pre>";
-    // print_r($productSearchLists);
-    $a = "";
-    $returnData = "";
-    if (empty($_SESSION["userid"])) {
-        $a = "data-bs-toggle='modal' data-bs-target='#staticBackdropCheckLogin'";
-    } else {
-        $a = "data-bs-toggle='modal' data-bs-target='#staticBackdrop' ";
-    };
-    for ($i = 0; $i < count($productSearchLists); $i++) {
+  $sql->bindValue(":search", "%" . $searchItems . "%");
+  $sql->execute();
+  $productSearchLists = $sql->fetchAll(PDO::FETCH_ASSOC);
+  // echo json_encode($productSearchLists);
+  // echo "<pre>";
+  // print_r($productSearchLists);
+  $a = "";
+  $returnData = "";
+  if (empty($_SESSION["userid"])) {
+    $a = "data-bs-toggle='modal' data-bs-target='#staticBackdropCheckLogin'";
+  } else {
+    $a = "data-bs-toggle='modal' data-bs-target='#staticBackdrop' ";
+  };
+  for ($i = 0; $i < count($productSearchLists); $i++) {
 
-        $returnData .= "<div class='m-auto searchProductContainer'>
+    $returnData .= "<div class='m-auto searchProductContainer'>
                   <div class='detailsBox pt-3 d-flex justify-content-between'>
                     <div class='productImage ms-3'>
                       <img src='../../Storages/" . $productSearchLists[$i]['product_photo'] . "' class='img'>
@@ -36,7 +36,7 @@ if (isset($_POST["searchText"])) {
                     <div class='me-4 mb-3'>
                       <div class='d-flex justify-content-between'>
                       <p class='pname productName'>" . $productSearchLists[$i]['product_name'] . "</p>
-                      <p class='price productAmount'>" . $productSearchLists[$i]['product_price'] . " MMK</p>
+                      <p class='price priceChange productAmount'>" . $productSearchLists[$i]['product_price'] . " MMK</p>
                       </div>
                       <p class='cafeName'>Shop Name - (<span> Htet Naung Cafe</span>)</p>
                       <div class='d-flex justify-content-between'>
@@ -46,7 +46,7 @@ if (isset($_POST["searchText"])) {
                     </div>
                   </div>
                     ";
-    };
-    echo $returnData;
-    // print_r($productSearchLists[0]["product_name"]);
+  };
+  echo $returnData;
+  // print_r($productSearchLists[0]["product_name"]);
 }

@@ -92,7 +92,7 @@
                 <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
               </button>
             </div>
-            <div class="disprice price">
+            <div class="disprice price priceChange">
               <?php
               $percentPrice = $poresult[$i]["product_price"] - (($poresult[$i]["product_price"] * $poresult[$i]["product_discount"]) / 100);
               echo $percentPrice ?> MMK

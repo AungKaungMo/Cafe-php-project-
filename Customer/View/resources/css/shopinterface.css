@@ -48,7 +48,6 @@ body {
   background-color: var(--paginationColor);
 }
 
-
 .mySwiper1 {
   position: unset !important;
 }
@@ -244,20 +243,20 @@ today menu
 }
 
 .disprice {
-  width: 120px;
-  height: 40px;
-  padding: 0.5em;
-  border-radius: 30px;
+  width: 120px !important;
+  height: 40px !important;
+  padding: 0.5em !important;
+  border-radius: 30px !important;
   /* padding: 5px 0px 0px 10px; */
-  background-color: var(--mainColor);
-  text-align: center;
-  color: var(--textColorPrimary);
-  font-family: var(--titleFont);
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  background-color: var(--mainColor) !important;
+  text-align: center !important;
+  color: var(--textColorPrimary) !important;
+  font-family: var(--titleFont) !important;
+  position: absolute !important;
+  bottom: -20px !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
 }
 
 .maincard {
@@ -309,6 +308,10 @@ today menu
 
 .pbtn {
   margin-top: 1em;
+}
+
+.buy {
+  color: var(--secondMainColor);
 }
 
 .pbtn button {

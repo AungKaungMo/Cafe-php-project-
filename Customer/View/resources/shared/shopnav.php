@@ -60,9 +60,11 @@ $id = $_SESSION["shopid"];
                                     <span class="cartCount">(14)</span>
                                 </div>
                                 <div>
-
-                                    <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"></iconify-icon>
-
+                                    <form method="post" action="./cart.php" enctype="multipart/form-data">
+                                        <input type="hidden" class="cartList" name="cartList">
+                                        <button type="btn" class="bg-transparent border-0" name="cartClick">
+                                            <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon"></iconify-icon>
+                                        </button>
                                     </form>
                                 </div>
 
@@ -191,9 +193,11 @@ $id = $_SESSION["shopid"];
                                     <span class="cartCount">(14)</span>
                                 </div>
                                 <div>
-                                    <form method="post" action="./cart.php">
-                                        <input type="hidden" name="storeItems" id="cartList">
-                                        <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
+                                    <form method="post" action="./cart.php" enctype="multipart/form-data">
+                                        <input type="hidden" class="cartList" name="cartList">
+                                        <button type="btn" class="bg-transparent border-0" name="cartClick">
+                                            <iconify-icon icon="ph:shopping-cart-fill" class="fs-3 cartIcon buyCartIcon"></iconify-icon>
+                                        </button>
                                     </form>
                                 </div>
 

@@ -81,7 +81,7 @@ $_SESSION["cartItemsLists"] = $cartItemsLists;
                                     <td data-label="Discount">
                                         <?= $_SESSION["cartItemsLists"][$j]["product_discount"] ?> %
                                     </td>
-                                    <td data-label="Price" class="price">
+                                    <td data-label="Price" class="price priceChange">
                                         <?= $_SESSION["cartItemsLists"][$j]["product_price"] ?> MMK
                                     </td>
                                     <td data-label="Coin Price">
