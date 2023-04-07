@@ -8,7 +8,7 @@ $sql = $pdo->prepare(
 
     "
         SELECT * FROM m_blogcomment AS cb INNER JOIN m_customer AS 
-        cu ON cb.user_id = cu.cus_id WHERE cb.del_flg=0
+        cu ON cb.user_id = cu.cus_id WHERE cb.del_flg = 0
         ORDER BY comment_id DESC
         "
 );

@@ -11,19 +11,18 @@ if (isset($_POST["submit"])) {
     $idu = $_SESSION["userid"];
     $pf = $_SESSION["userpf"];
     $uname = $_SESSION["username"];
-    $bid = $_POST["bid"];
-    $Sid =  $_SESSION["shopid"];
+    $bid = $_POST["id"];
     $db = new DBConnection();
     $pdo = $db->connect();
     $sql = $pdo->prepare(
         "
         INSERT INTO m_blogcomment
         (
-            user_pf,user_name,user_id,comment,blog_id,shop_id 
+            user_pf,user_name,user_id,comment,blog_id
         )
         VALUES
         (
-            :pf,:name,:id,:message,:bid,:sid 
+            :pf,:name,:id,:message,:bid 
         )
         "
     );
@@ -33,11 +32,10 @@ if (isset($_POST["submit"])) {
     $sql->bindValue(":id", $idu);
     $sql->bindValue(":message", $comment);
     $sql->bindValue(":bid", $bid);
-    $sql->bindValue(":sid", $Sid);
 
 
     $sql->execute();
-    // // header("Location: ../View/selectedBlog.php");
+    header("Location: ../View/selectedBlog.php");
 } else {
     echo "ERROR";
 }
