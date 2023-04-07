@@ -89,9 +89,6 @@
                 <iconify-icon icon="mdi:shopping-cart-arrow-down" data-id="<?= $poresult[$i]["product_id"] ?>" index="<?= $i ?>" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> data-bs-toggle="modal" data-bs-target="#staticBackdrop" <?php } ?> width="30" height="30" class="buy"></iconify-icon>
               </button>
 
-              <button>
-                <iconify-icon icon="mdi:cards-heart-outline" width="25" height="25"></iconify-icon>
-              </button>
             </div>
             <div class="disprice price priceChange">
               <?php

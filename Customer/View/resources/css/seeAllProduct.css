@@ -33,9 +33,11 @@
 }
 
 .activechoose {
-  background-image: radial-gradient(closest-side,
-      var(--mainColor),
-      transparent);
+  background-image: radial-gradient(
+    closest-side,
+    var(--mainColor),
+    transparent
+  );
 }
 
 .backArrow {
@@ -43,9 +45,11 @@
 }
 
 .btn .choose:hover {
-  background-image: radial-gradient(closest-side,
-      var(--mainColor),
-      transparent);
+  background-image: radial-gradient(
+    closest-side,
+    var(--mainColor),
+    transparent
+  );
 }
 
 .btn .choose a:hover {
@@ -80,9 +84,11 @@ h1 {
   position: relative;
   width: 250px;
   height: 210px;
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255),
-      rgba(217, 217, 217, 0.17));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255),
+    rgba(217, 217, 217, 0.17)
+  );
   border: solid var(--textColorPrimary);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -129,7 +135,8 @@ h1 {
 }
 
 .carditems .disbtn {
-  margin-left: 22%;
+  /* margin-left: 22%; */
+  text-align: center;
   margin-bottom: 5px;
 }
 
@@ -140,7 +147,7 @@ h1 {
   border: none;
   border-radius: 10px;
   padding: 4px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   transition: all 0.5s;
 }
 
@@ -168,7 +175,6 @@ h1 {
   right: 0;
   margin: auto;
 }
-
 
 .line {
   width: 90%;

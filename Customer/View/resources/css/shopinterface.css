@@ -219,7 +219,8 @@ today menu
 }
 
 .carditems .disbtn {
-  margin-left: 22%;
+  /* margin-left: 22%; */
+  text-align: center;
   margin-bottom: 5px;
 }
 
@@ -230,7 +231,7 @@ today menu
   border: none;
   border-radius: 10px;
   padding: 4px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   transition: all 0.5s;
 }
 
@@ -308,6 +309,7 @@ today menu
 
 .pbtn {
   margin-top: 1em;
+  text-align: center;
 }
 
 .buy {
@@ -321,7 +323,7 @@ today menu
   border: none;
   border-radius: 10px;
   padding: 4px;
-  margin-left: 20px;
+  /* margin-left: 55px; */
   transition: all 0.5s;
 }
 

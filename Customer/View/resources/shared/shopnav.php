@@ -72,20 +72,20 @@ include "../Controller/logoController.php";
                             </div>
                             <div class="line"></div>
 
-                            <div class="d-flex justify-content-between mt-2 afterLogin">
+                            <!-- <div class="d-flex justify-content-between mt-2 afterLogin">
                                 <div>
                                     <span class="cartText">Fav</span>
                                     <span>(14)</span>
                                 </div>
-                                <div>
-                                    <!-- <form method="post" action="./cart.php">
+                                <div> -->
+                            <!-- <form method="post" action="./cart.php">
                                         <input type="hidden" name="storeItems" id="cartList">
                                         <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
                                     </form> -->
-                                </div>
+                            <!-- </div>
 
                             </div>
-                            <div class="line"></div>
+                            <div class="line"></div> -->
 
                             <div class="d-flex justify-content-between mt-2 afterLogin">
                                 <div>
@@ -216,7 +216,7 @@ include "../Controller/logoController.php";
                         </div>
                         <div class="line"></div>
 
-                        <div class="d-flex justify-content-between mt-2 afterLogin">
+                        <!--<div class="d-flex justify-content-between mt-2 afterLogin">
                             <div>
                                 <span class="cartText">Fav</span>
                                 <span>(14)</span>
@@ -226,7 +226,7 @@ include "../Controller/logoController.php";
                             </div>
 
                         </div>
-                        <div class="line"></div>
+                        <div class="line"></div> -->
 
                         <div class="d-flex justify-content-between mt-2 afterLogin">
                             <div>
