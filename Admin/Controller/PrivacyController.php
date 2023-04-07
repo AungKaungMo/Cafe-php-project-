@@ -2,10 +2,9 @@
 ini_set("display_errors", "1");
 
 
-include "../Model/dbconnection.php";
+include "../Model/dbConnection.php";
 
-if (isset($_POST["saveChange"]))
-{
+if (isset($_POST["saveChange"])) {
     $paragraph = $_POST["paragraph"];
 
     $db = new DBConnection();
@@ -22,7 +21,6 @@ if (isset($_POST["saveChange"]))
 
     $sql->execute();
     header("Location: ../View/dashboard_setting_Privacy&Policy.php");
-}
-else{
+} else {
     echo "error";
-} 
+}

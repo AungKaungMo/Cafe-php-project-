@@ -1,7 +1,7 @@
 <?php
 
 
-include "../Model/dbconnection.php";
+include "../Model/dbConnection.php";
 
 if (isset($_POST["save"])) {
     $paragraph = $_POST["paragraph"];

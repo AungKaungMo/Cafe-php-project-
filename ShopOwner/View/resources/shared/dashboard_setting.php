@@ -4,7 +4,7 @@
         <h1><a href="./dashboard_setting_gallery.php">Gallery</a></h1>
         <h1><a href="./dashboard_setting_cu.php">Contact Us</a></h1>
         <h1><a href="./dashboard_setting_blog.php">Blog</a></h1>
-        <h1><a href="./dashboard_setting_menu.php">Menu</a></h1>
+        <h1><a href="./dashboard_setting_menu_two.php">Menu</a></h1>
     </div>
     <hr class="line">
 </div>

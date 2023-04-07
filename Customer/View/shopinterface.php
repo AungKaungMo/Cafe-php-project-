@@ -350,6 +350,25 @@ $_SESSION["shopid"] = $Sid;
         });
     </script>
 
+    <script>
+        var swiper = new Swiper(".mySwiperBlog", {
+            spaceBetween: 30,
+            slidesPerView: 2,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                900: {
+                    slidesPerView: 2,
+                },
+                300: {
+                    slidesPerView: 1,
+                }
+            }
+        });
+    </script>
+
 </body>
 
 </html>
@@ -605,24 +624,7 @@ $_SESSION["shopid"] = $Sid;
 <!-- </script> -->
 
 <!-- 
-<script>
-    var swiper = new Swiper(".mySwiperBlog", {
-        spaceBetween: 30,
-        slidesPerView: 2,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            900: {
-                slidesPerView: 2,
-            },
-            300: {
-                slidesPerView: 1,
-            }
-        }
-    });
-</script>
+
 
 <script>
     var swiper1 = new Swiper(".mySwiper1", {

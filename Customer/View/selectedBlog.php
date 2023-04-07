@@ -3,7 +3,7 @@ ini_set("display_errors", "1");
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-include "../Model/dbconnection.php";
+include "../Model/dbConnection.php";
 include "../Controller/blogSelectController.php";
 $bid = $_GET["bid"];
 ?>

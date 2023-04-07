@@ -97,6 +97,7 @@
         </div>
       </div>
     </section>
+    <a href="./seeAllProduct.php"><button class="rightseemore">See More</button></a>
     <!-- <div class="card">
            <img src="./resources/img/pshop2.png" alt="">
            <div class="script"> --->

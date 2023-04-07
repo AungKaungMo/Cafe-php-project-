@@ -3,17 +3,17 @@
 ini_set("display_errors", "1");
 // session_start();
 
-if(isset($_GET["page"])){
+if (isset($_GET["page"])) {
     $page = $_GET["page"];
-}else{
+} else {
     $page = 1;
 }
 
 $rowLimit = 1;
-$pageStart = ($page-1) * $rowLimit;
-$pageStart = ($pageStart<0)? 0 : $pageStart;
+$pageStart = ($page - 1) * $rowLimit;
+$pageStart = ($pageStart < 0) ? 0 : $pageStart;
 
-include "../Model/dbconnection.php"; 
+include "../Model/dbConnection.php";
 
 $db = new DBConnection();
 $pdo = $db->connect();
@@ -36,12 +36,12 @@ $sql = $pdo->prepare(
     SELECT* FROM m_customer 
     WHERE del_flg = 0
     LIMIT $pageStart ,$rowLimit     
-    "  
+    "
 );
 $sql->execute();
 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 $resultU = $result;
-$pageList = ceil(count($totalUser))/ $rowLimit;
+$pageList = ceil(count($totalUser)) / $rowLimit;
 
 
 
