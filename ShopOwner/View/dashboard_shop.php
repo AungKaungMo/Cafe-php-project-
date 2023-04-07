@@ -113,7 +113,6 @@ include "../Controller/dashboard_shop_showController.php";
 
         <form method="post" action="../Controller/dashboard_shop_pCheckController.php">
             <div class="mt-3">
-
                 <label for="package">Package Type</label><br><br>
                 <select id="package" name="packageType">
                     <option value="basic">Basic</option>

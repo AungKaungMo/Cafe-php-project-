@@ -67,7 +67,7 @@ session_start();
                     </a>
                 </li> -->
                 <li>
-                    <a href="./dashboard_profile_messagebox.php">
+                    <a href="./dashboard_profile_informtaions.php">
                         <span class="icon"><iconify-icon icon="iconoir:profile-circle"></iconify-icon></span>
                         <span class="title">Profile</span>
                     </a>
