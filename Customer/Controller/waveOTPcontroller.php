@@ -28,11 +28,11 @@ if(isset($_POST["submit"])){
         $_SESSION["otpemail_error"] = "";
         $generate = new Generate();
         $wOtp = $generate->genCode(4);
-        echo $wOtp;
+        // echo $wOtp;
         $sql = $pdo->prepare(
             "
             UPDATE m_customer SET
-            waveotp = :otp
+            wave_otp = :otp
             WHERE cus_email = :email
             "
         );
@@ -40,7 +40,7 @@ if(isset($_POST["submit"])){
         $sql->bindValue(":email", $email);
         $sql->execute();
 
-        $_SESSION["waveotp"] = $wOtp;
+        $_SESSION["wave_otp"] = $wOtp;
         $_SESSION["email"] = $email;
 
         $mail = new SendMail();

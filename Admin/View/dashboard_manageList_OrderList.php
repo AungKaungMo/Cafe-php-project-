@@ -1,6 +1,6 @@
 <?php
 ini_set("display_errors", "1");
-include "../Controller/manage_shopListController.php";
+include "../Controller/manage_orderlistController.php";
 // session_start();
 // if (isset($_SESSION["allshop"])) {
 //     $checkresult = $_SESSION["allshop"];
@@ -13,7 +13,7 @@ include "./resources/shared/dashboard.php";
 ?>
 
 <link rel="stylesheet" href="./resources/css/dashboard_manageList.css">
-<link rel="stylesheet" href="./resources/css/dashboard_manageList_ShopList.css">
+<link rel="stylesheet" href="./resources/css/dashboard_manageList_OrderList.css">
 
 </head>
 
@@ -30,36 +30,29 @@ include "./resources/shared/dashboard.php";
         <table class="table">
             <tr>
                 <th scope="col">No.</th>
-                <th scope="col">ID</th>
-                <th scope="col">ShopName</th>
-                <th scope="col">Address</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Package</th>
-                <th scope="col">created_date</th>
-                <th scope="col">expired_date</th>
-                <th scope="col">Action</th>
-
+                <th scope="col">ShopID</th>
+                <th scope="col">OrderID</th>
+                <th scope="col">Totalquantity</th>
+                <th scope="col">Totalprice</th>
+                <th scope="col">PaymentID</th>
+                <th scope="col">created_date</th> 
             </tr>
             <tr class="lineTable">
-                <td colspan="9">
+                <td colspan="8">
                     <hr class="line">
                 </td>
             </tr>
             <?php 
             $count = 1;
-            for ($i = 0; $i < count ($shop); $i++) {   ?>
+            for ($i = 0; $i < count ($order); $i++) {   ?>
                 <tr>
                     <td scope="row"><?= $count++ ?></td>
-                    <td><?= $shop[$i]["shop_id"]  ?></td>
-                    <td><?= $shop[$i]["shop_name"]  ?></td>
-                    <td><?= $shop[$i]["shop_address"]  ?></td>
-                    <td><?= $shop[$i]["shop_email"]  ?></td>
-                    <td><?= $shop[$i]["shop_phone"]  ?></td>
-                    <td><?= $shop[$i]["package_type"]  ?></td>
-                    <td><?= $shop[$i]["package_createdate"]  ?></td>
-                    <td><?= $shop[$i]["package_expiredate"]  ?></td>
-                    <td class="danger"><a href="../Controller/delete_shopListController.php?id= <?= $shop[$i]["shop_id"] ?>">Remove</a></td>
+                    <td><?= $order[$i]["shop_id"]  ?></td>
+                    <td><?= $order[$i]["order_id"]  ?></td>
+                    <td><?= $order[$i]["total_quantity"]  ?></td>
+                    <td><?= number_format($order[$i]["total_price"])  ?></td>
+                    <td><?= $order[$i]["payment_id"]  ?></td> 
+                    <td><?= $order[$i]["created_date"]  ?></td>
                 </tr>
             <?php } 
             ?>
@@ -99,32 +92,7 @@ include "./resources/shared/dashboard.php";
                 </li>
             </ul>
         </nav>
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <?php
-                for ($i = 1; $i <= $pageList; $i++) { ?>
-                    <li class="page-item"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
-                <?php } ?>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </nav> -->
-    
-    </div>
-
-    <!-- <script src="./resources/js/dashboard.js"></script>
-    <script src="./resources/js/dashboard_ManageList.js"></script> -->
+ 
 </body>
 
 </html>

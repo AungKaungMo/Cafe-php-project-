@@ -1,7 +1,7 @@
-.navigation ul li:nth-child(5) {
+.navigation ul li:nth-child(-) {
     background: var(--backgroundPrimary);
   }
-.navigation ul li:nth-child(5) a{
+.navigation ul li:nth-child(-) a{
     color: var(--mainColor);
   }
   .line{
