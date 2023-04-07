@@ -21,7 +21,7 @@ body {
 }
 
 
-.qrCode{
+.qrCode {
     font-size: 25em !important;
 }
 
@@ -31,31 +31,43 @@ body {
 
 .comBtn button {
     width: 150px;
-    background-color: var(--secondMainColor);
+    background-color: var(--secondMainColor) !important;
     border-radius: 10px;
-    border: 2px solid var(--mainColor);
-    color: var(--mainColor);
+    border: 2px solid var(--secondMainColor) !important;
+    color: var(--mainColor) !important;
     font-weight: bold;
     transition: all 0.5s;
 }
 
+a {
+    color: var(--mainColor) !important;
+}
+
+.comBtn button:hover {
+    background-color: transparent !important;
+    color: var(--secondMainColor) !important;
+}
+
+.comBtn button:hover a {
+    color: var(--secondMainColor) !important;
+}
 
 @media screen and (max-width: 720px) {
-.qrCode{
-    font-size: 18em !important;
-}
+    .qrCode {
+        font-size: 18em !important;
+    }
 
-.comBtn {
-    margin-top: 1em;
-}
+    .comBtn {
+        margin-top: 1em;
+    }
 
-.comBtn button {
-    width: 150px;
-    background-color: var(--secondMainColor);
-    border-radius: 10px;
-    border: 2px solid var(--mainColor);
-    color: var(--mainColor);
-    font-weight: bold;
-    transition: all 0.5s;
-}
+    .comBtn button {
+        width: 150px;
+        background-color: var(--secondMainColor);
+        border-radius: 10px;
+        border: 2px solid var(--mainColor);
+        color: var(--mainColor);
+        font-weight: bold;
+        transition: all 0.5s;
+    }
 }

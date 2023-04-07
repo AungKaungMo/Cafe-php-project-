@@ -7,11 +7,11 @@ if (isset($_POST["confirm"])) {
     $db = new DBConnection();
     $pdo = $db->connect();
     $email = $_SESSION["email"];
-    $otpcode = $_SESSION["waveotp"];
+    $otpcode = $_SESSION["wave_otp"];
     $enterotp = $_POST["pwd"];
     $sql = $pdo->prepare(
         "
-            SELECT waveotp FROM  m_customer WHERE cus_email=:email AND del_flg=0;
+            SELECT wave_otp FROM  m_customer WHERE cus_email=:email AND del_flg=0;
             "
     );
 
@@ -19,7 +19,7 @@ if (isset($_POST["confirm"])) {
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    if ($result[0]["waveotp"] == $enterotp) {
+    if ($result[0]["wave_otp"] == $enterotp) {
         $_SESSION["otperror"] = "";
         // echo "hell";
         // header("Location: ../View/wavepay2.php");

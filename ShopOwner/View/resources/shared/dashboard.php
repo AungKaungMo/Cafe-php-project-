@@ -60,12 +60,12 @@ session_start();
                         <span class="title">Order</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="./dashboard_booking.php">
                         <span class="icon"><iconify-icon icon="material-symbols:book"></iconify-icon></span>
                         <span class="title">Booking</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="./dashboard_profile_messagebox.php">
                         <span class="icon"><iconify-icon icon="iconoir:profile-circle"></iconify-icon></span>
