@@ -99,7 +99,7 @@
     </section>
     <!-- <div class="card">
            <img src="./resources/img/pshop2.png" alt="">
-           <div class="script">
+           <div class="script"> --->
 
     <!-- ==============================================trending shop ============================================ -->
     <?php include "../Controller/selectShopController.php"   ?>
@@ -204,6 +204,8 @@
   </body>
 
   </html>
+
+
 
 
   <!-- <div class="card">
