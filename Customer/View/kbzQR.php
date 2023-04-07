@@ -21,11 +21,16 @@
 <body>
   <div class="box">
     <div class="card">
-      <iconify-icon class="qrCode" icon="clarity:qr-code-line"></iconify-icon>
+
+      <?php
+      include "../Controller/qrController.php";
+      QRcode::png($emailAdmin, "../../Storages/qr_" . $emailAdmin . ".png");
+      // QRcode::png($emailAdmin);
+      ?>
     </div>
-    <div class="comBtn text-center">
+    <!-- <div class="comBtn text-center">
       <button class="p-2"><a href="../View/h.php">Comfirm</a></button>
-    </div>
+    </div> -->
   </div>
 
 </body>

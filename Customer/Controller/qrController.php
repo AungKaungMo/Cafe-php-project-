@@ -1,4 +1,5 @@
 <?php
+include "../Controller/lib/phpqrcode";
 include "../Model/dbConnection.php";
 $db = new DBConnection();
 $pdo = $db->connect();
@@ -8,4 +9,4 @@ $sql = $pdo->prepare(
     "
 );
 $sql->execute();
-$emailAdmin = $sql->fetchAll(PDO::FETCH_ASSOC);
+$emailAdmin = $sql->fetchAll(PDO::FETCH_ASSOC)[0]["admin_email"];
