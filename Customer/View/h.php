@@ -270,10 +270,12 @@ include "../Controller/sliderSelectController.php"
                             </div>
                           </div>
                           <div>
+                            <?php for ($j = 0; $j < $rvdata["rating"]; $j++) { ?>
+                              <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                            <?php } ?>
+                            <!--<iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
                             <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                            <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                            <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
-                            <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon>
+                            <iconify-icon icon="material-symbols:star-rounded" width="24" height="24"></iconify-icon> -->
                           </div>
                         </div>
 
