@@ -65,8 +65,17 @@ $(document).ready(() => {
         item.orderNote += " / " + noteValue;
       }
       $("#noteToOrder").val("");
+      setTimeout(function () {
+        location.reload();
+      }, 200);
     });
 
+    $(".closeReload").click(function () {
+      alert("hi");
+      setTimeout(function () {
+        location.reload();
+      }, 200);
+    });
     if (!found) {
       carts.push({
         id: itemId,
@@ -82,5 +91,5 @@ $(document).ready(() => {
     localStorage.setItem("cart", JSON.stringify(carts));
     $(".cartList").val(JSON.stringify(carts));
   });
-  console.log($(".cartList").val());
+  // console.log($(".cartList").val());
 });
