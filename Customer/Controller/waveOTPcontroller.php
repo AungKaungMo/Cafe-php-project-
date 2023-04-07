@@ -5,7 +5,7 @@ include "./shared/generatedCode.php";
 include "./shared/mailSender.php";
 session_start();
 
-if(isset($_POST["submit"])){ 
+if (isset($_POST["submit"])) {
     $email = $_POST["useremail"];
     // $password = $_POST["password"]; 
     // $_SESSION["otp_pwd"] = $_POST["pwd"]; 
@@ -50,6 +50,5 @@ if(isset($_POST["submit"])){
             "<h1>Code: $wOtp </h1>"
         );
         header("Location: ../View/wavepay1.php");
+    }
 }
-}
-

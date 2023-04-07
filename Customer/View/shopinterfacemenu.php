@@ -41,8 +41,9 @@
 
 <body>
     <?php
-    include "./resources/shared/shopnav.php";
     include "../Controller/shopInterfaceMenuController.php";
+    include "./resources/shared/shopnav.php";
+
 
     ?>
 

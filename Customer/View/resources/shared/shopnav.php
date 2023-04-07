@@ -4,6 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 $id = $_SESSION["shopid"];
+include "../Controller/logoController.php";
 ?>
 
 <!---------- nav --------->
@@ -14,7 +15,7 @@ $id = $_SESSION["shopid"];
 
         <a class="navbar-brand" href="#">
 
-            <img src="./resources/img/cafeLogo 1.png" height="60px" class="logo">
+            <img src="../../Storages/<?= $shoplog ?>" height="60px" class="logo">
 
         </a>
         <div class="d-flex align-items-center mt-1 d-lg-none d-bllock">

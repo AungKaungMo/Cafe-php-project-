@@ -5,9 +5,9 @@ if (isset($_POST["submit"])) {
     //     echo "<pre>";
     //     print_r($_FILES["profile"]);
     // }
-    include "../Model/dbconnection.php";
+    include "../Model/dbConnection.php";
     $headerTitle = $_POST['headerTitle'];
-    $headerText = $_POST['headerText'];  
+    $headerText = $_POST['headerText'];
     $file = $_FILES['headerImage']['name'];
     $db = new DBConnection();
     $pdo = $db->connect();
@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
 
         $location = $_FILES['headerImage']['tmp_name'];
 
-if (move_uploaded_file($location, "../../Storages/shopheader/" . $file )) {
+        if (move_uploaded_file($location, "../../Storages/shopheader/" . $file)) {
             //echo 'File is successfully uploaded.';
 
             $sql = $pdo->prepare(
@@ -28,10 +28,10 @@ if (move_uploaded_file($location, "../../Storages/shopheader/" . $file )) {
             WHERE id = 1
             "
             );
-            $sql->bindValue(":headerImage", "../../Storages/shopheader/" . $file );
+            $sql->bindValue(":headerImage", "../../Storages/shopheader/" . $file);
         }
     } else {
-//echo 'There was some error moving the file to upload directory.';
+        //echo 'There was some error moving the file to upload directory.';
         $sql = $pdo->prepare(
             "
             UPDATE m_shopHeader SET 
