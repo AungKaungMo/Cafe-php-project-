@@ -99,8 +99,6 @@
   transform: scale(1.2);
 }
 
-
-
 .infor {
   font-size: var(--navigationFontSize);
   color: var(--textColorPrimary);
@@ -238,10 +236,16 @@
 .anbox {
   transition: all 1s ease;
 }
+.shopImage {
+  width: 90%;
+  height: 360px !important;
+}
 
 .aboutImage {
   border-radius: 0.5em;
   transition: all 1s ease;
+  object-fit: cover;
+  height: 100% !important;
 }
 
 .anbox:hover {
@@ -277,7 +281,6 @@
 }
 
 @media screen and (max-width: 760px) {
-
   .text-label,
   .text-hero-regular {
     margin-left: 30px;

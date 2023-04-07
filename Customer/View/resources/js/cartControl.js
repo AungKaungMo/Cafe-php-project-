@@ -7,7 +7,8 @@ $(document).ready(() => {
   let itemId;
   let mmk;
   let originalPrice;
-  $(".buy").click((event) => {
+  $(document).on("click", ".buy", function (event) {
+    // alert("click");
     count = 1;
     $(".countItem").text(count);
     itemId = event.target.attributes[1].value;
