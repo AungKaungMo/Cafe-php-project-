@@ -1,9 +1,12 @@
 <?php
 ini_set("display_errors", "1");
-
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include "../Model/dbConnection.php";
 
 if (isset($_POST["submit"])) {
+
     $comment = $_POST["message"];
     $idu = $_SESSION["userid"];
     $pf = $_SESSION["userpf"];
@@ -34,7 +37,7 @@ if (isset($_POST["submit"])) {
 
 
     $sql->execute();
-    header("Location: ../View/selectedBlog.php");
+    // // header("Location: ../View/selectedBlog.php");
 } else {
     echo "ERROR";
 }
