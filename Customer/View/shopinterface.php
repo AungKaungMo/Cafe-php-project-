@@ -596,47 +596,15 @@ $_SESSION["shopid"] = $Sid;
 
 </div>
 
-<!-----------------------   Footer   ---------------------------->
-<?php
-include "./resources/shared/footer.php";
-?>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-<!----filter js----->
-<script src="./lib/isotope.pkgd.min.js"></script>
-
-<script>
-    var $grid = $('.item-details').isotope({
-        // options
-    });
-    // filter items on button click
-    $('.item-menu').on('click', 'button', function() {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({
-            filter: filterValue
-        });
-    });
-</script>
-
 
 
 <!-- Initialize Swiper -->
 
-<script>
-    var swiper2 = new Swiper(".mySwiper", {
-        // spaceBetween: 30,
-        slidesPerView: 1,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
+<!-- <script> -->
 
-    });
-</script>
+<!-- </script> -->
 
-
+<!-- 
 <script>
     var swiper = new Swiper(".mySwiperBlog", {
         spaceBetween: 30,
@@ -685,4 +653,4 @@ include "./resources/shared/footer.php";
 
 </body>
 
-</html>
+</html> -->

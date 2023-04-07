@@ -141,6 +141,8 @@ $bid = $_GET["bid"];
             <?php
             include "../Controller/blogcommentSelectController.php";
             $result1 = $result;
+            // echo "<pre>";
+            // print_r($result1)
             ?>
             <div class="line mt-4"></div>
             <div>
@@ -157,18 +159,17 @@ $bid = $_GET["bid"];
                                     <textarea name="message" placeholder="Message"></textarea>
                                 </div>
                                 <div class="text-center submitBtn mt-3 mb-5">
-                                    <!-- <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/blogcommentInsertController.php" <?php } ?>><button class="p-2" name="submit">Submit</button></a> -->
                                     <button class="p-2" name="submit">Submit</button>
                                     <input type="text" value="<?= $bid ?>" name="id" hidden>
                                 </div>
                             </div>
                         </form>
-                    <? } else if (count($result1)) {  ?>
+                    <?php } else if (count($result1) > 0) {  ?>
                         <?php for ($i = 0; $i < count($result1); $i++) { ?>
                             <div class="comment mt-5">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="d-flex">
-                                        <div class="commentImage"><img src="../../Storages/<?= $result1["cus_profile"] ?>"></div>
+                                        <div class="commentImage"><img src="../../Storages/<?= $result1[$i]["cus_profile"] ?>"></div>
                                         <div class="ms-4">
                                             <p class="personName fw-bold mb-0 fs-5">
                                                 <?php echo $result1[$i]["cus_name"]  ?>
@@ -193,25 +194,27 @@ $bid = $_GET["bid"];
                                     </p>
                                 </div>
                             </div>
-                            <div class="line mt-4"></div>
-                            <form action="../Controller/blogcommentInsertController.php" method="post">
-                                <div class="commentBox">
-                                    <div class="fw-bold fs-4 my-4">Leave Comments.</div>
-                                    <div class="typeBox">
-                                        <textarea name="message" placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="text-center submitBtn mt-3 mb-5">
-                                        <!-- <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/blogcommentInsertController.php" <?php } ?>><button class="p-2" name="submit">Submit</button></a> -->
-                                        <input type="text" value="<?= $bid ?>" name="id" hidden>
-                                        <button class="p-2" name="submit">Submit</button>
 
-                                    </div>
-                                </div>
-                            </form>
                         <?php }   ?>
-                    <?php   }  ?>
+                        <div class="line mt-4"></div>
+                        <form action="../Controller/blogcommentInsertController.php" method="post">
+                            <div class="commentBox">
+                                <div class="fw-bold fs-4 my-4">Leave Comments.</div>
+                                <div class="typeBox">
+                                    <textarea name="message" placeholder="Message"></textarea>
+                                </div>
+                                <div class="text-center submitBtn mt-3 mb-5">
+                                    <input type="text" value="<?= $bid ?>" name="id" hidden>
+                                    <button class="p-2" name="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
                 </div>
+
+            <?php   }  ?>
             </div>
+
+
 
         </div>
     </div>
