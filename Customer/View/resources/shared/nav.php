@@ -1,8 +1,3 @@
-<?php
-if (session_status() == PHP_SESSION_NONE) {
-  session_start();
-}
-?>
 <nav class="navbar navbar-expand-lg mx-sm-5 mx-2 ">
   <div class="container-fluid">
 
