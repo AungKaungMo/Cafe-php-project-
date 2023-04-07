@@ -1,19 +1,23 @@
 <?php
 ini_set("display_errors", "1");
 // include "../Model/dbconnection.php";
+if (isset($_GET["bid"])) {
+    $id = $_GET["bid"];
+    $db = new DBConnection();
+    $pdo = $db->connect();
+    $sql = $pdo->prepare(
 
-$db = new DBConnection();
-$pdo = $db->connect();
-$sql = $pdo->prepare(
-
-    "
+        "
         SELECT * FROM m_blogcomment AS cb INNER JOIN m_customer AS 
-        cu ON cb.user_id = cu.cus_id WHERE cb.del_flg = 0
+        cu ON cb.user_id = cu.cus_id WHERE cb.del_flg = 0 AND cb.blog_id = :id
         ORDER BY comment_id DESC
         "
-);
-$sql->execute();
-$result = $sql->fetchAll(PDO::FETCH_ASSOC);
+    );
+    $sql->bindValue(":id", $id);
+    $sql->execute();
+    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+
 ?>
 
 

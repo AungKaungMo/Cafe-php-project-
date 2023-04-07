@@ -93,10 +93,10 @@
           <?php  } ?>
           <!-- <div class="card">
            <img src="./resources/img/pshop2.png" alt="">
-           <div class="script">
+           <div class="script"> --->
 
-    <!-- ==============================================trending shop ============================================ -->
-          <?php include "../Controller/selectShopController.php"   ?>
+          <!-- ==============================================trending shop ============================================ -->
+          <!-- <?php include "../Controller/selectShopController.php" ?>
           <section id="tshop">
             <h1 class="title fw-bold position-relative pb-2">Trending Shop</h1>
 
@@ -186,7 +186,99 @@
 
           </section>
 
+          <a href="./seeAllShop.php"><button class="tseemore">See More</button></a> -->
+
+          <?php include "../Controller/selectShopController.php"   ?>
+          <section id="tshop">
+            <h1 class="title fw-bold position-relative pb-2">Trending Shop</h1>
+
+
+            <div class="mx-sm-5 mx-2 pt-5 row">
+              <div class="col-lg-6 ">
+                <div class="h-75 ">
+                  <img class="aboutImage" src="../../Storages/<?= $g1 ?>" height="100%" width="100%">
+                </div>
+              </div>
+
+              <div class="col-lg-6 ">
+                <p class="subtitle position-relative"><?= $shopname1 ?></p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
+                  ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+
+                <p class="subtitle position-relative">Popular</p>
+                <div class="poularphoto">
+                  <img src="./resources/img/popular_p.png" alt="">
+                  <img src="./resources/img/popular_p1.png" alt="">
+                  <img src="./resources/img/popular_p2.png" alt="">
+                  <img src="./resources/img/popular_p3.png" alt="">
+                </div>
+                <div class="mt-5">
+                  <a href="./shopinterface.php?id=<?= $shop1 ?>">
+                    <button class="rightseemore">See More</button></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="mx-sm-5 mx-2 pt-5 row flex flex-column-reverse flex-lg-row">
+
+              <div class="col-lg-6 ">
+                <p class="subtitle position-relative"><?= $shopname2 ?></p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
+                  ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+
+                <p class="subtitle position-relative">Popular</p>
+                <div class="poularphoto">
+                  <img src="./resources/img/popular_p.png" alt="">
+                  <img src="./resources/img/popular_p1.png" alt="">
+                  <img src="./resources/img/popular_p2.png" alt="">
+                  <img src="./resources/img/popular_p3.png" alt="">
+                </div>
+                <a href="./shopinterface.php?id=<?= $shop2 ?>">
+                  <button class="leftseemore">See More</button></a>
+              </div>
+              <div class="col-lg-6 ">
+                <div class="h-75 ">
+                  <img class="aboutImage" src="../../Storages/<?= $g2 ?>" height="100%" width="100%">
+                </div>
+              </div>
+            </div>
+
+            <div class="mx-sm-5 mx-2 pt-5 row">
+
+              <div class="col-lg-6 ">
+                <div class="h-75 ">
+                  <img class="aboutImage" src="../../Storages/<?= $g3 ?>" height="100%" width="100%">
+                </div>
+              </div>
+
+              <div class="col-lg-6 ">
+                <p class="subtitle position-relative"><?= $shopname3 ?></p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
+                  ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+                <p class="subtitle position-relative">Popular</p>
+                <div class="poularphoto">
+                  <img src="./resources/img/popular_p.png" alt="">
+                  <img src="./resources/img/popular_p1.png" alt="">
+                  <img src="./resources/img/popular_p2.png" alt="">
+                  <img src="./resources/img/popular_p3.png" alt="">
+                </div>
+                <div class="mt-5">
+                  <a href="./shopinterface.php?id=<?= $shop3 ?>">
+                    <button class="rightseemore mb-5">See More</button></a>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
           <a href="./seeAllShop.php"><button class="tseemore">See More</button></a>
+
 
 
 
@@ -198,6 +290,8 @@
   </body>
 
   </html>
+
+
 
 
   <!-- <div class="card">
