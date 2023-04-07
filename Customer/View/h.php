@@ -39,6 +39,7 @@ include "../Controller/sliderSelectController.php"
 
   <!------------------------   JS   -------------------------------->
   <script src="./resources/js/navigation.js"></script>
+  <script src="./resources/js/search.js"></script>
   <script src="./resources/js/cartControl.js"></script>
 
   <!------------------------   CSS   ----------------------------->

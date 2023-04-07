@@ -8,7 +8,7 @@
     </a>
     <div class="d-flex align-items-center mt-1 d-lg-none d-bllock">
       <div class="d-flex align-items-center position-relative">
-        <div class=" me-3">
+        <div class=" me-2">
           <iconify-icon icon="material-symbols:search" class="p-1 d-flex justify-content-center align-items-center fs-3 searchIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></iconify-icon>
         </div>
         <div class="w-100 rounded-3 userbox d-flex align-items-center justify-content-center">
@@ -60,20 +60,20 @@
               </div>
               <div class="line"></div>
 
-              <div class="d-flex justify-content-between mt-2 afterLogin">
-                <div>
+              <!-- <div class="d-flex justify-content-between mt-2 afterLogin"> -->
+              <!-- <div>
                   <span class="cartText">Fav</span>
                   <span>(14)</span>
                 </div>
-                <div>
-                  <!-- <form method="post" action="./cart.php"> -->
-                  <!-- <input type="hidden" name="storeItems" id="cartList"> -->
-                  <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
-                  <!-- </form> -->
-                </div>
+                <div> -->
+              <!-- <form method="post" action="./cart.php"> -->
+              <!-- <input type="hidden" name="storeItems" id="cartList"> -->
+              <!-- <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon> -->
+              <!-- </form> -->
+              <!-- </div>
 
               </div>
-              <div class="line"></div>
+              <div class="line"></div> -->
 
               <div class="d-flex justify-content-between mt-2 afterLogin">
                 <div>
@@ -211,17 +211,17 @@
             </div>
             <div class="line"></div>
 
-            <div class="d-flex justify-content-between mt-2 afterLogin">
-              <div>
-                <span class="cartText">Fav</span>
-                <span>(14)</span>
-              </div>
-              <div>
-                <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
-              </div>
+            <!-- <div class="d-flex justify-content-between mt-2 afterLogin">
+                <div>
+                  <span class="cartText">Fav</span>
+                  <span>(14)</span>
+                </div>
+                <div>
+                  <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
+                </div>
 
-            </div>
-            <div class="line"></div>
+              </div>
+              <div class="line"></div> -->
 
             <div class="d-flex justify-content-between mt-2 afterLogin">
               <div>

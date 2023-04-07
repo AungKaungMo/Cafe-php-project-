@@ -92,9 +92,11 @@ body {
 .card {
   width: 12.4em;
   height: 11em;
-  background: linear-gradient(120.9deg,
-      #ffffff 0%,
-      rgba(217, 217, 217, 0.34) 97.57%);
+  background: linear-gradient(
+    120.9deg,
+    #ffffff 0%,
+    rgba(217, 217, 217, 0.34) 97.57%
+  );
   border-radius: 0.8em;
   transition: all 0.5s;
   margin-bottom: 6.5em;
@@ -106,6 +108,7 @@ body {
 
 .pbtn {
   margin-top: 1em;
+  text-align: center;
 }
 
 .pbtn button {
@@ -115,7 +118,7 @@ body {
   border: none;
   border-radius: 10px;
   padding: 4px;
-  margin-left: 20px;
+  /* margin-left: 55px; */
   transition: all 0.5s;
 }
 

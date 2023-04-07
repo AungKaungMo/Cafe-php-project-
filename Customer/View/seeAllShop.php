@@ -23,7 +23,8 @@
     <script src="./lib/Jquery/jquery3.6.0.js"></script>
     <!------------------------   JS   -------------------------------->
     <script src="./resources/js/navigation.js"></script>
-
+    <script src="./resources/js/search.js"></script>
+    <script src="./resources/js/cartControl.js"></script>
 
     <!------------------------   CSS   ----------------------------->
     <link rel="stylesheet" href="./resources/css/root.css">
