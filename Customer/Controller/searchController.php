@@ -38,9 +38,9 @@ if (isset($_POST["searchText"])) {
                       <p class='pname productName'>" . $productSearchLists[$i]['product_name'] . "</p>
                       <p class='price priceChange productAmount'>" . $productSearchLists[$i]['product_price'] . " MMK</p>
                       </div>
-                      <p class='cafeName'>Shop Name - (<span> Htet Naung Cafe</span>)</p>
+                      <p class='cafeName opacity-75 '>Enjoy your search product items.</p>
                       <div class='d-flex justify-content-between'>
-                      <button class='goShopBtn'><a href='./shopinterface?id=" . $productSearchLists[$i]['shop_id'] . "'>Go Shop</a></button>
+                      <button class='goShopBtn'><a href='./shopinterface.php?id=" . $productSearchLists[$i]['shop_id'] . "'>Go Shop</a></button>
                       <iconify-icon icon='ph:shopping-cart-simple-fill' data-id='" . $productSearchLists[$i]['product_id'] . "' index='" . $i . "'  " . $a . " class='buyCart buy'></iconify-icon>
                       </div>
                     </div>

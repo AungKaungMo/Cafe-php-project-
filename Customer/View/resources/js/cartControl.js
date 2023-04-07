@@ -7,7 +7,8 @@ $(document).ready(() => {
   let itemId;
   let mmk;
   let originalPrice;
-  $(".buy").click((event) => {
+  $(document).on("click", ".buy", function (event) {
+    // alert("click");
     count = 1;
     $(".countItem").text(count);
     itemId = event.target.attributes[1].value;
@@ -64,8 +65,17 @@ $(document).ready(() => {
         item.orderNote += " / " + noteValue;
       }
       $("#noteToOrder").val("");
+      setTimeout(function () {
+        location.reload();
+      }, 200);
     });
 
+    $(".closeReload").click(function () {
+      alert("hi");
+      setTimeout(function () {
+        location.reload();
+      }, 200);
+    });
     if (!found) {
       carts.push({
         id: itemId,
@@ -81,5 +91,5 @@ $(document).ready(() => {
     localStorage.setItem("cart", JSON.stringify(carts));
     $(".cartList").val(JSON.stringify(carts));
   });
-  console.log($(".cartList").val());
+  // console.log($(".cartList").val());
 });

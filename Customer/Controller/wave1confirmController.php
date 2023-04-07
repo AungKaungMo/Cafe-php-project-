@@ -22,11 +22,10 @@ if (isset($_POST["confirm"])) {
     if ($result[0]["wave_otp"] == $enterotp) {
         $_SESSION["otperror"] = "";
         // echo "hell";
-        // header("Location: ../View/wavepay2.php");
+        header("Location: ../View/wavepay2.php");
     } else {
         $_SESSION["otperror"] = "Wrong Otp Code! Try Again..";
         echo "error";
         // header("Location: ../View/wavepay1.php");
     }
-
 }

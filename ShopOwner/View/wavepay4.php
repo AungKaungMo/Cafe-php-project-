@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,20 +92,13 @@
 
 
             <div class="comBtn text-center">
-                <a href="./h.php">
-                    <button class="p-2">Back To Cafe</button></a>
+                <a href="./dashboard_shop.php">
+                    <button class="p-2">Back To Dashboard</button></a>
             </div>
 
         </div>
     </div>
 
-    <script>
-        let order = "<?= $_SESSION["order"] ?>";
-        console.log(order)
-        if(order == 1){
-            localStorage.removeItem("cart");
-        }
-    </script>
 </body>
 
 </html>

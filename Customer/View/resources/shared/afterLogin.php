@@ -237,7 +237,7 @@
        <div class="modal-header">
          <h5 class="modal-title cart" id="staticBackdropLabel">Cart</h5>
          <iconify-icon icon="ph:shopping-cart-fill" class="carti"></iconify-icon>
-         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         <button type="button" class="btn-close closeReload" data-bs-dismiss="modal" aria-label="Close"></button>
        </div>
        <div class="modal-body">
          <div class="row mb-3">
