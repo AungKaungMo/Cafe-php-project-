@@ -42,12 +42,12 @@
                         <span class="title">Manage Lists</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="./dashboard_messagebox.php">
                         <span class="icon"><iconify-icon icon="material-symbols:mark-chat-unread"></iconify-icon></span>
                         <span class="title">Chat Box</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="./dashboard_managePage_Slider.php">
                         <span class="icon"><iconify-icon icon="material-symbols:edit-document-rounded"></iconify-icon></span>

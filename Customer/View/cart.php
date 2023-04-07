@@ -84,19 +84,21 @@ $_SESSION["cartItemsLists"] = $cartItemsLists;
                                     <td data-label="Price" class="price priceChange">
                                         <?= $_SESSION["cartItemsLists"][$j]["product_price"] ?> MMK
                                     </td>
-                                    <td data-label="Coin Price">
-                                        <?= $_SESSION["cartItemsLists"][$j]["product_price"] ?> Coins
-                                    </td>
+                                    <!-- <td data-label="Coin Price">
+                                        
+                                        // $_SESSION["cartItemsLists"][$j]["product_price"]
+                                        //  ?> Coins
+                                    </td> -->
                                     <td data-label="Total Price" class="totalPrice">
                                         <?=
                                         ($_SESSION["cartItemsLists"][$j]["product_price"] - ($_SESSION["cartItemsLists"][$j]["product_price"] * ($_SESSION["cartItemsLists"][$j]["product_discount"] / 100))) * $cartLists[$j]["quantity"] . " MMK";
                                         ?>
                                     </td>
-                                    <td data-label="Total Coin Price" class="totalCoinPrice">
-                                        <?=
-                                        ($_SESSION["cartItemsLists"][$j]["product_price"] - ($_SESSION["cartItemsLists"][$j]["product_price"] * ($_SESSION["cartItemsLists"][$j]["product_discount"] / 100))) * $cartLists[$j]["quantity"] . " Coins";
-                                        ?>
-                                    </td>
+                                    <!-- <td data-label="Total Coin Price" class="totalCoinPrice">
+                                       
+                                        // ($_SESSION["cartItemsLists"][$j]["product_price"] - ($_SESSION["cartItemsLists"][$j]["product_price"] * ($_SESSION["cartItemsLists"][$j]["product_discount"] / 100))) * $cartLists[$j]["quantity"] . " Coins";
+                                        // ?>
+                                    </td> -->
                                 </tr>
 
                     <?php
@@ -113,18 +115,18 @@ $_SESSION["cartItemsLists"] = $cartItemsLists;
 
                 <div class="d-flex">
                     <div>Sub Total</div>
-                    <div class="fw-bold ms-3 subTotal"> <?= $total ?> MMK(Coins)</div>
+                    <div class="fw-bold ms-3 subTotal"> <?= $total ?> MMK</div>
                 </div>
                 <div class="btline my-3"></div>
                 <div class="d-flex">
                     <div>Tax 5%</div>
                     <div class="fw-bold ms-5 taxFee"><?php $tax = $total * 5 / 100;
-                                                        echo $tax; ?> MMK(Coins)</div>
+                                                        echo $tax; ?> MMK</div>
                 </div>
                 <div class="btline my-3"></div>
                 <div class="d-flex">
                     <div>Grand Total</div>
-                    <div class="fw-bold ms-5 grandTotal"><?= $tax + $total ?> MMK(Coins)</div>
+                    <div class="fw-bold ms-5 grandTotal"><?= $tax + $total ?> MMK</div>
 
                 </div>
                 <form method="post" action="./orderconfirm.php">

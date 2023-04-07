@@ -72,7 +72,7 @@ include "../Controller/checkoutController.php";
                             <option value="1">KBZ</option>
                             <option value="2">Wave</option>
                             <option value="3">COD</option>
-                            <option value="4">Coin</option>
+                            <!-- <option value="4">Coin</option> -->
                         </select>
                     </div>
 
@@ -138,12 +138,9 @@ include "../Controller/checkoutController.php";
                                     <div>Delivery For(<?= $cartItems[$i]["shop_name"] ?>)</div>
                                     <div class="fw-bold ms-5  townshipVal" data-township="<?= $cartItems[$i]["township"] ?>">
                                         <?php
-                                        if ($userTownship == $cartItems[$i]["township"]) {
-                                            echo "0 MMK(Coins)";
-                                        } else {
-                                            $deliveryFee =  number_format(abs($cartItems[$i]["township"] - $userTownship)) * 500;
-                                            echo $deliveryFee . " MMK(Coins)";
-                                        }
+
+                                        $deliveryFee = abs($cartItems[$i]["township"] - 1) * 500;
+                                        echo $deliveryFee . " MMK";
 
                                         ?>
                                     </div>
@@ -155,9 +152,9 @@ include "../Controller/checkoutController.php";
                         <div class="btline my-3"></div>
                         <div class="d-flex">
                             <div>Total</div>
-                            <div class="fw-bold ms-5 grandTotal"><?php echo (int)substr($totalPrice, 0, -11) + $deliveryFee . " MMK(Coins)";  ?> </div>
+                            <div class="fw-bold ms-5 grandTotal"><?php echo (int)substr($totalPrice, 0, -4) + $deliveryFee . " MMK";  ?> </div>
                             <input type="hidden" value="<?= $deliveryFee ?>" name="deliveryFee" id="deli">
-                            <input type="hidden" value="<?= (int)substr($totalPrice, 0, -11) + $deliveryFee ?>" name="totalPrice" id="inputTotal">
+                            <input type="hidden" value="<?= (int)substr($totalPrice, 0, -4) + $deliveryFee ?>" name="totalPrice" id="inputTotal">
 
                         </div>
 
@@ -214,15 +211,15 @@ include "../Controller/checkoutController.php";
             for (let i = 0; i < tv.length; i++) {
                 tvalue = Number(tv[i].getAttribute("data-township"));
                 if (chooseTownship == tvalue) {
-                    tv[i].innerText = "0 MMK(Coins)";
+                    tv[i].innerText = "0 MMK";
                 } else {
-                    tv[i].innerText = Math.abs(Number(chooseTownship) - tvalue) * 300 + " MMK(Coins)";
+                    tv[i].innerText = Math.abs(Number(chooseTownship) - tvalue) * 300 + " MMK";
                     deliTotal += Math.abs(Number(chooseTownship) - tvalue) * 300;
 
                 }
             }
 
-            $(".grandTotal").text((deliTotal + Number(grandTotalPrice)) + " MMK(Coins)");
+            $(".grandTotal").text((deliTotal + Number(grandTotalPrice)) + " MMK");
             $("#deli").val(deliTotal);
             $("#inputTotal").val(deliTotal + Number(grandTotalPrice));
         });

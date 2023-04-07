@@ -1,0 +1,61 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: url(../img/waveback.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    display: flex;
+    width: auto;
+    height: 35em;
+    background-color: var(--backgroundTertiary);
+    border-radius: 12px;
+    margin-top: 3em;
+}
+
+
+.qrCode{
+    font-size: 25em !important;
+}
+
+.comBtn {
+    margin-top: 3em;
+}
+
+.comBtn button {
+    width: 150px;
+    background-color: var(--secondMainColor);
+    border-radius: 10px;
+    border: 2px solid var(--mainColor);
+    color: var(--mainColor);
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+
+@media screen and (max-width: 720px) {
+.qrCode{
+    font-size: 18em !important;
+}
+
+.comBtn {
+    margin-top: 1em;
+}
+
+.comBtn button {
+    width: 150px;
+    background-color: var(--secondMainColor);
+    border-radius: 10px;
+    border: 2px solid var(--mainColor);
+    color: var(--mainColor);
+    font-weight: bold;
+    transition: all 0.5s;
+}
+}

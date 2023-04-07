@@ -97,7 +97,7 @@ $_SESSION["shopid"] = $Sid;
             <div class="swiper-wrapper discountCardContainer">
                 <?php for ($i = 0; $i < count($Pmresult); $i++) { ?>
                     <div class="swiper-slide ">
-                        <div class="disCard mt-5">
+                        <div class="disCard mt-5 ms-4">
                             <div class="disticket">
                                 <?php echo $Pmresult[$i]["product_discount"] . " %" ?>
                             </div>
@@ -183,7 +183,7 @@ $_SESSION["shopid"] = $Sid;
             <h1 class=" text-center title fw-bold pb-2 position-relative">Blog Post</h1>
         </div>
     </div>
-    <div class="swiper mySwiper mt-5 body">
+    <div class="swiper mySwiperBlog mt-5 body">
         <div class="swiper-wrapper">
 
             <?php foreach ($blog as $blogbox) { ?>
@@ -194,7 +194,7 @@ $_SESSION["shopid"] = $Sid;
                                 <img src="../../Storages/<?= $blogbox["blog_image"] ?>" alt="">
                             </div>
                             <div class="part2">
-                                <h5 class="text1 pt-2 fw-bold"><?= $blogbox["main_title"] ?></h5>
+                                <h5 class="text1 mb-3 pt-2 fw-bold"><?= $blogbox["main_title"] ?></h5>
                                 <p class="text2"><?= $blogbox["first_para"] ?></p>
                                 <div class="day ">
                                     <iconify-icon icon="material-symbols:calendar-month-outline-sharp" class="icon pe-2"></iconify-icon>
@@ -592,3 +592,97 @@ $_SESSION["shopid"] = $Sid;
         </div>
     <?php    }       ?>
 </div> -->
+
+
+</div>
+
+<!-----------------------   Footer   ---------------------------->
+<?php
+include "./resources/shared/footer.php";
+?>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!----filter js----->
+<script src="./lib/isotope.pkgd.min.js"></script>
+
+<script>
+    var $grid = $('.item-details').isotope({
+        // options
+    });
+    // filter items on button click
+    $('.item-menu').on('click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({
+            filter: filterValue
+        });
+    });
+</script>
+
+
+
+<!-- Initialize Swiper -->
+
+<script>
+    var swiper2 = new Swiper(".mySwiper", {
+        // spaceBetween: 30,
+        slidesPerView: 1,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+    });
+</script>
+
+
+<script>
+    var swiper = new Swiper(".mySwiperBlog", {
+        spaceBetween: 30,
+        slidesPerView: 2,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            900: {
+                slidesPerView: 2,
+            },
+            300: {
+                slidesPerView: 1,
+            }
+        }
+    });
+</script>
+
+<script>
+    var swiper1 = new Swiper(".mySwiper1", {
+        slidesPerView: 4,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            530: {
+                slidesPerView: 2,
+            },
+            700: {
+                slidesPerView: 2.5,
+            },
+            900: {
+                slidesPerView: 3,
+            },
+
+        },
+    });
+</script>
+
+
+
+</body>
+
+</html>

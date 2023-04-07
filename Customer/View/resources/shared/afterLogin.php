@@ -259,10 +259,10 @@
                  <h6 class="fw-bold changeNum mmk">15000 MMk</h6>
                </div>
                <div class="babyline"></div>
-               <div class="cartbox1">
+               <!-- <div class="cartbox1">
                  <h6 class="fw-bold changeNum coin">15000 Coins</h6>
-               </div>
-               <div class="babyline"></div>
+               </div> -->
+               <!-- <div class="babyline"></div> -->
              </div>
              <div class="input4 mt-4 text-center">
                <textarea name="" id="noteToOrder" class="note" placeholder="Note to order"></textarea>
