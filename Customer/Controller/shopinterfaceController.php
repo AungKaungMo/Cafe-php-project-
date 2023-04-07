@@ -12,6 +12,10 @@ if (isset($_GET["id"])) {
     $sql->bindValue(":id", $shopid);
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+    if (count($result) == 0) {
+        header("Location: ./shop.php");
+    }
     $shoplogo = $result[0]["shop_logo"];
     $shopph = $result[0]["shop_phone"];
     $shopemail = $result[0]["shop_email"];
