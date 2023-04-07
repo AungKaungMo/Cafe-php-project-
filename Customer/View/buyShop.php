@@ -37,8 +37,12 @@
 
   <!------------------  Header Navigation   --------------------->
   <?php
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
   include "./resources/shared/nav.php";
   include "../Controller/shop_package_showController.php";
+
   ?>
 
   <!------------------------------    Get your own shop   ---------------------------------->

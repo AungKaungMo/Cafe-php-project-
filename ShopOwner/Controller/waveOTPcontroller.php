@@ -5,19 +5,19 @@ include "./shared/generatedCode.php";
 include "./shared/mailSender.php";
 session_start();
 
-if(isset($_POST["submit"])){ 
+if (isset($_POST["submit"])) {
     $email = $_POST["useremail"];
     // $password = $_POST["password"]; 
-    $_SESSION["otp_pwd"] = $_POST["pwd"]; 
+    $_SESSION["otp_pwd"] = $_POST["pwd"];
 
     $db = new DBConnection();
     $pdo = $db->connect();
     $sql = $pdo->prepare(
         "
-        SELECT * FROM m_customer WHERE cus_email=:email AND del_flg=0
+        SELECT * FROM m_shop WHERE shop_id=:id AND del_flg=0
         "
     );
-    $sql->bindValue(":email", $email);
+    $sql->bindValue(":id", $_SESSION["shopId"]);
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -28,19 +28,19 @@ if(isset($_POST["submit"])){
         $_SESSION["otpemail_error"] = "";
         $generate = new Generate();
         $wOtp = $generate->genCode(4);
-        echo $wOtp;
+        // echo $wOtp;
         $sql = $pdo->prepare(
             "
-            UPDATE m_customer SET
-            waveotp = :otp
-            WHERE cus_email = :email
+            UPDATE m_shop SET
+            wave_otp = :otp
+            WHERE shop_id = :id
             "
         );
         $sql->bindValue(":otp", $wOtp);
-        $sql->bindValue(":email", $email);
+        $sql->bindValue(":id", $_SESSION["shopId"]);
         $sql->execute();
 
-        $_SESSION["waveotp"] = $wOtp;
+        $_SESSION["wave_otp"] = $wOtp;
         $_SESSION["email"] = $email;
 
         $mail = new SendMail();
@@ -50,6 +50,5 @@ if(isset($_POST["submit"])){
             "<h1>Code: $wOtp </h1>"
         );
         header("Location: ../View/wavepay1.php");
+    }
 }
-}
-
