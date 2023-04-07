@@ -135,6 +135,18 @@
   }
 }
 
+@media screen and (max-width: 410px) {
+  .userText {
+    width: 60px !important;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  #responsiveSideBarIcon {
+    margin-left: 0em !important;
+  }
+}
+
 .searchDropdown {
   background-color: var(--mainColor);
   border-radius: 10px 10px 0px 0px;
@@ -237,6 +249,22 @@
 
 .signIcon {
   color: var(--secondMainColor);
+}
+
+.imgUnset {
+  position: unset !important;
+}
+
+.priceUnset {
+  width: unset !important;
+  height: unset !important;
+  border-radius: unset !important;
+  background-color: unset !important;
+  font-size: var(--navigationFontSize);
+  color: var(--textColorPrimary) !important;
+  font-family: unset !important;
+  position: unset !important;
+  font-size: 0.9em !important;
 }
 
 .signBox {

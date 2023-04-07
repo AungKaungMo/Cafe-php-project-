@@ -113,122 +113,6 @@
  </div>
 
 
- <!--------------cart----------------->
- <!-- 
-<div class="offcanvas offcanvas-end cartBox" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <div class="d-flex ">
-      <h5 id="offcanvasRightLabel" class="favList fs-3">Cart </h5>
-      <iconify-icon icon="ph:shopping-cart-fill" class=" mt-2 ms-2 fs-3"></iconify-icon>
-    </div>
-
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="navLine"></div>
-  <div class="offcanvas-body">
-    <div class="d-flex">
-      <div class="plusBox">
-        <iconify-icon icon="ic:baseline-plus" class="plusIcon"></iconify-icon>
-        <p class="mt-2 Num">2</p>
-        <iconify-icon icon="ic:sharp-minus" class="dashIcon"></iconify-icon>
-      </div>
-      <div class="ListImg me-3 col-5 mt-2">
-        <img src="./resources/img/cake.jpg" width="100%" height="100%" class="dashIcon">
-      </div>
-      <div class="col-7">
-        <div class="d-flex justify-content-between">
-          <div class="favProductTitle fw-bold">Chocolate Cake</div>
-        </div>
-        <p class="mt-3 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
-        <p class="mt-3 mb-1 favtext">Note - <span class="fw-bold">abcdefghijkl</span></p>
-        <p class="mt-3 mb-1 favtext">Price - <span class="fw-bold">20000mmk</span></p>
-        <div class="d-flex justify-content-between">
-        </div>
-      </div>
-    </div>
-    <div class="navLine my-4"></div>
-
-    <div class="d-flex">
-      <div class="plusBox">
-        <iconify-icon icon="ic:baseline-plus" class="plusIcon"></iconify-icon>
-        <p class="mt-2 Num">2</p>
-        <iconify-icon icon="ic:sharp-minus" class="dashIcon"></iconify-icon>
-      </div>
-      <div class="ListImg me-3 col-5 mt-2">
-        <img src="./resources/img/cake.jpg" width="100%" height="100%" class="dashIcon">
-      </div>
-      <div class="col-7">
-        <div class="d-flex justify-content-between">
-          <div class="favProductTitle fw-bold">Chocolate Cake</div>
-        </div>
-        <p class="mt-3 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
-        <p class="mt-3 mb-1 favtext">Note - <span class="fw-bold">abcdefghijkl</span></p>
-        <p class="mt-3 mb-1 favtext">Price - <span class="fw-bold">20000mmk</span></p>
-        <div class="d-flex justify-content-between">
-        </div>
-      </div>
-    </div>
-    <div class="navLine my-4"></div>
-
-    <div class="d-flex">
-      <div class="plusBox">
-        <iconify-icon icon="ic:baseline-plus" class="plusIcon"></iconify-icon>
-        <p class="mt-2 Num">2</p>
-        <iconify-icon icon="ic:sharp-minus" class="dashIcon"></iconify-icon>
-      </div>
-      <div class="ListImg me-3 col-5 mt-2">
-        <img src="./resources/img/cake.jpg" width="100%" height="100%" class="dashIcon">
-      </div>
-      <div class="col-7">
-        <div class="d-flex justify-content-between">
-          <div class="favProductTitle fw-bold">Chocolate Cake</div>
-        </div>
-        <p class="mt-3 mb-1 favtext">Shop Name - <span class="fw-bold">cofree coffee</span></p>
-        <p class="mt-3 mb-1 favtext">Note - <span class="fw-bold">abcdefghijkl</span></p>
-        <p class="mt-3 mb-1 favtext">Price - <span class="fw-bold">20000mmk</span></p>
-        <div class="d-flex justify-content-between">
-        </div>
-      </div>
-    </div>
-    <div class="navLine my-4"></div>
-
-
-    <div class="calprice mt-4">
-      <div class="d-flex">
-        <div class="Sotext fw-bold">Sub total</div>
-        <div class="Toprice">60000 MMK</div>
-      </div>
-    </div>
-    <div class="lineH"></div>
-    <div class="calprice mt-4">
-      <div class="d-flex">
-        <div class="Sotext fw-bold">Tax 5%</div>
-        <div class="Toprice1">4500 MMK</div>
-      </div>
-    </div>
-    <div class="lineH"></div>
-    <div class="calprice mt-4">
-      <div class="d-flex">
-        <div class="Sotext fw-bold">Discount</div>
-        <div class="Toprice2">-500 MMK</div>
-      </div>
-    </div>
-    <div class="lineH"></div>
-    <div class="calprice mt-4">
-      <div class="d-flex">
-        <div class="Sotext fw-bold">Grand Ttal<span class="tax">(incl.tax)</span></div>
-        <div class="Toprice3">64000 MMK</div>
-      </div>
-    </div>
-    <div class="lineH"></div>
-    <div class="CheckO">
-      <button class="p-1"><a href="./orderconfirm.php">Check out</a></button>
-    </div>
-  </div>
-
-
-</div> -->
-
  <!---------- cart popup--------->
 
  <div class="modal fade modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -237,7 +121,7 @@
        <div class="modal-header">
          <h5 class="modal-title cart" id="staticBackdropLabel">Cart</h5>
          <iconify-icon icon="ph:shopping-cart-fill" class="carti"></iconify-icon>
-         <button type="button" class="btn-close closeReload" data-bs-dismiss="modal" aria-label="Close"></button>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick="window.location.reload();"></button>
        </div>
        <div class="modal-body">
          <div class="row mb-3">

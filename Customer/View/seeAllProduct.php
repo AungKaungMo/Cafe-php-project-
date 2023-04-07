@@ -23,8 +23,9 @@
 
   <!------------------------   JS   -------------------------------->
   <script src="./resources/js/navigation.js"></script>
+  <script src="./resources/js/search.js"></script>
   <script src="./resources/js/cartControl.js"></script>
-  <script src="./resources/js/favList.js"></script>
+  <!-- <script src="./resources/js/favList.js"></script> -->
 
   <!------------------------   CSS   ----------------------------->
   <link rel="stylesheet" href="./resources/css/root.css">

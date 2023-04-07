@@ -37,6 +37,7 @@ $_SESSION["shopid"] = $Sid;
 
     <!------------------------   JS   -------------------------------->
     <script src="./resources/js/navigation.js"></script>
+    <script src="./resources/js/search.js"></script>
     <script src="./resources/js/cartControl.js"></script>
 
     <!------------------------   CSS   ----------------------------->
@@ -310,7 +311,24 @@ $_SESSION["shopid"] = $Sid;
         });
     </script>
 
-
+    <script>
+        var swiper = new Swiper(".mySwiperBlog", {
+            spaceBetween: 30,
+            slidesPerView: 2,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                900: {
+                    slidesPerView: 2,
+                },
+                300: {
+                    slidesPerView: 1,
+                }
+            }
+        });
+    </script>
 
     <!-- Initialize Swiper -->
     <script>

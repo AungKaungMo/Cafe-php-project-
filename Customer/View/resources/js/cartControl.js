@@ -70,12 +70,13 @@ $(document).ready(() => {
       }, 200);
     });
 
-    $(".closeReload").click(function () {
-      alert("hi");
-      setTimeout(function () {
-        location.reload();
-      }, 200);
-    });
+    // $(".closeReload").click(function () {
+    //   alert("hi");
+    // setTimeout(function () {
+    //   location.reload();
+    // }, 200);
+    // });
+
     if (!found) {
       carts.push({
         id: itemId,

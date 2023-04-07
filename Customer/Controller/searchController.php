@@ -28,23 +28,25 @@ if (isset($_POST["searchText"])) {
   };
   for ($i = 0; $i < count($productSearchLists); $i++) {
 
-    $returnData .= "<div class='m-auto searchProductContainer'>
-                  <div class='detailsBox pt-3 d-flex justify-content-between'>
-                    <div class='productImage ms-3'>
-                      <img src='../../Storages/" . $productSearchLists[$i]['product_photo'] . "' class='img'>
-                    </div>
-                    <div class='me-4 mb-3'>
-                      <div class='d-flex justify-content-between'>
+    $returnData .= "
+    <div class='m-auto searchProductContainer'>
+        <div class='detailsBox pt-3 d-flex justify-content-between'>
+              <div class='productImage ms-3'>
+                      <img src='../../Storages/" . $productSearchLists[$i]['product_photo'] . "' class='img imgUnset'>
+              </div>
+            <div class='me-4 mb-3'>
+                  <div class='d-flex justify-content-between'>
                       <p class='pname productName'>" . $productSearchLists[$i]['product_name'] . "</p>
-                      <p class='price priceChange productAmount'>" . $productSearchLists[$i]['product_price'] . " MMK</p>
-                      </div>
+                      <p class='price priceChange priceUnset productAmount'>" . $productSearchLists[$i]['product_price'] . " MMK</p>
+                  </div>
                       <p class='cafeName opacity-75 '>Enjoy your search product items.</p>
-                      <div class='d-flex justify-content-between'>
+                  <div class='d-flex justify-content-between'>
                       <button class='goShopBtn'><a href='./shopinterface.php?id=" . $productSearchLists[$i]['shop_id'] . "'>Go Shop</a></button>
                       <iconify-icon icon='ph:shopping-cart-simple-fill' data-id='" . $productSearchLists[$i]['product_id'] . "' index='" . $i . "'  " . $a . " class='buyCart buy'></iconify-icon>
-                      </div>
-                    </div>
                   </div>
+            </div>
+        </div>
+    </div>
                     ";
   };
   echo $returnData;

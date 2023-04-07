@@ -29,6 +29,8 @@
     <!------------------------   JS   -------------------------------->
     <script src="./resources/js/menu.js"></script>
     <script src="./resources/js/navigation.js"></script>
+    <script src="./resources/js/search.js"></script>
+    <script src="./resources/js/cartControl.js"></script>
 
     <!----------- css---------->
     <link rel="stylesheet" href="./resources/css/root.css">
@@ -41,8 +43,8 @@
 
 <body>
     <?php
-    include "./resources/shared/shopnav.php";
     include "../Controller/shopInterfaceMenuController.php";
+    include "./resources/shared/shopnav.php";
 
     ?>
 
