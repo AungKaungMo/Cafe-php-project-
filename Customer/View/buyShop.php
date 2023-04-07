@@ -37,135 +37,140 @@
 
   <!------------------  Header Navigation   --------------------->
   <?php
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
   include "./resources/shared/nav.php";
+  include "../Controller/shop_package_showController.php";
+
   ?>
 
   <!------------------------------    Get your own shop   ---------------------------------->
   <div class="mt-5 row mx-sm-5 mx-2 d-flex flex-lg-row flex-column-reverse">
     <div class="col-lg-6 col-12">
-      <h1 class="title my-5 fw-bold position-relative pb-2">Get Your Own Shop</h1>
-      <p class="buyText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ab tempora laborum. Eveniet sit amet consectetur olor sit amet consectetur adipisicing elit. Numquam ab tempora laborum. Eveniet sit amet consecte adipisicing elit.t sit amet consectetu Numquam ab t fugiat deserunt culpa deleniti dolorum architecto ab?
-        <span class="collapse" id="collapseExample4">Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
+      <h1 class="title my-5 fw-bold position-relative pb-2"><?= $shopInfoResults[0]["title_one"] ?></h1>
+      <p class="buyText">
+        <span class="collapse" id="collapseExample4"></span>
       </p>
       <div class="mt-5">
         <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">See More</button>
       </div>
     </div>
     <div class="col-lg-6 col-md-8 col-10 m-auto">
-      <img src="./resources/img/buyShop.png" width="100%">
+      <img src="../../Storages/<?= $shopInfoResults[0]["picture"] ?>" width="100%">
     </div>
   </div>
 
   <!--------------------------    Payment Card   --------------------------------->
 
   <div class="payment mt-5 pt-5 mx-sm-5 mx-2">
-    <h1 class="text-center title position-relative pb-2">Choose Your Plan</h1>
+    <h1 class="text-center title position-relative pb-2"><?= $shopInfoResults[0]["title_two"] ?></h1>
 
     <div class="d-flex justify-content-between w-75 m-auto paymentCardContainer flex-wrap">
       <div class="paymentCard p-4 ">
         <h6 class="text-center mb-0 mt-3">Basic</h6>
-        <div class="text-center fs-5 mb-5 fw-bold">$150 per month</div>
+        <div class="text-center fs-5 mb-5 fw-bold">$<?= $shopInfoResults[0]["basic_price"] ?> per month</div>
 
         <div class="rule">
           <div class="d-flex ">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">have only booking and reserve system.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["basic_detail_one"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can booking 100 times each day.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["basic_detail_two"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can update menu 4 times each day.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["basic_detail_three"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can update 4 promotion menus.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["basic_detail_four"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can update 2 blogs.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["basic_detail_five"] ?></p>
           </div>
-          <div class="d-flex">
+          <!-- <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
             <p class=" ruleText">online cash payment system.</p>
-          </div>
+          </div> -->
         </div>
         <div class="buyNowBtn mt-2 text-center">
-          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/buyShopController.php" <?php } ?>> <button class="p-2">Buy Now</button></a>
+          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="./buyShopFillInformation.php" <?php } ?>> <button class="p-2">Buy Now</button></a>
         </div>
       </div>
 
       <div class="paymentCard p-4 ">
         <h6 class="text-center mb-0 mt-3">Premium</h6>
-        <div class="text-center fs-5 mb-5 fw-bold paymentPrice">$400 per month</div>
+        <div class="text-center fs-5 mb-5 fw-bold paymentPrice">$<?= $shopInfoResults[0]["premium_price"] ?> per month</div>
 
         <div class="rule">
           <div class="d-flex ">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">have delivery system and booking system</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["premium_detail_one"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">unlimited delivery and booking.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["premium_detail_two"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can update unlimited menu everyday.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["premium_detail_three"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can update 10 promotion menus.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["premium_detail_four"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can update 6 blog..</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["premium_detail_five"] ?></p>
           </div>
-          <div class="d-flex">
+          <!-- <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
             <p class=" ruleText">coin payment.</p>
-          </div>
+          </div> -->
         </div>
 
         <div class="buyNowBtn2 mt-2 text-center">
-          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/buyShopController.php" <?php } ?>> <button class="p-2">Buy Now</button></a>
+          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="./buyShopFillInformation.php" <?php } ?>> <button class="p-2">Buy Now</button></a>
         </div>
 
       </div>
 
       <div class="paymentCard p-4 ">
         <h6 class="text-center mb-0 mt-3">Standard</h6>
-        <div class="text-center fs-5 mb-5 fw-bold">$250 per month</div>
+        <div class="text-center fs-5 mb-5 fw-bold">$<?= $shopInfoResults[0]["standard_price"] ?> per month</div>
 
         <div class="rule">
           <div class="d-flex ">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">have delivery system and booking system.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["standard_detail_one"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can booking and deliver 100 time each day.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["standard_detail_two"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can update 20times menu each day.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["standard_detail_three"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can update 6 promotion menus.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["standard_detail_four"] ?></p>
           </div>
           <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
-            <p class=" ruleText">can update 3 blogs.</p>
+            <p class=" ruleText"><?= $shopInfoResults[0]["standard_detail_five"] ?></p>
           </div>
-          <div class="d-flex">
+          <!-- <div class="d-flex">
             <iconify-icon icon="material-symbols:check-circle-rounded" class=" fs-3 ruleIcon"></iconify-icon>
             <p class=" ruleText">coin payment.</p>
-          </div>
+          </div> -->
         </div>
         <div class="buyNowBtn mt-2 text-center">
-          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/buyShopController.php" <?php } ?>><button class="p-2">Buy Now</button></a>
+          <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="./buyShopFillInformation.php" <?php } ?>><button class="p-2">Buy Now</button></a>
         </div>
       </div>
 
@@ -176,9 +181,19 @@
   <!-----------------------   Footer   ---------------------------->
 
   <?php
-  include "../Model/dbConnection.php";
+  // include "../Model/dbConnection.php";
   include "./resources/shared/footer.php"
   ?>
+
+  <script>
+    let text = "<?= $shopInfoResults[0]["paragraph"] ?>";
+    $(".buyText").append(
+      `
+      ${text.substring(0,260)}
+       <span class="collapse" id="collapseExample4">${text.substring(260,text.length)}</span>
+        `
+    )
+  </script>
 
 </body>
 

@@ -11,11 +11,11 @@ if (isset($_POST["confirm"])) {
     $enterotp = $_POST["pwd"];
     $sql = $pdo->prepare(
         "
-            SELECT wave_otp FROM  m_customer WHERE cus_email=:email AND del_flg=0;
+            SELECT wave_otp FROM  m_shop WHERE shop_id=:id AND del_flg=0;
             "
     );
 
-    $sql->bindValue(":email", $email);
+    $sql->bindValue(":id", $_SESSION["shopId"]);
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 

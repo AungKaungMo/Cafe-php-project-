@@ -121,7 +121,7 @@ session_start();
             </table>
 
             <div class="comBtn text-center mb-4">
-                <a href="<?php if ($_SESSION["order"] == 1) { ?>../Controller/orderconfirmController.php<?php } else if ($_SESSION["order"] == 0) { ?>../Controller/paymentController.php<?php } ?>">
+                <a href="../Controller/dashboard_shop_paymentController.php">
                     <button class="p-2">Comfirm</button></a>
             </div>
 

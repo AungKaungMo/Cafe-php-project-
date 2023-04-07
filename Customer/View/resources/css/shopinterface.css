@@ -400,11 +400,13 @@ today menu
 
 .text1 {
   font-family: var(--titleFont);
+  font-size: 1.4em;
 }
 
 .text2 {
   font-family: var(--paragraphFont);
   line-height: 1.5;
+  font-size: 0.9em;
 }
 
 .body {
@@ -593,8 +595,8 @@ ContactUs
 }
 
 .part1 {
-  width: 24em;
-  height: 24em;
+  width: 22em;
+  height: 22em;
 }
 
 .part1 img {

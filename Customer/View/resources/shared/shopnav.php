@@ -77,10 +77,10 @@ $id = $_SESSION["shopid"];
                                     <span>(14)</span>
                                 </div>
                                 <div>
-                                    <form method="post" action="./cart.php">
+                                    <!-- <form method="post" action="./cart.php">
                                         <input type="hidden" name="storeItems" id="cartList">
                                         <iconify-icon icon="mdi:cards-heart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="fs-3 cartIcon" id="favourite"></iconify-icon>
-                                    </form>
+                                    </form> -->
                                 </div>
 
                             </div>
@@ -147,9 +147,6 @@ $id = $_SESSION["shopid"];
                 </li>
                 <li class="nav-item">
                     <a class="nav-link navtitle mx-5" href="./shopinterfacemenu.php?id=<?= $id ?>">Menu</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link navtitle  me-5" href="./booking.php">Booking</a>
                 </li>
             </ul>
             <div class="d-flex align-items-center position-relative">
@@ -290,9 +287,6 @@ include "./resources/shared/afterLogin.php";
         </li>
         <li class="nav-item">
             <a class="nav-link navtitle menutitle my-5 pb-2" href="./shopinterfacemenu.php?id=<?= $id ?>">Menu</a>
-        </li>
-        <li class="nav-item ">
-            <a class="nav-link navtitle bookingtitle pb-2" href="./booking.php">Booking</a>
         </li>
     </ul>
 </div>

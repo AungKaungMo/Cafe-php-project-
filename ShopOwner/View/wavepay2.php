@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,11 +27,10 @@ session_start();
     <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
     <!------------------------   JS   -------------------------------->
-    <script src="./resources/js/wavepay3.js"></script>
 
     <!----------- css---------->
     <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/wavepay3.css">
+    <link rel="stylesheet" href="./resources/css/wavepay2.css">
 
 </head>
 
@@ -58,7 +54,7 @@ session_start();
                     <div class="me-4">
                         <button class="circle activecircle"></button>
                         <button class="circle activecircle"></button>
-                        <button class="circle activecircle"></button>
+                        <button class="circle"></button>
                         <button class="circle"></button>
                     </div>
                 </div>
@@ -66,63 +62,45 @@ session_start();
             </div>
 
 
-            <h4 class="text-center fw-bold mt-4">Enter Your Pin</h4>
-            <div class="text-center text1">Please enter your login pin</div>
-            <div class="text-center text2">Comfirm Purchase</div>
-
-            <div class="btncircle mt-3">
-                <button class="circles"></button>
-                <button class="circles"></button>
-                <button class="circles"></button>
-                <button class="circles"></button>
+            <div class="second">
+                <div class="slideBall mt-4">
+                    <div class="ms-4">Tax</div>
+                    <div class="me-4 fw-bold">30Ks</div>
+                </div>
+                <div class="line"></div>
             </div>
 
-            <!-- <div class="Table">
-                <div class="Row">
-                    <div class="Num"></div>
-                    <div class="Num"></div>
-                    <div class="Num"></div>
+
+            <div class="second">
+                <div class="slideBall mt-4">
+                    <div class="ms-4">Total</div>
+                    <div class="me-4 fw-bold">5030Ks</div>
                 </div>
+                <div class="line"></div>
+            </div>
 
-                <div class="Row">
-                    <div class="Num"></div>
-                    <div class="Num"></div>
-                    <div class="Num"></div>
+
+            <div class="mt-3 ms-4">
+                <p>You've logged in as</p>
+            </div>
+
+            <div class="third">
+                <div>
+                    <img src="./resources/img/Ellipse 72.png" alt="" width="50%" class="ms-4">
                 </div>
-
-                <div class="Row">
-                    <div class="Num"></div>
-                    <div class="Num"></div>
-                    <div class="Num"></div>
+                <div>
+                    <div class="fw-bold mb-3">959 122 324 221</div>
+                    <div>
+                        <iconify-icon icon="icon-park-twotone:mall-bag" class="icon"></iconify-icon>
+                        <span class="ms-2 fw-bold">5030Ks</span>
+                    </div>
                 </div>
-            </div> -->
+            </div>
 
-            <table class="mt-3">
-                <tr align="center" bgcolor="white">
-                    <td class="tbl clickPsw">1</td>
-                    <td class="tbl clickPsw">2</td>
-                    <td class="tbl clickPsw">3</td>
-                </tr>
-                <tr align="center" bgcolor="white">
-                    <td class="tbl clickPsw">4</td>
-                    <td class="tbl clickPsw">5</td>
-                    <td class="tbl clickPsw">6</td>
-                </tr>
-                <tr align="center" bgcolor="white">
-                    <td class="tbl clickPsw">7</td>
-                    <td class="tbl clickPsw">8</td>
-                    <td class="tbl clickPsw">9</td>
-                </tr>
-                <tr align="center" bgcolor="white">
-                    <td class="tbl"></td>
-                    <td class="tbl clickPsw">0</td>
-                    <td class="tbl backspace"><iconify-icon icon="ri:delete-back-2-fill" class="icondel"></iconify-icon></td>
-                </tr>
-            </table>
 
-            <div class="comBtn text-center mb-4">
-                <a href="<?php if ($_SESSION["order"] == 1) { ?>../Controller/orderconfirmController.php<?php } else if ($_SESSION["order"] == 0) { ?>../Controller/paymentController.php<?php } ?>">
-                    <button class="p-2">Comfirm</button></a>
+            <div class="comBtn text-center">
+                <a href="./wavepay3.php">
+                    <button class="p-1">Enter To Comfirm</button></a>
             </div>
 
         </div>

@@ -1,4 +1,7 @@
- <?php include  "../Controller/mainpromotionController.php";                ?>
+ <?php include  "../Controller/mainpromotionController.php";
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }             ?>
  <!DOCTYPE html>
  <html lang="en">
 
@@ -65,7 +68,7 @@
     include "./resources/shared/nav.php";
     ?>
    <!-- ===========================================Hero section================================ -->
-
+   <?php include "../Controller/PromotionpgController.php" ?>
    <div class="herosection">
      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
@@ -77,9 +80,9 @@
          </button>
 
          <div class="carousel-indicators">
-           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" style="background-image: url('./resources/img/disitem.png'); background-repeat: no-repeat;" aria-current="true" aria-label="Slide 1"></button>
-           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-image: url('./resources/img/disitem1.png'); background-repeat: no-repeat;"></button>
-           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-image: url('./resources/img/disitem2.png'); background-repeat: no-repeat;"></button>
+           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" style="background-image: url('./resources/img/ck2.png'); background-repeat: no-repeat;" aria-current="true" aria-label="Slide 1"></button>
+           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-image: url('./resources/img/ck1.png'); background-repeat: no-repeat;  "></button>
+           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-image: url('./resources/img/ck3.png'); background-repeat: no-repeat;"></button>
          </div>
 
          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
@@ -94,28 +97,28 @@
            <div class="row">
              <div class="col-sm-6 col-4">
                <div class="herocontent">
-                 <p class="herotitle">10% Off in this month</p>
+                 <p class="herotitle"><?= $pgresult[0]["product_discount"] ?>% Off in this month</p>
 
                  <p>
                    <iconify-icon icon="mdi:shop" class="promotionsHeaderIcons" width="24" height="24"></iconify-icon>
-                   <span class="cafeShopName"> Htet Naung cafe</span>
+                   <span class="cafeShopName"><?= $pgresult[0]["shop_name"] ?></span>
 
                  </p>
 
                  <p>
                    <iconify-icon icon="material-symbols:location-on" class="promotionsHeaderIcons" width="24" height="24"></iconify-icon>
-                   <span class="cafeLoc">No.98, Pazundaung Road, Yangon</span>
+                   <span class="cafeLoc"><?= $pgresult[0]["shop_address"] ?></span>
                  </p>
 
                  <p>
                    <iconify-icon icon="material-symbols:shopping-bag" class="promotionsHeaderIcons" width="24" height="24"></iconify-icon>
-                   <span class="cafeName"> Ice tae with cream</span>
+                   <span class="cafeName"><?= $pgresult[0]["product_name"] ?></span>
                  </p>
                </div>
              </div>
 
-             <div class="col-sm-6 col-8">
-               <img src="./resources/img/disitem.png" alt="...">
+             <div class="col-sm-6 col-8 may">
+               <img src="../../Storages/<?= $pgresult[0]["product_photo"] ?>" alt="...">
              </div>
            </div>
 
@@ -125,27 +128,27 @@
            <div class="row">
              <div class="col-sm-6 col-4">
                <div class="herocontent">
-                 <p class="herotitle">10% Off in this month</p>
+                 <p class="herotitle"><?= $pgresult[1]["product_discount"] ?>% Off in this month</p>
 
                  <p>
                    <iconify-icon icon="mdi:shop" class="promotionsHeaderIcons" width="24" height="24"></iconify-icon>
-                   <span class="cafeShopName">CJ Cafe</span>
+                   <span class="cafeShopName"><?= $pgresult[1]["shop_name"] ?></span>
                  </p>
 
                  <p>
                    <iconify-icon icon="material-symbols:location-on" class="promotionsHeaderIcons" width="24" height="24"></iconify-icon>
-                   <span class="cafeLoc">No.98, Pazundaung Road, Yangon</span>
+                   <span class="cafeLoc"><?= $pgresult[1]["shop_address"] ?></span>
                  </p>
 
                  <p>
                    <iconify-icon icon="material-symbols:shopping-bag" class="promotionsHeaderIcons" width="24" height="24"></iconify-icon>
-                   <span class="cafeName"> Ice tae with cream</span>
+                   <span class="cafeName"><?= $pgresult[1]["product_name"] ?></span>
                  </p>
                </div>
              </div>
 
-             <div class="col-sm-6 col-8">
-               <img src="./resources/img/disitem1.png" alt="...">
+             <div class="col-sm-6 col-8 may">
+               <img src="../../Storages/<?= $pgresult[1]["product_photo"] ?>" alt="...">
              </div>
            </div>
 
@@ -155,28 +158,28 @@
            <div class="row">
              <div class="col-sm-6 col-4">
                <div class="herocontent">
-                 <p class="herotitle">10% Off in this month</p>
+                 <p class="herotitle"><?= $pgresult[2]["product_discount"] ?>% Off in this month</p>
 
                  <p>
                    <iconify-icon icon="mdi:shop" class="promotionsHeaderIcons" width="24" height="24"></iconify-icon>
-                   <span class="cafeShopName">The Hide Out cafe</span>
+                   <span class="cafeShopName"><?= $pgresult[2]["shop_name"] ?></span>
                  </p>
 
                  <p>
                    <iconify-icon icon="material-symbols:location-on" class="promotionsHeaderIcons" width="24" height="24"></iconify-icon>
-                   <span class="cafeLoc">No.98, Pazundaung Road, Yangon</span>
+                   <span class="cafeLoc"><?= $pgresult[2]["shop_address"] ?></span>
 
                  </p>
 
                  <p>
                    <iconify-icon icon="material-symbols:shopping-bag" class="promotionsHeaderIcons" width="24" height="24"></iconify-icon>
-                   <span class="cafeName"> Ice tae with cream</span>
+                   <span class="cafeName"><?= $pgresult[1]["product_name"] ?></span>
                  </p>
                </div>
              </div>
 
-             <div class="col-sm-6 col-8">
-               <img src="./resources/img/disitem2.png" alt="...">
+             <div class="col-sm-6 col-8 may">
+               <img src="../../Storages/<?= $pgresult[2]["product_photo"] ?>" alt="...">
              </div>
            </div>
 
@@ -188,8 +191,45 @@
      <div class="whatwaveimg"></div>
    </div>
 
-   <!-- =============================================what'new=================================== -->
-   <!-- <div class="whatnewsection">
+
+
+   <!-- ===========================================Dis product==================================== -->
+
+   <div class="container">
+     <p class="subtitle">Discount Products</p>
+
+
+     <div class="d-flex justify-content-around w-100 flex-wrap disBox">
+
+       <?php
+        $count = 1;
+        foreach ($result as $data) { ?>
+         <div class="box">
+           <span class="box_ribbon  promotion<?= $count++ ?>"></span>
+           <img src="../../Storages/<?= $data["product_photo"] ?>" alt="">
+         </div>
+       <?php  } ?>
+
+     </div>
+     <div class="seemore">
+       <a href="./promotionmenu.php">see more<iconify-icon icon="material-symbols:arrow-forward" width="35" height="35"></iconify-icon></a>
+     </div>
+   </div>
+
+
+
+
+   <?php
+    include "./resources/shared/footer.php";
+    ?>
+ </body>
+
+ </html>
+
+
+
+ <!-- =============================================what'new=================================== -->
+ <!-- <div class="whatnewsection">
     <div class="row">
       <div class="col-4 script">
         <h2>What's new</h2>
@@ -226,28 +266,45 @@
 
   </div> -->
 
-   <!-- ===========================================Dis product==================================== -->
 
-   <div class="container">
-     <p class="subtitle">Discount Products</p>
+ <!-- ===========================================Dis Shop ==================================== -->
+ <!-- <div class="container">
+    <p class="subtitle">Discount Shops</p>
+    <div class="seemore">
+      <a href="./Promotionshopmenu.php">see more</a><iconify-icon icon="material-symbols:arrow-forward" width="35" height="35"></iconify-icon>
+    </div>
+
+    <div class="d-flex justify-content-between w-100 flex-wrap disBox">
+
+      <div class="box">
+        <span class="box_ribbon">
+        </span>
+        <img src="./resources/img/shop.png" alt="">
+      </div>
+
+      <div class="box">
+        <span class="box_ribbon">
+        </span>
+        <img src="./resources/img/shop.png" alt="">
+      </div>
+
+      <div class="box">
+        <span class="box_ribbon">
+        </span>
+        <img src="./resources/img/shop.png" alt="">
+      </div>
+
+      <div class="box">
+        <span class="box_ribbon">
+        </span>
+        <img src="./resources/img/shop.png" alt="">
+      </div>
+
+    </div>
+  </div> -->
 
 
-     <div class="d-flex justify-content-around w-100 flex-wrap disBox">
-
-       <?php
-        $count = 1;
-        foreach ($result as $data) { ?>
-         <div class="box">
-           <span class="box_ribbon  promotion<?= $count++ ?>"></span>
-           <img src="../../Storages/<?= $data["product_photo"] ?>" alt="">
-         </div>
-       <?php  } ?>
-
-
-
-
-
-       <!-- <div class="box">
+ <!-- <div class="box">
         <span class="box_ribbon">
         </span>
         <img src="./resources/img/disp1.png" alt="">
@@ -312,53 +369,3 @@
         </span>
         <img src="./resources/img/disp3.png" alt="">
       </div> -->
-
-     </div>
-     <div class="seemore">
-       <a href="./promotionmenu.php">see more<iconify-icon icon="material-symbols:arrow-forward" width="35" height="35"></iconify-icon></a>
-     </div>
-   </div>
-
-   <!-- ===========================================Dis Shop ==================================== -->
-   <!-- <div class="container">
-    <p class="subtitle">Discount Shops</p>
-    <div class="seemore">
-      <a href="./Promotionshopmenu.php">see more</a><iconify-icon icon="material-symbols:arrow-forward" width="35" height="35"></iconify-icon>
-    </div>
-
-    <div class="d-flex justify-content-between w-100 flex-wrap disBox">
-
-      <div class="box">
-        <span class="box_ribbon">
-        </span>
-        <img src="./resources/img/shop.png" alt="">
-      </div>
-
-      <div class="box">
-        <span class="box_ribbon">
-        </span>
-        <img src="./resources/img/shop.png" alt="">
-      </div>
-
-      <div class="box">
-        <span class="box_ribbon">
-        </span>
-        <img src="./resources/img/shop.png" alt="">
-      </div>
-
-      <div class="box">
-        <span class="box_ribbon">
-        </span>
-        <img src="./resources/img/shop.png" alt="">
-      </div>
-
-    </div>
-  </div> -->
-
-
-   <?php
-    include "./resources/shared/footer.php";
-    ?>
- </body>
-
- </html>

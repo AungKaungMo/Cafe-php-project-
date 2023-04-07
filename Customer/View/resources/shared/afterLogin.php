@@ -237,7 +237,7 @@
        <div class="modal-header">
          <h5 class="modal-title cart" id="staticBackdropLabel">Cart</h5>
          <iconify-icon icon="ph:shopping-cart-fill" class="carti"></iconify-icon>
-         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         <button type="button" class="btn-close closeReload" data-bs-dismiss="modal" aria-label="Close"></button>
        </div>
        <div class="modal-body">
          <div class="row mb-3">
@@ -259,10 +259,10 @@
                  <h6 class="fw-bold changeNum mmk">15000 MMk</h6>
                </div>
                <div class="babyline"></div>
-               <div class="cartbox1">
+               <!-- <div class="cartbox1">
                  <h6 class="fw-bold changeNum coin">15000 Coins</h6>
-               </div>
-               <div class="babyline"></div>
+               </div> -->
+               <!-- <div class="babyline"></div> -->
              </div>
              <div class="input4 mt-4 text-center">
                <textarea name="" id="noteToOrder" class="note" placeholder="Note to order"></textarea>
