@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,6 @@ session_start();
     <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
     <!------------------------   JS   -------------------------------->
-    <script src="./resources/js/wavepay3.js"></script>
 
     <!----------- css---------->
     <link rel="stylesheet" href="./resources/css/root.css">
@@ -99,29 +98,29 @@ session_start();
 
             <table class="mt-3">
                 <tr align="center" bgcolor="white">
-                    <td class="tbl clickPsw">1</td>
-                    <td class="tbl clickPsw">2</td>
-                    <td class="tbl clickPsw">3</td>
+                    <td class="tbl">1</td>
+                    <td class="tbl">2</td>
+                    <td class="tbl">3</td>
                 </tr>
                 <tr align="center" bgcolor="white">
-                    <td class="tbl clickPsw">4</td>
-                    <td class="tbl clickPsw">5</td>
-                    <td class="tbl clickPsw">6</td>
+                    <td class="tbl">4</td>
+                    <td class="tbl">5</td>
+                    <td class="tbl">6</td>
                 </tr>
                 <tr align="center" bgcolor="white">
-                    <td class="tbl clickPsw">7</td>
-                    <td class="tbl clickPsw">8</td>
-                    <td class="tbl clickPsw">9</td>
+                    <td class="tbl">7</td>
+                    <td class="tbl">8</td>
+                    <td class="tbl">9</td>
                 </tr>
                 <tr align="center" bgcolor="white">
                     <td class="tbl"></td>
-                    <td class="tbl clickPsw">0</td>
-                    <td class="tbl backspace"><iconify-icon icon="ri:delete-back-2-fill" class="icondel"></iconify-icon></td>
+                    <td class="tbl">0</td>
+                    <td class="tbl"><iconify-icon icon="ri:delete-back-2-fill" class="icondel"></iconify-icon></td>
                 </tr>
             </table>
 
             <div class="comBtn text-center mb-4">
-                <a href="<?php if ($_SESSION["order"] == 1) { ?>../Controller/orderconfirmController.php<?php } else if ($_SESSION["order"] == 0) { ?>../Controller/paymentController.php<?php } ?>">
+                <a href="<?php if($_SESSION["order"] == 1) {?>../Controller/orderconfirmController.php<?php } else if($_SESSION["order"] == 0){?>../Controller/paymentController.php<?php } ?>" >
                     <button class="p-2">Comfirm</button></a>
             </div>
 

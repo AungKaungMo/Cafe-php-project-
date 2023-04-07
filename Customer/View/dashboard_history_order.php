@@ -28,13 +28,11 @@ include "./resources/shared/dashboard.php";
                                                                 echo "Wave Pay.";
                                                             } else if ($orderLists[$i]["payment_id"] == 3) {
                                                                 echo "COD.";
-                                                            } else {
-                                                                echo "Coins.";
-                                                            } ?><span class="fs-6 opacity-75"> (<?= substr($orderLists[$i]["created_date"],0,10) ?>)</span></h1>
+                                                            }  ?><span class="fs-6 opacity-75"> (<?= substr($orderLists[$i]["created_date"], 0, 10) ?>)</span></h1>
                     </div>
                     <div class="d-flex align-items-center justify-content-center rounded-circle closeIcon">
                         <a href="../Controller/delete_dashboard_historyController.php?token=<?= $orderLists[$i]["order_token"] ?>">
-                        <iconify-icon icon="fa6-solid:xmark" class="fs-3 d-flex align-items-center"></iconify-icon>
+                            <iconify-icon icon="fa6-solid:xmark" class="fs-3 d-flex align-items-center"></iconify-icon>
                         </a>
                     </div>
                 </div>
@@ -45,8 +43,9 @@ include "./resources/shared/dashboard.php";
                         if ($orderLists[$i]["order_token"] == $orderHistory[$j]["order_token"]) { ?>
 
                             <div class="mt-3 historyText d-flex">
-                                <div><?= $orderHistory[$j]["bought_product_name"] . "(" .$orderHistory[$j]['total_quantity'].")" ?></div>
-                                <div class="ms-4"><?php $eachPprice = $orderHistory[$j]["product_price"] * $orderHistory[$j]['total_quantity'];echo $eachPprice . " MMK";
+                                <div><?= $orderHistory[$j]["bought_product_name"] . "(" . $orderHistory[$j]['total_quantity'] . ")" ?></div>
+                                <div class="ms-4"><?php $eachPprice = $orderHistory[$j]["product_price"] * $orderHistory[$j]['total_quantity'];
+                                                    echo $eachPprice . " MMK";
                                                     $totalpprice += $eachPprice; ?></div>
                             </div>
 
@@ -55,12 +54,12 @@ include "./resources/shared/dashboard.php";
                     <div class="closeLine my-3"></div>
                     <div class="d-flex">
                         <div>Total</div>
-                        <div class="ms-4"><?= $totalpprice  . " MMK"?></div>
+                        <div class="ms-4"><?= $totalpprice  . " MMK" ?></div>
                     </div>
 
                 </div>
             </div>
-            <?php } ?>
+        <?php } ?>
 
         <!-- <div class="historyBox p-4 mt-3 mb-3">
              <div class="d-flex justify-content-between">

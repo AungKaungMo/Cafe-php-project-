@@ -77,20 +77,20 @@
 
        <div class="shopContainer">
 
-         <?php foreach ($Tfood as $key) { ?>
+         <?php for ($i = 0; $i < count($Tfood); $i++) { ?>
            <div class="card">
-             <img src="../../Storages/<?= $key["product_photo"] ?>" alt="">
+             <img src="../../Storages/<?= $Tfood[$i]["product_photo"] ?>" alt="" class="img">
              <div class="script">
 
-               <span class="infor"><?= $key["product_name"] ?></span>
+               <span class="infor pname"><?= $Tfood[$i]["product_name"] ?></span>
 
                <div class="icon">
-                 <span class="price priceChange fw-bold"><?= $key["product_price"] ?>MMK</span>
-                 <iconify-icon icon="icon-park-solid:shopping-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="30" height="30"></iconify-icon>
+                 <span class="price priceChange fw-bold"><?= $Tfood[$i]["product_price"] . " MMK" ?></span>
+                 <iconify-icon icon="icon-park-solid:shopping-cart" data-id="<?= $Tfood[$i]["product_id"] ?>" index="<?= $i ?>" <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> data-bs-toggle="modal" data-bs-target="#staticBackdrop" <?php } ?> width="30" height="30" class="buy"></iconify-icon>
                </div>
              </div>
            </div>
-         <?php  }                                ?>
+         <?php  } ?>
          <!-- <div class="card">
            <img src="./resources/img/pshop2.png" alt="">
            <div class="script">

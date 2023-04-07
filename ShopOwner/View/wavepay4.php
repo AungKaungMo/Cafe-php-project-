@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,11 +30,11 @@ session_start();
     <script src="./lib/Jquery/jquery3.6.0.js"></script>
 
     <!------------------------   JS   -------------------------------->
-    <script src="./resources/js/wavepay3.js"></script>
+
 
     <!----------- css---------->
     <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/wavepay3.css">
+    <link rel="stylesheet" href="./resources/css/wavepay4.css">
 
 </head>
 
@@ -59,74 +59,53 @@ session_start();
                         <button class="circle activecircle"></button>
                         <button class="circle activecircle"></button>
                         <button class="circle activecircle"></button>
-                        <button class="circle"></button>
+                        <button class="circle activecircle"></button>
                     </div>
                 </div>
                 <div class="line"></div>
             </div>
 
-
-            <h4 class="text-center fw-bold mt-4">Enter Your Pin</h4>
-            <div class="text-center text1">Please enter your login pin</div>
-            <div class="text-center text2">Comfirm Purchase</div>
-
-            <div class="btncircle mt-3">
-                <button class="circles"></button>
-                <button class="circles"></button>
-                <button class="circles"></button>
-                <button class="circles"></button>
+            <div class="third mt-5">
+                <div class="ms-5">Item Name</div>
+                <div class="me-5 fw-bold">Cafe Order</div>
             </div>
 
-            <!-- <div class="Table">
-                <div class="Row">
-                    <div class="Num"></div>
-                    <div class="Num"></div>
-                    <div class="Num"></div>
+            <div class="third mt-3">
+                <div class="ms-5">Total Amount</div>
+                <div class="me-5 fw-bold">5030Ks</div>
+            </div>
+            <div class="line mt-4"></div>
+
+
+            <div class="fouth mt-4">
+                <div>
+                    <img src="./resources/img/Ellipse 72.png" alt="" width="50%" class="ms-4">
                 </div>
-
-                <div class="Row">
-                    <div class="Num"></div>
-                    <div class="Num"></div>
-                    <div class="Num"></div>
+                <div class="ms-1">
+                    <div class="fw-bold me-5">959 122 324 221</div>
+                    <div class="me-4 mt-3">
+                        <div class="mb-2">Old Balance - <span class="fw-bold">130,000,00Ks</span></div>
+                        <div>New Balance - <span class="fw-bold">129,994,970Ks</span></div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="Row">
-                    <div class="Num"></div>
-                    <div class="Num"></div>
-                    <div class="Num"></div>
-                </div>
-            </div> -->
 
-            <table class="mt-3">
-                <tr align="center" bgcolor="white">
-                    <td class="tbl clickPsw">1</td>
-                    <td class="tbl clickPsw">2</td>
-                    <td class="tbl clickPsw">3</td>
-                </tr>
-                <tr align="center" bgcolor="white">
-                    <td class="tbl clickPsw">4</td>
-                    <td class="tbl clickPsw">5</td>
-                    <td class="tbl clickPsw">6</td>
-                </tr>
-                <tr align="center" bgcolor="white">
-                    <td class="tbl clickPsw">7</td>
-                    <td class="tbl clickPsw">8</td>
-                    <td class="tbl clickPsw">9</td>
-                </tr>
-                <tr align="center" bgcolor="white">
-                    <td class="tbl"></td>
-                    <td class="tbl clickPsw">0</td>
-                    <td class="tbl backspace"><iconify-icon icon="ri:delete-back-2-fill" class="icondel"></iconify-icon></td>
-                </tr>
-            </table>
-
-            <div class="comBtn text-center mb-4">
-                <a href="<?php if ($_SESSION["order"] == 1) { ?>../Controller/orderconfirmController.php<?php } else if ($_SESSION["order"] == 0) { ?>../Controller/paymentController.php<?php } ?>">
-                    <button class="p-2">Comfirm</button></a>
+            <div class="comBtn text-center">
+                <a href="./h.php">
+                    <button class="p-2">Back To Cafe</button></a>
             </div>
 
         </div>
     </div>
+
+    <script>
+        let order = "<?= $_SESSION["order"] ?>";
+        console.log(order)
+        if(order == 1){
+            localStorage.removeItem("cart");
+        }
+    </script>
 </body>
 
 </html>
