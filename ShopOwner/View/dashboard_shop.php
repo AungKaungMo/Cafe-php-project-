@@ -98,27 +98,25 @@ include "./resources/shared/dashboard.php";
 
         </div>
 
-        <form>
+        <form action="../Controller/dashboard_shopController.php" method="post">
             <div class="mt-3">
-
                 <label for="package">Package Type</label><br><br>
-                <select id="package">
-                    <option value="basic">Basic</option>
-                    <option value="standard">Standard</option>
-                    <option value="premium">Premium</option>
+                <select id="package" name="package">
+                    <option value="1">Basic</option>
+                    <option value="2">Standard</option>
+                    <option value="3">Premium</option>
                 </select>
             </div>
             <div class="mt-3">
                 <label for="payment">Payment Type</label><br><br>
-                <select id="payment">
-                    <option value="Credit Card">Credit Card</option>
-                    <option value="KBZ">KBZ</option>
-                    <option value="Wave">Wave</option>
+                <select id="payment" name="payment">
+                    <option value="1">KBZ</option>
+                    <option value="2">Wave</option>
                 </select>
             </div>
 
             <div class="text-center submitBtn my-5">
-                <button class="fw-bold px-2 py-3">Submit</button>
+                <button class="fw-bold px-2 py-3" name="submit">Submit</button>
             </div>
         </form>
     </div>
