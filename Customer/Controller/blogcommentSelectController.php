@@ -1,6 +1,6 @@
 <?php
 ini_set("display_errors", "1");
-// include "../Model/dbconnection.php";
+// include "../Model/dbConnection.php";
 if (isset($_GET["bid"])) {
     $id = $_GET["bid"];
     $db = new DBConnection();

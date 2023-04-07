@@ -1,7 +1,7 @@
 <?php
 ini_set("display_errors", "1");
 //drug
-include "../Model/dbconnection.php";
+include "../Model/dbConnection.php";
 
 if (isset($_GET["cus_id"])) { 
     $delete = $_GET["cus_id"];
@@ -23,6 +23,3 @@ if (isset($_GET["cus_id"])) {
 } else {
     echo "error";
 }
-
-
-?>

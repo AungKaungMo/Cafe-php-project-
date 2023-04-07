@@ -4,7 +4,7 @@ include "../Model/dbConnection.php";
 session_start();
 
 
-if (isset($_POST["submit"])) 
+if (isset($_POST["buySubmit"])) 
 {
     $package = $_POST["package"];
     $payment = $_POST["payment"]; 

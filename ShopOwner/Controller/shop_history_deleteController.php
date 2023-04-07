@@ -13,6 +13,4 @@
     $sql->bindValue(":id",$_GET["id"]);
     $sql->execute();
 
-    header("location: ../View/dashboard_history.php");
-
-?>
+    header("location: ../View/dashboard_History.php");

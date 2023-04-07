@@ -55,7 +55,7 @@ session_start();
                     </a>
                 </li>
                 <li>
-                    <a href="./dashboard_order.php">
+                    <a href="./dashboard_Order.php">
                         <span class="icon"><iconify-icon icon="mdi:truck-delivery"></iconify-icon></span>
                         <span class="title">Order</span>
                     </a>
@@ -127,7 +127,7 @@ session_start();
                 <!-- userImg -->
                 <div class="fs-4 fw-bold">Shop Owner</div>
                 <div class="owner">
-                    <img src="../../Storages/<?= $_SESSION["ownerImage"] ?> ?>">
+                    <img src="../../Storages/<?= $_SESSION["ownerImage"] ?>">
                 </div>
             </div>
             <hr>
