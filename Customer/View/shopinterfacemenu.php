@@ -52,13 +52,6 @@
         </div>
     </div>
 
-    <!-- <div class="slidebtn mt-5">
-        <div class="box text-center change" id="cg1">Featured Menu</div>
-        <div class="box text-center" id="cg2">Popular Menu</div>
-        <div class="box text-center" id="cg3">New Menu</div>
-    </div> -->
-
-
     <div class="maincard">
         <div class="mainCardContainer">
 
@@ -108,3 +101,9 @@
 </body>
 
 </html>
+
+<!-- <div class="slidebtn mt-5">
+        <div class="box text-center change" id="cg1">Featured Menu</div>
+        <div class="box text-center" id="cg2">Popular Menu</div>
+        <div class="box text-center" id="cg3">New Menu</div>
+    </div> -->

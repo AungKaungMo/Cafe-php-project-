@@ -148,9 +148,6 @@ $id = $_SESSION["shopid"];
                 <li class="nav-item">
                     <a class="nav-link navtitle mx-5" href="./shopinterfacemenu.php?id=<?= $id ?>">Menu</a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link navtitle  me-5" href="./booking.php">Booking</a>
-                </li>
             </ul>
             <div class="d-flex align-items-center position-relative">
                 <div class=" me-4">
@@ -290,9 +287,6 @@ include "./resources/shared/afterLogin.php";
         </li>
         <li class="nav-item">
             <a class="nav-link navtitle menutitle my-5 pb-2" href="./shopinterfacemenu.php?id=<?= $id ?>">Menu</a>
-        </li>
-        <li class="nav-item ">
-            <a class="nav-link navtitle bookingtitle pb-2" href="./booking.php">Booking</a>
         </li>
     </ul>
 </div>
