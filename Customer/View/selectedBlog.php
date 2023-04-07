@@ -1,9 +1,10 @@
 <?php
 ini_set("display_errors", "1");
-
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include "../Model/dbconnection.php";
 include "../Controller/blogSelectController.php";
-
 
 ?>
 
@@ -74,13 +75,7 @@ include "../Controller/blogSelectController.php";
                         <?php
                         echo $resultB[0]["first_para"];
                         ?>
-                        <!-- We mean real food as opposed to processed food.
-                        Real food is fruits, vegetables, meats, dairy, seafood,
-                        nuts, seeds, whole grains and beans. Natural
-                        sweeteners, coffee, chocolate and wine count,
-                        too — just in moderation. Avoid food that is
-                        mass-produced, emulsified (where water and oil don’t
-                        separate) or shelf-stable. -->
+
 
                     </p>
                 </div>
@@ -97,15 +92,7 @@ include "../Controller/blogSelectController.php";
                         <?php
                         echo $resultB[0]["sec_para"];
                         ?>
-                        <!-- Eating real food leads to eating more nutrient-rich
-                        food without much effort.When it comes to carbs,
-                        the more natural and whole, the better. Go for
-                        complex carbs like 100% whole-grain breads
-                        and pasta, brown rice, starchy vegetables, legumes,
-                        nuts, seeds, low-fat dairy and plenty of fruits and
-                        vegetables. Limit simple sugars from refined
-                        grains, processed snack foods, sweets and
-                        sugar-sweetened beverages. -->
+
 
                     </p>
                 </div>
@@ -120,11 +107,7 @@ include "../Controller/blogSelectController.php";
                         <?php
                         echo $resultB[0]["third_para"];
                         ?>
-                        <!-- We mean real food as opposed to processed food.
-                        Real food is fruits, vegetables, meats, dairy, seafood,
-                        nuts, seeds, whole grains and beans. Natural
-                        sweeteners, coffee, chocolate and wine count,
-                        too — just in moderation.  -->
+
                     </p>
                 </div>
             </div>
@@ -138,13 +121,11 @@ include "../Controller/blogSelectController.php";
                     <div class="fs-5 aurthorName">Author - <span> <?php
                                                                     echo $resultB[0]["author_name"];
                                                                     ?>
-                            <!-- John Selena Zane -->
                         </span></div>
                     <div class="fs-5 blogTitle">Title - <span>
                             <?php
                             echo $resultB[0]["main_title"];
                             ?>
-                            <!-- Essential Guide to Healthy Eating -->
                         </span></div>
                     <div class="socialGp d-flex mt-4">
                         <a href="<?= $resultB[0]["fb_link"]; ?>"><iconify-icon icon="ic:baseline-facebook">
@@ -167,118 +148,159 @@ include "../Controller/blogSelectController.php";
 
                 <div class="commentSection">
 
-                    <div class="comment mt-5">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex">
-                                <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
-                                <div class="ms-4">
-                                    <p class="personName fw-bold mb-0 fs-5">
-                                        Calara
-                                    </p>
-                                    <p class="commentDate">
+                    <?php if (count($result1) == 0) { ?>
+                        <div class="line mt-4"></div>
+                        <form action="../Controller/blogcommentInsertController.php" method="post">
+                            <div class="commentBox">
+                                <div class="fw-bold fs-4 my-4">Leave Comments.</div>
+                                <div class="typeBox">
+                                    <textarea name="message" placeholder="Message"></textarea>
+                                </div>
+                                <div class="text-center submitBtn mt-3 mb-5">
+                                    <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/blogcommentInsertController.php" <?php } ?>><button class="p-2">Submit</button></a>
+                                </div>
+                            </div>
+                        </form>
+                    <?       } else {  ?>
+                        <?php for ($i = 0; $i < count($result1); $i++) { ?>
+                            <div class="comment mt-5">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex">
+                                        <div class="commentImage"><img src="../../Storages/<?= $result1["cus_profile"] ?>"></div>
+                                        <div class="ms-4">
+                                            <p class="personName fw-bold mb-0 fs-5">
+                                                <?php echo $result1[$i]["cus_name"]  ?>
+                                            </p>
+                                            <p class="commentDate">
+                                                <?php
+                                                echo $result1[$i]["created_date"];
+                                                ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="mdi:cards-heart-outline" class="likeIcon fs-2"></iconify-icon>
+                                        <iconify-icon icon="mdi:cards-heart" class="unLikeIcon d-none fs-2"></iconify-icon>
+                                    </div>
+                                </div>
+                                <div class="commentText mt-4">
+                                    <p class="p-3">
                                         <?php
-                                        echo $result1[0]["created_date"];
+                                        echo $result1[$i]["comment"];
                                         ?>
-                                        <!-- 12/03/2023 -->
                                     </p>
                                 </div>
                             </div>
-                            <div>
-                                <iconify-icon icon="mdi:cards-heart-outline" class="likeIcon fs-2"></iconify-icon>
-                                <iconify-icon icon="mdi:cards-heart" class="unLikeIcon d-none fs-2"></iconify-icon>
-                            </div>
-                        </div>
-                        <div class="commentText mt-4">
-                            <p class="p-3">
-                                <?php
-                                echo $result1[0]["comment"];
-                                ?>
-
-                                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="comment mt-5">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex">
-                                <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
-                                <div class="ms-4">
-                                    <p class="personName fw-bold mb-0 fs-5" name="name">
-                                        Calara
-                                    </p>
-                                    <p class="commentDate" name="date">
-                                        <?php
-                                        echo $result1[1]["created_date"];
-                                        ?>
-                                        <!-- 12/03/2023 -->
-                                    </p>
+                            <div class="line mt-4"></div>
+                            <form action="../Controller/blogcommentInsertController.php" method="post">
+                                <div class="commentBox">
+                                    <div class="fw-bold fs-4 my-4">Leave Comments.</div>
+                                    <div class="typeBox">
+                                        <textarea name="message" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="text-center submitBtn mt-3 mb-5">
+                                        <button name="submit" class="fw-bold px-2 py-3"><a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/blogcommentInsertController.php" <?php } ?>><button class="p-2">Submit</button></a>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <iconify-icon icon="mdi:cards-heart-outline" class="likeIcon fs-2"></iconify-icon>
-                                <iconify-icon icon="mdi:cards-heart" class="unLikeIcon d-none fs-2"></iconify-icon>
-                            </div>
-                        </div>
-                        <div class="commentText mt-4">
-                            <p class="p-3">
-                                <?php
-                                echo $result1[1]["comment"];
-                                ?>
-                                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="comment mt-5">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex">
-                                <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
-                                <div class="ms-4">
-                                    <p class="personName fw-bold mb-0 fs-5">
-                                        Calara
-                                    </p>
-                                    <p class="commentDate">
-                                        <?php
-                                        echo $result1[2]["created_date"];
-                                        ?>
-                                        <!-- 12/03/2023 -->
-                                    </p>
-                                </div>
-                            </div>
-                            <div>
-                                <iconify-icon icon="mdi:cards-heart-outline" class="likeIcon fs-2"></iconify-icon>
-                                <iconify-icon icon="mdi:cards-heart" class="unLikeIcon d-none fs-2"></iconify-icon>
-                            </div>
-                        </div>
-                        <div class="commentText mt-4">
-                            <p class="p-3">
-                                <?php
-                                echo $result1[2]["comment"];
-                                ?>
-                                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
-                            </p>
-                        </div>
-                    </div>
-
+                            </form>
+                        <?php }   ?>
+                    <?php       }             ?>
 
                 </div>
             </div>
-            <div class="line mt-4"></div>
-            <form action="../Controller/blogcommentInsertController.php" method="post">
-                <div class="commentBox">
-                    <div class="fw-bold fs-4 my-4">Leave Comments.</div>
-                    <div class="typeBox">
-                        <textarea name="message" placeholder="Message"></textarea>
-                    </div>
-                    <div class="text-center submitBtn mt-3 mb-5">
-                        <button name="submit" class="fw-bold px-2 py-3">Submit</button>
-                    </div>
-                </div>
-            </form>
+
         </div>
     </div>
 
 </body>
 
 </html>
+
+
+
+<!-- We mean real food as opposed to processed food.
+                        Real food is fruits, vegetables, meats, dairy, seafood,
+                        nuts, seeds, whole grains and beans. Natural
+                        sweeteners, coffee, chocolate and wine count,
+                        too — just in moderation. Avoid food that is
+                        mass-produced, emulsified (where water and oil don’t
+                        separate) or shelf-stable. -->
+
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia doloremque temporibus quasi magni vitae, culpa fuga in dolor ratione! -->
+
+<!-- We mean real food as opposed to processed food.
+                        Real food is fruits, vegetables, meats, dairy, seafood,
+                        nuts, seeds, whole grains and beans. Natural
+                        sweeteners, coffee, chocolate and wine count,
+                        too — just in moderation.  -->
+
+<!-- Eating real food leads to eating more nutrient-rich
+                        food without much effort.When it comes to carbs,
+                        the more natural and whole, the better. Go for
+                        complex carbs like 100% whole-grain breads
+                        and pasta, brown rice, starchy vegetables, legumes,
+                        nuts, seeds, low-fat dairy and plenty of fruits and
+                        vegetables. Limit simple sugars from refined
+                        grains, processed snack foods, sweets and
+                        sugar-sweetened beverages. -->
+
+<!-- <div class="comment mt-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex">
+            <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
+            <div class="ms-4">
+                <p class="personName fw-bold mb-0 fs-5" name="name">
+                    Calara
+                </p>
+                <p class="commentDate" name="date">
+                    <?php
+                    echo $result1[1]["created_date"];
+                    ?>
+                </p>
+            </div>
+        </div>
+        <div>
+            <iconify-icon icon="mdi:cards-heart-outline" class="likeIcon fs-2"></iconify-icon>
+            <iconify-icon icon="mdi:cards-heart" class="unLikeIcon d-none fs-2"></iconify-icon>
+        </div>
+    </div>
+    <div class="commentText mt-4">
+        <p class="p-3">
+            <?php
+            echo $result1[1]["comment"];
+            ?>
+        </p>
+    </div>
+</div>
+
+<div class="comment mt-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex">
+            <div class="commentImage"><img src="./resources/img/aurthor.jpg"></div>
+            <div class="ms-4">
+                <p class="personName fw-bold mb-0 fs-5">
+                    Calara
+                </p>
+                <p class="commentDate">
+                    <?php
+                    echo $result1[2]["created_date"];
+                    ?>
+                </p>
+            </div>
+        </div>
+        <div>
+            <iconify-icon icon="mdi:cards-heart-outline" class="likeIcon fs-2"></iconify-icon>
+            <iconify-icon icon="mdi:cards-heart" class="unLikeIcon d-none fs-2"></iconify-icon>
+        </div>
+    </div>
+    <div class="commentText mt-4">
+        <p class="p-3">
+            <?php
+            echo $result1[2]["comment"];
+            ?>
+        </p>
+    </div>
+</div> -->
