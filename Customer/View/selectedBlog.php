@@ -34,6 +34,7 @@ $bid = $_GET["bid"];
 
     <!-------------------------   CSS   ---------------------------------->
     <link rel="stylesheet" href="./resources/css/root.css">
+    <link rel="stylesheet" href="./resources/css/navigationAndFooter.css">
     <link rel="stylesheet" href="./resources/css/selectedBlog.css">
 
 
@@ -159,7 +160,9 @@ $bid = $_GET["bid"];
                                     <textarea name="message" placeholder="Message"></textarea>
                                 </div>
                                 <div class="text-center submitBtn mt-3 mb-5">
-                                    <button class="p-2" name="submit">Submit</button>
+                                    <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="./selectedBlog.php" <?php } ?>>
+                                        <button class="p-2" name="submit">Submit</button>
+                                    </a>
                                     <input type="text" value="<?= $bid ?>" name="id" hidden>
                                 </div>
                             </div>
@@ -205,7 +208,9 @@ $bid = $_GET["bid"];
                                 </div>
                                 <div class="text-center submitBtn mt-3 mb-5">
                                     <input type="text" value="<?= $bid ?>" name="id" hidden>
-                                    <button class="p-2" name="submit">Submit</button>
+                                    <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="./selectedBlog.php" <?php } ?>>
+                                        <button class="p-2" name="submit">Submit</button>
+                                    </a>
                                 </div>
                             </div>
                         </form>
@@ -214,7 +219,26 @@ $bid = $_GET["bid"];
             <?php   }  ?>
             </div>
 
-
+            <div class="modal fade" id="staticBackdropCheckLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body newUser">
+                            <div>
+                                <div class="fs-4 text-center ">New User?</div>
+                                <div class="mt-3">
+                                    <div class="text-center">Dont have an account? <a href="./signup.php">Sign Up</a></div>
+                                </div>
+                                <div class="mt-3 mb-4">
+                                    <div class="text-center">Already have an account? <a href="./login.php">Log In</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>

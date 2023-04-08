@@ -128,23 +128,23 @@ for ($i = 0; $i < count($cartItemsLists); $i++) {
    $sql->bindValue(":pid", $cartItemsLists[$i]["product_id"]);
    $sql->execute();
 }
-   //  echo $payment;
+//  echo $payment;
 
-   $_SESSION["cartLists"] = "";
-   $_SESSION["cartItemsLists"] = "";
-   $_SESSION["cusTownship"] = "";
-   $_SESSION["cusAddress"] = "";
-   $_SESSION["cusNote"] = "";
-   $_SESSION["cusPhone"] = "";
-   $_SESSION["cusName"] = "";
-   $_SESSION["cusDeliFee"] = "";
-   $_SESSION["cusTotalPrice"] = ""; 
-   $_SESSION["itemsPrice"] = "";
-if($payment == 2){
-   $_SESSION["payment"] = ""; 
+$_SESSION["cartLists"] = "";
+$_SESSION["cartItemsLists"] = "";
+$_SESSION["cusTownship"] = "";
+$_SESSION["cusAddress"] = "";
+$_SESSION["cusNote"] = "";
+$_SESSION["cusPhone"] = "";
+$_SESSION["cusName"] = "";
+$_SESSION["cusDeliFee"] = "";
+$_SESSION["cusTotalPrice"] = "";
+$_SESSION["itemsPrice"] = "";
+if ($payment == 2) {
+   $_SESSION["payment"] = "";
    header("Location: ../View/wavepay4.php");
-}else if($payment == 3) {
-   $_SESSION["payment"] = ""; 
+} else if ($payment == 3) {
+   $_SESSION["payment"] = "";
    $_SESSION["finished"] = "finished";
    header("Location: ../View/h.php");
 }

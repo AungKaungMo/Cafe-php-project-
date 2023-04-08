@@ -30,7 +30,7 @@ include "./resources/shared/dashboard.php";
 
         <table class="table">
             <tr>
-                <th scope="col">ID</th>
+                <th scope="col">No</th>
                 <th scope="col">Name</th>
                 <th scope="col">PhoneNumber</th>
                 <th scope="col">Email</th>
@@ -38,16 +38,16 @@ include "./resources/shared/dashboard.php";
                 <th scope="col">Date</th>
                 <th scope="col">Action</th>
             </tr>
-            <?php
+            <?php $co = 1;
             foreach ($data as $key) { ?>
                 <tr>
-                    <td><?= $key["userid"] ?></td>
+                    <td><?= $co++; ?></td>
                     <td><?= $key["name"] ?></td>
                     <td><?= $key["phone"] ?></td>
                     <td><?= $key["email"] ?></td>
                     <td><?= $key["message"] ?></td>
                     <td><?= $key["create_date"] ?></td>
-                    <td class="danger"><a href="">Remove</a></td>
+                    <td class="danger"><a href="../Controller/deCuController.php?id=<?= $key["id"] ?>">Remove</a></td>
                 </tr>
             <?php  }  ?>
         </table>
