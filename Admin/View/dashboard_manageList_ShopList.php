@@ -59,7 +59,7 @@ include "./resources/shared/dashboard.php";
                     <td><?= $shop[$i]["package_type"]  ?></td>
                     <td><?= $shop[$i]["package_createdate"]  ?></td>
                     <td><?= $shop[$i]["package_expiredate"]  ?></td>
-                    <td class="danger"><a href="../Controller/delete_shopListController.php?id= <?= $shop[$i]["shop_id"] ?>">Remove</a></td>
+                    <td class="danger"><a href="../Controller/delete_shopListController.php?id=<?= $shop[$i]["shop_id"] ?>">Remove</a></td>
                 </tr>
             <?php } 
             ?>

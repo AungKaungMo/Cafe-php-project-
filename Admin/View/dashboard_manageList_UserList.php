@@ -47,7 +47,7 @@ include "./resources/shared/dashboard.php";
                         <td><?= $resultU[$i]["cus_phone"]  ?></td>
                         <td><?= $resultU[$i]["created_date"]  ?></td>
                         <!-- <td class="primary"><a href="">Coins</a></td> -->
-                        <td class="danger"><a href="../Controller/delete_userListController.php?id= <?= $resultU[$i]["cus_id"] ?>">Remove</a></td>
+                        <td ><a class="danger" href="../Controller/delete_userListController.php?id=<?= $resultU[$i]["cus_id"] ?>">Remove</a></td>
                     </tr>
                 <?php } ?>
             </tbody>
