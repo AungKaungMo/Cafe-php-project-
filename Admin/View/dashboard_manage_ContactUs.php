@@ -18,7 +18,6 @@ $data = $result;
                     <hr class="line">
                 </td>
             </tr>
-
         </tbody>
         </table>
 

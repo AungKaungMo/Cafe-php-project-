@@ -11,7 +11,7 @@ include "./resources/shared/dashboard.php";
     <?php
     include "./resources/shared/dashboard_setting.php";
     include "../Controller/selectContactController.php";
-    $data = $result;
+    $key = $result;
     ?>
 
 
@@ -38,20 +38,56 @@ include "./resources/shared/dashboard.php";
                 <th scope="col">Date</th>
                 <th scope="col">Action</th>
             </tr>
-            <?php $co = 1;
-            foreach ($data as $key) { ?>
+            <?php  
+            $count = (($page - 1) * $rowLimit) + 1;
+            for ($i = 0; $i < count($key); $i++) { ?>
                 <tr>
-                    <td><?= $co++; ?></td>
-                    <td><?= $key["name"] ?></td>
-                    <td><?= $key["phone"] ?></td>
-                    <td><?= $key["email"] ?></td>
-                    <td><?= $key["message"] ?></td>
-                    <td><?= $key["create_date"] ?></td>
-                    <td class="danger"><a href="../Controller/deCuController.php?id=<?= $key["id"] ?>">Remove</a></td>
+                <td scope="row"><?= $count++ ?></td>
+                    <td><?= $key[$i]["name"] ?></td>
+                    <td><?= $key[$i]["phone"] ?></td>
+                    <td><?= $key[$i]["email"] ?></td>
+                    <td><?= $key[$i]["message"] ?></td>
+                    <td><?= $key[$i]["create_date"] ?></td>
+                    <td class="danger"><a href="../Controller/deCuController.php?id=<?= $key[$i]["id"] ?>">Remove</a></td>
                 </tr>
             <?php  }  ?>
         </table>
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination justify-content-center">
+                <li class="page-item
+    <?php
+    if ($page <= 1) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page - 1 ?>">Previous</a>
+                </li>
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <li class="page-item part 
+                    <?php
+                    if ($page == $i){
+                        echo "active";
+                    }
+                    ?>
+                    ">
+                        <a class="page-link text-black" href="?page=<?= $i ?>"><?= $i ?></a>
+                    </li>
+                <?php }
+                ?>
+                <li class="page-item
+    <?php
+    if ($page >= $pageList) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page + 1 ?>">Next</a>
+                </li>
+            </ul>
+        </nav>
     </div>
+
 
     <!----------  Ending Tab ------>
     </div>
