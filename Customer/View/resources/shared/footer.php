@@ -54,8 +54,8 @@ include "../Controller/selectfooterController.php";
 <div class="footer">
     <div class="footerContainer d-flex mx-sm-5 mx-2 pt-5 mb-4 justify-content-between flex-wrap">
         <div class="footerLogo">
-            <img src="./resources/img/footerlogo.png" width="200px">
-            <!-- <img src="../../Stroges/<?= $footer[0]["logo"] ?>" width="200px">-->
+            <!-- <img src="./resources/img/footerlogo.png" width="200px"> -->
+            <img src="../../Storages/<?= $footer[0]["logo"] ?>" width="200px">
         </div>
         <div class="navigation">
             <div class="footerTitle">Navigation</div>

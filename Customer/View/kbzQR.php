@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,17 +26,21 @@
   <div class="box">
     <div class="card">
 
-      <?php
-      include "../Controller/qrController.php";
-      QRcode::png($emailAdmin, "../../Storages/qr_" . $emailAdmin . ".png");
-      // QRcode::png($emailAdmin);
-      ?>
+      <iconify-icon class="qrCode" icon="clarity:qr-code-line"></iconify-icon>
     </div>
-    <!-- <div class="comBtn text-center">
-      <button class="p-2"><a href="../View/h.php">Comfirm</a></button>
-    </div> -->
-  </div>
 
+    <!-- <div class="comBtn text-center">
+      <a href="<?php if ($_SESSION["order"] == 1) { ?>../Controller/orderconfirmController.php<?php } else if ($_SESSION["order"] == 0) { ?>../Controller/paymentController.php<?php } ?>">
+        <button class="p-2">Comfirm</button>
+    </div> -->
+    <!-- <div class="card"> -->
+    <!-- <iconify-icon class="qrCode" icon="clarity:qr-code-line"></iconify-icon> -->
+    <!-- <?php
+          include "../Controller/qrController.php";
+          QRcode::png($emailAdmin[0]["admin_email"], "../View/kbzQR_" . $emailAdmin[0]["admin_id"] . ".png");
+          ?> -->
+    <!-- </div> -->
+  </div>
 </body>
 
 </html>

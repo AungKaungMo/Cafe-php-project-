@@ -94,7 +94,7 @@
                         </div>
                         <div class="modal-body text-center">
                             <div class="mainPop mb-4">
-                                <div class="h2 mb-3 fw-bold log">Lou Out</div>
+                                <div class="h2 mb-3 fw-bold log">Log Out</div>
                                 <div class="mb-5 thankPurchase">Are You Sure...</div>
                                 <button type="button" class="btn text-white Back2Home me-5" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
                                 <button type="button" class="btn text-white Back2Home ms-5"> <a href="./adminlogin.php">Confirm</a>
