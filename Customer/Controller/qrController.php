@@ -8,4 +8,5 @@ $sql = $pdo->prepare(
     "
 );
 $sql->execute();
-$emailAdmin = $sql->fetchAll(PDO::FETCH_ASSOC);
+$emailAdmin = $sql->fetchAll(PDO::FETCH_ASSOC)[0]["admin_email"];
+echo $emailAdmin;

@@ -27,9 +27,9 @@
             QRcode::png($emailAdmin[0]["admin_email"], "../View/kbzQR_" . $emailAdmin[0]["admin_id"] . ".png");
             ?> -->
     </div>
-    <div class="comBtn text-center">
+    <!-- <div class="comBtn text-center">
       <button class="p-2">Comfirm</button>
-    </div>
+    </div> -->
 
   </div>
 
