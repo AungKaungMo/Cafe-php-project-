@@ -4,6 +4,7 @@ include "../Model/dbConnection.php";
  $db = new DBConnection();
     $pdo = $db->connect();
 
+    echo "cafe";
          $sql = $pdo->prepare(
                 "INSERT INTO m_shop 
                 (

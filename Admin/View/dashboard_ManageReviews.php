@@ -1,6 +1,6 @@
 <?php
 include "../Controller/selectreviewController.php";
-$data = $resultreview;
+$value= $resultreview;
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_ManageReviews.css">
@@ -33,17 +33,17 @@ include "./resources/shared/dashboard.php";
                     </td>
                 </tr>
                 <?php
-
-                foreach ($data as $value) { ?>
-
+                $count = (($page - 1) * $rowLimit) + 1;
+                for ($i = 0; $i < count($value); $i++) { ?>
                     <tr>
-                        <td><?= $value["id"] ?></td>
-                        <td><?= $value["user_name"] ?></td>
-                        <td><?= $value["address"] ?></td>
-                        <td><?= $value["comment"] ?></td>
-                        <td><?= $value["rating"] ?></td>
-                        <td><?= $value["create_date"] ?></td>
-                        <td class="danger"><a href="../Controller/delectreviewController.php?id=<?= $value["id"] ?>">Remove</a></td>
+                    <td scope="row"><?= $count++ ?></td>
+                        <td><?= $value[$i]["id"] ?></td>
+                        <td><?= $value[$i]["user_name"] ?></td>
+                        <td><?= $value[$i]["address"] ?></td>
+                        <td><?= $value[$i]["comment"] ?></td>
+                        <td><?= $value[$i]["rating"] ?></td>
+                        <td><?= $value[$i]["create_date"] ?></td>
+                        <td class="danger"><a href="../Controller/delectreviewController.php?id=<?= $value[$i]["id"] ?>">Remove</a></td>
                     </tr>
 
                 <?php  }  ?>
@@ -51,17 +51,40 @@ include "./resources/shared/dashboard.php";
 
             </tbody>
         </table>
-        <div class="d-flex justify-content-center w-100 mt-5 align-items-center user-select-none">
-            <div class="mt-1">
-                <iconify-icon icon="material-symbols:keyboard-double-arrow-left" class="fs-1 prev"></iconify-icon>
-            </div>
-            <div class="mx-3">
-                <span class="currentPage">1</span><span> / </span><span class="allPage">2</span>
-            </div>
-            <div class="mt-1">
-                <iconify-icon icon="material-symbols:keyboard-double-arrow-right" class="fs-1 next"></iconify-icon>
-            </div>
-        </div>
+         <!-- Pagination -->
+         <nav aria-label="Page navigation example ">
+            <ul class="pagination justify-content-center">
+                <li class="page-item
+    <?php
+    if ($page <= 1) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page - 1 ?>">Previous</a>
+                </li>
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <li class="page-item part 
+                    <?php
+                    if ($page == $i){
+                        echo "active";
+                    }
+                    ?>
+                    ">
+                        <a class="page-link text-black" href="?page=<?= $i ?>"><?= $i ?></a>
+                    </li>
+                <?php }
+                ?>
+                <li class="page-item
+    <?php
+    if ($page >= $pageList) {
+        echo "disabled";
+    }
+    ?>">
+                    <a class="page-link text-black" href="?page=<?= $page + 1 ?>">Next</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
     <script src="./resources/js/dashboard.js"></script>
