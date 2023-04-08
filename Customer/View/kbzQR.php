@@ -1,3 +1,9 @@
+<?php
+ini_set("display_errors", "1");
+include "../Controller/qrController.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +29,7 @@
     <div class="card">
 
       <?php
-      include "../Controller/qrController.php";
+      
       QRcode::png($emailAdmin, "../../Storages/qr_" . $emailAdmin . ".png");
       // QRcode::png($emailAdmin);
       ?>

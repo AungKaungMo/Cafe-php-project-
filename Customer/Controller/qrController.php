@@ -1,5 +1,6 @@
 <?php
-include "../Controller/lib/phpqrcode";
+ini_set("display_errors", "1");
+include "../Controller/lib/phpqrcode/qrlib.php";
 include "../Model/dbConnection.php";
 $db = new DBConnection();
 $pdo = $db->connect();

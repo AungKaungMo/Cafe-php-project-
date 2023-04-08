@@ -3,8 +3,8 @@ ini_set("display_errors", "1");
 //drug
 include "../Model/dbConnection.php";
 
-if (isset($_GET["shop_id"])) { 
-    $delete = $_GET["shop_id"];
+if (isset($_GET["id"])) { 
+    $delete = $_GET["id"];
 
     $db = new DBConnection();
     $pdo = $db->connect();
