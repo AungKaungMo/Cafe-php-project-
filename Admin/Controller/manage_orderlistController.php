@@ -68,11 +68,3 @@ $sql->execute();
 $order = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 $pageList = count($totalRecord)/ $rowLimit;
-
-
-
-
-
-
-
-?>

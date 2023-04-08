@@ -1,20 +1,22 @@
 <?php
 ini_set("display_errors", "1");
-// session_start();
+// if (session_status() == PHP_SESSION_NONE) {
+//     session_start();
+// }
 
-if(isset($_GET["page"])){
+if (isset($_GET["page"])) {
     $page = $_GET["page"];
-}else{
+} else {
     $page = 1;
 }
 
 $rowLimit = 5;
-$pageStart = ($page-1) * $rowLimit;
-$pageStart = ($pageStart<0)? 0 : $pageStart;
+$pageStart = ($page - 1) * $rowLimit;
+$pageStart = ($pageStart < 0) ? 0 : $pageStart;
 
 include "../Model/dbConnection.php";
 
-// $shopID = $_SESSION["shopID"];
+$shopID = $_SESSION["shopID"];
 
 $db = new DBConnection();
 $pdo = $db->connect();
@@ -23,21 +25,17 @@ $pdo = $db->connect();
 $sql = $pdo->prepare(
     "
     SELECT
-    od.cus_name,
-    od.payment_id, 
-    od.cus_phone,
-    od.cus_address,
-    o.bought_product_name,
-    o.product_price
+    *
     FROM
         m_orderdetails AS od
     INNER JOIN m_order AS o
     ON
         od.order_token = o.order_token
     WHERE
-        o.shop_id = 16 
+        o.shop_id = :id 
     "
 );
+$sql->bindValue(":id", $shopID);
 $sql->execute();
 $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -46,12 +44,7 @@ $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC);
 $sql = $pdo->prepare(
     "
     SELECT
-    od.cus_name,
-    od.payment_id, 
-    od.cus_phone,
-    od.cus_address,
-    o.bought_product_name,
-    o.product_price
+   *
     FROM
         m_orderdetails AS od
     INNER JOIN m_order AS o
@@ -67,12 +60,12 @@ $sql = $pdo->prepare(
 $sql->execute();
 $orderList = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-$pageList = count($totalRecord)/ $rowLimit;
+$pageList = count($totalRecord) / $rowLimit;
 
 
-
-
-
-
-
-?>
+// od.cus_name,
+//     od.payment_id, 
+//     od.cus_phone,
+//     od.cus_address,
+//     o.bought_product_name,
+//     o.product_price
