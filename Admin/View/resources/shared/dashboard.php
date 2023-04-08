@@ -60,12 +60,12 @@
                         <span class="title">Manage Reviews</span>
                     </a>
                 </li>
-                <li>
-                    <a href="./dashboard_manage_ContactUs.php">
+                <!-- <li>
+                    <a href="./dashboard_managePage_ContactUs.php">
                         <span class="icon"><iconify-icon icon="material-symbols:edit-document-rounded"></iconify-icon></span>
                         <span class="title">Manage Contact Us</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="./dashboard_setting_Option&Fill.php">
                         <span class="icon"><iconify-icon icon="uiw:setting"></iconify-icon></span>
