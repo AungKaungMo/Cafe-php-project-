@@ -47,7 +47,7 @@ include "./resources/shared/dashboard.php";
                     </td>
                 </tr>
                 <?php
-                $count = 1;
+                $count = (($page - 1) * $rowLimit) + 1;;
                 for ($i = 0; $i < count($shop); $i++) {   ?>
                     <tr>
                         <td scope="row"><?= $count++ ?></td>

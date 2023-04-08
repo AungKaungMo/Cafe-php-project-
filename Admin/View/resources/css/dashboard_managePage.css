@@ -1,15 +1,17 @@
-
 .navigation ul li:nth-child(3) {
   background: var(--backgroundPrimary);
 }
+
 .navigation ul li:nth-child(3) a {
   color: var(--mainColor);
 }
+
 .navBar h1 {
   font-size: 1.2em;
   transition: all 0.3s;
   cursor: pointer;
 }
+
 .navBar h1:hover {
   color: var(--mainColor);
 }
@@ -20,10 +22,12 @@
   background-color: var(--mainColor);
   box-shadow: 0px 5px 10px var(--mainColor);
 }
+
 @media screen and (max-width: 700px) {
   .line {
     display: none !important;
   }
+
   .navBar {
     flex-direction: column;
     align-items: center;
@@ -39,28 +43,34 @@
     transition: all 0.7s;
     z-index: 111;
   }
+
   .navBar h1 {
     margin-bottom: 2em;
   }
+
   .toggleNavBar {
     display: flex !important;
     justify-content: end;
   }
+
   .navBar h1:hover {
     color: var(--secondMainColor);
   }
 }
+
 .navBarSlide {
   right: 0;
   opacity: 1;
 }
+
 .box {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5em;
 }
 
-input , textarea{
+input,
+textarea {
   width: 300px;
   margin-left: 0.8em;
   border: 1px solid var(--mainColor);
@@ -69,14 +79,19 @@ input , textarea{
   outline: none;
   padding: 0.1em;
 }
-textarea{
+
+textarea {
   height: 100px;
 }
+
 @media screen and (max-width: 550px) {
-   input, textarea {
+
+  input,
+  textarea {
     width: 200px;
   }
-   label {
+
+  label {
     font-size: 0.8em;
   }
 }
