@@ -37,8 +37,9 @@
 <body>
 
     <?php
+    session_start();
+    include "../Controller/shopallController.php";
     include "./resources/shared/nav.php";
-    include "../Controller/shopallController.php"
     ?>
 
     <!-- ===========================================arrow========================================== -->

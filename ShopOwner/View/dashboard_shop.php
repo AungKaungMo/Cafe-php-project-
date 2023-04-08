@@ -124,7 +124,7 @@ include "../Controller/dashboard_shop_showController.php";
                 <label for="payment">Payment Type</label><br><br>
                 <select id="payment" name="paymentType">
                     <!-- <option value="Credit Card">Credit Card</option> -->
-                    <option value="1">KBZ</option>
+                    <!-- <option value="1">KBZ</option> -->
                     <option value="2">Wave</option>
                 </select>
             </div>
