@@ -5,9 +5,8 @@
 
     $sql = $pdo->prepare(
         "
-            SELECT * FROM m_aboutUs WHERE del_flg = 0
+            SELECT * FROM m_aboutus WHERE del_flg = 0
         "
     );
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-?>

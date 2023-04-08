@@ -49,7 +49,7 @@ session_start();
                     </a>
                 </li>
                 <li>
-                    <a href="./dashboard_history.php">
+                    <a href="./dashboard_History.php">
                         <span class="icon"><iconify-icon icon="ic:baseline-history"></iconify-icon></span>
                         <span class="title">History</span>
                     </a>
