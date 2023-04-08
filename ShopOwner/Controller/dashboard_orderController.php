@@ -16,7 +16,7 @@ $pageStart = ($pageStart < 0) ? 0 : $pageStart;
 
 include "../Model/dbConnection.php";
 
-$shopID = $_SESSION["shopID"];
+$shopID = $_SESSION["shopId"];
 
 $db = new DBConnection();
 $pdo = $db->connect();
@@ -35,7 +35,7 @@ $sql = $pdo->prepare(
         o.shop_id = :id
     "
 );
-$sql->bindValue(":id", $_SESSION["shopId"]);
+$sql->bindValue(":id", $shopID);
 $sql->execute();
 $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -51,12 +51,12 @@ $sql = $pdo->prepare(
     ON
         od.order_token = o.order_token
     WHERE
-        o.shop_id = 16
+        o.shop_id = :id
     LIMIT $pageStart ,$rowLimit   
     "
 );
 
-// $sql->bindValue(":shopID", $shopID);
+$sql->bindValue(":id", $shopID);
 $sql->execute();
 $orderList = $sql->fetchAll(PDO::FETCH_ASSOC);
 
