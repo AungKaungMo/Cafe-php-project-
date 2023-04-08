@@ -468,7 +468,9 @@ include "../Controller/sliderSelectController.php"
           </div>
 
           <div class="sendBtn">
-            <button class="p-2" name="send">Send</button>
+            <a <?php if (empty($_SESSION["userid"])) { ?> data-bs-toggle="modal" data-bs-target="#staticBackdropCheckLogin" <?php } else { ?> href="../Controller/sendContact.php" <?php } ?>>
+              <button class="p-2" name="send">Send</button>
+            </a>
           </div>
         </form>
 
