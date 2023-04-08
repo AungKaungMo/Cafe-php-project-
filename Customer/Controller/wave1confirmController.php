@@ -26,6 +26,6 @@ if (isset($_POST["confirm"])) {
     } else {
         $_SESSION["otperror"] = "Wrong Otp Code! Try Again..";
         echo "error";
-        // header("Location: ../View/wavepay1.php");
+        header("Location: ../View/wavepay1.php");
     }
 }
