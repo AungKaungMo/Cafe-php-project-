@@ -9,7 +9,7 @@ if (isset($_GET["page"])) {
     $page = 1;
 }
 
-$rowLimit = 1;
+$rowLimit = 5;
 $pageStart = ($page - 1) * $rowLimit;
 $pageStart = ($pageStart < 0) ? 0 : $pageStart;
 

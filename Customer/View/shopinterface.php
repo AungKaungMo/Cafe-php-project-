@@ -88,7 +88,7 @@ $_SESSION["shopid"] = $Sid;
 
     <div class="mx-sm-5 mx-2 pt-5 row aboutSection serviceSection">
         <div>
-            <h1 class=" text-center title fw-bold pb-2 position-relative">Promotiom Product</h1>
+            <h1 class=" text-center title fw-bold pb-2 position-relative">Promotion Products</h1>
         </div>
     </div>
 
