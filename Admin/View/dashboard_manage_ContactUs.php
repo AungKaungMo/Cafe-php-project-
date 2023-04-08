@@ -23,7 +23,7 @@ $data = $result;
 
         <table class="table">
             <tr>
-                <th scope="col">ID</th>
+                <th scope="col">No</th>
                 <th scope="col">Name</th>
                 <th scope="col">PhoneNumber</th>
                 <th scope="col">Email</th>
@@ -33,12 +33,12 @@ $data = $result;
 
             </tr>
 
-            <?php
+            <?php $co = 1;
 
             foreach ($data as $key) { ?>
 
                 <tr>
-                    <td><?= $key["id"] ?></td>
+                    <td><?= $co++ ?></td>
                     <td><?= $key["name"] ?></td>
                     <td><?= $key["phone"] ?></td>
                     <td><?= $key["email"] ?></td>
