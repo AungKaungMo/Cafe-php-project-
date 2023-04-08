@@ -1,7 +1,7 @@
 <?php
 ini_set("display_errors", "1");
-include "../Controller/dashboard_orderController.php";
 include "./resources/shared/dashboard.php";
+include "../Controller/dashboard_orderController.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_order.css">
 

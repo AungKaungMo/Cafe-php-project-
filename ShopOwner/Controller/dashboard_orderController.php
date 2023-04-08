@@ -35,9 +35,10 @@ $sql = $pdo->prepare(
     ON
         od.order_token = o.order_token
     WHERE
-        o.shop_id = 16 
+        o.shop_id = :id
     "
 );
+$sql->bindValue(":id", $_SESSION["shopId"]);
 $sql->execute();
 $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -68,11 +69,3 @@ $sql->execute();
 $orderList = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 $pageList = count($totalRecord)/ $rowLimit;
-
-
-
-
-
-
-
-?>

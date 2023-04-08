@@ -2,15 +2,15 @@
 ini_set("display_errors", "1");
 // session_start();
 
-if(isset($_GET["page"])){
+if (isset($_GET["page"])) {
     $page = $_GET["page"];
-}else{
+} else {
     $page = 1;
 }
 
 $rowLimit = 5;
-$pageStart = ($page-1) * $rowLimit;
-$pageStart = ($pageStart<0)? 0 : $pageStart;
+$pageStart = ($page - 1) * $rowLimit;
+$pageStart = ($pageStart < 0) ? 0 : $pageStart;
 
 include "../Model/dbConnection.php";
 
@@ -35,7 +35,7 @@ $sql = $pdo->prepare(
     ON
         od.order_token = o.order_token
     WHERE
-        o.shop_id = 16
+         o.del_flg = 0 AND od.del_flg = 0
     "
 );
 $sql->execute();
@@ -58,7 +58,7 @@ $sql = $pdo->prepare(
     ON
         od.order_token = o.order_token
     WHERE
-        o.shop_id = 16
+        o.del_flg = 0 AND od.del_flg = 0
     LIMIT $pageStart ,$rowLimit   
     "
 );
@@ -67,12 +67,4 @@ $sql = $pdo->prepare(
 $sql->execute();
 $order = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-$pageList = count($totalRecord)/ $rowLimit;
-
-
-
-
-
-
-
-?>
+$pageList = count($totalRecord) / $rowLimit;
