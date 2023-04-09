@@ -10,7 +10,7 @@ if (isset($_POST["submit"])) {
 
     $sql = $pdo->prepare(
         "
-        SELECT * FROM m_aboutUs WHERE 1
+        SELECT * FROM m_aboutus WHERE 1
         "
     );
 
@@ -24,7 +24,7 @@ if (isset($_POST["submit"])) {
             if (move_uploaded_file($location, "../../Storages/aboutUs/" . "aboutImage." . $extension)) {
                 $sql = $pdo->prepare(
                     "
-                        INSERT INTO m_aboutUs 
+                        INSERT INTO m_aboutus 
                         (
                             about_image,
                             about_text
@@ -45,7 +45,7 @@ if (isset($_POST["submit"])) {
         } else {
             $sql = $pdo->prepare(
                 "
-                    INSERT INTO m_aboutUs 
+                    INSERT INTO m_aboutus 
                     (
                         about_text
                     )
@@ -66,7 +66,7 @@ if (isset($_POST["submit"])) {
             if (move_uploaded_file($location, "../../Storages/aboutUs/aboutImage." . $extension)) {
                 $sql = $pdo->prepare(
                     "
-                            UPDATE m_aboutUs 
+                            UPDATE m_aboutus 
                             SET 
                             about_image = :aboutImage,
                             about_text = :aboutText
@@ -83,7 +83,7 @@ if (isset($_POST["submit"])) {
 
             $sql = $pdo->prepare(
                 "
-                        UPDATE m_aboutUs 
+                        UPDATE m_aboutus 
                         SET 
                         about_text = :aboutText
                         WHERE del_flg = 0

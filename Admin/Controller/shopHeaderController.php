@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
 
             $sql = $pdo->prepare(
                 "
-            UPDATE m_shopHeader SET 
+            UPDATE m_shopeader SET 
             header_title = :headerTitle,
             header_text = :headerText,
             header_image = :headerImage
@@ -34,7 +34,7 @@ if (isset($_POST["submit"])) {
         //echo 'There was some error moving the file to upload directory.';
         $sql = $pdo->prepare(
             "
-            UPDATE m_shopHeader SET 
+            UPDATE m_shopheader SET 
             header_title = :headerTitle,
             header_text = :headerText
             WHERE id = 1

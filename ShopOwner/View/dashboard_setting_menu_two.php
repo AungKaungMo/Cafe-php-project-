@@ -42,7 +42,7 @@ include "./resources/shared/dashboard.php";
                 </div>
                 <div class="box">
                     <label for="pdis">Discount</label>
-                    <input type="number" name="pdis" id="pdis">
+                    <input type="number" name="pdis" id="pdis" value="0" required>
                 </div>
                 <div class="box">
                     <label for="pinstock">Instock</label>

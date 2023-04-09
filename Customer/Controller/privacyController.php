@@ -1,10 +1,9 @@
 <?php
 ini_set("display_errors", "1");
 
-include "../Model/dbconnection.php";
+include "../Model/dbConnection.php";
 
-if (isset($_POST["saveChange"]))
-{
+if (isset($_POST["saveChange"])) {
     $paragraph = $_POST["paragraph"];
 
     $db = new DBConnection();
@@ -21,9 +20,6 @@ if (isset($_POST["saveChange"]))
     $sql->execute();
     $result1 = $sql->fetchAll(PDO::FETCH_ASSOC);
     $_SESSION["saveChange"] = $result1[0]["paragraph"];
-     
-    
-}
-else{
+} else {
     echo "error";
-} 
+}
