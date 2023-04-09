@@ -2,7 +2,7 @@
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_profile.css">
-<link rel="stylesheet" href="./resources/css/dashboard_profile_Theme.css">
+<link rel="stylesheet" href="./resources/css/dashboard_profile_theme.css">
 
 </head>
 
@@ -12,7 +12,7 @@ include "./resources/shared/dashboard.php";
     include "./resources/shared/dashboard_profile.php";
     ?>
 
-        <div class="d-flex justify-content-center flex-column align-items-center">
+    <div class="d-flex justify-content-center flex-column align-items-center">
 
         <div>
             <div class="colorBox mt-5">
@@ -46,17 +46,17 @@ include "./resources/shared/dashboard.php";
             </div>
         </div>
 
-        </div>
-        <div class=" d-flex align-items-end flex-column">
-            
+    </div>
+    <div class=" d-flex align-items-end flex-column">
+
         <div class="saveBtn my-3">
             <button id="orgColor">Get Original <iconify-icon icon="uim:redo"></iconify-icon></button>
         </div>
         <div class="saveBtn mt-3">
             <button id="saveColor">Save Change <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>
-        
-        </div>
+
+    </div>
 
     </div>
     </div>

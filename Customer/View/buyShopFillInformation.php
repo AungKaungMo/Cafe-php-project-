@@ -143,7 +143,7 @@ session_start();
               Payment Type
             </label><br><br>
             <select id="payment" name="payment">
-              <option value="1">KBZ</option>
+              <!-- <option value="1">KBZ</option> -->
               <option value="2">Wave</option>
             </select>
           </div>

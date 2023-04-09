@@ -15,7 +15,7 @@ include "./resources/shared/dashboard.php";
     ?>
 
 
-    <div class="d-flex flex-column justify-content-center align-items-center">
+    <div class="d-flex flex-column justify-content-center align-items-center m-4">
         <h1 class="fs-3">Contact Us</h1>
 
         <tbody class="tableBody">
@@ -28,27 +28,29 @@ include "./resources/shared/dashboard.php";
         </tbody>
         </table>
 
-        <table class="table">
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">Name</th>
-                <th scope="col">PhoneNumber</th>
-                <th scope="col">Email</th>
-                <th scope="col">Message</th>
-                <th scope="col">Date</th>
-                <th scope="col">Action</th>
-            </tr>
-            <?php  
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">PhoneNumber</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <?php
             $count = (($page - 1) * $rowLimit) + 1;
             for ($i = 0; $i < count($key); $i++) { ?>
                 <tr>
-                <td scope="row"><?= $count++ ?></td>
-                    <td><?= $key[$i]["name"] ?></td>
-                    <td><?= $key[$i]["phone"] ?></td>
-                    <td><?= $key[$i]["email"] ?></td>
-                    <td><?= $key[$i]["message"] ?></td>
-                    <td><?= $key[$i]["create_date"] ?></td>
-                    <td class="danger"><a href="../Controller/deCuController.php?id=<?= $key[$i]["id"] ?>">Remove</a></td>
+                    <td data-label="No" scope="row"><?= $count++ ?></td>
+                    <td data-label="Name"><?= $key[$i]["name"] ?></td>
+                    <td data-label="Phone"><?= $key[$i]["phone"] ?></td>
+                    <td data-label="Email"><?= $key[$i]["email"] ?></td>
+                    <td data-label="Message"><?= $key[$i]["message"] ?></td>
+                    <td data-label="Date"><?= $key[$i]["create_date"] ?></td>
+                    <td data-label="Action"><a class="text-danger" href="../Controller/deCuController.php?id=<?= $key[$i]["id"] ?>">Remove</a></td>
                 </tr>
             <?php  }  ?>
         </table>
@@ -67,7 +69,7 @@ include "./resources/shared/dashboard.php";
                 for ($i = 1; $i <= $pageList; $i++) { ?>
                     <li class="page-item part 
                     <?php
-                    if ($page == $i){
+                    if ($page == $i) {
                         echo "active";
                     }
                     ?>

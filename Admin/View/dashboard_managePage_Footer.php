@@ -2,7 +2,7 @@
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_managePage.css">
-<link rel="stylesheet" href="./resources/css/dashboard_managePage_Footer.css">
+<link rel="stylesheet" href="./resources/css/dashboard_managePage_footer.css">
 
 </head>
 

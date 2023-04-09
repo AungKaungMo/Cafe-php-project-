@@ -84,7 +84,7 @@ if (isset($_POST["send"])) {
         $mail->sendMail(
             $email,
             "Your Account Has Been Created!",
-            "<a href='localhost/cafe_Project/Customer/Controller/VerifyController.php?code=$code'>Verify</a>"
+            "<a href='http://159.223.38.19/StudentProject/CafeProject/Customer/Controller/VerifyController.php?code=$code'>Verify</a>"
         );
         header("Location: https://mail.google.com/");
         $_SESSION["signuperror"] = "";

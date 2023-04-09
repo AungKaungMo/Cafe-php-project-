@@ -69,7 +69,7 @@ include "../Controller/checkoutController.php";
                             Payment Type
                         </label><br><br>
                         <select id="payment" name="payment">
-                            <option value="1">KBZ</option>
+                            <!-- <option value="1">KBZ</option> -->
                             <option value="2">Wave</option>
                             <option value="3">COD</option>
                             <!-- <option value="4">Coin</option> -->
@@ -200,7 +200,7 @@ include "../Controller/checkoutController.php";
     <script>
         let tv = document.getElementsByClassName("townshipVal");
 
-        const grandTotalPrice = "<?= substr($totalPrice, 0, -11) ?>";
+        const grandTotalPrice = "<?= substr($totalPrice, 0, -4) ?>";
         let tvalue;
         let deliTotal = 0;
 

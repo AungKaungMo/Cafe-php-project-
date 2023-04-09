@@ -11,5 +11,5 @@ if (isset($_GET["id"])) {
     );
     $sql->bindValue(":id", $delect);
     $sql->execute();
-    header("Location: dashboard_ManageReviews.php");
+    header("Location: dashboard_manageReviews.php");
 }

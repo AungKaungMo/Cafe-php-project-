@@ -46,11 +46,10 @@ include "../Model/dbConnection.php";
 
         include "./shared/mailSender.php";
         $mail = new SendMail();
-        $mail->sendMail($_SESSION["email"], "Payment Successful","You got a new shop.<br>
-        To log in your dashboard please type 'http://localhost/cafe_Project/ShopOwner/View/shoplogin.php' in your browser tab
+        $mail->sendMail($_SESSION["email"], "Payment Successful", "You got a new shop.<br>
+        To log in your dashboard please type 'http://159.223.38.19/StudentProject/CafeProject/ShopOwner/View/shoplogin.php' in your browser tab
         ");
 
         include "./shop_historyController.php";
 
         header("location: ../View/wavepay4.php");
-?>

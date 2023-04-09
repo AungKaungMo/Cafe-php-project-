@@ -34,7 +34,7 @@ if (isset($_POST["save"])) {
             $sql->bindValue(":email", $email);
             $sql->bindValue(":profile", "contactus/" . $file);
             $sql->execute();
-            header("Location: ../View/dashboard_managePage_ContactUs.php");
+            header("Location: ../View/dashboard_managePage_contactUs.php");
         }
     }
 } else {
