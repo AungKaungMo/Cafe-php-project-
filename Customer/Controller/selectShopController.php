@@ -4,7 +4,7 @@ $db = new DBConnection();
 $pdo = $db->connect();
 $sql = $pdo->prepare(
     "
-    SELECT * FROM m_shop WHERE del_flg = 0 ORDER BY del_flg = 0 DESC LIMIT 3
+    SELECT * FROM m_shop WHERE del_flg = 0 ORDER BY shop_id LIMIT 3
     "
 );
 $sql->execute();
@@ -20,7 +20,7 @@ $shopname3 = $shop[2]["shop_name"];
 
 $sql = $pdo->prepare(
     "
-    SELECT * FROM m_shopgallery WHERE  del_flg = 0 ORDER BY del_flg = 0 DESC LIMIT 3
+    SELECT * FROM m_shopgallery WHERE  del_flg = 0 ORDER BY shop_id LIMIT 3
     "
 );
 $sql->execute();

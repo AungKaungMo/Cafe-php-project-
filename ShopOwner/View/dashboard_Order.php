@@ -29,7 +29,7 @@ include "../Controller/dashboard_orderController.php";
                 </tr>
                 <?php
                 $count = (($page - 1) * $rowLimit) + 1;
-                for ($i = 0; $i < count($orderList); $i++) { ?>
+            for ($i = 0; $i < count($orderList); $i++) { ?>
                     <tr>
                         <td data-label="No" scope="row"><?= $count++ ?></td>
                         <td data-label="Name"><?= $orderList[$i]["cus_name"]  ?></td>

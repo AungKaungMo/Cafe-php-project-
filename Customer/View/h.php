@@ -82,19 +82,19 @@ include "../Controller/sliderSelectController.php"
             echo $resultS[0]["titleOne"];
             ?>
           </h1>
-          <p class="mt-5 col-lg-6 col-md-9">
-            <?php
-            echo $resultS[0]["paraOne"];
-            ?>
+          <p class="mt-5 col-lg-6 col-md-9 text1">
+
+            <!-- <span class="collapse" id="collapseExample1">Some placeholder content for the collapse component.
+              This panel is hidden by default but revealed when the user activates the relevant trigger.</span> -->
             <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad -->
           </p>
           <div class="mt-5">
-            <a href="./shopinterface.php"><button class="btn px-2 py-3 fw-bold seemoreBtn">
-                Go Now
-              </button></a>
+            <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+              See More
+            </button>
           </div>
 
         </div>
@@ -109,17 +109,17 @@ include "../Controller/sliderSelectController.php"
             echo $resultS[0]["titleTwo"];
             ?>
           </h1>
-          <p class="mt-5 col-lg-6 col-md-9">
-            <?php
-            echo $resultS[0]["paraTwo"];
-            ?>
+          <p class="mt-5 col-lg-6 col-md-9 text2">
+
+            <!-- <span class="collapse" id="collapseExample2">Some placeholder content for the collapse component.
+              This panel is hidden by default but revealed when the user activates the relevant trigger.</span> -->
             <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad -->
           </p>
           <div class="mt-5">
-            <a href="./shopinterface.php"><button class="btn px-2 py-3 fw-bold seemoreBtn">Go Now</button></a>
+            <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">Go Now</button>
           </div>
         </div>
       </div>
@@ -133,17 +133,17 @@ include "../Controller/sliderSelectController.php"
             ?>
             <!-- The Hide Out -->
           </h1>
-          <p class="mt-5 col-lg-6 col-md-9">
-            <?php
-            echo $resultS[0]["paraThree"];
-            ?>
+          <p class="mt-5 col-lg-6 col-md-9 text3">
+
+            <!-- <span class="collapse" id="collapseExample3">Some placeholder content for the collapse component.
+              This panel is hidden by default but revealed when the user activates the relevant trigger.</span> -->
             <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
             ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad -->
           </p>
           <div class="mt-5">
-            <a href="./shopinterface.php"><button class="btn px-2 py-3 fw-bold seemoreBtn">Go Now</button></a>
+            <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">Go Now</button>
           </div>
         </div>
       </div>
@@ -160,15 +160,13 @@ include "../Controller/sliderSelectController.php"
   <div class="mx-sm-5 mx-2 pt-5 row aboutSection ">
     <div class="col-lg-6 ">
       <h1 class="title my-5 fw-bold position-relative pb-2">About Us</h1>
-      <p>
-        <?php
-        echo $resultA[0]["about_text"];
-        ?>
+      <p class="aboutText">
+
         <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad?
         ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus ad
         ipsum dolor sit, amet consectetur adipisicing elit. Nisi itaque odio cupiditate odit accusamus. -->
-        <span class="collapse" id="collapseExample4">Some placeholder content for the collapse component.
-          This panel is hidden by default but revealed when the user activates the relevant trigger.</span>
+        <!-- <span class="collapse" id="collapseExample4">Some placeholder content for the collapse component.
+          This panel is hidden by default but revealed when the user activates the relevant trigger.</span> -->
       </p>
       <div class="mt-5">
         <button class="btn px-2 py-3 fw-bold seemoreBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">See More</button>
@@ -488,6 +486,7 @@ include "../Controller/sliderSelectController.php"
 
   ?>
 
+
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
@@ -513,8 +512,48 @@ include "../Controller/sliderSelectController.php"
   </script>
 
   <script>
-    let finish = "<?= $_SESSION["finished"] ?>";
-    console.log(finish);
+    let text1 = `<?php echo $resultS[0]["paraOne"]; ?>`;
+
+    $(".text1").append(
+      `
+      ${text1.substring(0,190)}
+       <span class="collapse" id="collapseExample1">${text1.substring(190,text1.length)}</span>
+        `
+    );
+
+    let text2 = `<?php echo $resultS[0]["paraTwo"]; ?>`;
+
+    $(".text2").append(
+      `
+      ${text2.substring(0,190)}
+       <span class="collapse" id="collapseExample2">${text2.substring(190,text2.length)}</span>
+        `
+    );
+
+    let text3 = `<?php echo $resultS[0]["paraThree"]; ?>`;
+
+    $(".text3").append(
+      `
+      ${text3.substring(0,190)}
+       <span class="collapse" id="collapseExample3">${text3.substring(190,text3.length)}</span>
+        `
+    );
+
+    let aboutText = `<?php echo $resultA[0]["about_text"]; ?>`;
+
+    $(".aboutText").append(
+      `
+      ${aboutText.substring(0,190)}
+       <span class="collapse" id="collapseExample4">${aboutText.substring(190,aboutText.length)}</span>
+        `
+    );
+
+    let finish = "<?php if (empty($_SESSION["finished"])) {
+                    echo "";
+                  } else {
+                    echo $_SESSION["finished"];
+                  } ?> ";
+    // console.log(finish);
     if (finish == "finished") {
       localStorage.removeItem("cart");
     }

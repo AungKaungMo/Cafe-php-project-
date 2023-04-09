@@ -190,8 +190,8 @@
     let text = "<?= $shopInfoResults[0]["paragraph"] ?>";
     $(".buyText").append(
       `
-      ${text.substring(0,260)}
-       <span class="collapse" id="collapseExample4">${text.substring(260,text.length)}</span>
+      ${text.substring(0,200)}
+       <span class="collapse" id="collapseExample4">${text.substring(200,text.length)}</span>
         `
     )
   </script>

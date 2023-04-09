@@ -4,8 +4,7 @@ ini_set("display_errors", "1");
 
 include "../Model/dbConnection.php";
 
-if (isset($_POST["saveChange"]))
-{
+if (isset($_POST["saveChange"])) {
     $questionOne = $_POST["questionOne"];
     $answerOne = $_POST["answerOne"];
     $questionTwo = $_POST["questionTwo"];
@@ -35,7 +34,7 @@ if (isset($_POST["saveChange"]))
         answerFive=:answerFive
         WHERE id=2
         ;      
-        "  
+        "
     );
 
     $sql->bindValue(":questionOne", $questionOne);
@@ -48,12 +47,12 @@ if (isset($_POST["saveChange"]))
     $sql->bindValue(":answerFour", $answerFour);
     $sql->bindValue(":questionFive", $questionFive);
     $sql->bindValue(":answerFive", $answerFive);
-    
+
     $sql->execute();
-    header("Location: ../View/dashboard_setting_FAQs.php");
+    header("Location: ../View/dashboard_setting_fAQs.php");
     // echo $answerFive;
 
-}  else {
+} else {
     echo "ERROR";
 }
 

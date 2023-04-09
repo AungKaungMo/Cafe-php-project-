@@ -1,18 +1,18 @@
 <?php
-    include "../Model/dbconnection.php";
+include "../Model/dbConnection.php";
 
-    $db = new DBConnection();
-    $pdo = $db->connect();
-    $sql = $pdo->prepare(
+$db = new DBConnection();
+$pdo = $db->connect();
+$sql = $pdo->prepare(
 
-        "SELECT * FROM m_faqs
+    "SELECT * FROM m_faqs
         WHERE id=2
         "
-    );
-    $sql->execute();
-    $result1 = $sql->fetchAll(PDO::FETCH_ASSOC);
+);
+$sql->execute();
+$result1 = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    
+
 ?>
 
 <!DOCTYPE html>
@@ -153,7 +153,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                             <!-- Which payment system is used by this website? -->
                             <?php
-                            echo $result1[0]["questionOne"];  
+                            echo $result1[0]["questionOne"];
                             ?>
                         </button>
                     </h2>
@@ -162,7 +162,7 @@
                             <!-- Kpay, Wavepay, Cash on Delivery(COD) and Coins(virtual currency of the website)
                             can be used to purchase the products on this website. -->
                             <?php
-                            echo $result1[0]["answerOne"];  
+                            echo $result1[0]["answerOne"];
                             ?>
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                             <!-- How do I get the coins in this website? -->
                             <?php
-                            echo $result1[0]["questionTwo"];  
+                            echo $result1[0]["questionTwo"];
                             ?>
                         </button>
                     </h2>
@@ -181,9 +181,9 @@
                             <!-- Coins are granted when you purchase from the website.
                             1 coin equal 100MMK and it is calculated from grand total of your purchase. -->
                             <?php
-                            echo $result1[0]["answerTwo"];  
+                            echo $result1[0]["answerTwo"];
                             ?>
-                        
+
                         </div>
                     </div>
                 </div>
@@ -193,8 +193,8 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                 <!-- How do I book a table at the shop? -->
                                 <?php
-                            echo $result1[0]["questionThree"];  
-                            ?>
+                                echo $result1[0]["questionThree"];
+                                ?>
                             </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -205,8 +205,8 @@
                                 If you have trouble understanding, click the User Guide link in the footer and
                                 read the details instruction. -->
                                 <?php
-                            echo $result1[0]["answerThree"];  
-                            ?>
+                                echo $result1[0]["answerThree"];
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -215,8 +215,8 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                                 <!-- I'm sure I've booked, but I haven't had confirmation - what now? -->
                                 <?php
-                            echo $result1[0]["questionFour"];  
-                            ?>
+                                echo $result1[0]["questionFour"];
+                                ?>
                             </button>
                         </h2>
                         <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
@@ -224,8 +224,8 @@
                                 <!-- We will always send you an automated confirmation when your booking is confirmed at the restaurant. If you haven't received a confirmation, please start the process again.
                                 If you continue to have an issue please a call a number on the shop home page. -->
                                 <?php
-                            echo $result1[0]["answerFour"];  
-                            ?>
+                                echo $result1[0]["answerFour"];
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -234,16 +234,16 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
                                 <!-- How do I cancel my booking? -->
                                 <?php
-                            echo $result1[0]["questionFive"];  
-                            ?>
+                                echo $result1[0]["questionFive"];
+                                ?>
                             </button>
                         </h2>
                         <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <!-- Contact the number on the shop Homepage and notify your cancellation. -->
                                 <?php
-                            echo $result1[0]["answerFive"];  
-                            ?>
+                                echo $result1[0]["answerFive"];
+                                ?>
                             </div>
                         </div>
                     </div>
