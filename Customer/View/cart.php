@@ -67,7 +67,7 @@ $_SESSION["cartItemsLists"] = $cartItemsLists;
                                         <?= $_SESSION["cartItemsLists"][$j]["product_name"] ?>
                                     </td>
                                     <td data-label="Shop Name">
-                                        <a href="#"><?= $_SESSION["cartItemsLists"][$j]["shop_name"] ?></a>
+                                        <a href="./shopinterface.php?id=<?= $_SESSION["cartItemsLists"][$j]["shop_id"] ?>"><?= $_SESSION["cartItemsLists"][$j]["shop_name"] ?></a>
                                     </td>
                                     <td data-label="Quantity" class="d-flex align-items-center justify-content-end user-select-none quantityControl">
                                         <iconify-icon icon="bi:dash-circle-fill" class="me-2 minus" width="23" height="23"></iconify-icon>

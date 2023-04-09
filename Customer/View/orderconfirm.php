@@ -200,7 +200,7 @@ include "../Controller/checkoutController.php";
     <script>
         let tv = document.getElementsByClassName("townshipVal");
 
-        const grandTotalPrice = "<?= substr($totalPrice, 0, -11) ?>";
+        const grandTotalPrice = "<?= substr($totalPrice, 0, -4) ?>";
         let tvalue;
         let deliTotal = 0;
 

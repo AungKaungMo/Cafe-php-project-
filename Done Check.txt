@@ -1,0 +1,28 @@
+Customer 
+
+Login (OK)
+Sign Up (OK)
+change Psw (OK)
+
+order confirm(need to change in script -11 to -4)
+
+error upload customer profile (permision)
+
+can't review bec user-pf doesn't have
+
+in cart.php/line no.70 href="./shopinterface.php?id=<?= $_SESSION["cartItemsLists"][$j]["shop_id"] ?>"
+
+error in shop information file move
+
+error again in history and order/ shop dashboard
+
+error in file gallery
+
+dashboard theme need to change Theme to theme in css
+
+new shop didn't show in see all shop
+
+blog image uploaded but didn't show photo in customer's view
+
+i dun know why only one product in ginza shop but when i click see more , i saw 3 products. At first, didn't we say we show 6 products at least?
+

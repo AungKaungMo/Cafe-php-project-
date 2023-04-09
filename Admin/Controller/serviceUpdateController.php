@@ -36,5 +36,5 @@ if (isset($_POST["save"])) {
     $sql->bindValue(":i5", $icon5);
     $sql->bindValue(":i6", $icon6);
     $sql->execute();
-    header("Location: ../View/dashboard_managePage_Services.php");
+    header("Location: ../View/dashboard_managePage_services.php");
 }

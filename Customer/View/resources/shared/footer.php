@@ -70,7 +70,7 @@ include "../Controller/selectfooterController.php";
         <div class="someLinks">
             <div class="footerTitle">Some Links</div>
             <div class="mt-4 d-flex flex-column footerDetails">
-                <a href=".//FAQs.php"><?= $footer[0]["some_link1"]  ?></a>
+                <a href="./FAQs.php"><?= $footer[0]["some_link1"]  ?></a>
                 <a href=""><?= $footer[0]["some_link2"]  ?></a>
                 <a href="./PrivacyPolicy.php"><?= $footer[0]["some_link3"]  ?></a>
             </div>
