@@ -3,7 +3,7 @@ ini_set("display_errors", "1");
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_setting.css">
-<link rel="stylesheet" href="./resources/css/dashboard_setting_FAQs.css">
+<link rel="stylesheet" href="./resources/css/dashboard_setting_fAQs.css">
 
 </head>
 
@@ -17,7 +17,7 @@ include "./resources/shared/dashboard.php";
 
         <div class="d-flex flex-column justify-content-center align-items-center">
 
-            <div class="my-3"> 
+            <div class="my-3">
                 <div class="box">
                     <label for="question1">Question 1</label>
                     <input type="text" id="question1" name="questionOne" value="<?= $resultF[0]["questionOne"] ?>">
@@ -26,7 +26,7 @@ include "./resources/shared/dashboard.php";
                     <label for="answer1">Answer 1</label>
                     <textarea id="answer1" name="answerOne"><?= $resultF[0]["answerOne"] ?></textarea>
                 </div>
-                
+
                 <div class="box">
                     <label for="question2">Question 2</label>
                     <input type="text" id="question2" name="questionTwo" value="<?= $resultF[0]["questionTwo"] ?>">
@@ -62,7 +62,7 @@ include "./resources/shared/dashboard.php";
             </div>
         </div>
         <div class="saveBtn mb-5 ">
-            <button name="saveChange">Save Change 
+            <button name="saveChange">Save Change
                 <iconify-icon icon="material-symbols:save"></iconify-icon></button>
         </div>
     </form>

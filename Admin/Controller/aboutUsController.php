@@ -77,7 +77,7 @@ if (isset($_POST["submit"])) {
                 $sql->bindValue(":aboutImage", "aboutUs/aboutImage." . $extension);
                 $sql->bindValue(":aboutText", $aboutText);
                 $sql->execute();
-                header("Location: ../View/dashboard_managePage_AboutUs.php");
+                header("Location: ../View/dashboard_managePage_Aboutus.php");
             }
         } else {
 

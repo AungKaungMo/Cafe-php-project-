@@ -4,7 +4,11 @@ $db = new DBConnection();
 $pdo = $db->connect();
 $sql = $pdo->prepare(
     "
+<<<<<<< HEAD
     SELECT * FROM m_shop WHERE del_flg = 0 ORDER BY shop_id  LIMIT 3
+=======
+    SELECT * FROM m_shop WHERE del_flg = 0 ORDER BY shop_id LIMIT 3
+>>>>>>> origin/main
     "
 );
 $sql->execute();
