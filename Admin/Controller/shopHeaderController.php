@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
 
             $sql = $pdo->prepare(
                 "
-            UPDATE m_shopeader SET 
+            UPDATE m_shopheader SET 
             header_title = :headerTitle,
             header_text = :headerText,
             header_image = :headerImage
