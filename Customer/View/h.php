@@ -552,7 +552,7 @@ include "../Controller/sliderSelectController.php"
                     echo "";
                   } else {
                     echo $_SESSION["finished"];
-                  } ?> ";
+                  } ?>";
     // console.log(finish);
     if (finish == "finished") {
       localStorage.removeItem("cart");

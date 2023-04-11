@@ -10,7 +10,7 @@ include "./resources/shared/dashboard.php";
 <body>
 
     <?php
-    include "./resources/shared/dashboard_history.php";
+    // include "./resources/shared/dashboard_history.php";
     ?>
 
     <div class="historyBoxContainer mx-sm-5 mx-3 my-5">

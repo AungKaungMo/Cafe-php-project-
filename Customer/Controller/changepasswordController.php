@@ -31,8 +31,9 @@ if (isset($_POST["change"])) {
         $sql->bindValue(":id", $id);
         $sql->execute();
         // echo "ok";
+        $_SESSION["error"] = "";
         header("Location: ../View/login.php");
     } else {
-        echo "not";
+        echo "password incorrect";
     }
 }
