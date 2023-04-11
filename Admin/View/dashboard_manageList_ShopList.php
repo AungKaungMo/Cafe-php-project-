@@ -27,7 +27,28 @@ include "./resources/shared/dashboard.php";
         <tbody class="tableBody">
             </table>
 
-            <table class="table">
+        <table class="table">
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">ID</th>
+                <th scope="col">ShopName</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Package</th>
+                <th scope="col">created_date</th>
+                <th scope="col">expired_date</th>
+                <th scope="col">Action</th>
+
+            </tr>
+            <tr class="lineTable">
+                <td colspan="9">
+                    <hr class="line">
+                </td>
+            </tr>
+            <?php 
+            $count = (($page-1) * $rowLimit) +1;
+            for ($i = 0; $i < count ($shop); $i++) {   ?>
                 <tr>
                     <th scope="col">No.</th>
                     <th scope="col">ID</th>
