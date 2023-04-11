@@ -6,10 +6,9 @@ ini_set("display_errors", "1");
 
     $sql = $pdo->prepare(
         "
-            SELECT * FROM m_shopHeader WHERE id=1
+            SELECT * FROM m_shopheader WHERE id=1
         "
     );
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
     $img = $result[0]["header_image"];
-?>

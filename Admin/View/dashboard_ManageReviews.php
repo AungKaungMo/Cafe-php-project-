@@ -1,6 +1,6 @@
 <?php
 include "../Controller/selectreviewController.php";
-$value= $resultreview;
+$value = $resultreview;
 include "./resources/shared/dashboard.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_ManageReviews.css">
@@ -15,6 +15,7 @@ include "./resources/shared/dashboard.php";
         <table class="table">
             <thead>
                 <tr>
+                    <th>No</th>
                     <th>ID</th>
                     <th>UserName</th>
                     <th>Address</th>
@@ -36,14 +37,14 @@ include "./resources/shared/dashboard.php";
                 $count = (($page - 1) * $rowLimit) + 1;
                 for ($i = 0; $i < count($value); $i++) { ?>
                     <tr>
-                    <td scope="row"><?= $count++ ?></td>
+                        <td scope="row"><?= $count++ ?></td>
                         <td><?= $value[$i]["id"] ?></td>
                         <td><?= $value[$i]["user_name"] ?></td>
                         <td><?= $value[$i]["address"] ?></td>
                         <td><?= $value[$i]["comment"] ?></td>
                         <td><?= $value[$i]["rating"] ?></td>
                         <td><?= $value[$i]["create_date"] ?></td>
-                        <td class="danger"><a href="../Controller/delectreviewController.php?id=<?= $value[$i]["id"] ?>">Remove</a></td>
+                        <td><a href="../Controller/delectreviewController.php?id=<?= $value[$i]["id"] ?>" class="text-danger">Remove</a></td>
                     </tr>
 
                 <?php  }  ?>
@@ -51,8 +52,8 @@ include "./resources/shared/dashboard.php";
 
             </tbody>
         </table>
-         <!-- Pagination -->
-         <nav aria-label="Page navigation example ">
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example ">
             <ul class="pagination justify-content-center">
                 <li class="page-item
     <?php
@@ -66,7 +67,7 @@ include "./resources/shared/dashboard.php";
                 for ($i = 1; $i <= $pageList; $i++) { ?>
                     <li class="page-item part 
                     <?php
-                    if ($page == $i){
+                    if ($page == $i) {
                         echo "active";
                     }
                     ?>

@@ -42,10 +42,7 @@ include "./resources/shared/dashboard.php";
                     <label for="premain">Sold</label>
                     <input type="number" value="<?php echo $result[0]["sold_quantity"] ?>" name="usold" id="pprice" readonly>
                 </div>
-                <div class="box">
-                    <label for="premain">Remain</label>
-                    <input type="number" value="<?php echo $result[0]["remain_stock"] ?>" name="uremain" id="pprice" readonly>
-                </div>
+
                 <div class="box">
                     <label for="ptype">Type</label>
                     <select id="ptype" name="ptype" required>

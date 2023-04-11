@@ -55,7 +55,7 @@ session_start();
                     </a>
                 </li>
                 <li>
-                    <a href="./dashboard_Order.php">
+                    <a href="./dashboard_order.php">
                         <span class="icon"><iconify-icon icon="mdi:truck-delivery"></iconify-icon></span>
                         <span class="title">Order</span>
                     </a>

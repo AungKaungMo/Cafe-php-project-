@@ -61,7 +61,7 @@ if (isset($_POST["saveChange"])) {
 
             $sql->bindValue(":img3", "adminslider/" . $file3['name']);
             $sql->execute();
-            header("Location: ../View/dashboard_managePage_Slider.php");
+            header("Location: ../View/dashboard_managePage_slider.php");
         }
         $sql = $pdo->prepare(
             "
@@ -83,7 +83,7 @@ if (isset($_POST["saveChange"])) {
         $sql->bindValue(":title3", $titleThree);
         $sql->bindValue(":para3", $paraThree);
         $sql->execute();
-        header("Location: ../View/dashboard_managePage_Slider.php");
+        header("Location: ../View/dashboard_managePage_slider.php");
     }
 };
 //     echo $file1;

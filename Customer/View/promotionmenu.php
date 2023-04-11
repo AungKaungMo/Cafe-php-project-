@@ -38,6 +38,7 @@
 <body class="promobody">
 
   <?php
+  session_start();
   include "./resources/shared/nav.php";
   ?>
 

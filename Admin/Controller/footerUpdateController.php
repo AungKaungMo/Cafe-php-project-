@@ -48,7 +48,7 @@ if (isset($_POST["save"])) {
             $sql->bindValue(":text", $text);
             $sql->bindValue(":logo", "footer/" . $file);
             $sql->execute();
-            header("Location: ../View/dashboard_managePage_Footer.php");
+            header("Location: ../View/dashboard_managePage_footer.php");
         }
     }
 } else {

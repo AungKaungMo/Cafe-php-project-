@@ -106,7 +106,7 @@ if (session_status() == PHP_SESSION_NONE) {
                                 <div class="h2 mb-3 fw-bold log">Log Out</div>
                                 <div class="mb-5 thankPurchase">Are You Sure...</div>
                                 <button type="button" class="btn text-white Back2Home me-5" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
-                                <button type="button" class="btn text-white Back2Home ms-5"> <a href="./login.php">Confirm</a>
+                                <button type="button" class="btn text-white Back2Home ms-5"> <a href="./signup.php">Confirm</a>
                                 </button>
                             </div>
                         </div>

@@ -1,9 +1,9 @@
-.navBar h1:nth-child(3) a {
+.navBar h1:nth-child(1) a {
   color: var(--mainColor);
   font-weight: bold;
 }
 @media screen and (max-width: 700px) {
-  .navBar h1:nth-child(3) a {
+  .navBar h1:nth-child(1) a {
     color: var(--secondMainColor);
     font-weight: bold;
   }

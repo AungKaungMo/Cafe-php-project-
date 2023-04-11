@@ -1,7 +1,7 @@
 <?php
 ini_set("display_errors", "1");
-include "../Controller/dashboard_orderController.php";
 include "./resources/shared/dashboard.php";
+include "../Controller/dashboard_orderController.php";
 ?>
 <link rel="stylesheet" href="./resources/css/dashboard_order.css">
 
@@ -28,16 +28,16 @@ include "./resources/shared/dashboard.php";
                     </td>
                 </tr>
                 <?php
-                $count = (($page-1) * $rowLimit) +1 ;
+                $count = (($page - 1) * $rowLimit) + 1;
                 for ($i = 0; $i < count($orderList); $i++) { ?>
                     <tr>
-                        <td scope="row"><?= $count++ ?></td>
-                        <td><?= $orderList[$i]["cus_name"]  ?></td>
-                        <td><?= $orderList[$i]["bought_product_name"]  ?></td>
-                        <td><?= $orderList[$i]["payment_id"]  ?></td>
-                        <td><?= number_format($orderList[$i]["product_price"])  ?></td>
-                        <td><?= $orderList[$i]["cus_phone"]  ?></td>
-                        <td><?= $orderList[$i]["cus_address"]  ?></td>
+                        <td data-label="No" scope="row"><?= $count++ ?></td>
+                        <td data-label="Name"><?= $orderList[$i]["cus_name"]  ?></td>
+                        <td data-label="ProductName"><?= $orderList[$i]["bought_product_name"]  ?></td>
+                        <td data-label="PaymentId"><?= $orderList[$i]["payment_id"]  ?></td>
+                        <td data-label="Price"><?= number_format($orderList[$i]["product_price"])  ?></td>
+                        <td data-label="Phone"><?= $orderList[$i]["cus_phone"]  ?></td>
+                        <td data-label="Address"><?= $orderList[$i]["cus_address"]  ?></td>
                     </tr>
                 <?php } ?>
             </tbody>
@@ -57,7 +57,7 @@ include "./resources/shared/dashboard.php";
                 for ($i = 1; $i <= $pageList; $i++) { ?>
                     <li class="page-item part 
                     <?php
-                    if ($page == $i){
+                    if ($page == $i) {
                         echo "active";
                     }
                     ?>
@@ -103,7 +103,7 @@ include "./resources/shared/dashboard.php";
 
         <!--------------  Ending Tab for dashboard  ----------------->
     </div>
-     
+
 
     <!--------------------------   JS   ------------------------------->
     <!-- <script src="./resources/js/dashboard_order.js"></script> -->

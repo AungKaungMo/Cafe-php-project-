@@ -1,20 +1,87 @@
 .navBar h1:nth-child(2) a {
-    color: var(--mainColor);
+  color: var(--mainColor);
+  font-weight: bold;
+}
+@media screen and (max-width: 700px) {
+  .navBar h1:nth-child(2) a {
+    color: var(--secondMainColor);
     font-weight: bold;
   }
-  @media screen and (max-width: 700px) {
-    .navBar h1:nth-child(2) a {
-      color: var(--secondMainColor);
-      font-weight: bold;
-    }
+}
+
+.sliderTitle {
+  padding: 0.7em;
+  background-color: var(--mainColor);
+  border-radius: 10px;
+  color: var(--textColorPrimary);
+  width: 100px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/*****  New ADD ******/
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-style: unset;
+}
+@media screen and (max-width: 890px) {
+  .table thead {
+    display: none;
+  }
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+  .lineTable {
+    display: none !important;
   }
 
-  .sliderTitle{
-    padding: 0.7em;
-    background-color: var(--mainColor);
-    border-radius: 10px;
-    color: var(--textColorPrimary);
-    width: 100px;
-    text-align: center;
-    margin-bottom: 1em;
+  .table tr {
+    margin-bottom: 1.5em;
   }
+  .table tbody tr td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  .table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: left;
+  }
+  tr {
+    background-color: var(--backgroundTertiary);
+    padding: 0.9em;
+    box-shadow: var(--cardShadow);
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 790px) {
+  .table tbody tr td {
+    padding-left: unset;
+  }
+}
+@media screen and (max-width: 480px) {
+  td {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 400px) {
+  tr {
+    padding: 0.7em;
+  }
+  td {
+    font-size: 0.7em;
+  }
+}

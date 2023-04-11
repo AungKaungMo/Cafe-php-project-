@@ -1,31 +1,27 @@
-.navBar h1:nth-child(3) a{
-    color: var(--mainColor);
+.navBar h1:nth-child(2) a {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+
+#paragraph {
+  width: 30em;
+  height: 20em;
+}
+
+@media screen and (max-width: 700px) {
+  .navBar h1:nth-child(3) a {
+    color: var(--secondMainColor);
     font-weight: bold;
   }
+}
 
-
-  #paragraph{
-    width: 30em;
-    height: 20em;
-  }
-
-
-  @media screen and (max-width: 700px) {
-    .navBar h1:nth-child(3) a{
-      color: var(--secondMainColor);
-      font-weight: bold;
-    }
-  }
-
-  .sliderTitle{
-    padding: 0.7em;
-    background-color: var(--mainColor);
-    border-radius: 10px;
-    color: var(--textColorPrimary);
-    width: 90px;
-    height: 45px;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-
-
+.sliderTitle {
+  padding: 0.7em;
+  background-color: var(--mainColor);
+  border-radius: 10px;
+  color: var(--textColorPrimary);
+  width: 90px;
+  height: 45px;
+  text-align: center;
+  margin-bottom: 1em;
+}
