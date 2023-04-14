@@ -19,6 +19,8 @@ if (isset($_POST["confirm"])) {
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 
+    // echo $result[0]["wave_otp"];
+    // echo $enterotp;
     if ($result[0]["wave_otp"] == $enterotp) {
         $_SESSION["otperror"] = "";
         // echo "hell";
@@ -26,6 +28,6 @@ if (isset($_POST["confirm"])) {
     } else {
         $_SESSION["otperror"] = "Wrong Otp Code! Try Again..";
         echo "error";
-        // header("Location: ../View/wavepay1.php");
+        header("Location: ../View/wavepay1.php");
     }
 }

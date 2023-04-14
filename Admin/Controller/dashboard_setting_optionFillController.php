@@ -175,5 +175,5 @@ if (isset($_POST["savechange"])) {
     $sql->bindValue(":premiumD5", $premiumD5);
     $sql->bindValue(":premiumD6", $premiumD6);
     $sql->execute();
-    header("Location: ../View/dashboard_setting_Option&Fill.php");
+    header("Location: ../View/dashboard_setting_option&Fill.php");
 }

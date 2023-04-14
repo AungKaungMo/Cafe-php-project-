@@ -3,7 +3,7 @@ include "../Controller/selectreviewController.php";
 $value = $resultreview;
 include "./resources/shared/dashboard.php";
 ?>
-<link rel="stylesheet" href="./resources/css/dashboard_ManageReviews.css">
+<link rel="stylesheet" href="./resources/css/dashboard_manageReviews.css">
 
 </head>
 
@@ -89,7 +89,7 @@ include "./resources/shared/dashboard.php";
     </div>
 
     <script src="./resources/js/dashboard.js"></script>
-    <!-- <script src="./resources/js/dashboard_ManageReviews.js"></script> -->
+    <!-- <script src="./resources/js/dashboard_manageReviews.js"></script> -->
 </body>
 
 </html>

@@ -17,9 +17,22 @@ $(document).ready(() => {
       count = Number(orgCount[i].innerText);
       count++;
       orgCount[i].innerText = count;
-      let mmk = Number(
+      let oldmmk = Number(
         price[i].innerText.substring(0, price[i].innerText.length - 4)
       );
+      let newmmk =
+        oldmmk *
+        (Number(
+          document
+            .getElementsByClassName("discountPercentage")
+            [i].innerText.substring(
+              0,
+              document.getElementsByClassName("discountPercentage")[i].innerText
+                .length - 2
+            )
+        ) /
+          100);
+      let mmk = oldmmk - newmmk;
 
       total[i].innerText = mmk * count + " MMK";
       orgp1 = mmk * count;
@@ -55,9 +68,22 @@ $(document).ready(() => {
         count = Number(orgCount[i].innerText);
         count--;
         orgCount[i].innerText = count;
-        let mmk = Number(
+        let oldmmk = Number(
           price[i].innerText.substring(0, price[i].innerText.length - 4)
         );
+        let newmmk =
+          oldmmk *
+          (Number(
+            document
+              .getElementsByClassName("discountPercentage")
+              [i].innerText.substring(
+                0,
+                document.getElementsByClassName("discountPercentage")[i]
+                  .innerText.length - 2
+              )
+          ) /
+            100);
+        let mmk = oldmmk - newmmk;
 
         total[i].innerText = mmk * count + " MMK";
         orgp2 = mmk * count;

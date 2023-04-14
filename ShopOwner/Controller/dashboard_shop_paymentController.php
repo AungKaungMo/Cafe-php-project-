@@ -14,8 +14,9 @@ $sql->execute();
 $expDate = $sql->fetchAll(PDO::FETCH_ASSOC)[0]["package_expiredate"];
 
 $dateExp = strtotime($expDate);
-$newExpDate = date("Y-m-d", strtotime(' + 1 months', $dateExp));
-
+$newExpDate = date("Y-m-d", strtotime(' + 1months', $dateExp));
+echo $newExpDate;
+echo $_SESSION["shopId"];
 $sql = $pdo->prepare(
     "
             UPDATE m_shop SET
@@ -25,9 +26,10 @@ $sql = $pdo->prepare(
             WHERE shop_id = :shopId AND del_flg =0
         "
 );
+
 $sql->bindValue(":ptype", $_SESSION["shopPayment"]);
 $sql->bindValue(":payType", $_SESSION["shopPackage"]);
 $sql->bindValue(":pexp", $newExpDate);
 $sql->bindValue(":shopId", $_SESSION["shopId"]);
-
+$sql->execute();
 header("Location: ../View/wavepay4.php");

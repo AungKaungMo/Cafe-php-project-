@@ -20,7 +20,7 @@ if (isset($_POST["saveChange"])) {
     $sql->bindValue(":paragraph", $paragraph);
 
     $sql->execute();
-    header("Location: ../View/dashboard_setting_Privacy&Policy.php");
+    header("Location: ../View/dashboard_setting_privacy&Policy.php");
 } else {
     echo "error";
 }
