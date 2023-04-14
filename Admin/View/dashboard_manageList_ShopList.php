@@ -27,28 +27,7 @@ include "./resources/shared/dashboard.php";
         <tbody class="tableBody">
             </table>
 
-        <table class="table">
-            <tr>
-                <th scope="col">No.</th>
-                <th scope="col">ID</th>
-                <th scope="col">ShopName</th>
-                <th scope="col">Address</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Package</th>
-                <th scope="col">created_date</th>
-                <th scope="col">expired_date</th>
-                <th scope="col">Action</th>
-
-            </tr>
-            <tr class="lineTable">
-                <td colspan="9">
-                    <hr class="line">
-                </td>
-            </tr>
-            <?php 
-            $count = (($page-1) * $rowLimit) +1;
-            for ($i = 0; $i < count ($shop); $i++) {   ?>
+            <table class="table">
                 <tr>
                     <th scope="col">No.</th>
                     <th scope="col">ID</th>
@@ -121,31 +100,9 @@ include "./resources/shared/dashboard.php";
             </ul>
         </nav>
 
+        </div>
 
-
-
-
-
-
-
-
-
-
-        <!-- <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <?php
-                for ($i = 1; $i <= $pageList; $i++) { ?>
-                    <li class="page-item"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
-                <?php } ?>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </nav> -->
-
-    </div>
-
-    <!-- <script src="./resources/js/dashboard.js"></script>
-    <script src="./resources/js/dashboard_ManageList.js"></script> -->
-</body>
+        </body>
 
 </html>
+
